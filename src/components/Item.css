@@ -1,0 +1,13 @@
+.item-img {
+    width: 100%;
+}
+
+.item-name,
+.item-price {
+    font-family: var(--sans-serif);
+    font-size: var(--medium-font);
+}
+
+.item-name {
+    margin: 1rem 0 .5rem 0;
+}
