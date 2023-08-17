@@ -1,16 +1,20 @@
+import { Link } from 'react-router-dom';
 import { Product } from "../types";
 import './Item.css';
 
 type ItemProps = {
-    product: Product
+    item: Product,
+    currentSection: string
 }
 
-const Item = ({ product }: ItemProps) => {
+const Item = ({ item, currentSection }: ItemProps) => {
     return (
         <article className="item">
-            <img className="item-img" src={`/imgs/${product.imgs[0]}.jpg`} alt={`${product.band} ${product.productType}`}/>
-            <h2 className="item-name">{`${product.band} "${product.desc}" ${product.productType}`}</h2>
-            <span className="item-price">{`$${product.price}`}</span>
+            <Link to={`/collections/${currentSection}/products/${item.id}`}>
+                <img className="item-img" src={`/imgs/${item.imgs[0]}.jpg`} alt={`${item.band} ${item.productType}`} />
+                <h2 className="item-name">{`${item.band} "${item.desc}" ${item.productType}`}</h2>
+                <span className="item-price">{`$${item.price}`}</span>
+            </Link>
         </article>
     );
 }

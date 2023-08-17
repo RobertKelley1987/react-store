@@ -3,11 +3,12 @@ import Item from './Item';
 import { ProductList } from "../types";
 
 type ItemListProps = {
-    products: ProductList
+    items: ProductList,
+    currentSection: string
 }
 
-const ItemList = ({ products }: ItemListProps) => {
-    return <Fragment>{products.map(product => <Item key={product.id} product={product}/>)}</Fragment>
+const ItemList = ({ items, currentSection }: ItemListProps) => {
+    return <Fragment>{items.map(item => <Item key={item.id} item={item} currentSection={currentSection} />)}</Fragment>
 }
 
 export default ItemList;

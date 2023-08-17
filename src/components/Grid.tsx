@@ -5,7 +5,7 @@ type GridProps = {
 }
 
 const Grid = ({ children }: GridProps) => {
-    return <section className="grid">{children}</section>
+    return <div className="grid">{children}</div>
 }
 
 export default Grid;

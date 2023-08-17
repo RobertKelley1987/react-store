@@ -1,0 +1,32 @@
+.img-carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img-carousel-imgs-wrapper {
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.img-carousel-img-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0);
+    flex-basis: 25%;
+}
+
+.img-carousel-img-wrapper:hover {
+    cursor: pointer;
+}
+
+.img-carousel-img-wrapper:hover img {
+    opacity: 100%;
+}
+
+.img-carousel-img {
+    width: 100%;
+}
+
+.img-carousel-img-transparent {
+    opacity: 50%;
+}
