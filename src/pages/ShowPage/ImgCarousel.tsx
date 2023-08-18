@@ -1,29 +1,30 @@
 import { useState, useEffect } from 'react';
+import { Product } from '../../types';
 import './ImgCarousel.css';
 
 type ImgCarouselProps = {
-    images?: string[],
-    productType?: string
+    product: Product
 }
 
-const ImgCarousel = ({ images, productType }: ImgCarouselProps) => {
+const ImgCarousel = ({ product }: ImgCarouselProps) => {
+    const { imgs, productType } = product;
     const [selectedImg, setSelectedImg] = useState('');
 
     const renderClassNames = (img: string) => {
         return selectedImg === img ? 'img-carousel-img' : 'img-carousel-img img-carousel-img-transparent'
     }
     
+    // Set selected img to 1st photo in imgs array
     useEffect(() => {
-        if(images) {
-            setSelectedImg(images[0]);
+        if(imgs) {
+            setSelectedImg(imgs[0]);
         }
-    }, [images])
+    }, [imgs]);
 
-    return (
-        <div className="img-carousel">
-            <img alt={productType} src={`/imgs/${selectedImg}.jpg`} className="img-carousel-img"/>
+    const renderImgSelector = () => {
+        return (
             <div className="img-carousel-imgs-wrapper">
-                {images?.map(image => {
+                {imgs.map(image => {
                     return (
                         <div className="img-carousel-img-wrapper" onClick={() => setSelectedImg(image)}>
                             <img alt={productType} src={`/imgs/${image}.jpg`} className={renderClassNames(image)}/>
@@ -31,6 +32,13 @@ const ImgCarousel = ({ images, productType }: ImgCarouselProps) => {
                     );
                 })}
             </div>
+        );
+    }
+
+    return (
+        <div className="img-carousel">
+            <img alt={productType} src={`/imgs/${selectedImg}.jpg`} className="img-carousel-img"/>
+            {imgs.length > 1 && renderImgSelector()}
         </div>
     )
 }

@@ -1,0 +1,32 @@
+.show-page-product-grid {
+    display: flex;
+    grid-gap: 3rem;
+    margin: 2rem;
+}
+
+.show-page-heading,
+.show-page-heading-small,
+.show-page-price {
+    font-family: var(--sans-serif);
+}
+
+.show-page-heading {
+    font-size: var(--huge-font);
+}
+
+.show-page-heading-small {
+    font-size: var(--medium-font);
+    font-weight: bold;
+}
+
+.show-page-price {
+    font-size: var(--big-font);
+    font-weight: 300;
+}
+
+.show-page-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 40%;
+}

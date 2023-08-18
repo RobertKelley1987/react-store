@@ -1,34 +1,9 @@
-import { ProductList } from "./types"
+import { Album } from "../types"
 
-export const data: ProductList = [
-    {
-        id: 'rO2qIi',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Agriculture',
-        imgs: ['agriculture_logo-t-shirt'],
-        desc: 'Logo',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100%',
-        price: 24.99,
-        dateAdded: new Date(2023, 5, 10)
-    },
-    {
-        id: 'LyhD7N',
-        featured: true,
-        productType: 'Longsleeve',
-        band: 'Agriculture',
-        imgs: ['agriculture_ecstatic-longsleeve'],
-        desc: 'Ecstatic',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2023, 5, 10)
-    },
+export const albums: Album[] = [
     {
         id: 'cDumka',
+        category: 'music',
         featured: true,
         productType: 'LP',
         band: 'Agriculture',
@@ -67,210 +42,9 @@ export const data: ProductList = [
         ' incomprehensible questions with a poignant beauty that makes its music as much of an artistic statement as it' + 
         ' is a transcendental experience.'
     },
-    {        
-        id: 'FSHjGj',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'Blood Incantation',
-        imgs: ['blood-incantation_tour-t-shirt_front', 'blood-incantation_tour-t-shirt_back'],
-        desc: 'Logo - Tour 2022',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 1, 10)
-    },
-    {        
-        id: 'lDGbL0',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Blood Incantation',
-        imgs: ['blood-incantation_split-t-shirt'],
-        desc: 'Split',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2015, 8, 20)
-    },
-    {        
-        id: 'GHBGBe',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_timewave-zero-t-shirt_front', 
-            'blood-incantation_timewave-zero-t-shirt_back'
-        ],
-        desc: 'Timewave Zero',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2022, 0, 2)
-    },
-    {        
-        id: 'vgI4Be',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_hidden-history-t-shirt_front', 
-            'blood-incantation_hidden-history-t-shirt_back'
-        ],
-        desc: 'Hidden History',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2019, 10, 22)
-    },
-    {        
-        id: 'VZFyH7',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_starspawn-t-shirt_front', 
-            'blood-incantation_starspawn-t-shirt_back'
-        ],
-        desc: 'Starspawn',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2016, 7, 13)
-    },
-    {        
-        id: 'XgtZZD',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_hidden-species-t-shirt_front', 
-            'blood-incantation_hidden-species-t-shirt_back'
-        ],
-        desc: 'Hidden Species',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 3, 7)
-    },
-    {
-        id: 'prhpz5',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_interdimensional-extinction-longsleeve_front', 
-            'blood-incantation_interdimensional-extinction-longsleeve_back'
-        ],
-        desc: 'Interdimensional Extinction',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2015, 9, 30)
-    },
-    {
-        id: 'PGw9Pd',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_timewave-zero-longsleeve_front', 
-            'blood-incantation_timewave-zero-longsleeve_back'
-        ],
-        desc: 'Timewave Zero',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2022, 0, 2)
-    },
-    {
-        id: '8kTlrQ',
-        featured: true,
-        productType: 'Longsleeve',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_timewave-zero-pocket-longsleeve_front', 
-            'blood-incantation_timewave-zero-pocket-longsleeve_back'
-        ],
-        desc: 'Timewave Zero - Pocket',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2023, 1, 10)
-    },
-    {
-        id: 'AjGxjB',
-        featured: true,
-        productType: 'Longsleeve',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_starspawn-pocket-longsleeve_front', 
-            'blood-incantation_starspawn-pocket-longsleeve_back'
-        ],
-        desc: 'Starspawn - Pocket',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2016, 7, 13)
-    },
-    {
-        id: 'MJ186B',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_hidden-history-longsleeve_front', 
-            'blood-incantation_hidden-history-longsleeve_back'
-        ],
-        desc: 'Timewave Zero',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2019, 10, 22)
-    },
-    {
-        id: 'IqZbSP',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_hidden-species-longsleeve_front', 
-            'blood-incantation_hidden-species-longsleeve_back'
-        ],
-        desc: 'Hidden Species',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2023, 3, 7)
-    },
-    {
-        id: '3btUFL',
-        featured: false,
-        productType: 'Hoodie',
-        band: 'Blood Incantation',
-        imgs: [
-            'blood-incantation_hidden-history-hoodie_front', 
-            'blood-incantation_hidden-history-hoodie_back'
-        ],
-        desc: 'Hidden History of the Human Race',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
-        price: 29.99,
-        dateAdded: new Date(2019, 10, 22)
-    },
     {
         id: '5ogDEc',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Blood Incantation',
@@ -286,6 +60,7 @@ export const data: ProductList = [
     },
     {
         id: 'HjS7Es',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Blood Incantation',
@@ -311,6 +86,7 @@ export const data: ProductList = [
     },
     {
         id: 'Mxoypz',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Blood Incantation',
@@ -335,6 +111,7 @@ export const data: ProductList = [
     },
     {
         id: 'AW3lj6',
+        category: 'music',
         featured: true,
         productType: 'LP',
         band: 'Blood Incantation',
@@ -360,124 +137,8 @@ export const data: ProductList = [
         ' luminosity of the Mind´s Eye.'
     },
     {
-        id: 'PXTQCJ',
-        featured: false,
-        productType: 'Hat',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_hat_1', 'chat-pile_hat_2'],
-        desc: 'Logo',
-        color: 'Black',
-        manufacturer: 'Beechfield',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2021, 0, 1),
-    },
-    {        
-        id: 'K3upYf',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_on-deadly-ground-t-shirt_front', 'chat-pile_on-deadly-ground-t-shirt_back'],
-        desc: 'On Deadly Ground',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 2, 1),
-    },
-    {        
-        id: '7v81xM',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_logo-t-shirt'],
-        desc: 'Logo',
-        color: 'Natural',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2021, 2, 3),
-    },
-    {        
-        id: 'jM1fLp',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_grim-guy-smoking-weed-t-shirt'],
-        desc: 'Grim Guy Smoking Weed',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2022, 5, 2),
-    },
-    {        
-        id: 'HUV2SY',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_pamela-t-shirt'],
-        desc: 'Pamela',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2021, 7, 15),
-    },
-    {        
-        id: 'zrj2MJ',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_staircase-t-shirt'],
-        desc: 'Staircase',
-        color: 'Sand Dune',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2021, 1, 10),
-    },
-    {        
-        id: 'WIxfW7',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_samantha-wendel-longsleeve'],
-        desc: 'Samantha Wendel',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2023, 0, 15),
-    },
-    {        
-        id: '0YGiGt',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_mute-neighbor-longsleeve'],
-        desc: 'Mute Neighbor',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2022, 1, 3),
-    },
-    {        
-        id: 'lXfmFS',
-        featured: true,
-        productType: 'Longsleeve',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_alex-eckman-longsleeve'],
-        desc: 'Alex Eckman',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2022, 4, 15),
-    },
-    {
         id: 'lqsdJC',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Chat Pile',
@@ -495,6 +156,7 @@ export const data: ProductList = [
     },
     {
         id: '36ILOG',
+        category: 'music',
         featured: true,
         productType: 'LP',
         band: 'Chat Pile',
@@ -502,32 +164,32 @@ export const data: ProductList = [
         desc: 'God\'s Country',
         price: 21.99,
         dateAdded: new Date(2022, 6, 20),
-        albumDesc: 'There’s a sick irony to how a country that extols rhetoric of individual' + 
+        albumDesc: 'There\'s a sick irony to how a country that extols rhetoric of individual' + 
         ' freedom, in the same gasp, has no problem commodifying human life as if it were meat' + 
         ' to feed the insatiable hunger of capitalism. If this is American nihilism taken to its' + 
-        ' absolute zenith, then God’s Country, the first full length record from Oklahoma City noise' +
+        ' absolute zenith, then God\'s Country, the first full length record from Oklahoma City noise' +
         ' rock quartet Chat Pile is the aural embodiment of such a concept.\n\n' +
 
         'Having lived alongside the heaps of toxic refuse that the band derives its name from, the' + 
         ' fatalism of daily life in the American Midwest permeates throughout the works of Chat Pile,' + 
         ' and especially so on its debut LP. Exasperated by the pandemic, the hopelessness of climate' + 
         ' change, the cattle shoot of global capitalism, and fueled by “...lots and lots and lots and' + 
-        ' lots and lots and lots of THC,” God’s Country is as much of an acknowledgement of the Earth’s' +
+        ' lots and lots and lots of THC,” God\'s Country is as much of an acknowledgement of the Earth\'s' +
         ' most assured demise as it is a snarling violent act of defiance against it. Within its over 40' +
-        ' minute runtime, God’s Country displays both Chat Pile’s most aggressively unhinged and' +
+        ' minute runtime, God\'s Country displays both Chat Pile\'s most aggressively unhinged and' +
         ' contemplatively nuanced moments to date, drawing from its preceding two EPs and its score for' + 
-        ' the 2021 film, Tenkiller. In the band’s own words, the album is, at its heart, “Oklahoma’s' + 
+        ' the 2021 film, Tenkiller. In the band\'s own words, the album is, at its heart, “Oklahoma\'s' + 
         ' specific brand of misery.” A misery intent on taking all down with it and its cacophonous' + 
         ' chaos on its own terms as opposed to idly accepting its otherwise assured fall. This is what' + 
-        ' the end of the world sounds like. God’s Country is out via The Flenser.\n\n' +
+        ' the end of the world sounds like. God\'s Country is out via The Flenser.\n\n' +
 
-        'In just a couple of years, Oklahoma City’s Chat Pile has made nothing short of a profound' + 
+        'In just a couple of years, Oklahoma City\'s Chat Pile has made nothing short of a profound' + 
         ' impression on the underground music discourse. Formed in the spring of 2019 by Raygun Busch' + 
         ' (vocals), Luther Manhole (Guitar), Stin (Bass), and Captain Ron (Drums), the noise-rock quartet' + 
         ' would release two EPs that same year, titled This Dungeon Earth and Remove Your Skin Please' + 
         ' respectively. Spurred on by both a hearty run of live performances and a swiftly growing online' + 
         ' fanbase, Chat Pile became a staple name among its genre contemporaries thanks to its hellish' + 
-        ' synthesis of noise rock, sludge, industrial, and mid 90’s nu-metal. In 2020, the band would sign' + 
+        ' synthesis of noise rock, sludge, industrial, and mid 90\'s nu-metal. In 2020, the band would sign' + 
         ' with San Francisco underground music label, The Flenser, to put out its upcoming full length debut.' + 
         ' That following year, Chat Pile kept its roll going, with accolades including composing the score' + 
         ' for the indie film, Tenkiller, as well as releasing a 7” split with portrayal of guilt in the summer.' + 
@@ -537,6 +199,7 @@ export const data: ProductList = [
     },
     {
         id: '0ZYN2I',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Chat Pile',
@@ -562,59 +225,8 @@ export const data: ProductList = [
         ' set out to do.'
     },
     {
-        id: 'V7SZ5o',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'Deafheaven',
-        imgs: ['deafheaven_sunbather-t-shirt_front', 'deafheaven_sunbather-t-shirt_back'],
-        desc: 'Sunbather',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100%',
-        price: 24.99,
-        dateAdded: new Date(2013, 5, 13)
-    },
-    {
-        id: 'V7SZ5o',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Deafheaven',
-        imgs: ['deafheaven_shellstar-t-shirt_front', 'deafheaven_shellstar-t-shirt_back'],
-        desc: 'Sunbather',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100%',
-        price: 24.99,
-        dateAdded: new Date(2021, 7, 20)
-    },
-    {
-        id: 'YRmZq2',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Deafheaven',
-        imgs: ['deafheaven_sleeper-t-shirt'],
-        desc: 'Sleeper',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2015, 9, 3),
-    },
-    {
-        id: 'pBjMac',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Deafheaven',
-        imgs: ['deafheaven_sunflower-t-shirt_front', 'deafheaven_sunflower-t-shirt_back'],
-        desc: 'Sunflower',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2018, 7, 23)
-    },
-    {
         id: '1cdrzY',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Deafheaven',
@@ -626,6 +238,7 @@ export const data: ProductList = [
     },
     {
         id: 'D7I9zB',
+        category: 'music',
         featured: true,
         productType: '2XLP',
         band: 'Deafheaven',
@@ -656,6 +269,7 @@ export const data: ProductList = [
     },
     {
         id: 'i8ZG0P',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'Deafheaven',
@@ -667,6 +281,7 @@ export const data: ProductList = [
     },
     {
         id: 'u31s5N',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'Deafheaven',
@@ -697,112 +312,8 @@ export const data: ProductList = [
         ' goosebump-inducing album to date.'
     },
     {
-        id: 'dswJJF',
-        featured: false,
-        productType: 'Hat',
-        band: 'Nails',
-        imgs: ['nails_hat_1', 'nails_hat_2'],
-        desc: 'Logo',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2012, 4, 20)
-    },
-    {
-        id: 'ZlOcH8',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Nails',
-        imgs: ['nails_unsilent-death-t-shirt'],
-        desc: 'Unsilent Death',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2010, 2, 1)
-    },
-    {
-        id: 'AKFLVT',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Nails',
-        imgs: ['nails_destroy-all-who-oppose-t-shirt'],
-        desc: 'Destroy All Who Oppose',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2012, 4, 20)
-    },
-    {
-        id: 'izaYdb',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Nails',
-        imgs: ['nails_scapegoat-t-shirt'],
-        desc: 'Scapegoat',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2013, 4, 20)
-
-    },
-    {
-        id: '6wekQY',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Nails',
-        imgs: ['nails_hatred-ad-infinitum-t-shirt'],
-        desc: 'Hatred Ad Infinitum',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2013, 7, 30)
-    },
-    {
-        id: 'gdXf2X',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Nails',
-        imgs: ['nails_unsilent-death-longsleeve_front', 'nails_unsilent-death-longsleeve_back'],
-        desc: 'Unsilent Death',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
-        price: 34.99,
-        dateAdded: new Date(2010, 2, 15)
-    },
-    {
-        id: 'YNMqzg',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Nails',
-        imgs: ['nails_born-to-follow-longsleeve_front', 'nails_born-to-follow-longsleeve_back'],
-        desc: 'Brn To Follow',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
-        price: 34.99,
-        dateAdded: new Date(2010, 2, 15)
-    },
-    {
-        id: 'SlB3zV',
-        featured: false,
-        productType: 'Hoodie',
-        band: 'Nails',
-        imgs: ['nails_unsilent-death-hoodie_front', 'nails_unsilent-death-hoodie_back'],
-        desc: 'Unsilent Death',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
-        price: 29.99,
-        dateAdded: new Date(2010, 2, 15)
-    },
-    {
         id: 'XhWCKY',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Nails',
@@ -819,6 +330,7 @@ export const data: ProductList = [
     },
     {
         id: 'zoHGIC',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Nails',
@@ -837,123 +349,8 @@ export const data: ProductList = [
         ' the howling war cry of ABANDON ALL LIFE shows NAILS as a band without equal in their class.'
     },
     {
-        id: 'GS3JLk',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Bell Witch',
-        imgs: ['bell-witch_impious-t-shirt'],
-        desc: 'Impious',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2017, 10, 30)
-    },
-    {
-        id: 'abnMGh',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'Bell Witch',
-        imgs: ['bell-witch_hollow-specter-t-shirt'],
-        desc: 'Hollow Specter',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 2, 15)
-    },
-    {
-        id: 'HUr2a3',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Bell Witch',
-        imgs: ['bell-witch_phantom-forest-t-shirt'],
-        desc: 'Phantom Forest',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2020, 10, 4)
-    },
-    {
-        id: '1HbKq5',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Bell Witch',
-        imgs: ['bell-witch_clandestine-gate-t-shirt'],
-        desc: 'Clandestine Gate',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 2, 15)
-    },
-    {
-        id: '',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Bell Witch',
-        imgs: [
-            'bell-witch_mirror-reaper-t-shirt_front',
-            'bell-witch_mirror-reaper-t-shirt_back'
-        ],
-        desc: 'Mirror Reaper',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2017, 11, 30)
-    },
-    {
-        id: 'nYMwxu',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Bell Witch',
-        imgs: [
-            'bell-witch_mirror-reaper-longsleeve_front',
-            'bell-witch_mirror-reaper-longsleeve_back'
-        ],
-        desc: 'Mirror Reaper',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2017, 11, 30)
-    },
-    {
-        id: 'AwtdXg',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Bell Witch',
-        imgs: [
-            'bell-witch_spire-of-skeletons-longsleeve_front',
-            'bell-witch_spire-of-skeletons-longsleeve_back'
-        ],
-        desc: 'Spire Of Skeletons',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2017, 1, 13)
-    },
-    {
-        id: 'Ph362A',
-        featured: true,
-        productType: 'Longsleeve',
-        band: 'Bell Witch',
-        imgs: [
-            'bell-witch_mirror-reaper-anniversary-longsleeve_front',
-            'bell-witch_mirror-reaper-anniversary-longsleeve_front'
-        ],
-        desc: 'Mirror Reaper - Fifth Anniversary',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2023, 2, 15)
-    },
-    {
         id: '2CB33S',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'Bell Witch',
@@ -969,6 +366,7 @@ export const data: ProductList = [
     },
     {
         id: 'B92jdL',
+        category: 'music',
         featured: true,
         productType: '2XLP',
         band: 'Bell Witch',
@@ -999,6 +397,7 @@ export const data: ProductList = [
     },
     {
         id: '3Z7rK1',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'Bell Witch',
@@ -1019,88 +418,8 @@ export const data: ProductList = [
         ' something of night."'
     },
     {
-        id: 'rmHwNn',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'The Body',
-        imgs: [
-            'the-body_enemy-t-shirt_front',
-            'the-body_enemy-t-shirt_back'
-        ],
-        desc: 'Enemy',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2020, 10, 30)
-    },
-    {
-        id: 'cFmdSu',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'The Body',
-        imgs: ['the-body_the-hour-of-loneliness-t-shirt'],
-        desc: 'Hour Of Loneliness',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 3, 30)
-    },
-    {
-        id: 'vtxVI3',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'The Body',
-        imgs: ['the-body_new-heaven-t-shirt'],
-        desc: 'New Heaven',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2022, 4, 30)
-    },
-    {
-        id: 'XYHbrL',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'The Body',
-        imgs: ['the-body_cloth-cross-t-shirt'],
-        desc: 'Cloth Cross',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2019, 9, 30)
-    },
-    {
-        id: 'blacVK',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'The Body',
-        imgs: ['the-body_demon-t-shirt'],
-        desc: 'Demon',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2019, 9, 30)
-    },
-    {
-        id: '5Ll43Z',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'The Body',
-        imgs: ['the-body_enough-labor-longsleeve'],
-        desc: 'Enough Labor',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 34.99,
-        dateAdded: new Date(2018, 6, 25)
-    },
-    {
         id: 'BRZVUr',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'The Body',
@@ -1145,6 +464,7 @@ export const data: ProductList = [
     },
     {
         id: 'iStjS9',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'The Body',
@@ -1195,6 +515,7 @@ export const data: ProductList = [
     },
     {
         id: 'BwBQaU',
+        category: 'music',
         featured: true,
         productType: '2XLP',
         band: 'The Body',
@@ -1215,6 +536,7 @@ export const data: ProductList = [
     },
     {
         id: 'KSgOgW',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'The Body',
@@ -1240,6 +562,7 @@ export const data: ProductList = [
     },
     {
         id: 'z7sN2E',
+        category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'The Body',
@@ -1263,20 +586,8 @@ export const data: ProductList = [
         ' respect.'
     },
     {
-        id: 'lsMpx1',
-        featured: true,
-        productType: 'T-Shirt',
-        band: 'Ragana',
-        imgs: ['ragana_logo-t-shirt'],
-        desc: 'Logo',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2023, 5, 30)
-    },
-    {
         id: '9bBlq8',
+        category: 'music',
         featured: true,
         productType: 'LP',
         band: 'Ragana',
@@ -1333,6 +644,7 @@ export const data: ProductList = [
     },
     {
         id: 'BCzhAX',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Ragana',
@@ -1347,6 +659,7 @@ export const data: ProductList = [
     },
     {
         id: '3Vfep3',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Ragana',
@@ -1360,46 +673,8 @@ export const data: ProductList = [
         '"Wash Away" was originally Released by An Out Recordings in 2015.'
     },
     {
-        id: 'D1Lkgf',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Knoll',
-        imgs: ['knoll_marred-longsleeve'],
-        desc: 'Marred',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2022, 5, 30)
-    },
-    {
-        id: '6AnO4D',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Knoll',
-        imgs: ['knoll_dolly-t-shirt'],
-        desc: 'Dolly',
-        color: 'Natural',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2022, 5, 30)
-    },
-    {
-        id: 'QNPgZr',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Knoll',
-        imgs: ['knoll_ligature-t-shirt_front', 'knoll_ligature-t-shirt_back'],
-        desc: 'Ligature',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2022, 5, 30)
-    },
-    {
         id: '2HTHXw',
+        category: 'music',
         featured: true,
         productType: 'LP',
         band: 'Knoll',
@@ -1410,72 +685,8 @@ export const data: ProductList = [
         albumDesc: ''
     },
     {
-        id: 'KDKXL3',
-        featured: false,
-        productType: 'Hoodie',
-        band: 'Cloud Rat',
-        imgs: ['cloud-rat_harpy-hoodie_front', 'cloud-rat_harpy-hoodie_back'],
-        desc: 'Harpy',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
-        price: 39.99,
-        dateAdded: new Date(2020, 9, 30)
-    },
-    {
-        id: '6TrF5x',
-        featured: false,
-        productType: 'Longsleeve',
-        band: 'Cloud Rat',
-        imgs: ['cloud-rat_biome-longsleeve_front', 'cloud-rat_biome-longsleeve_back'],
-        desc: 'Biome',
-        color: 'Red',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2020, 9, 30)
-    },
-    {
-        id: 'QHqMuM',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Cloud Rat',
-        imgs: ['cloud-rat_heartbreak-t-shirt_front', 'cloud-rat_heartbreak-t-shirt_back'],
-        desc: 'Heartbreak',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2020, 9, 30)
-    },
-    {
-        id: 'ujsTdl',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Cloud Rat',
-        imgs: ['cloud-rat_youre-safe-now-t-shirt_front', 'cloud-rat_youre-safe-now-t-shirt_back'],
-        desc: 'You\'re Safe Now',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 24.99,
-        dateAdded: new Date(2020, 9, 30)
-    },
-        {
-        id: 'pFESkH',
-        featured: false,
-        productType: 'T-Shirt',
-        band: 'Cloud Rat',
-        imgs: ['cloud-rat_deer-splatter-t-shirt_front'],
-        desc: 'Deer Splatter',
-        color: 'White',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 19.99,
-        dateAdded: new Date(2020, 9, 30)
-    },
-    {
         id: '5cRfn5',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Cloud Rat',
@@ -1490,6 +701,7 @@ export const data: ProductList = [
     },
     {
         id: 'xuvVIk',
+        category: 'music',
         featured: false,
         productType: 'LP',
         band: 'Cloud Rat',
@@ -1504,6 +716,7 @@ export const data: ProductList = [
     },
     {
         id: 'fOzvh5',
+        category: 'music',
         featured: true,
         productType: 'LP',
         band: 'Cloud Rat',
@@ -1518,9 +731,3 @@ export const data: ProductList = [
         ' best work so far."'
     },
 ];
-
-const APPAREL_TYPES = ['T-Shirt', 'Longsleeve', 'Hoodie', 'Hat'];
-const MUSIC_TYPES = ['LP', '2XLP'];
-
-export const apparel = data.filter(item => APPAREL_TYPES.includes(item.productType));
-export const music = data.filter(item => MUSIC_TYPES.includes(item.productType));

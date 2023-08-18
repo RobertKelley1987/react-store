@@ -10,7 +10,8 @@
   --sans-serif: 'Open Sans', sans-serif;
 
   /* FONT SIZES*/
-  --huge-font: 3rem;
+  --huge-font: 2.5rem;
+  --big-font: 1.75rem;
   --medium-font: 1rem;
 }
 
@@ -29,10 +30,49 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* UTILITY CLASSES */
-.page-title {
-  font-size: var(--huge-font);
-  font-family: var(--display-font);
-  margin: 3rem;
-  text-align: left;
+.container {
+  max-width: 1000px;
+}
+
+.button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  font-family: var(--sans-serif);
+  font-size: var(--medium-font);
+  font-weight: 400;
+  padding: .5rem;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.button-black {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.button-black:hover,
+.button-black-selected {
+  background: var(--black);
+  color: white;
+}
+
+.heading-small {
+  font-family:var(--sans-serif);
+  font-size: var(--medium-font);
+  font-weight: bold;
 }

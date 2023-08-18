@@ -1,0 +1,5 @@
+.error-message {
+    background-color: rgb(255, 177, 177);
+    color: red;
+    padding: 1rem;
+}

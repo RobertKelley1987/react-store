@@ -1,0 +1,15 @@
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.size-button:hover {
+    cursor: pointer;
+}
+
+.sizes-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
