@@ -1,0 +1,16 @@
+.menu-button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-button:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 700px) {
+    .menu-button {
+        display: none
+    }
+}

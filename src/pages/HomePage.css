@@ -2,14 +2,6 @@
     width: 100%;
 }
 
-.home-page-grid {
-    display: grid;
-    grid-gap: 4rem;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    margin: 4rem auto;
-    padding: 0 2rem;
-}
-
 .home-page-banner {
     display: flex;
     justify-content: center;
@@ -32,3 +24,11 @@
 .home-page-banner-img {
     width: 250px;
 }
+
+.home-page-grid {
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }

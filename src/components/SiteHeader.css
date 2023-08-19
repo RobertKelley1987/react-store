@@ -1,5 +1,6 @@
 .site-header {
     border-bottom: 1px solid var(--black);
+    position: relative;
     width: 100%;
 }
 
@@ -21,7 +22,9 @@
 }
 
 .site-header-main {
+    align-items: center;
     display: flex;
+    height: 55px;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 1rem;
 }

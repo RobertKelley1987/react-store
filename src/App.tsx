@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import CartPage from './pages/CartPage';
 import AlbumShowPage from './pages/ShowPage/AlbumShowPage';
 import ApparelShowPage from './pages/ShowPage/ApparelShowPage';
+import NewMusicPage from './pages/NewMusicPage';
 import ErrorMessage from './components/ErrorMessage';
 import { ErrorMessageContext } from './context/ErrorMessageContext';
 import './App.css';
@@ -27,6 +28,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/cart' element={<CartPage />} />
+          <Route path='/music/new' element={<NewMusicPage />} />
           <Route path='/music/:albumId' element={<AlbumShowPage dispatch={albumDispatch}/>} />
           <Route path='/apparel/:apparelId' element={<ApparelShowPage dispatch={apparelDispatch}/>} />
         </Routes>

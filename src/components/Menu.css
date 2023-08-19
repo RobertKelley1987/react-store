@@ -1,0 +1,36 @@
+.menu {
+    font-family: var(--sans-serif);
+    padding: 1rem;
+}
+
+.menu-heading {
+    font-size: var(--medium-font);
+}
+
+.menu-heading-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.menu-heading-wrapper:hover {
+    cursor: pointer;
+}
+
+.menu-chevron-button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media(min-width: 700px) {
+    .menu-dropdown {
+        background-color: white;
+        left: 0;
+        position: absolute;
+        top: 55px;
+        width: 100%;
+    }
+}

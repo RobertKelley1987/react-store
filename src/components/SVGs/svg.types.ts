@@ -1,3 +1,3 @@
-export type svgProps = {
+export type SVGProps = {
     className: string
 }

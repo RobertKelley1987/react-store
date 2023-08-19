@@ -76,3 +76,7 @@ ul {
   font-size: var(--medium-font);
   font-weight: bold;
 }
+
+.flipped {
+  transform: rotate(180deg);
+}
