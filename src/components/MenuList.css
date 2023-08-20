@@ -1,0 +1,35 @@
+.menu-list {
+    padding: 0 0 0 1rem;
+}
+
+.menu-list-heading-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.menu-list-heading-wrapper:hover {
+    cursor: pointer;
+}
+
+.menu-list-item {
+    font-size: var(--medium-font);
+    font-weight: bold;
+    padding: .5rem 0;
+}
+
+@media(min-width: 700px) {
+    .menu-list {
+        padding: 0;
+    }
+    
+    .menu-list-wrapper {
+        padding: 1rem;
+    }
+
+    .menu-list-heading-wrapper {
+        border-bottom: 1px solid var(--black);
+        margin: 0 0 .5rem 0;
+    }
+}

@@ -13,7 +13,7 @@ const SiteHeader = () => {
             <div className="site-header-main">
                 <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
                 <Link to="/" className="site-header-logo">Eternal Bliss</Link>
-                <Menu setMenuOpen={setMenuOpen} />
+                <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
                 <ShoppingBag className="site-header-svg" />
             </div>
         </header>

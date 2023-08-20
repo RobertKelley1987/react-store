@@ -1,56 +1,66 @@
-import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { assertIsNode } from '../utils';
-import MenuList from './MenuList';
+import { useEffect, useRef, useState } from 'react';
+import { assertIsNode, classNames } from '../utils';
+import Categories from './Categories';
+import Artists from './Artists';
 import './Menu.css';
 
 type MenuProps = {
+    menuOpen: boolean,
     setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Menu = ({ setMenuOpen }: MenuProps) => {
+const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
+    const [categoriesOpen, setCategoriesOpen] = useState(false);
+    const [artistsOpen, setArtistsOpen] = useState(false);
     const menu = useRef<HTMLDivElement>(null);
+
+    const closeAllMenus = () => {
+        setMenuOpen(false);
+        setCategoriesOpen(false);
+        setArtistsOpen(false);
+    }
 
     useEffect(() => {
         function closeMenu(e: MouseEvent) {
             assertIsNode(e.target);
             if(menu.current?.contains(e.target)) return;
             setMenuOpen(false);
+            setCategoriesOpen(false);
+            setArtistsOpen(false);
         }
 
         document.body.addEventListener('mousedown', closeMenu);
         return () => document.body.removeEventListener('mousedown', closeMenu);
     }, [setMenuOpen]);
 
+    useEffect(() => {
+        const closeMenu = () => {
+            setMenuOpen(false);
+            setCategoriesOpen(false);
+            setArtistsOpen(false);
+        }
+        const mediaQuery = window.matchMedia('(min-width: 700px)');
+        mediaQuery.addEventListener('change', closeMenu);
+    
+        return () => mediaQuery.removeEventListener('change', closeMenu);
+      }, [setMenuOpen]);
+
     return (
-        <div ref={menu} className="menu">
+        <div ref={menu} className={classNames(!menuOpen, 'menu', 'menu-hidden')}>
             <nav>
-                <ul>
-                    <MenuList heading="Categories" className="menu-dropdown">       
-                        <MenuList heading="Apparel">
-                            <li>
-                                <Link onClick={() => setMenuOpen(false)} to="/apparel/new">New</Link>
-                            </li>
-                            <li>
-                                <Link onClick={() => setMenuOpen(false)} to="/apparel/t-shirts">T-Shirts</Link>
-                            </li>
-                            <li>
-                                <Link onClick={() => setMenuOpen(false)} to="/apparel/longsleeves">Longsleeves</Link>
-                            </li>
-                            <li>
-                                <Link onClick={() => setMenuOpen(false)} to="/apparel/hoodies">Hoodies</Link>
-                            </li>
-                        </MenuList>
-                    
-                        <MenuList heading="Music">  
-                            <li>
-                                <Link onClick={() => setMenuOpen(false)} to="/music/new">New</Link>
-                            </li>
-                            <li>
-                                <Link onClick={() => setMenuOpen(false)} to="/music/vinyl">Vinyl</Link>
-                            </li>
-                        </MenuList>
-                    </MenuList>
+                <ul className="menu-nav">
+                    <Categories 
+                        categoriesOpen={categoriesOpen} 
+                        setArtistsOpen={setArtistsOpen} 
+                        setCategoriesOpen={setCategoriesOpen}
+                        closeAllMenus={closeAllMenus}
+                    />
+                    <Artists 
+                        artistsOpen={artistsOpen} 
+                        setArtistsOpen={setArtistsOpen} 
+                        setCategoriesOpen={setCategoriesOpen}
+                        closeAllMenus={closeAllMenus}
+                    />
                 </ul>    
             </nav>
         </div>

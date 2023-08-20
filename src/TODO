@@ -1,0 +1,2 @@
+- MenuList and Menu use similar click outside element function. Try to refactor into a custom hook.
+- Band names should be sorted from data, not hardcoded in Artists element used in Menu

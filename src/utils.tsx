@@ -24,3 +24,9 @@ export function assertIsNode(target: EventTarget | null): asserts target is Node
         throw new Error("Element clicked is not a react node");
     }
 }
+
+// Add conditional utility class names to existing list, 
+// ex: add "menu-hidden" to "menu" to get "menu menu-hidden"
+export const classNames = (test: boolean, className: string, addedClassName: string) => {
+    return test ? `${className} ${addedClassName}` : className;
+}

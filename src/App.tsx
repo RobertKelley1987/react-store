@@ -10,6 +10,7 @@ import ApparelShowPage from './pages/ShowPage/ApparelShowPage';
 import NewMusicPage from './pages/NewMusicPage';
 import ErrorMessage from './components/ErrorMessage';
 import { ErrorMessageContext } from './context/ErrorMessageContext';
+import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
 import './App.css';
 
 const App = () => {
@@ -23,7 +24,9 @@ const App = () => {
   return (
     <div className="app">
       <ErrorMessageContext.Provider value={{ errorMessage, setErrorMessage }}>
-        <SiteHeader />
+        <ScreenIsBigContextProvider>
+          <SiteHeader />
+        </ScreenIsBigContextProvider>        
         <ErrorMessage errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
         <Routes>
           <Route path='/' element={<HomePage />} />

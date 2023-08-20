@@ -1,24 +1,45 @@
-import { Fragment, useState } from 'react';
-import Chevron from "./SVGs/Chevron";
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ScreenIsBigContext } from '../context/ScreenIsBigContext';
+import './MenuList.css';
 
 type MenuListProps = {
-    heading: string,
-    className?: string,
-    children: React.ReactNode
+    category: string,
+    pathSlug?: string,
+    pages: string[],
+    closeMenu: () => void,
 }
 
-const MenuList = ({ heading, className, children }: MenuListProps) => {
+const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
     const [sectionOpen, setSectionOpen] = useState(false);
+    const screenIsBigContext = useContext(ScreenIsBigContext)
+
+    const categorySlug = pathSlug || category.toLowerCase().replaceAll(' ', '-');
+
+    const renderList = () => {
+        return (screenIsBigContext?.screenIsBig || sectionOpen) && (
+            <ul className="menu-list">
+                {pages.map(page => {
+                    const pageSlug = page.toLowerCase().replaceAll(' ', '-');
+                    
+                    return (
+                        <li key={page} className="menu-list-item">
+                            <Link onClick={closeMenu} to={`/${categorySlug}/${pageSlug}`}>{page}</Link>
+                        </li>
+                    )
+                })}
+            </ul>
+        );
+    }
 
     return ( 
-        <Fragment>              
-            <li className="menu-heading-wrapper" onClick={() => setSectionOpen(prev => !prev)}>
-                <h1 className="menu-heading">{heading}</h1>
-                <Chevron className="site-header-svg" flipped={sectionOpen}/>
+        <div className="menu-list-wrapper">              
+            <li className="menu-list-heading-wrapper" onClick={() => setSectionOpen(prev => !prev)}>
+                <h1 className="menu-heading">{category}</h1>
+                <span className="material-symbols-outlined menu-chevron">expand_more</span>
             </li>
-
-            {sectionOpen && <ul className={className}>{children}</ul>}
-        </Fragment>
+            {renderList()}
+        </div>
     );
 }
 
