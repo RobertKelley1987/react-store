@@ -1,4 +1,5 @@
-import { Apparel } from "../types"
+import { Apparel } from '../types';
+import { paginate, sortByBandName, sortByDateAdded } from '../utils';
 
 export const apparel: Apparel[] = [
     {
@@ -244,20 +245,6 @@ export const apparel: Apparel[] = [
         price: 29.99,
         dateAdded: new Date(2019, 10, 22)
     },
-    {
-        id: 'PXTQCJ',
-        category: 'apparel',
-        featured: false,
-        productType: 'Hat',
-        band: 'Chat Pile',
-        imgs: ['chat-pile_hat_1', 'chat-pile_hat_2'],
-        desc: 'Logo',
-        color: 'Black',
-        manufacturer: 'Beechfield',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2021, 0, 1),
-    },
     {        
         id: 'K3upYf',
         category: 'apparel',
@@ -371,7 +358,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 4, 15),
     },
     {
-        id: 'V7SZ5o',
+        id: 'V7SZ54',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
@@ -390,8 +377,8 @@ export const apparel: Apparel[] = [
         featured: false,
         productType: 'T-Shirt',
         band: 'Deafheaven',
-        imgs: ['deafheaven_shellstar-t-shirt_front', 'deafheaven_shellstar-t-shirt_back'],
-        desc: 'Sunbather',
+        imgs: ['deafheaven_shellstar-t-shirt'],
+        desc: 'Shellstar',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100%',
@@ -425,20 +412,6 @@ export const apparel: Apparel[] = [
         material: '100% Cotton',
         price: 24.99,
         dateAdded: new Date(2018, 7, 23)
-    },
-    {
-        id: 'dswJJF',
-        category: 'apparel',
-        featured: false,
-        productType: 'Hat',
-        band: 'Nails',
-        imgs: ['nails_hat_1', 'nails_hat_2'],
-        desc: 'Logo',
-        color: 'Black',
-        manufacturer: 'Gildan',
-        material: '100% Cotton',
-        price: 29.99,
-        dateAdded: new Date(2012, 4, 20)
     },
     {
         id: 'ZlOcH8',
@@ -868,7 +841,7 @@ export const apparel: Apparel[] = [
         featured: false,
         productType: 'T-Shirt',
         band: 'Cloud Rat',
-        imgs: ['cloud-rat_deer-splatter-t-shirt_front'],
+        imgs: ['cloud-rat_deer-splatter-t-shirt'],
         desc: 'Deer Splatter',
         color: 'White',
         manufacturer: 'Gildan',
@@ -877,3 +850,18 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     }
 ];
+
+// All apparel sorted new to old
+const newApparel = apparel.sort(sortByDateAdded);
+export const newApparelPages = paginate(newApparel);
+
+// All t-shirts sorted by band name
+const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(sortByBandName);
+export const tShirtPages = paginate(tShirts);
+// All longsleeves sorted by band name
+export const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(sortByBandName);
+export const longsleevePages = paginate(longsleeves);
+// All hoodies sorted by band name
+export const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(sortByBandName);
+export const hoodiePages = paginate(hoodies);
+

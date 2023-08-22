@@ -1,4 +1,5 @@
 import { Product } from './types';
+import { ITEMS_PER_PAGE } from './constants';
 
 // Sort from newest to oldest items
 export const sortByDateAdded = (item: Product, nextItem: Product) => {
@@ -30,3 +31,27 @@ export function assertIsNode(target: EventTarget | null): asserts target is Node
 export const classNames = (test: boolean, className: string, addedClassName: string) => {
     return test ? `${className} ${addedClassName}` : className;
 }
+
+// Function to convert an array of data into an array of smaller arrays of pages
+export function paginate<T>(items: T[]): T[][] {
+    const pages = [];
+    let page = [];
+    for(let i = 0; i < items.length; i++) {
+        // Add item to page
+        page.push(items[i]);
+        // Test if page has 24 items
+        if(page.length === ITEMS_PER_PAGE) {
+            // Add page to pages arr and reset page var
+            pages.push(page);
+            page = [];
+        // Test for final page and add final page
+        } else if(i === items.length - 1) {
+            pages.push(page);
+        }
+    }
+
+    return pages;
+}
+
+// Function to convert a string into an http-friendly format for string comparisons
+export const httpFormat = (text: string) => text.replaceAll(' ', '-').toLowerCase();

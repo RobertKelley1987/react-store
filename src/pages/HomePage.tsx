@@ -25,8 +25,8 @@ const HomePage = () => {
                         className="home-page-banner-img"
                     />
                     <div className="home-page-banner-links">
-                        <Link className="button" to="/collections/chat-pile">Official Store</Link>
-                        <Link className="button" to="/collections/chat-pile">New Record</Link>
+                        <Link className="button" to="/artists/chat-pile">Official Store</Link>
+                        <Link className="button" to="/music/36ILOG">New Record</Link>
                     </div>
                 </div>
             </div>

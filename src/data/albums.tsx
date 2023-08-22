@@ -1,4 +1,5 @@
-import { Album } from "../types"
+import { Album } from '../types';
+import { paginate, sortByDateAdded } from '../utils';
 
 export const albums: Album[] = [
     {
@@ -423,7 +424,7 @@ export const albums: Album[] = [
         featured: false,
         productType: 'LP',
         band: 'The Body',
-        imgs: ['the-body_christs-redeemers'],
+        imgs: ['the-body_christs-redeemers-lp'],
         desc: 'Christs, Redeemers',
         price: 27.99,
         dateAdded: new Date(2013, 9, 15),
@@ -731,3 +732,6 @@ export const albums: Album[] = [
         ' best work so far."'
     },
 ];
+
+const sortedAlbums = albums.sort(sortByDateAdded);
+export const newAlbumPages = paginate(sortedAlbums);

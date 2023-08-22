@@ -12,7 +12,7 @@ const SiteHeader = () => {
         <header className="site-header">
             <div className="site-header-main">
                 <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-                <Link to="/" className="site-header-logo">Eternal Bliss</Link>
+                <Link to="/" className="site-header-logo">Infinite Bliss</Link>
                 <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
                 <ShoppingBag className="site-header-svg" />
             </div>

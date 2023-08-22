@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useContext, useRef, useState } from 'react';
+import { ScreenIsBigContext } from '../context/ScreenIsBigContext';
 import { assertIsNode, classNames } from '../utils';
-import Categories from './Categories';
-import Artists from './Artists';
+import DropdownList from './DropdownList';
+import { BANDS, CATEGORIES } from '../constants';
 import './Menu.css';
 
 type MenuProps = {
@@ -12,18 +13,17 @@ type MenuProps = {
 const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
     const [categoriesOpen, setCategoriesOpen] = useState(false);
     const [artistsOpen, setArtistsOpen] = useState(false);
-    const menu = useRef<HTMLDivElement>(null);
+    const screenIsBigContext = useContext(ScreenIsBigContext);
+    const screenIsBig = screenIsBigContext?.screenIsBig;
 
-    const closeAllMenus = () => {
-        setMenuOpen(false);
-        setCategoriesOpen(false);
-        setArtistsOpen(false);
-    }
+    const menu = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         function closeMenu(e: MouseEvent) {
             assertIsNode(e.target);
+
             if(menu.current?.contains(e.target)) return;
+
             setMenuOpen(false);
             setCategoriesOpen(false);
             setArtistsOpen(false);
@@ -34,32 +34,32 @@ const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
     }, [setMenuOpen]);
 
     useEffect(() => {
-        const closeMenu = () => {
-            setMenuOpen(false);
-            setCategoriesOpen(false);
-            setArtistsOpen(false);
-        }
-        const mediaQuery = window.matchMedia('(min-width: 700px)');
-        mediaQuery.addEventListener('change', closeMenu);
-    
-        return () => mediaQuery.removeEventListener('change', closeMenu);
-      }, [setMenuOpen]);
+        setMenuOpen(false);
+        setCategoriesOpen(false);
+        setArtistsOpen(false);
+      }, [screenIsBig, setMenuOpen]);
 
     return (
         <div ref={menu} className={classNames(!menuOpen, 'menu', 'menu-hidden')}>
             <nav>
                 <ul className="menu-nav">
-                    <Categories 
-                        categoriesOpen={categoriesOpen} 
-                        setArtistsOpen={setArtistsOpen} 
-                        setCategoriesOpen={setCategoriesOpen}
-                        closeAllMenus={closeAllMenus}
+                    <DropdownList 
+                        thisIsOpen={categoriesOpen} 
+                        pathSlug=''
+                        pageLists={CATEGORIES}
+                        heading="Categories"
+                        setOtherListsOpen={setArtistsOpen} 
+                        setThisListOpen={setCategoriesOpen}
+                        setMenuOpen={setMenuOpen}
                     />
-                    <Artists 
-                        artistsOpen={artistsOpen} 
-                        setArtistsOpen={setArtistsOpen} 
-                        setCategoriesOpen={setCategoriesOpen}
-                        closeAllMenus={closeAllMenus}
+                    <DropdownList 
+                        thisIsOpen={artistsOpen} 
+                        pathSlug='artists'
+                        pageLists={BANDS}
+                        heading="Artists"
+                        setOtherListsOpen={setCategoriesOpen} 
+                        setThisListOpen={setArtistsOpen}
+                        setMenuOpen={setMenuOpen}
                     />
                 </ul>    
             </nav>
