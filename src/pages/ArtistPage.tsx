@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'; 
 import { albums } from '../data/albums';
 import { apparel } from '../data/apparel';
+import { accessories } from '../data/accessories';
 import { paginate, httpFormat } from '../utils';
 import ListPage from "./ListPage";
 import { ALL_BANDS } from '../constants';
@@ -14,7 +15,8 @@ const ArtistPage = () => {
     // Filter all store data by band name from name in request parameter
     const bandAlbums = albums.filter(album => httpFormat(album.band) === name?.toLowerCase());
     const bandApparel = apparel.filter(item => httpFormat(item.band) === name?.toLowerCase());
-    const bandPages = paginate([...bandAlbums, ...bandApparel]);
+    const bandAccessories = accessories.filter(item => httpFormat(item.band) === name?.toLowerCase());
+    const bandPages = paginate([...bandAlbums, ...bandApparel, ...bandAccessories]);
 
     // Find band name in original format to print on page
     const bandIndex = allBands.findIndex(band => band === name?.toLowerCase());

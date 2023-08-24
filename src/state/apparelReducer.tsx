@@ -1,6 +1,6 @@
 import { ApparelCartItem, ApparelCartAction } from '../types';
   
-const apparelRreducer = (state: ApparelCartItem[], action: ApparelCartAction) => {
+const apparelReducer = (state: ApparelCartItem[], action: ApparelCartAction) => {
     const { type, payload } = action;
 
     const apparelEquals = (apparel: ApparelCartItem, anotherApparel: ApparelCartItem) => {
@@ -14,8 +14,6 @@ const apparelRreducer = (state: ApparelCartItem[], action: ApparelCartAction) =>
                 return [...state, payload];
             } else {
                 state[foundItemIndex].qty += payload.qty;
-                console.log("qty before: " + state[foundItemIndex].qty);
-                console.log("qty after: " + payload.qty);
                 return state;
             }
         default:
@@ -23,4 +21,4 @@ const apparelRreducer = (state: ApparelCartItem[], action: ApparelCartAction) =>
     }
 }
 
-export default apparelRreducer;
+export default apparelReducer;

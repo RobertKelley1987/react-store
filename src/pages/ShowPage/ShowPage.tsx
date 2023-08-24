@@ -8,10 +8,11 @@ type ShowPageProps = {
     product: Album | Apparel,
     qty: number,
     setQty: React.Dispatch<React.SetStateAction<number>>,
+    desc?: string,
     children?: React.ReactNode
 }
 
-const ShowPage = ({ product, qty, setQty, handleClick, children }: ShowPageProps) => {
+const ShowPage = ({ product, qty, setQty, handleClick, desc, children }: ShowPageProps) => {
     return (
         <div className="show-page-product-grid container">
             <ImgCarousel product={product} />
@@ -21,6 +22,7 @@ const ShowPage = ({ product, qty, setQty, handleClick, children }: ShowPageProps
                 <Qty qty={qty} setQty={setQty} />
                 {children}
                 <button onClick={handleClick} className="button button-black">ADD TO CART</button>
+                {desc && <p>{desc}</p>}
             </div>
         </div>
     )

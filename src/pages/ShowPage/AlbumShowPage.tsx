@@ -26,7 +26,7 @@ const AlbumShowPage = ({ dispatch }: AlbumShowPageProps) => {
         dispatch({ type: 'ADD_ALBUM', payload: newItem });
     }
 
-    return <ShowPage handleClick={handleClick} product={product} qty={qty} setQty={setQty} />
+    return <ShowPage handleClick={handleClick} product={product} qty={qty} setQty={setQty} desc={product.albumDesc}/>
 }
 
 export default AlbumShowPage;

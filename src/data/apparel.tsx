@@ -3,7 +3,7 @@ import { paginate, sortByBandName, sortByDateAdded } from '../utils';
 
 export const apparel: Apparel[] = [
     {
-        id: 'rO2qIi',
+        id: 'agriculture_logo-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -17,7 +17,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 5, 10)
     },
     {
-        id: 'LyhD7N',
+        id: 'agriculture_ecstatic-longsleeve',
         category: 'apparel',
         featured: true,
         productType: 'Longsleeve',
@@ -31,12 +31,12 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 5, 10)
     },
     {        
-        id: 'FSHjGj',
+        id: 'blood-incantation-logo-tour-2022-t-shirt',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
         band: 'Blood Incantation',
-        imgs: ['blood-incantation_tour-t-shirt_front', 'blood-incantation_tour-t-shirt_back'],
+        imgs: ['blood-incantation_logo-tour-2022-t-shirt_front', 'blood-incantation_logo-tour-2022-t-shirt_back'],
         desc: 'Logo - Tour 2022',
         color: 'Black',
         manufacturer: 'Gildan',
@@ -45,7 +45,24 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 1, 10)
     },
     {        
-        id: 'lDGbL0',
+        id: 'blood-incantation-orbital-remains-tour-2022-t-shirt',
+        category: 'apparel',
+        featured: true,
+        productType: 'T-Shirt',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_orbital-remains-tour-2022-t-shirt_front', 
+            'blood-incantation_orbital-remains-tour-2022-t-shirt_back'
+        ],
+        desc: 'Orbital Remains - Tour 2022',
+        color: 'Heather Grey',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 1, 10)
+    },
+    {        
+        id: 'blood-incantation-split-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -59,7 +76,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2015, 8, 20)
     },
     {        
-        id: 'GHBGBe',
+        id: 'blood-incantation-timewave-zero-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -73,10 +90,41 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2022, 0, 2)
+        dateAdded: new Date(2022, 1, 25)
     },
     {        
-        id: 'vgI4Be',
+        id: 'blood-incantation-timewave-zero-tour-2022-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_timewave-zero-tour-2022-t-shirt_front', 
+            'blood-incantation_timewave-zero-tour-2022-t-shirt_back'
+        ],
+        desc: 'Timewave Zero - Tour 2022',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 1, 25)
+    },
+    {        
+        id: 'blood-incantation-live-vitrification-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Blood Incantation',
+        imgs: ['blood-incantation_live-vitrification-t-shirt'],
+        desc: 'Live Vitrification',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 10, 18)
+    },
+    {        
+        id: 'blood-incantation_hidden-history-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -93,7 +141,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 10, 22)
     },
     {        
-        id: 'VZFyH7',
+        id: 'blood-incantation-starspawn-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -110,7 +158,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2016, 7, 13)
     },
     {        
-        id: 'XgtZZD',
+        id: 'blood-incantation_hidden-species-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -126,8 +174,42 @@ export const apparel: Apparel[] = [
         price: 24.99,
         dateAdded: new Date(2023, 3, 7)
     },
+    {        
+        id: 'blood-incantation-timewave-zero-pocket-grey-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_timewave-zero-pocket-grey-t-shirt_front', 
+            'blood-incantation_timewave-zero-pocket-grey-t-shirt_back'
+        ],
+        desc: 'Timewave Zero Pocket - Grey',
+        color: 'Heather Grey',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 4, 30)
+    },
+    {        
+        id: 'blood-incantation-red-logo-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_red-logo-t-shirt_front', 
+            'blood-incantation_red-logo-t-shirt_back'
+        ],
+        desc: 'Red Logo',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 8, 30)
+    },
     {
-        id: 'prhpz5',
+        id: 'blood-incantation-interdimensional-extinction-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -144,7 +226,75 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2015, 9, 30)
     },
     {
-        id: 'PGw9Pd',
+        id: 'blood-incantation-interdimensional-extinction-logo-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_interdimensional-extinction-logo-longsleeve_front', 
+            'blood-incantation_interdimensional-extinction-logo-longsleeve_back'
+        ],
+        desc: 'Interdimensional Extinction - Logo',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2015, 9, 30)
+    },
+    {
+        id: 'blood-incantation-interdimensional-pocket-tour-2022-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_interdimensional-pocket-tour-2022-longsleeve_front', 
+            'blood-incantation_interdimensional-pocket-tour-2022-longsleeve_back'
+        ],
+        desc: 'Interdimensional Pocket - Tour 2022',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2023, 1, 15)
+    },
+    {
+        id: 'blood-incantation-bacteria-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_bacteria-longsleeve_front', 
+            'blood-incantation_bacteria-longsleeve_back'
+        ],
+        desc: 'Bacteria',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2021, 5, 12)
+    },
+    {
+        id: 'blood-incantation-logo-grey-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_logo-grey-longsleeve_front', 
+            'blood-incantation_logo-grey-longsleeve_back'
+        ],
+        desc: 'Logo - Grey',
+        color: 'Heather Grey',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2021, 5, 12)
+    },
+    {
+        id: 'blood-incantation-timewave-zero-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -161,7 +311,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 0, 2)
     },
     {
-        id: '8kTlrQ',
+        id: 'blood-incantation-timewave-zero-pocket-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -178,7 +328,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 1, 10)
     },
     {
-        id: 'AjGxjB',
+        id: 'blood-incantation-starspawn-pocket-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -195,7 +345,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2016, 7, 13)
     },
     {
-        id: 'MJ186B',
+        id: 'blood-incantation-hidden-history-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -204,7 +354,24 @@ export const apparel: Apparel[] = [
             'blood-incantation_hidden-history-longsleeve_front', 
             'blood-incantation_hidden-history-longsleeve_back'
         ],
-        desc: 'Timewave Zero',
+        desc: 'Hidden History of the Human Race',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2019, 10, 22)
+    },
+    {
+        id: 'blood-incantation-hidden-history-tour-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Blood Incantation',
+        imgs: [
+            'blood-incantation_hidden-history-tour-longsleeve_front', 
+            'blood-incantation_hidden-history-tour-longsleeve_back'
+        ],
+        desc: 'Hidden History - Tour',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
@@ -246,7 +413,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 10, 22)
     },
     {        
-        id: 'K3upYf',
+        id: 'chat-pile_on-deadly-ground-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -274,7 +441,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 2, 3),
     },
     {        
-        id: 'jM1fLp',
+        id: 'chat-pile_grim-guy-smoking-weed-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -288,7 +455,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 2),
     },
     {        
-        id: 'HUV2SY',
+        id: 'chat-pile_pamela-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -372,6 +539,20 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2013, 5, 13)
     },
     {
+        id: 'deafheaven_sunbather-pink-t-shirt',
+        category: 'apparel',
+        featured: true,
+        productType: 'T-Shirt',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_sunbather-pink-t-shirt_front', 'deafheaven_sunbather-pink-t-shirt_back'],
+        desc: 'Sunbather Pink',
+        color: 'Pink',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2023, 8, 13)
+    },
+    {
         id: 'V7SZ5o',
         category: 'apparel',
         featured: false,
@@ -384,6 +565,62 @@ export const apparel: Apparel[] = [
         material: '100%',
         price: 24.99,
         dateAdded: new Date(2021, 7, 20)
+    },
+    {
+        id: 'deafheaven_grid-tri-blend-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_grid-tri-blend-t-shirt'],
+        desc: 'Grid - Tri-Blend',
+        color: 'Blue Tri-Blend',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2021, 7, 20)
+    },
+    {
+        id: 'deafheaven_infinite-granite-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_infinite-granite-t-shirt_front', 'deafheaven_infinite-granite-t-shirt_back'],
+        desc: 'Infinite Granite',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2021, 7, 20)
+    },
+    {
+        id: 'deafheaven_styleguide-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_styleguide-t-shirt_front', 'deafheaven_styleguide-t-shirt_back'],
+        desc: 'Styleguide',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2021, 7, 20)
+    },
+    {
+        id: 'deafheaven_ochl-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_ochl-t-shirt'],
+        desc: 'OCHL',
+        color: 'Military Green',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2018, 6, 15)
     },
     {
         id: 'YRmZq2',
@@ -603,7 +840,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2017, 11, 30)
     },
     {
-        id: 'AwtdXg',
+        id: 'bell-witch_spire-of-skeletons-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -620,7 +857,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2017, 1, 13)
     },
     {
-        id: 'Ph362A',
+        id: 'bell-witch_mirror-reaper-anniversary-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -654,7 +891,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 10, 30)
     },
     {
-        id: 'cFmdSu',
+        id: 'the-body_the-hour-of-loneliness-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -668,7 +905,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 3, 30)
     },
     {
-        id: 'vtxVI3',
+        id: 'the-body_new-heaven-t-shirt',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
@@ -682,7 +919,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 4, 30)
     },
     {
-        id: 'XYHbrL',
+        id: 'the-body_cloth-cross-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -738,7 +975,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 5, 30)
     },
     {
-        id: 'D1Lkgf',
+        id: 'knoll_marred-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -752,7 +989,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 30)
     },
     {
-        id: '6AnO4D',
+        id: 'knoll_dolly-t-shirt',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
@@ -766,7 +1003,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 30)
     },
     {
-        id: 'QNPgZr',
+        id: 'knoll_ligature-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -780,7 +1017,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 30)
     },
     {
-        id: 'KDKXL3',
+        id: 'cloud-rat_harpy-hoodie_front',
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
@@ -794,7 +1031,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: '6TrF5x',
+        id: 'cloud-rat_biome-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -808,7 +1045,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: 'QHqMuM',
+        id: 'cloud-rat_heartbreak-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -835,7 +1072,7 @@ export const apparel: Apparel[] = [
         price: 24.99,
         dateAdded: new Date(2020, 9, 30)
     },
-        {
+    {
         id: 'pFESkH',
         category: 'apparel',
         featured: false,
@@ -848,7 +1085,696 @@ export const apparel: Apparel[] = [
         material: '100% Cotton',
         price: 19.99,
         dateAdded: new Date(2020, 9, 30)
-    }
+    },
+    {
+        id: 'full-of-hell_free-will-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_free-will-t-shirt'],
+        desc: 'Free Will',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2018, 6, 7)
+    },
+    {
+        id: 'full-of-hell_torture-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_torture-t-shirt'],
+        desc: 'Torture',
+        color: 'Light Pink',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2023, 7, 22)
+    },
+    {
+        id: 'full-of-hell_goat-church-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_goat-church-t-shirt'],
+        desc: 'Goat Church',
+        color: 'Sand',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2020, 2, 21)
+    },
+    {
+        id: 'full-of-hell_merzrip-black-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_merzrip-black-t-shirt'],
+        desc: 'Merzrip - Black',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2018, 3, 1)
+    },
+    {
+        id: 'full-of-hell_merzrip-white-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_merzrip-white-t-shirt'],
+        desc: 'Merzrip - White',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2018, 3, 1)
+    },
+    {
+        id: 'full-of-hell_cherub-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_cherub-t-shirt'],
+        desc: 'Cherub',
+        color: 'Light Blue',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2022, 11, 5)
+    },
+    {
+        id: 'full-of-hell_cursed-guardian-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_cursed-guardian-t-shirt'],
+        desc: 'Cursed Guardian',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2023, 8, 22)
+    },
+    {
+        id: 'full-of-hell_demon-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_demon-t-shirt'],
+        desc: 'Demon',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2021, 4, 14)
+    },
+    {
+        id: 'full-of-hell_trumpeting-ecstasy-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_trumpeting-ecstasy-t-shirt'],
+        desc: 'Trumpeting Ecstasy',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 19.99,
+        dateAdded: new Date(2019, 1, 30)
+    },    
+    {
+        id: 'full-of-hell_garden-of-burning-apparitions-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Full of Hell',
+        imgs: [
+            'full-of-hell_garden-of-burning-apparitions-t-shirt_front', 
+            'full-of-hell_garden-of-burning-apparitions-t-shirt_back'
+        ],
+        desc: 'Garden of Burning Apparitions',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2021, 10, 21)
+    },
+    {
+        id: 'full-of-hell_radiant-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_radiant-longsleeve'],
+        desc: 'Radiant',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2020, 9, 30)
+    },
+    {
+        id: 'full-of-hell_crawling-back-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_crawling-back-longsleeve'],
+        desc: 'Crawling Back',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2019, 12, 30)
+    },
+    {
+        id: 'full-of-hell_trumpeting-ecstasy-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_trumpeting-ecstasy-longsleeve'],
+        desc: 'Trumpeting Ecstasy',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2017, 5, 30)
+    },
+    {
+        id: 'full-of-hell_garden-of-burning-apparitions-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Full of Hell',
+        imgs: [
+            'full-of-hell_garden-of-burning-apparitions-longsleeve_front', 
+            'full-of-hell_garden-of-burning-apparitions-longsleeve_back'
+        ],
+        desc: 'Garden of Burning Apparitions',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2021, 10, 21)
+    },
+    {
+        id: 'full-of-hell_insect-logo-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Full of Hell',
+        imgs: ['full-of-hell_insect-logo-hoodie'],
+        desc: 'Insect Logo',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2015, 2, 10)
+    },
+    {
+        id: 'portrayal-of-guilt_devil-music-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Portrayal of Guilt',
+        imgs: ['portrayal-of-guilt_devil-music-t-shirt'],
+        desc: 'Devil Music',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 3, 1)
+    },
+    {
+        id: 'portrayal-of-guilt_bad-museums-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Portrayal of Guilt',
+        imgs: ['portrayal-of-guilt_bad-museums-t-shirt'],
+        desc: 'Bad Museums',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 8, 10)
+    },
+    {
+        id: 'portrayal-of-guilt_devil-music-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Portrayal of Guilt',
+        imgs: [
+            'portrayal-of-guilt_devil-music-longsleeve_front',
+            'portrayal-of-guilt_devil-music-longsleeve_back'
+        ],
+        desc: 'Devil Music',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2023, 3, 1)
+    },
+    {
+        id: 'soft-kill_pretty-face-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_pretty-face-t-shirt'],
+        desc: 'Pretty Face',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2020, 10, 15)
+    },
+    {
+        id: 'soft-kill_halloween-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Soft Kill',
+        imgs: [
+            'soft-kill_halloween-t-shirt_front',
+            'soft-kill_halloween-t-shirt_back'
+        ],
+        desc: 'Halloween',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2021, 7, 15)
+    },
+    {
+        id: 'soft-kill_dancing-with-glass-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_dancing-with-glass-t-shirt'],
+        desc: 'Dancing With Glass',
+        color: 'Pepper Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 1, 15)
+    },
+    {
+        id: 'touche-amore_sirens-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_sirens-t-shirt'],
+        desc: 'Sirens',
+        color: 'Sand',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 22.99,
+        dateAdded: new Date(2023, 1, 15)
+    },
+    {
+        id: 'touche-amore_city-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_city-t-shirt_front', 'touche-amore_city-t-shirt_back'],
+        desc: 'City',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 22.99,
+        dateAdded: new Date(2020, 4, 15)
+    },
+    {
+        id: 'touche-amore_honest-sleep-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_honest-sleep-t-shirt_front', 'touche-amore_honest-sleep-t-shirt_back'],
+        desc: 'Honest Sleep',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 22.99,
+        dateAdded: new Date(2010, 2, 3)
+    },
+    {
+        id: 'touche-amore_stage-four-rose-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Touche Amore',
+        imgs: [
+            'touche-amore_stage-four-rose-t-shirt_front', 
+            'touche-amore_stage-four-rose-t-shirt_back'
+        ],
+        desc: 'Stage Four Rose',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 22.99,
+        dateAdded: new Date(2016, 8, 30)
+    },
+    {
+        id: 'emma-ruth-rundle-live-at-roadburn-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_live-at-roadburn-t-shirt_front', 
+            'emma-ruth-rundle_live-at-roadburn-t-shirt_back'
+        ],
+        desc: 'Live at Roadburn',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 6, 7)
+    },
+    {
+        id: 'emma-ruth-rundle-afterlife-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_afterlife-t-shirt'],
+        desc: 'Afterlife',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2021, 10, 21)
+    },
+    {
+        id: 'emma-ruth-rundle-mfd-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_mfd-t-shirt'],
+        desc: 'MFD',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2016, 8, 30)
+    },
+    {
+        id: 'emma-ruth-rundle-marked-for-death-album-cover-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_marked-for-death-album-cover-t-shirt'],
+        desc: 'MFD',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2016, 8, 30)
+    },
+    {
+        id: 'emma-ruth-rundle-dowsing-voice-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_dowsing-voice-t-shirt'],
+        desc: 'Dowsing Voice',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2022, 4, 15)
+    },
+    {
+        id: 'emma-ruth-rundle-some-heavy-ocean-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_some-heavy-ocean-t-shirt'],
+        desc: 'Some Heavy Ocean',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 23.99,
+        dateAdded: new Date(2014, 4, 20)
+    },
+    {
+        id: 'emma-ruth-rundle-moon-lady-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_moon-lady-t-shirt'],
+        desc: 'Moon Lady',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 23.99,
+        dateAdded: new Date(2018, 8, 14)
+    },
+    {
+        id: 'emma-ruth-rundle-album-cover-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_album-cover-t-shirt'],
+        desc: 'Album Cover',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 23.99,
+        dateAdded: new Date(2018, 8, 14)
+    },
+    {
+        id: 'emma-ruth-rundle-skull-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_skull-t-shirt'],
+        desc: 'Skull',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 23.99,
+        dateAdded: new Date(2018, 8, 14)
+    },
+    {
+        id: 'emma-ruth-rundle-jas-helena-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_jas-helena-t-shirt'],
+        desc: 'Jas Helena',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2020, 8, 21)
+    },
+    {
+        id: 'emma-ruth-rundle-return-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_return-t-shirt'],
+        desc: 'Return',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2021, 10, 5)
+    },
+    {
+        id: 'emma-ruth-rundle-engine-of-hell-black-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_engine-of-hell-black-t-shirt_front', 
+            'emma-ruth-rundle_engine-of-hell-black-t-shirt_back'
+        ],
+        desc: 'Engine of Hell - Black',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 24.99,
+        dateAdded: new Date(2021, 10, 5)
+    },
+    {
+        id: 'emma-ruth-rundle-skull-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_skull-longsleeve_front',
+            'emma-ruth-rundle_skull-longsleeve_back'
+        ],
+        desc: 'Skull',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 34.99,
+        dateAdded: new Date(2018, 8, 14)
+    },
+    {
+        id: 'emma-ruth-rundle-dark-horse-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_dark-horse-longsleeve_front',
+            'emma-ruth-rundle_dark-horse-longsleeve_back'
+        ],
+        desc: 'Dark Horse',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 34.99,
+        dateAdded: new Date(2018, 8, 14)
+    },
+    {
+        id: 'emma-ruth-rundle-engine-of-hell-white-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_engine-of-hell-white-longsleeve_front', 
+            'emma-ruth-rundle_engine-of-hell-white-longsleeve_back'
+        ],
+        desc: 'Engine of Hell - White',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 34.99,
+        dateAdded: new Date(2021, 10, 5)
+    },
+    {
+        id: 'emma-ruth-rundle-engine-of-hell-lyrics-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_engine-of-hell-lyrics-longsleeve_front', 
+            'emma-ruth-rundle_engine-of-hell-lyrics-longsleeve_back'
+        ],
+        desc: 'Engine of Hell - Lyrics',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100%',
+        price: 34.99,
+        dateAdded: new Date(2021, 10, 5)
+    },
+    {
+        id: 'emma-ruth-rundle-citadel-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_citadel-longsleeve'],
+        desc: 'Citadel',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2021, 10, 21)
+    },
+    {
+        id: 'emma-ruth-rundle-afterlife-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_afterlife-hoodie_front', 
+            'emma-ruth-rundle_afterlife-hoodie_back'
+        ],
+        desc: 'Afterlife',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2021, 10, 21)
+    },
+    {
+        id: 'spectral-wound-infernal-decadence-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Spectral Wound',
+        imgs: [
+            'spectral-wound_infernal-decadence-t-shirt_front', 
+            'spectral-wound_infernal-decadence-t-shirt_back'
+        ],
+        desc: 'Infernal Decadence',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 5, 1)
+    },
+    {
+        id: 'spectral-wound-infernal-decadence-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Spectral Wound',
+        imgs: [
+            'spectral-wound_infernal-decadence-longsleeve_front', 
+            'spectral-wound_infernal-decadence-longsleeve_back'
+        ],
+        desc: 'Infernal Decadence',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2018, 5, 1)
+    },
+    {
+        id: 'spectral-wound-infernal-decadence-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Spectral Wound',
+        imgs: [
+            'spectral-wound_infernal-decadence-hoodie_front', 
+            'spectral-wound_infernal-decadence-hoodie_back'
+        ],
+        desc: 'Infernal Decadence',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2018, 5, 1)
+    },
 ];
 
 // All apparel sorted new to old

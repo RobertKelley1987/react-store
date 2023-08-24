@@ -3,7 +3,7 @@ import { paginate, sortByDateAdded } from '../utils';
 
 export const albums: Album[] = [
     {
-        id: 'cDumka',
+        id: 'agriculture-agriculture-lp',
         category: 'music',
         featured: true,
         productType: 'LP',
@@ -44,7 +44,7 @@ export const albums: Album[] = [
         ' is a transcendental experience.'
     },
     {
-        id: '5ogDEc',
+        id: 'blood-incantation-interdimensional-extinction-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -60,7 +60,19 @@ export const albums: Album[] = [
         albumDesc: ''
     },
     {
-        id: 'HjS7Es',
+        id: 'blood-incantation-interdimensional-extinction-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Blood Incantation',
+        imgs: ['blood-incantation_interdimensional-extinction-lp_1'],
+        desc: 'Interdimensional Extinction',
+        price: 14.99,
+        dateAdded: new Date(2015, 7, 13),
+        albumDesc: ''
+    },
+    {
+        id: 'blood-incantation-starspawn-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -86,7 +98,33 @@ export const albums: Album[] = [
         ' as inevitable as your own death and this galaxy\'s violent collapse.'
     },
     {
-        id: 'Mxoypz',
+        id: 'blood-incantation-starspawn-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Blood Incantation',
+        imgs: ['blood-incantation_starspawn-lp'],
+        desc: 'Starspawn',
+        price: 14.99,
+        dateAdded: new Date(2016, 7, 13),
+        albumDesc: 'After signing with the label prior to the August 2015' + 
+        ' release of the Interdimensional Extinction EP, BLOOD INCANTATION' + 
+        ' returns with a 30-minute cerebral whirlwind of powerful atmospheric' + 
+        ' death metal. The intense and otherworldly technical/ambient/funeral' + 
+        ' death metal of Starspawn leaves the listener feeling transcendentally' + 
+        ' disembodied at the end of an unknown dimension.\n\n' +
+
+        'Produced entirely in analog, the energy and magnetism of live BLOOD' + 
+        ' INCANTATION is tangibly melting through the speakers, and the songwriting,' + 
+        ' production and performance constellations have all fully aligned.' +
+        
+        'With appearances at California Death Fest and Covenant Festival (Canada)' +
+        ' already on the horizon, and an even more extensive US tour this September,' + 
+        ' the worldwide spread of the BLOOD INCANTATION tentacles into all orbits is' + 
+        ' as inevitable as your own death and this galaxy\'s violent collapse.'
+    },
+    {
+        id: 'blood-incantation-hidden-history-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -111,7 +149,27 @@ export const albums: Album[] = [
         ' is the manifest of a band destined to top many year’s end lists!'
     },
     {
-        id: 'AW3lj6',
+        id: 'blood-incantation-hidden-history-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Blood Incantation',
+        imgs: ['blood-incantation_hidden-history-lp_1'],
+        desc: 'Hidden History of the Human Race',
+        price: 15.99,
+        dateAdded: new Date(2019, 10, 22),
+        albumDesc: 'With “Hidden History of the Human Race”, Denver, Colorado’s cosmic' + 
+        ' death metallers BLOOD INCANTATION present the successor to one of the most talked' + 
+        ' about death metal debuts in recent years, 2016’s “Starspawn”. A cerebral whirlwind' + 
+        ' of intense and otherworldly atmospheric death metal, “Starspawn” took the underground' + 
+        ' Death Metal world by storm and is about to be topped by the quartet’s second offering.' + 
+        ' BLOOD INCANTATION have excelled themselves at crafting a dynamic foray into the realms' + 
+        ' of progressive, brutal & strangely melodic death metal, all recorded analogue at World' + 
+        ' Famous Studios. Accompanied by stunning art by sci-fi legend Bruce Pennington, “HHofHR”' + 
+        ' is the manifest of a band destined to top many year’s end lists!'
+    },
+    {
+        id: 'blood-incantation-timewave-zero-lp',
         category: 'music',
         featured: true,
         productType: 'LP',
@@ -138,7 +196,34 @@ export const albums: Album[] = [
         ' luminosity of the Mind´s Eye.'
     },
     {
-        id: 'lqsdJC',
+        id: 'blood-incantation-timewave-zero-cd',
+        category: 'music',
+        featured: true,
+        productType: 'CD',
+        band: 'Blood Incantation',
+        imgs: ['blood-incantation_timewave-zero-lp'],
+        desc: 'Timewave Zero',
+        price: 18.99,
+        dateAdded: new Date(2022, 0, 2),
+        albumDesc: 'Spawned in the Fall of 2011, Cosmic Death Metal initiates BLOOD INCANTATION,' + 
+        ' spent the past decade establishing a reputation for creating powerful Athmospheric Death' + 
+        ' Metal with progressive elements, while gradually incorporating more Psychedelic & Ambient' + 
+        ' components with each new release. The inevitable zenith of these increasingly exploratory' + 
+        ' excursions was finally reached during the summer of 2021 and captured once again on analog' + 
+        ' tape at World Famous Studios in Denver, Colorado.\n\n' +
+
+        'Epitomizing their Cosmic essence and Experimental nature, this new recording reveals an' + 
+        ' alternate dimension for experiencing the mind-bending songwriting of BLOOD INCANTATION´s' + 
+        ' dense & otherworldly sonic landscapes: Beyond the limitations of genre and free to travel' + 
+        ' among the stars.\n\n' +
+        
+        'Echoes of TANGERINE DREAM, PINK FLOYD, LUSTMORD, POPOL VUH & DEAD CAN DANCE synthesize in' + 
+        ' an archaic planetarium soundtrack, taking the listener on a cinematic journey through the' + 
+        ' Stargate, into the vast darkness of Outer Space, and beyond the infinite transcendental' + 
+        ' luminosity of the Mind´s Eye.'
+    },
+    {
+        id: 'chat-pile-this-dungeon-earth-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -156,7 +241,7 @@ export const albums: Album[] = [
         ' to terrorize listeners worldwide in only a matter of months.'
     },
     {
-        id: '36ILOG',
+        id: 'chat-pile-gods-country-lp',
         category: 'music',
         featured: true,
         productType: 'LP',
@@ -199,7 +284,7 @@ export const albums: Album[] = [
         ' Pony .'
     },
     {
-        id: '0ZYN2I',
+        id: 'chat-pile-tenkiller-soundtrack-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -226,7 +311,7 @@ export const albums: Album[] = [
         ' set out to do.'
     },
     {
-        id: '1cdrzY',
+        id: 'deafheaven-roads-to-judah-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -238,7 +323,7 @@ export const albums: Album[] = [
         albumDesc: 'Released via DEATHWISH RECORDS in April 2011.'
     },
     {
-        id: 'D7I9zB',
+        id: 'deafheaven-sunbather-lp',
         category: 'music',
         featured: true,
         productType: '2XLP',
@@ -269,19 +354,93 @@ export const albums: Album[] = [
         ' existence. A masterfully crafted work of art that will be renowned for years to come.'
     },
     {
-        id: 'i8ZG0P',
+        id: 'deafheaven-sunbather-cd',
+        category: 'music',
+        featured: true,
+        productType: 'CD',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_sunbather-lp_1'],
+        desc: 'Sunbather',
+        price: 14.99,
+        dateAdded: new Date(2013, 5, 13),
+        albumDesc: 'Recorded and engineered by Jack Shirley (Funeral Diner, Comadre) and designed by Nick Steinhardt' +
+        ' (Touche Amore) "Sunbather" deals with the profound sadness found in the quest for one\'s personal perfection.' + 
+        ' Serving as an artistic lucid dream of warmth despite the stinging pain of life\'s cruel idealism\n\n.' +
+
+        'With opener "Dream House" George Clarke\'s tortured vocals familiarly intertwine with Kerry McCoy\'s hypnotic' + 
+        ' guitar work before crashing into a wash of post-everything melody. This leads to the moving instrumental' +
+        ' "Irresistible" a track that carries a twisted indie-like sensibility buried beneath glittery layers of guitar' + 
+        ' and piano. However it is in the title track and beyond where the maturation and growth of Deafheaven brightly' + 
+        ' shines. In "Sunbather" they explore sonic peaks and valleys created by superb percussionist Daniel Tracy (new' + 
+        ' to the band for this recording). His inclusion brings new dynamics to light as an urgent pulse to the swirling' +
+        ' musical chaos. Pushing bleak epic "Vertigo" and the dark emotional closer "The Pecan Tree" to new, awe-inducing' +
+        ' heights.\n\n' +
+        
+        'Without question "Sunbather" is Deafheaven at the peak of their creative strength and vision of their young' + 
+        ' existence. A masterfully crafted work of art that will be renowned for years to come.'
+    },
+    {
+        id: 'deafheaven-new-bermuda-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
         band: 'Deafheaven',
-        imgs: ['deafheaven_new-bermuda-lp_1', 'deafheaven_new-bermuda-lp_2', 'deafheaven_new-bermuda-lp_3', 'deafheaven_new-bermuda-lp_4'],
+        imgs: [
+            'deafheaven_new-bermuda-lp_1', 
+            'deafheaven_new-bermuda-lp_2', 
+            'deafheaven_new-bermuda-lp_3', 
+            'deafheaven_new-bermuda-lp_4'
+        ],
         desc: 'New Bermuda',
         price: 28.99,
         dateAdded: new Date(2015, 9, 3),
         albumDesc: 'Released via ANTI-RECORDS.'
     },
     {
-        id: 'u31s5N',
+        id: 'deafheaven-new-bermuda-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_new-bermuda-lp_1'],
+        desc: 'New Bermuda',
+        price: 14.99,
+        dateAdded: new Date(2015, 9, 3),
+        albumDesc: 'Released via ANTI-RECORDS.'
+    },
+    {
+        id: 'deafheaven-ordinary-corrupt-human-love-lp',
+        category: 'music',
+        featured: false,
+        productType: '2XLP',
+        band: 'Deafheaven',
+        imgs: [
+            'deafheaven_ordinary-corrupt-human-love-lp_1',
+            'deafheaven_ordinary-corrupt-human-love-lp_2',
+            'deafheaven_ordinary-corrupt-human-love-lp_3',
+            'deafheaven_ordinary-corrupt-human-love-lp_4',
+            'deafheaven_ordinary-corrupt-human-love-lp_5',
+            'deafheaven_ordinary-corrupt-human-love-lp_6'
+        ],
+        desc: 'Ordinary Corrupt Human Love',
+        price: 29.99,
+        dateAdded: new Date(2018, 6, 13),
+        albumDesc: ''
+    },
+    {
+        id: 'deafheaven-ordinary-corrupt-human-love-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_ordinary-corrupt-human-love-lp_1'],
+        desc: 'Ordinary Corrupt Human Love',
+        price: 14.99,
+        dateAdded: new Date(2018, 6, 13),
+        albumDesc: ''
+    },
+    {
+        id: 'deafheaven-infinite-granite-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
@@ -313,7 +472,39 @@ export const albums: Album[] = [
         ' goosebump-inducing album to date.'
     },
     {
-        id: 'XhWCKY',
+        id: 'deafheaven-infinite-granite-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Deafheaven',
+        imgs: ['deafheaven_infinite-granite-lp_1'],
+        desc: 'Infinite Granite',
+        price: 13.99,
+        dateAdded: new Date(2021, 7, 20),
+        albumDesc: 'Over the course of their first ten years, Deafheaven’s music vacillated between' + 
+        ' tormented beauty and harmonic rage—a hybrid of black metal’s malice and shoegaze’s sublime' + 
+        ' wall-of-sound. On their fifth album, Infinite Granite, Deafheaven are no longer toying with' + 
+        ' the juxtaposition of pitting metallic abrasion against swirling grandeur. Quite the opposite:' + 
+        ' Infinite Granite is a bold and brave leap forward, a gorgeous and invigorating album brimming' + 
+        ' with style and splendor. In the context of their catalog, it takes on a whole other layer of' + 
+        ' defiant beauty.\n\n' + 
+
+        'Across Infinite Granite, vocalist George Clarke showcases a startling vocal range; falsettos,' + 
+        ' whispers, multi-part harmonies, and other adventurous vocal treatments, with his trademark black' + 
+        ' metal-inspired howls mostly absent. Guitarists Kerry McCoy and Shiv Mehra expand their sonic palette' + 
+        ' to include synth textures using them to enrich their astral guitar work rather than outright replace it.' +  
+        ' Drummer Daniel Tracy has always been a force to reckon with behind the kit, but where he used to floor' + 
+        ' audiences with his speed and stamina, he’s now free to broaden his approach and lay down authoritative' + 
+        ' drum patterns that together with bassist Christopher Johnson’s punchy bass lines anchor the band’s lofty' + 
+        ' arrangements. The refinement of their sound was further encouraged by producer Justin Meldal-Johnsen' + 
+        ' (M83, Paramore, Wolf Alice, Metric), who lent a pop ear to the record. Jack Shirley, who helped produce' + 
+        ' every previous Deafheaven album, remained on board to engineer the album at his Atomic Garden East' + 
+        ' studio in Oakland, CA along with additional engineering and mixing from nine-time Grammy Award winner' + 
+        ' Darrell Thorp (Foo Fighters, Radiohead, Beck). Ultimately, Infinite Granite is Deafheaven’s most' + 
+        ' goosebump-inducing album to date.'
+    },
+    {
+        id: 'nails-unsilent-death-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -330,7 +521,7 @@ export const albums: Album[] = [
         ' to the original with the Stoughton gatefold jacket and also includes an 18”x24” poster.'
     },
     {
-        id: 'zoHGIC',
+        id: 'nails-abandon-all-life-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -341,16 +532,16 @@ export const albums: Album[] = [
         dateAdded: new Date(2013, 2, 1),
         albumDesc: 'NAILS is beyond brutality. These grindcore tyrants of the American underground' + 
         ' have triumphantly returned with their 2nd full length "ABANDON ALL LIFE"! Like the bands' + 
-        ' debut album: "Unsilent Death, was recorded with CONVERGEÍs Kurt Ballou. These 10 tracks of' + 
+        ' debut album: "Unsilent Death, was recorded with CONVERGE\'s Kurt Ballou. These 10 tracks of' + 
         ' barbaric rage have no resemblance to the laughable retro party metal that passes as extreme' + 
-        ' music in todayÍs world. Abandon All Life viciously carpet bombs the listener with a horrifying' + 
-        ' brand of Death/ Grind/ Hardcore chaos. Bludgeoning beatdowns, grinding blasts, hyper-distorted' + 
+        ' music in today\'s world. Abandon All Life viciously carpet bombs the listener with a horrifying' + 
+        ' brand of Death/Grind/Hardcore chaos. Bludgeoning beatdowns, grinding blasts, hyper-distorted' + 
         ' vocals, hard-hitting metallic chugs and early death metal riffs intensifies to a climatic end' + 
         ' where the guitars wail and militant drum breakdowns send us marching. With profound hatred,' + 
         ' the howling war cry of ABANDON ALL LIFE shows NAILS as a band without equal in their class.'
     },
     {
-        id: '2CB33S',
+        id: 'bell-witch-four-phantoms-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
@@ -366,7 +557,7 @@ export const albums: Album[] = [
         albumDesc: 'Four Phantoms is the second studio album by Seattle-based doom metal band Bell Witch.'
     },
     {
-        id: 'B92jdL',
+        id: 'bell-witch-mirror-reaper-lp',
         category: 'music',
         featured: true,
         productType: '2XLP',
@@ -397,7 +588,7 @@ export const albums: Album[] = [
         ' Psycho CA).\n\n'
     },
     {
-        id: '3Z7rK1',
+        id: 'bell-witch-futures-shadow-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
@@ -419,7 +610,7 @@ export const albums: Album[] = [
         ' something of night."'
     },
     {
-        id: 'BRZVUr',
+        id: 'the-body-christs-redeemers-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -464,7 +655,7 @@ export const albums: Album[] = [
         ' their hell scapes. They will be touring the US extensively in the fall.\n\n' 
     },
     {
-        id: 'iStjS9',
+        id: 'the-body-i-shall-die-here-earth-triumphant-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
@@ -515,7 +706,7 @@ export const albums: Album[] = [
         ' create effective systemic change and on-the-ground impact.' 
     },
     {
-        id: 'BwBQaU',
+        id: 'the-body-no-one-deserves-happiness-lp',
         category: 'music',
         featured: true,
         productType: '2XLP',
@@ -536,7 +727,7 @@ export const albums: Album[] = [
         ' an album that defies definition and expectations, standing utterly alone.'
     },
     {
-        id: 'KSgOgW',
+        id: 'the-body-i-have-fought-against-it-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
@@ -562,7 +753,7 @@ export const albums: Album[] = [
         ' incomparable variety of sounds.'
     },
     {
-        id: 'z7sN2E',
+        id: 'the-body-remixed-lp',
         category: 'music',
         featured: false,
         productType: '2XLP',
@@ -587,7 +778,7 @@ export const albums: Album[] = [
         ' respect.'
     },
     {
-        id: '9bBlq8',
+        id: 'ragana-desolations-flower-lp',
         category: 'music',
         featured: true,
         productType: 'LP',
@@ -644,7 +835,7 @@ export const albums: Album[] = [
         ' and compassion.'
     },
     {
-        id: 'BCzhAX',
+        id: 'ragana-you-take-nothing-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -659,7 +850,7 @@ export const albums: Album[] = [
         '"You take nothing" was originally Released by An Out Recordings in 2017.'
     },
     {
-        id: '3Vfep3',
+        id: 'ragana-wash-away-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -674,7 +865,7 @@ export const albums: Album[] = [
         '"Wash Away" was originally Released by An Out Recordings in 2015.'
     },
     {
-        id: '2HTHXw',
+        id: 'knoll-metempiric-lp',
         category: 'music',
         featured: true,
         productType: 'LP',
@@ -686,7 +877,7 @@ export const albums: Album[] = [
         albumDesc: ''
     },
     {
-        id: '5cRfn5',
+        id: 'cloud-rat-cloud-rat-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -701,7 +892,7 @@ export const albums: Album[] = [
         ' including a bonus insert. Pressed on black vinyl.'
     },
     {
-        id: 'xuvVIk',
+        id: 'cloud-rat-do-not-let-me-off-the-cliff-lp',
         category: 'music',
         featured: false,
         productType: 'LP',
@@ -716,7 +907,7 @@ export const albums: Album[] = [
         ' that were not available on the original CD. Comes with a wild art insert.'
     },
     {
-        id: 'fOzvh5',
+        id: 'cloud-rat-threshold-lp',
         category: 'music',
         featured: true,
         productType: 'LP',
@@ -731,7 +922,826 @@ export const albums: Album[] = [
         ' distillation of all our seemingly disparate influences, into what I feel is our' + 
         ' best work so far."'
     },
-];
+    {
+        id: 'full-of-hell-garden-of-burning-apparitions-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Full of Hell',
+        imgs: [
+            'full-of-hell_garden-of-burning-apparitions-lp_1',
+            'full-of-hell_garden-of-burning-apparitions-lp_2'
+        ],        
+        desc: 'Garden of Burning Apparitions',
+        price: 25.99,
+        dateAdded: new Date(2021, 9, 1),
+        albumDesc: 'FULL OF HELL return with their highly anticipated new album, Garden Of' + 
+        ' Burning Apparitions. The new album, a genre-bending blitzkrieg of hardcore, grind' +
+        ' and death metal, sees the band expand upon the very elements that have propelled' +
+        ' FULL OF HELL to the forefront of extreme music over the last decade.\n\n' +
+    
+        'Produced by Seth Manchester at Machines With Magnets in Pawtucket, Rhode Island,' +
+        ' Garden of Burning Apparitions also sees FULL OF HELL adding new dimensions to their' +
+        ' warp-speed hellscape. Guitarist Spencer Hazard and bassist Sam DiGristine\'s' +
+        ' monstrous riffs now have an added noise-rock influence, while drummer Dave Bland' +
+        ' commands the rhythm section at blazing speeds.\n\n' +
+        
+        'Lyrically, Garden of Burning Apparitions sees vocalist Dylan Walker exploring' +
+        ' (anti)religion, life\'s impermanence and the fear that comes with knowing death' +
+        ' is inescapable. "Industrial Messiah Complex” grinds organized religion to a pulp' +
+        ' in under 90 seconds, while Walker contemplates the commodification of spirituality' +
+        ' seen in America’s vast network of garish mega-churches and how these practices are' +
+        ' at odds with true spirituality. Meanwhile, “Reeking Tunnels” rides a strident noise' +
+        ' rock riff down into the sewer. It’s a metaphor for the physical and mental space we' +
+        ' become trapped in when we live in a perpetual state of fear and hate. Elsewhere,' +
+        ' justifiable ochlophobia propels the guttural death metal blast of “Eroding Shell.”' +
+        ' The song seeks to capture our fear of the violent, ignorant mob—a scene glimpsed far' +
+        ' too often in this volatile era.\n\n' +
+        
+        'In the end, FULL OF HELL\'s boundary smashing has paid off again. “I think it’s good' + 
+        ' that we tried not to pigeonhole ourselves early on,” Walker reflects. “Because now,' + 
+        ' 10 years in, we have the opportunity to make whatever record we want, within reason,' + 
+        ' and people will follow along.”'
+    },
+    {
+        id: 'full-of-hell-trumpeting-ecstasy-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Full of Hell',
+        imgs: [
+            'full-of-hell_trumpeting-ecstasy-lp_1',
+            'full-of-hell_trumpeting-ecstasy-lp_2',
+            'full-of-hell_trumpeting-ecstasy-lp_3',
+            'full-of-hell_trumpeting-ecstasy-lp_4',
+            'full-of-hell_trumpeting-ecstasy-lp_5',
+        ],        
+        desc: 'Trumpeting Ecstasy',
+        price: 25.99,
+        dateAdded: new Date(2017, 5, 5),
+        albumDesc: 'Maryland/Pennsylvania experimental death-noise' +
+        ' band FULL OF HELL have embarked on quite the journey leading' +
+        ' up to the impending release of their latest full-length album' +
+        ' “Trumpeting Ecstasy”, an album which will see the band deliver' +
+        ' their most punishing, virulent, and dynamic album to date.\n\n' +
+
+        'The embryonic beginnings of Full of Hell displayed their palette' +
+        ' at it\'s most primitive, d-beat and blast ridden hardcore punk with' +
+        ' spats of noise and caustic rhythm, and within a few short years,' +
+        ' they have bloomed into a true force to be reckoned with within the' +
+        ' punk and metal communities. Since the release of their Profound Lore' +
+        ' Records debut album “Full Of Hell & Merzbow” late 2014, their third' +
+        ' full-length album, the band began to truly come into their own, combining' +
+        ' elements of grindcore, death/black metal, punk and hardcore with a' +
+        ' smattering of sonically laden power electronics and industrial pounding.' +
+        ' It would also signal the band being at their most active and prolific ever' +
+        ' since their inception in 2009.\n\n' +
+        
+        'The band would tour endlessly non-stop in different parts of the world in' +
+        ' places as far off as Japan, Australia (twice), Southeast Asia (Indonesia,' +
+        ' Philippines, South Korea etc.), along with several tour runs in Europe' +
+        ' and many tour jaunts within the US, along with playing countless festivals' +
+        ' and exclusive shows. The band would also add to their repertoire and' +
+        ' discography as well during said timeframe releasing a direct collaboration' +
+        ' album with The Body and several EPs, one of them being their most-recent' +
+        ' split 7”EP with Nails (which debuts #2 on the Billboard Top 100 Singles' +
+        ' Chart).\n\n' +
+        
+        'With “Trumpeting Ecstasy”, FULL OF HELL build upon their progression since' +
+        ' the Merzbow collaboration and the releases succeeding it. This time the band' +
+        ' decided to go into God City Studios with Kurt Ballou at the production helm' +
+        ' to help achieve the intended vision of “Trumpeting Ecstasy”. The result being' +
+        ' the best and strongest sounding FULL OF HELL album along with it being their' +
+        ' most towering release to date. Sky tearing and sonically cataclysmic, the aural' +
+        ' deluge that is “Trumpeting Ecstasy” also features guest appearances by Aaron' +
+        ' Turner (Sumac/Old Man Gloom/Mamiffer/Isis), Nate Newton (Converge/Old Man Gloom),' +
+        ' Andrew Nolan (Column Of Heaven/The Endless Blockade), and Canadian singer/songwriter' +
+        ' Nicole Dollanganger. Expect FULL OF HELL to tour relentlessly in support of “Trumpeting' +
+        ' Ecstasy” as well.'
+    },
+    {
+        id: 'full-of-hell-weeping-choir-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Full of Hell',
+        imgs: [
+            'full-of-hell_weeping-choir-lp_1',
+            'full-of-hell_weeping-choir-lp_2',
+            'full-of-hell_weeping-choir-lp_3',
+            'full-of-hell_weeping-choir-lp_4',
+            'full-of-hell_weeping-choir-lp_5',
+            'full-of-hell_weeping-choir-lp_6'
+        ],        
+        desc: 'Weeping Choir',
+        price: 24.99,
+        dateAdded: new Date(2019, 4, 17),
+        albumDesc: 'FULL OF HELL make their Relapse debut' +
+        ' with their most explosive album to date, Weeping Choir.' +
+        ' Dynamic, pissed, and wholly urgent, the highly anticipated' +
+        ' Weeping Choir is a definitive statement of intent by one' +
+        ' of the underground’s most dynamic and virulent entities.' +
+        ' FULL OF HELL have once again culled the extreme elements' +
+        ' from hardcore, metal, and power electronics to redefine' +
+        ' darkness and sheer brutality. Distorted guitars, and' +
+        ' ominous, disparate electronics grind and gnash against' +
+        ' rapid-fire drumming, as FULL OF HELL take themes of religion,' +
+        ' loss, hatred, and set them ablaze. Recorded by the' +
+        ' critically acclaimed Kurt Ballou at GodCity Studio, Weeping' +
+        ' Choir sees FULL OF HELL fully unleashed. Abrasive,' +
+        ' confrontational, none equal!'
+    },
+    {
+        id: 'portrayal-of-guilt-devil-music-12in',
+        category: 'music',
+        featured: true,
+        productType: '12"',
+        band: 'Portrayal of Guilt',
+        imgs: [
+            'portrayal-of-guilt_devil-music-12in_1',
+            'portrayal-of-guilt_devil-music-12in_2',
+        ],        
+        desc: 'Devil Music',
+        price: 23.99,
+        dateAdded: new Date(2023, 3, 20),
+        albumDesc: 'Plunge deeper into the deranged world of PORTRAYAL OF GUILT' +
+        ' with DEVIL MUSIC, the latest EP from the Austin-based trio. In the wake' +
+        ' of releasing two full-length records in 2021 - We Are Always Alone and' +
+        ' CHRISTFUCKER - they followed up 2022 with a year of relentless touring.' +
+        ' In the middle of their frantic schedule, the band took time to draft the' +
+        ' five new songs that would make up Devil Music with Viva Studios\' Matt' +
+        ' Michel (Majority Rule) in Virginia. They then took their creative vision' +
+        ' to the next level with Ben Greenberg (Uniform), by tracking alternate' +
+        ' versions of each song with orchestral arrangements in place of the three' +
+        ' piece\'s standard instrumentation.\n\n' +
+
+        'On Devil Music, Portrayal of Guilt\'s goal is to create a visceral listening' +
+        ' experience. On either version of these songs, whether it be the a-side\'s more' +
+        ' familiar heaviness or the orchestral b-side takes, the band is determined to' +
+        ' drag the listener with them through what feels like a reckoning. Lyrics on' +
+        ' songs like the opener “One Last Taste of Heaven" feel burdened with a sense' +
+        ' of finality - “I\'ve carried this body for miles... I lay the angel on the wooden' +
+        ' pyre / before taking one last taste of heaven” feels as heavy as the blackened' +
+        ' guitar riff refraining throughout the song. Through other songs like the intense' +
+        ' “Burning Hand” (complete with it\'s hypnotizing post-punk bridge) or the epic' +
+        ' title-track closer, the imagery of King\'s lyrics is an unapologetically grotesque' +
+        ' examination of loss, exhaustion and suffering - brought fully to life by illustrator' +
+        ' Ben Robert\'s cover art for the release.\n\n' +
+        
+        'These songs are yet another example of Portrayal of Guilt pushing the limits of' +
+        ' their sound into more extremes. Since their inception they have been challenging' +
+        ' the boundaries of genre, taking elements from screamo, blackened metal, grind and' +
+        ' industrial music to make something uniquely unsettling and expertly-crafted. Devil' +
+        ' Music feels like the soundtrack to a future-less future, one where either path you' +
+        ' tread is destined to lead towards ruin.'
+    },
+    {
+        id: 'portrayal-of-guilt-we-are-always-alone-cd',
+        category: 'music',
+        featured: true,
+        productType: 'CD',
+        band: 'Portrayal of Guilt',
+        imgs: ['portrayal-of-guilt_we-are-always-alone-cd'],        
+        desc: 'We Are Always Alone',
+        price: 23.99,
+        dateAdded: new Date(2021, 1, 29),
+        albumDesc: 'To say Portrayal of Guilt write grim songs is an understatement.' +
+        ' Since forming in 2017, the Austin trio has been a flowing fountain of fatalism,' +
+        ' spewing harsh and brutal sentiments across their releases. Now, on their second' +
+        ' album, We Are Always Alone (Closed Casket, January 29th, 2021), the band turns' +
+        ' the nihilism inwards and explores the notion of eternal isolation.\n\n' +
+
+        'We Are Always Alone was written and recorded ahead of schedule. In March,' +
+        ' Portrayal of Guilt was on tour in Atlanta when they realized the looming COVID-19' +
+        ' was about to render the remainder of their dates unsustainable. They packed up' +
+        ' and drove home, where they immediately got to work crafting and recording nine' +
+        ' new tracks with producer and frequent collaborator Phillip Odom (Code Orange,' +
+        ' Turnover, La Dispute, Ceremony), with mastering by Grammy nominated engineer' +
+        ' Will Yip. The album boasts vocal cameos from Matt Michel and Chris Taylor of' +
+        ' Majority Rule and pageninetynine, two seminal bands to whom Portrayal of Guilt' +
+        ' has often been deemed the heir apparent.\n\n' +
+        
+        'The album sees the band continuing to perfect their gritty style of charred punk' +
+        ' that seamlessly fuses together a broad array of styles, from the piercing ferocity' +
+        ' of screamo to the thick gnarls of black metal, underlined with chilling and ominous' +
+        ' industrial samples. The LP is a climatic listening experience that never really lets' + 
+        ' the light peek through, instead building up to a cathartic final track that hammers' +
+        ' home the bleak desolation that runs through it.\n\n' +
+        
+        'We Are Always Alone comes off the heels of the band\'s 2019 EP, Suffering Is a Gift,' +
+        ' and their celebrated debut full-length in 2018, Let Pain Be Your Guide, which earned' +
+        ' the band praise in outlets like NPR, Revolver, and Kerrang!. Even though it was birthed' + 
+        ' under the spectre of a global pandemic, it\'s hard to argue that We Are Always Alone is' +
+        ' any more dire than the rest of the band\'s catalog. For a Portrayal of Guilt release, it' +
+        ' seems par for the course.'
+    },
+    {
+        id: 'soft-kill-savior-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_savior-lp'],        
+        desc: 'Savior',
+        price: 24.99,
+        dateAdded: new Date(2018, 4, 15),
+        albumDesc: 'Released via PROFOUND LORE RECORDS in May 2018.'
+    },
+    {
+        id: 'soft-kill-canary-yellow-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_canary-yellow-lp_1', 'soft-kill_canary-yellow-lp_2'],        
+        desc: 'Canary Yellow',
+        price: 24.99,
+        dateAdded: new Date(2022, 9, 31),
+        albumDesc: ''
+    },
+    {
+        id: 'soft-kill-canary-yellow-cd',
+        category: 'music',
+        featured: true,
+        productType: 'CD',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_canary-yellow-lp_1'],        
+        desc: 'Canary Yellow',
+        price: 15.99,
+        dateAdded: new Date(2022, 9, 31),
+        albumDesc: ''
+    },
+    {
+        id: 'soft-kill-premium-drifter-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_premium-drifter-lp_1', 'soft-kill_premium-drifter-lp_2'],        
+        desc: 'Premium Drifter',
+        price: 24.99,
+        dateAdded: new Date(2020, 3, 14),
+        albumDesc: 'A collection of demos written and recorded over the course of the' + 
+        ' last two years, most of which we\'re intended for inclusion on "Dead Kids, R.I.P.' + 
+        ' City". A couple of these were released on extremely limited lathes or cassettes' + 
+        ' but most have never been heard before. Included are the two tracks from the recent' + 
+        ' "Sick Day" digital only EP as well. Recorded by Soft Kill at A Block, mastered by' + 
+        ' Telegraph and pressed here locally at Cascade. Art by N.A. Youngboy, layout by Nathan' + 
+        ' Preston.'
+    },
+    {
+        id: 'soft-kill-metta-world-peace-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Soft Kill',
+        imgs: ['soft-kill_metta-world-peace-lp_1', 'soft-kill_metta-world-peace-lp_2'],        
+        desc: 'Metta World Peace',
+        price: 28.99,
+        dateAdded: new Date(2023, 5, 4),
+        albumDesc: 'Primarily recorded during a transitional move, "Metta World Peace"' +
+        ' embraces new sonic textures and ideas while returning to the bedroom experiments' + 
+        ' of 2020\'s "Premium Drifter" and the many cassette-only releases since the project\'s' + 
+        ' inception.\n\n' +
+
+        'Featuring contributions from Evil Pimp, Andres Chavez, N8NOFACE and Adam Klopp,' + 
+        ' a primary production approach was the cut and paste sampling of my favorite hip' + 
+        ' hop albums paired against fun and spontaneous collaborations with artists I love.\n\n' +
+        
+        'This record solidifies a commitment to the blueprint that\'s been in play all along:' + 
+        ' a stream of consciousness output removed from the confines of "the album cycle"' + 
+        ' inspired equally by boredom and Guided By Voices. My comfort zone has always been' + 
+        ' the demo and everything that follows has felt complicated and forced at times. This' + 
+        ' celebrates my love for writing songs and ignoring the rest.'
+    },
+    {
+        id: 'touche-amore-parting-the-sea-between-brightness-and-me-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_parting-the-sea-between-brightness-and-me-lp'],        
+        desc: 'Parting The Sea Between The Brightness And Me',
+        price: 28.99,
+        dateAdded: new Date(2011, 5, 30),
+        albumDesc: 'Released via DEATHWISH RECORDS in June 2011.'
+    },
+    {
+        id: 'touche-amore-is-survived-by-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_is-survived-by-lp'],        
+        desc: 'Is Survived By',
+        price: 28.99,
+        dateAdded: new Date(2013, 8, 15),
+        albumDesc: 'Released via DEATHWISH RECORDS in September 2013. '
+    },
+    {
+        id: 'touche-amore-is-survived-by-cd',
+        category: 'music',
+        featured: true,
+        productType: 'CD',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_is-survived-by-lp'],        
+        desc: 'Is Survived By',
+        price: 15.99,
+        dateAdded: new Date(2013, 8, 15),
+        albumDesc: 'Released via DEATHWISH RECORDS in September 2013. '
+    },
+    {
+        id: 'touche-amore-to-the-beat-of-a-dead-horse-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_to-the-beat-of-a-dead-horse-lp'],        
+        desc: 'To The Beat of a Dead Horse...',
+        price: 34.99,
+        dateAdded: new Date(2009, 7,4),
+        albumDesc: 'Hailing from Los Angeles, CA, Touché Amoré set themselves' + 
+        ' against the glamor and greed of their hometown culture with "...To The' + 
+        ' Beat Of A Dead Horse," the passionate debut LP and CD. Where Touché Amoré\'s' + 
+        ' demo 7" (No Sleep Records) was full of promise, "...To The Beat Of A Dead' + 
+        ' Horse" feels fully realized: the guitars bend and weave but always maintain' + 
+        ' their drive, the rhythms are frequently off kilter but never off-time and the' + 
+        ' vocals are screamed at the edge of breaking up but they\'re always exciting,' + 
+        ' pleasing even. Features guest vocals by Geoff Rickly (Thursday) and Jeff' + 
+        ' Eaton (Modern Life Is War).'
+    },
+    {
+        id: 'touche-amore-stage-four-cd',
+        category: 'music',
+        featured: true,
+        productType: 'CD',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_stage-four-cd'],        
+        desc: 'Stage Four',
+        price: 13.99,
+        dateAdded: new Date(2016, 8, 16),
+        albumDesc: 'Los Angeles artful indie post hardcore band Touché Amoré have announced' + 
+        'a new album, Stage Four, to be released September 16 on Epitaph.\n\n' +
+
+        'Formed in Burbank, California, across 2007 and 2008, the band\'s urgent sound, with' + 
+        ' its melodic sonic assault and impassioned vocals, has grown tighter and more refined' + 
+        ' through a trio of full-length albums and a series of EPÍs and releases. Since those' + 
+        ' early days, lead singer Jeremy Bolm, guitarists Nick Steinhardt and Clayton Stevens,' + 
+        ' bassist Tyler Kirby, and drummer Elliot Babin have created a trajectory for themselves' + 
+        ' through hard work and dedication. And now with Stage Four, their fourth and biggest' + 
+        ' album to date, they are cementing their status as one of rock music\'s most talented,' + 
+        ' relatable, and visceral acts. Over the years the band rose to prominence with 2009\'s' + 
+        ' To the Beat of a Dead Horse and 2011\'s Parting the Sea Between Brightness and Me.' + 
+        ' Touche Amore crossed into new territory with the 2013 art-punk masterpiece Is Survived' + 
+        ' By. Having earned early cred, critical favor, and legions of fans by playing lengthy' + 
+        ' tours of all shapes and sizes, in every basement, youth center, and house show, the' + 
+        ' band enjoyed a bigger following which only grew along with their talents.\n\n' +
+        
+        '"I don\'t open up to people too much in regular life, but when I\'m writing songs, I want' +
+        ' to be as open and as honest as possible," Bolm confesses. Touché albums have always served' + 
+        ' as an emotional outlet for Bolm. So when the time came to write Stage Four there was no' + 
+        ' question that it would be about passing of Bolm\'s mother in late 2014. Stage Four was recorded' + 
+        ' in early 2016 in Studio City, CA with producer Brad Wood. Cathartic in delivery, highly' + 
+        ' sentimental, and sonically triumphant, Stage Four is an emblem of a band both living its dream' + 
+        ' and marred by loss. And with Stage Four, Touché Amoré has unmistakably made the biggest, boldest,' + 
+        ' and most artistic statement of their career.'
+    },
+    {
+        id: 'touche-amore-lament-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Touche Amore',
+        imgs: ['touche-amore_lament-lp'],        
+        desc: 'Lament',
+        price: 23.99,
+        dateAdded: new Date(2020, 8, 9),
+        albumDesc: 'TOUCHÉ AMORÉ has been burrowing through angst, alienation,' + 
+        ' cancer, and heartbreak throughout four adored studio albums. After over' + 
+        ' a decade of working through darkness, the band\'s gorgeously gruff fifth' + 
+        ' album, Lament, finds the light at the end of the tunnel. Through 11 songs,' + 
+        ' Touché Amoré looks back at its past and uses hard-won optimism to point its' + 
+        ' fans toward light, and love. For the follow up to the their critically' + 
+        ' acclaimed 2016 release, Stage Four, Touché Amoré have opted to get out' + 
+        ' of their comfort zone and work with a new producer, the famously demanding' + 
+        ' Ross Robinson (Slipknot, Korn, At the Drive-In). Both Robinson and Touché' + 
+        ' Amoré are known for their trademark intensity. "I believe there was an' + 
+        ' unspoken learning curve between Ross\'s methods and the understanding that' + 
+        ' I\'ve poured myself into the words and mean every one of them," vocalist Jeremy' + 
+        ' Bolm says. Robinson agreed to a rare one-song "test recording" last summer,' + 
+        ' which resulted in the song "Deflector," released last fall. In the end, "Deflector"' + 
+        ' proved the producer/band combo was undoubtedly the right fit. Robinson made Bolm' + 
+        ' read out all of his confessional lyrics to his bandmates to make sure they understood' + 
+        ' their emotional content. Making Bolm read those lyrics turned out to be what helped' + 
+        ' make their emotions palpable in the final recording. With its ruminations on the' + 
+        ' draining human connection ("I\'ll test the water/I won\'t dive right in/That\'s too' + 
+        ' personal/I\'m too delicate"), Lament\'s first helping is a sharp intro to the album\'s' + 
+        ' themes. Lament is their masterstroke. Its longer, structured songs soar with a ferocious' + 
+        ' but delicate musicality and powerful, gut-wrenching storytelling that smashes previous' +
+        ' heights. Yet as much as the band has grown and matured via everything they\'ve endured,' + 
+        ' it\'s perhaps equally impressive how they\'ve managed to stay true to their core...'
+    },
+    {
+        id: 'primitive-man-insurmountable-12in',
+        category: 'music',
+        featured: true,
+        productType: '12"',
+        band: 'Primitive Man',
+        imgs: ['primitive-man_insurmountable-12in_1', 'primitive-man_insurmountable-12in_2'],        
+        desc: 'Insurmountable',
+        price: 24.99,
+        dateAdded: new Date(2022, 4, 18),
+        albumDesc: 'Listening to Primitive Man is a devastating experience of Doom' +     
+        ' as performed by just three members. Their discography of agonizing personal' + 
+        ' and universal hell is spread across three albums, two EPs and a raft of splits' + 
+        ' released over more than 10 years. 2020 saw the release of the groups most' + 
+        ' recent full length album \'Immersion\' (Relapse Records), a terrifying and' + 
+        ' confrontational record that expressed resentment and the unbearable during' + 
+        ' uncertain times. The tension through out the record is palpable. McCarthy\'s' + 
+        ' foul roar feels wrenched from a cavern so deep that it defied language itself.' + 
+        ' The riffs are vast slabs - edifices dragged and erected to stand tall against' + 
+        ' the outrages of \'humanity rotten on the vine\' (\'Consumption\'). With 2013\'s Scorn' + 
+        ' and 2017\'s Caustic, Primitive Man raged against religious dogma, elitism, capitalism' + 
+        ' and the creature within, desperate to burst out. They keep the animal inside at' + 
+        ' bay with a rancorous and cerebral blend of the heaviest sounds. Splits with Hell' + 
+        ' and Unearthly Trance, and a host of others, have seen the band branch out into' + 
+        ' experimental noise. Other projects from members of the band - Black Curse, Vermin' + 
+        ' Womb and Many Blessings - show how they are bursting at the seams to express their' + 
+        ' outrage at the state of things, in different mutations.\n\n' +
+        
+        '2022 brings the release of the groups latest album, Insurmountable. Four new suffocating' + 
+        ' tracks totaling over 38 minutes of Primitive Man in their strongest and most crushing' + 
+        ' artistic display to date. Mixed and mastered by Arthur Rizk and featuring the artwork' + 
+        ' of Ethan McCarthy (Hell Simulation). Vinyl comes packaged in a tip-on gatefold lp jacket,' + 
+        ' complimented with an obi-strip, gatefold insert and deluxe colored vinyl.'
+    },
+    {
+        id: 'primitive-man-immersion-lp',
+        category: 'music',
+        featured: true,
+        productType: 'LP',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_immersion-lp_1', 
+            'primitive-man_immersion-lp_2',
+            'primitive-man_immersion-lp_3',
+            'primitive-man_immersion-lp_4',
+            'primitive-man_immersion-lp_5',
+            'primitive-man_immersion-lp_6'
+        ],        
+        desc: 'Immersion',
+        price: 25.99,
+        dateAdded: new Date(2020, 7, 14),
+        albumDesc: 'PRIMITIVE MAN return with the extreme, terrifying and confrontational new' + 
+        ' album, Immersion. True to the band\'s ethos, every moment on Immersionis overwhelming;' + 
+        ' from the sonic pummeling on the album opener "The Lifer" to the brooding, unnerving' + 
+        ' guitars whirring throughout "Entity", Immersionbuilds and builds. The tension throughout' + 
+        ' the record is palpable - hair raising tracks such as "Menacing" push and pull constantly,' + 
+        ' shifting from passages of harsh doom to an endless corridor of horrid screaming, blast' + 
+        ' beats, and a formidable low end.\n\n' +
+
+        'Adding to the album\'s darkness, a pervasive lyrical anxiety erodes throughout Immersion.' + 
+        ' A stark look at a mirror, Immersion\'s themes tackle sobering views on existential crises,' + 
+        ' a general distrust among another, and the current state of the world. "Souring your view' + 
+        ' on your existence and everything you had worked towards. Allowing you to become possessed' + 
+        ' by the darkest parts of your mind that you have carried around your entire life and not' + 
+        ' dealt with." PRIMITIVE MAN\'s Ethan McCarthy elaborates.\n\n' +
+        
+        'True to these dark times, PRIMITIVE MAN\'s Immersionis an introspective look into ruin and' + 
+        ' undoing. As McCarthy explains, Immersiondives into the point of no return. "Now you\'re a' + 
+        ' grown man and you\'re fucked."'
+    },
+    {
+        id: 'emma-ruth-rundle-live-at-roadburn-2xlp',
+        category: 'music',
+        featured: false,
+        productType: '2XLP',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_live-at-roadburn-2xlp_1', 'emma-ruth-rundle_live-at-roadburn-2xlp_2'],
+        desc: 'Live at Roadburn',
+        price: 29.99,
+        dateAdded: new Date(2023, 6, 7),
+        tracklist: [
+            'Return',
+            'Blooms of Oblivion',
+            'Body',
+            'The Company',
+            'Dancing Man',
+            'Razor\'s Edge',
+            'Citadel',
+            'In My Afterlife',
+            'Pump Organ Song'
+        ],
+        albumDesc: '"Roadburn has been such an important place for me and my evolution as an artist.' + 
+        ' The opportunity to perform Engine of Hell in full there in 2022 was the end of something… and' + 
+        ' the beginning of this whole new chapter in my life and art. I really do feel free is so many' + 
+        ' ways. I wanted to commemorate and honor the experience by making my Live at Roadburn album my' + 
+        ' first self release in 13 years. I will always treasure the Roadburn community."'
+    },
+    {
+        id: 'emma-ruth-rundle-marked-for-death-lp',
+        category: 'music',
+        featured: false,
+        productType: 'LP',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_marked-for-death-lp_1', 'emma-ruth-rundle_marked-for-death-lp_2'],
+        desc: 'Marked For Death',
+        price: 26.99,
+        dateAdded: new Date(2016, 8, 30),
+        tracklist: [
+            'Marked For Death',
+            'Protection',
+            'Medusa',
+            'Hand of God',
+            'Heaven',
+            'So, Come',
+            'Furious Angel',
+            'Real Big Sky'
+        ],
+        albumDesc: ''
+    },
+    {
+        id: 'emma-ruth-rundle_on-dark-horses-lp',
+        category: 'music',
+        featured: false,
+        productType: 'LP',
+        band: 'Emma Ruth Rundle',
+        imgs: [
+            'emma-ruth-rundle_on-dark-horses-lp_1', 
+            'emma-ruth-rundle_on-dark-horses-lp_2',
+            'emma-ruth-rundle_on-dark-horses-lp_3',
+            'emma-ruth-rundle_on-dark-horses-lp_4'
+        ],
+        desc: 'On Dark Horses',
+        price: 26.99,
+        dateAdded: new Date(2018, 8, 14),
+        tracklist: [
+            'Fever Dreams',
+            'Control',
+            'Darkhorse',
+            'Races',
+            'Dead Set Eyes',
+            'Light Song',
+            'Apathy on the Indiana Border',
+            'You Don\'t Have To Cry'
+        ],
+        albumDesc: ''
+    },
+    {
+        id: 'emma-ruth-rundle_on-dark-horses-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_on-dark-horses-lp_1'],
+        desc: 'On Dark Horses',
+        price: 14.99,
+        dateAdded: new Date(2018, 8, 14),
+        tracklist: [
+            'Fever Dreams',
+            'Control',
+            'Darkhorse',
+            'Races',
+            'Dead Set Eyes',
+            'Light Song',
+            'Apathy on the Indiana Border',
+            'You Don\'t Have To Cry'
+        ],
+        albumDesc: ''
+    },
+    {
+        id: 'emma-ruth-rundle_engine-of-hell-lp',
+        category: 'music',
+        featured: false,
+        productType: 'LP',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_engine-of-hell-lp_1', 'emma-ruth-rundle_engine-of-hell-lp_2'],
+        desc: 'Engine of Hell',
+        price: 23.99,
+        dateAdded: new Date(2021, 10, 5),
+        tracklist: [
+            'Return',
+            'Blooms of Oblivion',
+            'Body',
+            'The Company',
+            'Dancing Man',
+            'Razor\'s Edge',
+            'Citadel',
+            'In My Afterlife'
+        ],
+        albumDesc: 'Emma Ruth Rundle\'s forthcoming Engine of Hell is stark, intimate, and unflinching.' +
+        ' For anyone that\'s endured trauma and grief, there\'s a beautiful solace in hearing Rundle' +
+        ' articulate and humanize that particular type of pain not only with her words, but with her' +
+        ' particular mysterious language of melody and timbre. The album captures a moment where a' +
+        ' masterful songwriter strips away all flourishes and embellishments in order to make every' +
+        ' note and word hit with maximum impact, leaving little to hide behind. “I really wanted to' +
+        ' capture imperfection and the vulnerability of my humanity,” Rundle says of the album\'s sonic' +
+        ' approach. “Here are some very personal songs; here are my memories; here is me teetering on' +
+        ' the very edge of sanity dipping my toe into the outer reaches of space and I\'m taking you with' +
+        ' me and it\'s very fucked up and imperfect.\'\n\n”' + 
+
+        'Emma Ruth Rundle has always been a multifaceted musician, equally capable of dreamy abstraction' +
+        ' (as heard on her album Electric Guitar: One), maximalist textural explorations (see her work in' +
+        ' Marriages, Red Sparowes, Nocturnes or collaborations with Chelsea Wolfe and Thou), and the' +
+        ' classic singer-songwriter tradition (exemplified by Some Heavy Ocean). But on Engine of Hell,' + 
+        ' Rundle has opted to forego the full-band arrangements of her previous albums in favor of the' +
+        ' austerity of a lone piano or guitar and her voice, which creates a kind of intimacy, as if' +
+        ' we\'re sitting beside Rundle on a bench, or perhaps even playing the songs ourselves. It\'s an' +
+        ' extremely up-close and personal confessional with a focus on the rich subtleties and timbre of' +
+        ' Rundle\'s graceful performances.\n\n' + 
+        
+        '“For me this album is the end of an era to the end of a decade of making records. Things DO have' + 
+        ' to change and have changed for me since I finished recording it.” In essence, Engine of Hell' +
+        ' signifies a major turning point for Rundle as both an artist and as a person. The catharsis of' +
+        ' this type of songwriting has effectively served its purpose, and to continue ruminating on the' +
+        ' past going forward is less of a healing process and more like picking at a scab and refusing to' + 
+        ' let it heal. This may help explain why Rundle is less than enthusiastic about divulging the details' + 
+        ' about her muses, but it doesn’t alter the fact that these songs served a purpose in their creation,' + 
+        ' and that they may continue to bring comfort to others.'
+    },
+    {
+        id: 'emma-ruth-rundle_engine-of-hell-cd',
+        category: 'music',
+        featured: false,
+        productType: 'CD',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_engine-of-hell-lp_1'],
+        desc: 'Engine of Hell',
+        price: 14.99,
+        dateAdded: new Date(2021, 10, 5),
+        tracklist: [
+            'Return',
+            'Blooms of Oblivion',
+            'Body',
+            'The Company',
+            'Dancing Man',
+            'Razor\'s Edge',
+            'Citadel',
+            'In My Afterlife'
+        ],
+        albumDesc: 'Emma Ruth Rundle\'s forthcoming Engine of Hell is stark, intimate, and unflinching.' +
+        ' For anyone that\'s endured trauma and grief, there\'s a beautiful solace in hearing Rundle' +
+        ' articulate and humanize that particular type of pain not only with her words, but with her' +
+        ' particular mysterious language of melody and timbre. The album captures a moment where a' +
+        ' masterful songwriter strips away all flourishes and embellishments in order to make every' +
+        ' note and word hit with maximum impact, leaving little to hide behind. “I really wanted to' +
+        ' capture imperfection and the vulnerability of my humanity,” Rundle says of the album\'s sonic' +
+        ' approach. “Here are some very personal songs; here are my memories; here is me teetering on' +
+        ' the very edge of sanity dipping my toe into the outer reaches of space and I\'m taking you with' +
+        ' me and it\'s very fucked up and imperfect.\'\n\n”' + 
+
+        'Emma Ruth Rundle has always been a multifaceted musician, equally capable of dreamy abstraction' +
+        ' (as heard on her album Electric Guitar: One), maximalist textural explorations (see her work in' +
+        ' Marriages, Red Sparowes, Nocturnes or collaborations with Chelsea Wolfe and Thou), and the' +
+        ' classic singer-songwriter tradition (exemplified by Some Heavy Ocean). But on Engine of Hell,' + 
+        ' Rundle has opted to forego the full-band arrangements of her previous albums in favor of the' +
+        ' austerity of a lone piano or guitar and her voice, which creates a kind of intimacy, as if' +
+        ' we\'re sitting beside Rundle on a bench, or perhaps even playing the songs ourselves. It\'s an' +
+        ' extremely up-close and personal confessional with a focus on the rich subtleties and timbre of' +
+        ' Rundle\'s graceful performances.\n\n' + 
+        
+        '“For me this album is the end of an era to the end of a decade of making records. Things DO have' + 
+        ' to change and have changed for me since I finished recording it.” In essence, Engine of Hell' +
+        ' signifies a major turning point for Rundle as both an artist and as a person. The catharsis of' +
+        ' this type of songwriting has effectively served its purpose, and to continue ruminating on the' +
+        ' past going forward is less of a healing process and more like picking at a scab and refusing to' + 
+        ' let it heal. This may help explain why Rundle is less than enthusiastic about divulging the details' + 
+        ' about her muses, but it doesn’t alter the fact that these songs served a purpose in their creation,' + 
+        ' and that they may continue to bring comfort to others.'
+    },
+    {
+        id: 'emma-ruth-rundle-eg-2-dowsing-voice-lp',
+        category: 'music',
+        featured: false,
+        productType: 'LP',
+        band: 'Emma Ruth Rundle',
+        imgs: ['emma-ruth-rundle_eg2-dowsing-voice-lp_1', 'emma-ruth-rundle_eg2-dowsing-voice-lp_2'],
+        desc: 'EG2: Dowsing Voice',
+        price: 25.99,
+        dateAdded: new Date(2022, 4, 15),
+        tracklist: [
+            'Intro to the Underpool: The Path, The Gate, The Field, The Well',
+            'Keening into Ffynnon Llanllawer',
+            'In the Cave of The Cailleach’s Death-Birth',
+            'Gathering around Pair Dadeni',
+            'Brigid Wakes To Find Her Voice Anew. The Little Flowers and Birds Show Themselves',
+            'Imbolc Dawn Atop Ynys Wydryn. Ice Melts as The First Resplendent Rays of Spring Pour Over The Horizon.',
+            'The Tempest on Trefasser',
+            'Don Danann Dana Danu Ana',
+            'Standing Stones Singing / Cellphone Towers Ringing Up To The Darkening Sky',
+            'In Sadness For Our Dying World (here come the Christians)',
+        ],
+        albumDesc: 'Emma Ruth Rundle\'s second installment in her Electric Guitar series, EG2:' + 
+        ' Dowsing Voice, is like the soundtrack to a film that hasn\'t been made. The mostly' + 
+        ' instrumental record follows her on a trip to the Welsh coast and down a magical well' + 
+        ' into the waters of nature, myth and the Old Golds - by way of her improvised music.' + 
+        ' The 40 plus minute album was sewn together from recordings channeled during her month-long' + 
+        ' solo journey in the early days of 2020 and completed before 2021\'s critically lauded album' + 
+        ' Engine of Hell was even written.\n\n' + 
+ 
+        'Unlike Electric Guitar One, EG2: Dowsing Voice features vocal improvisation, unconventional' + 
+        ' singing and extended vocal techniques free from lyrics - like the throat singing on “In the' + 
+        ' Cave…” which is meant to be the voices of crones gathering in a rhythmic and physical ritual.' + 
+        ' Rundle was led to these voices by unseen forces along with the immense impact of the Welsh' + 
+        ' water: ocean, rivers springs and wells that gave the album its extended title Dowsing Voice.' + 
+        ' While there is some focus on vocal and story here, her textural and even bombastic guitar' + 
+        ' improvisations are featured throughout the album. The album is accompanied by a massive body' + 
+        ' of visual artwork Rundle created in her studio upon returning to the states in an attempt to' + 
+        ' further flesh out the world and beings she encountered in the landscapes and music during her' + 
+        ' trip to Wales. The blood self-portrait on the cover is from this series and is meant to capture' + 
+        ' the moment after rebirth. For Rundle, the Electric Guitar series will always be about inspired,' + 
+        ' unplanned moments like this at its core.\n\n'
+    },
+    {
+        id: 'devil-master-satan-spits-on-children-of-light-lp',
+        category: 'music',
+        featured: false,
+        productType: 'LP',
+        band: 'Devil Master',
+        imgs: ['devil-master_satan-spits-on-children-of-light-lp'],
+        desc: 'Satan Spits on Children of Light',
+        price: 25.99,
+        dateAdded: new Date(2019, 2, 1),
+        tracklist: [
+            'Listen, Sweet Demons...' ,          
+            'Nightmares in the Human Collapse',
+            'Black Flame Candle',
+            'Devil Is Your Master',
+            'Christ\'s Last Hiss',
+            'Skeleton Hand',
+            'Nuit',
+            'Gaunt Immortality',
+            'Desperate Shadow',
+            'Her Thirsty Whip',
+            'Dance of Fullmoon Specter',
+            'Webs of Sorrow',
+            'XIII'
+        ],
+        albumDesc: 'Philadelphia\'s DEVIL MASTER stake their claim' + 
+        ' as one of the most venomous, twisted entities in the underground' + 
+        ' with their hellish debut, Satan Spits on Children of Light. The' + 
+        ' album, recorded, mixed, and mastered by Arthur Rizk (POWER TRIP,' + 
+        ' MAMMOTH GRINDER, OUTER HEAVEN, and more,) rattles the very' + 
+        ' gates of hell with a vile dose of black metal-infused punk' + 
+        ' mayhem. Commanding the steel of VENOM, the fury of BATHORY\'s' + 
+        ' earliest years, and the raw, uncompromising nature of the' + 
+        ' notorious GISM, Satan Spits on Children of Light sees DEVIL' + 
+        ' MASTER emerge from the grave and reach new blasphemous heights.' + 
+        ' Give in to the Satanic panic and obey yourDEVIL MASTER!'
+    },
+    {
+        id: 'devil-master-ecstasies-of-never-ending-night-lp',
+        category: 'music',
+        featured: false,
+        productType: 'LP',
+        band: 'Devil Master',
+        imgs: [
+            'devil-master_ecstasies-of-never-ending-night-lp_1',
+            'devil-master_ecstasies-of-never-ending-night-lp_2'
+        ],
+        desc: 'Ecstasies of Never Ending Night',
+        price: 28.99,
+        dateAdded: new Date(2022, 3, 29),
+        tracklist: [
+            'Ecstasies...',	
+            'Enamoured in the Throes of Death', 
+            'Golgotha\'s Cruel Song',	 
+            'The Vigour of Evil',		 
+            'Acid Black Mass',		 
+            'Abyss in Vision',		 
+            'Shrines in Cinder',		 
+            'Funerary Gyre of Dreams & Madness',		 
+            'Precious Blood of Christ Rebuked',		 
+            'Never Ending Night'	
+        ],
+        albumDesc: 'Philadelphia\'s DEVIL MASTER\'s roots in' +
+        ' ritual magick have never been more prominent than on' + 
+        ' their highly anticipated new album Ecstasies Of Never' + 
+        ' Ending Night. Recorded live to analog tape by Pete DeBoer' + 
+        ' (Blood Incantation, Spectral Voice), Ecstasies expands on' + 
+        ' the warped riffing and dark atmospheres that have already' + 
+        ' propelled DEVIL MASTER as one of the underground\'s most' + 
+        ' unique and unfettered bands. From the band\'s blackened' + 
+        ' punk maelstrom of “Acid Black Mass” to the spiraling' + 
+        ' death rock of “Abyss In Vision” and the layers of refined' + 
+        ' atmosphere on the closer “Never Ending Night”, lead guitarist' + 
+        ' Darkest Prince of All Rebellion shines across a collection of' + 
+        ' fiery, tumultuous riffs - Lyrically, vocalist Disembody Through' + 
+        ' Unparalleled Pleasure laces Ecstasies with life-affirming blasphemy' + 
+        ' and existential dread.\n\n' + 
+
+        'Ecstasies of Never Ending Night witnesses DEVIL MASTER at its core.' + 
+        ' Vocalist Disembody Through Unparalleled Pleasure has assumed the' + 
+        ' role of bassist, strengthening the songwriting alongside Darkest' + 
+        ' Prince and founding member/rhythm guitarist Infernal Moonlight' + 
+        ' Apparition. Fresh blood was required and found in drummer/keyboardist' + 
+        ' Festering Terror in Deepest Catacomb (a.k.a. Chris Ulsh of Power' + 
+        ' Trip and Iron Age).\n\n' +
+        
+        'Ecstasies of Never Ending Night proves to be a crucial addition to the' + 
+        ' pantheon of evil satanic metal. In the end, magick reigns!'
+    },
+]
 
 const sortedAlbums = albums.sort(sortByDateAdded);
 export const newAlbumPages = paginate(sortedAlbums);
