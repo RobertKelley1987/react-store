@@ -14,7 +14,9 @@ const SiteHeader = () => {
                 <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
                 <Link to="/" className="site-header-logo">Infinite Bliss</Link>
                 <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
-                <ShoppingBag className="site-header-svg" />
+                <Link to="/cart">
+                    <ShoppingBag className="site-header-svg" />
+                </Link>
             </div>
         </header>
     )

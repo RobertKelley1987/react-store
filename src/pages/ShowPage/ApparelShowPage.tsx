@@ -4,10 +4,10 @@ import { apparel } from '../../data/apparel';
 import ShowPage from './ShowPage';
 import Sizes from './Sizes';
 import { ErrorMessageContext } from '../../context/ErrorMessageContext';
-import { Size, ApparelCartAction, Apparel } from '../../types';
+import { Size, CartAction, Apparel } from '../../types';
 
 type ApparelShowPageProps = {
-    dispatch: React.Dispatch<ApparelCartAction>
+    dispatch: React.Dispatch<CartAction>
 }
 
 const ApparelShowPage = ({ dispatch }: ApparelShowPageProps) => {
@@ -20,7 +20,7 @@ const ApparelShowPage = ({ dispatch }: ApparelShowPageProps) => {
     useEffect(() => {
         const foundApparel = apparel.find(apparel => apparel.id === apparelId);
         if(foundApparel) setProduct(foundApparel);
-    }, [])
+    }, [apparelId])
 
 
     if(!product) return <p>Error - Product Not Found.</p>;
@@ -30,7 +30,7 @@ const ApparelShowPage = ({ dispatch }: ApparelShowPageProps) => {
             errorContext?.setErrorMessage('Please select a size.');
         } else {
             const newItem = { product, qty, size: selectedSize }
-            dispatch({ type: 'ADD_APPAREL', payload: newItem });
+            dispatch({ type: 'ADD_ITEM', payload: newItem });
         }
     }
 

@@ -64,7 +64,7 @@ export const accessories: Accessory[] = [
         imgs: ['full-of-hell_logo-patch-cap_1', 'full-of-hell_logo-patch-cap_2'],
         desc: 'Logo Patch',
         color: 'Black',
-        manufacturer: 'Gildan',
+        manufacturer: 'Beechfield',
         material: '100% Cotton',
         price: 29.99,
         dateAdded: new Date(2021, 3, 17)
@@ -164,7 +164,7 @@ export const accessories: Accessory[] = [
         imgs: ['emma-ruth-rundle_emma-ruth-rundle-cap_1', 'emma-ruth-rundle_emma-ruth-rundle-cap_2'],
         desc: 'Emma Ruth Rundle',
         color: 'White',
-        manufacturer: 'Gildan',
+        manufacturer: 'Beechfield',
         material: '100% Cotton',
         price: 29.99,
         dateAdded: new Date(2018, 8, 30)
@@ -240,5 +240,43 @@ export const accessories: Accessory[] = [
         price: 11.99,
         accessoryDesc: 'Silver and black metal pin with two clutches on the back. 5cm wide.',
         dateAdded: new Date(2021, 3, 16)
+    },
+    {
+        id: 'oathbreaker-hands-patch',
+        category: 'accessories',
+        featured: false,
+        productType: 'Patch',
+        band: 'Oathbreaker',
+        imgs: ['oathbreaker_hands-patch'],
+        desc: 'Hands',
+        price: 11.99,
+        accessoryDesc: 'Rectangular patch with embroidered Oathbreaker logo. 8cm x 15cm / 3.15" x 5.90".',
+        dateAdded: new Date(2016, 8, 30)
+    },
+    {
+        id: 'oathbreaker-logo-patch',
+        category: 'accessories',
+        featured: false,
+        productType: 'Patch',
+        band: 'Oathbreaker',
+        imgs: ['oathbreaker_logo-patch'],
+        desc: 'Logo',
+        price: 11.99,
+        accessoryDesc: 'Rectangular patch with embroidered Oathbreaker logo. 2,5cm x 10cm / 1" x 1,95".',
+        dateAdded: new Date(2016, 8, 30)
+    },
+    {
+        id: 'undeath_logo-cap',
+        category: 'accessories',
+        featured: false,
+        productType: 'Cap',
+        band: 'Undeath',
+        imgs: ['undeath_logo-cap_1', 'undeath_logo-cap_2'],
+        desc: 'Logo',
+        color: 'Black',
+        manufacturer: 'Beechfield',
+        material: '100% Cotton',
+        price: 29.99,
+        dateAdded: new Date(2021, 3, 17)
     },
 ];

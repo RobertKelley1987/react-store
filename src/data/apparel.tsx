@@ -708,6 +708,23 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2013, 7, 30)
     },
     {
+        id: 'nails-you-will-never-be-one-of-us-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Nails',
+        imgs: [
+            'nails_you-will-never-be-one-of-us-t-shirt_front', 
+            'nails_you-will-never-be-one-of-us-t-shirt_back'
+        ],
+        desc: 'You Will Never Be One of Us',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2016, 0, 13)
+    },
+    {
         id: 'gdXf2X',
         category: 'apparel',
         featured: false,
@@ -717,26 +734,63 @@ export const apparel: Apparel[] = [
         desc: 'Unsilent Death',
         color: 'Black',
         manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
+        material: '100% Cotton',
         price: 34.99,
         dateAdded: new Date(2010, 2, 15)
     },
     {
-        id: 'YNMqzg',
+        id: 'nails-born-to-follow-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
         band: 'Nails',
-        imgs: ['nails_born-to-follow-longsleeve_front', 'nails_born-to-follow-longsleeve_back'],
-        desc: 'Brn To Follow',
+        imgs: [
+            'nails_born-to-follow-longsleeve_front', 
+            'nails_born-to-follow-longsleeve_back'
+        ],
+        desc: 'Born To Follow',
         color: 'Black',
         manufacturer: 'Gildan',
-        material: '50% Cotton / 50% Polyester',
+        material: '100% Cotton',
         price: 34.99,
         dateAdded: new Date(2010, 2, 15)
     },
     {
-        id: 'SlB3zV',
+        id: 'nails-you-will-never-be-one-of-us-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Nails',
+        imgs: [
+            'nails_you-will-never-be-one-of-us-longsleeve_front', 
+            'nails_you-will-never-be-one-of-us-longsleeve_back'
+        ],
+        desc: 'You Will Never Be One of Us',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 34.99,
+        dateAdded: new Date(2016, 0, 13)
+    },
+    {
+        id: 'nails-you-will-never-be-one-of-us-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Nails',
+        imgs: [
+            'nails_you-will-never-be-one-of-us-hoodie_front', 
+            'nails_you-will-never-be-one-of-us-hoodie_back'
+        ],
+        desc: 'You Will Never Be One of Us',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 44.99,
+        dateAdded: new Date(2016, 0, 13)
+    },
+    {
+        id: 'nails-unsilent-death-hoodie',
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
@@ -750,7 +804,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2010, 2, 15)
     },
     {
-        id: 'GS3JLk',
+        id: 'bell-witch-impious-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -1397,7 +1451,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touche Amore',
+        band: 'Touché Amoré',
         imgs: ['touche-amore_sirens-t-shirt'],
         desc: 'Sirens',
         color: 'Sand',
@@ -1411,7 +1465,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touche Amore',
+        band: 'Touché Amoré',
         imgs: ['touche-amore_city-t-shirt_front', 'touche-amore_city-t-shirt_back'],
         desc: 'City',
         color: 'Black',
@@ -1425,7 +1479,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touche Amore',
+        band: 'Touché Amoré',
         imgs: ['touche-amore_honest-sleep-t-shirt_front', 'touche-amore_honest-sleep-t-shirt_back'],
         desc: 'Honest Sleep',
         color: 'Black',
@@ -1439,7 +1493,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touche Amore',
+        band: 'Touché Amoré',
         imgs: [
             'touche-amore_stage-four-rose-t-shirt_front', 
             'touche-amore_stage-four-rose-t-shirt_back'
@@ -1742,6 +1796,40 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2018, 5, 1)
     },
     {
+        id: 'spectral-wound-a-diabolic-thirst-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Spectral Wound',
+        imgs: [
+            'spectral-wound_a-diabolic-thirst-t-shirt_front', 
+            'spectral-wound_a-diabolic-thirst-t-shirt_back'
+        ],
+        desc: 'A Diabolic Thirst',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2021, 3, 16)
+    },
+    {
+        id: 'spectral-wound-skull-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Spectral Wound',
+        imgs: [
+            'spectral-wound_skull-t-shirt_front', 
+            'spectral-wound_skull-t-shirt_back'
+        ],
+        desc: 'Skull',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2021, 3, 16)
+    },
+    {
         id: 'spectral-wound-infernal-decadence-longsleeve',
         category: 'apparel',
         featured: false,
@@ -1759,6 +1847,23 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2018, 5, 1)
     },
     {
+        id: 'spectral-wound-a-diabolic-thirst-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Spectral Wound',
+        imgs: [
+            'spectral-wound_a-diabolic-thirst-longsleeve_front', 
+            'spectral-wound_a-diabolic-thirst-longsleeve_back'
+        ],
+        desc: 'A Diabolic Thirst',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2021, 3, 16)
+    },
+    {
         id: 'spectral-wound-infernal-decadence-hoodie',
         category: 'apparel',
         featured: false,
@@ -1774,6 +1879,557 @@ export const apparel: Apparel[] = [
         material: '50% Cotton / 50% Polyester',
         price: 39.99,
         dateAdded: new Date(2018, 5, 1)
+    },
+    {
+        id: 'devil-master-devil-head-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Devil Master',
+        imgs: ['devil-master_devil-head-t-shirt'],
+        desc: 'Devil Head',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 9, 1)
+    },
+    {
+        id: 'devil-master-devil-head-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Devil Master',
+        imgs: ['devil-master_devil-head-longsleeve'],
+        desc: 'Devil Head',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2023, 9, 1)
+    },
+    {
+        id: 'divide-and-dissolve-destroy-white-supremacy-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Divide and Dissolve',
+        imgs: [
+            'divide-and-dissolve_destroy-white-supremacy-t-shirt_front', 
+            'divide-and-dissolve_destroy-white-supremacy-t-shirt_back'
+        ],
+        desc: 'Destroy White Supremacy',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 1, 16)
+    },
+    {
+        id: 'divide-and-dissolve-no-prisons-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Divide and Dissolve',
+        imgs: [
+            'divide-and-dissolve_no-prisons-t-shirt_front', 
+            'divide-and-dissolve_no-prisons-t-shirt_back'
+        ],
+        desc: 'No Prisons',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 1, 16)
+    },
+    {
+        id: 'divide-and-dissolve-dismantle-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Divide and Dissolve',
+        imgs: [
+            'divide-and-dissolve_dismantle-t-shirt_front', 
+            'divide-and-dissolve_dismantle-t-shirt_back'
+        ],
+        desc: 'Dismantle',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 1, 16)
+    },
+    {
+        id: 'oathbreaker-hands-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Oathbreaker',
+        imgs: [
+            'oathbreaker_hands-hoodie_front', 
+            'oathbreaker_hands-hoodie_back'
+        ],
+        desc: 'Hands',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2016, 30, 8)
+    },
+    {
+        id: 'oathbreaker-face-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Oathbreaker',
+        imgs: ['oathbreaker_face-t-shirt'],
+        desc: 'Face',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2016, 30, 8)
+    },
+    {
+        id: 'oathbreaker-bird-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Oathbreaker',
+        imgs: [
+            'oathbreaker_bird-t-shirt_front',
+            'oathbreaker_bird-t-shirt_back'
+        ],
+        desc: 'Bird',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2016, 30, 8)
+    },
+    {
+        id: 'undeath-death-obscene-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: ['undeath_death-obscene-t-shirt'],
+        desc: 'Death Obscene',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 6, 30)
+    },
+    {
+        id: 'undeath-its-time-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: [
+            'undeath_its-time-t-shirt_front', 
+            'undeath_its-time-t-shirt_back'
+        ],
+        desc: 'It\'s Time',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 9, 23)
+    },
+    {
+        id: 'undeath-its-time-no-back-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: ['undeath_its-time-t-shirt_front'],
+        desc: 'It\'s Time (No Back)',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 9, 23)
+    },
+    {
+        id: 'undeath-red-on-black-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: ['undeath_red-on-black-t-shirt'],
+        desc: 'Red On Black',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2020, 11, 3)
+    },
+    {
+        id: 'undeath-rotting-in-rochester-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: ['undeath_rotting-in-rochester-t-shirt'],
+        desc: 'Rotting in Rochester',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2019, 6, 30)
+    },
+    {
+        id: 'undeath-jumped-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: ['undeath_jumped-t-shirt'],
+        desc: 'Jumped',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2019, 10, 30)
+    },
+    {
+        id: 'undeath-european-exhumation-2023-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: [
+            'undeath_european-exhumation-2023-t-shirt_front',
+            'undeath_european-exhumation-2023-t-shirt_back'
+        ],
+        desc: 'European Exhumation 2023',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2023, 11, 2)
+    },
+    {
+        id: 'undeath-skull-crushing-death-metal-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: [
+            'undeath_skull-crushing-death-metal-t-shirt_front', 
+            'undeath_skull-crushing-death-metal-t-shirt_back'
+        ],
+        desc: 'Skull Crushing Death Metal',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2020, 4, 23)
+    },
+    {
+        id: 'undeath-lesions-of-a-different-kind-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Undeath',
+        imgs: [
+            'undeath_lesions-of-a-different-kind-t-shirt_front', 
+            'undeath_lesions-of-a-different-kind-t-shirt_back'
+        ],
+        desc: 'Lesions of a Different Kind',
+        color: 'White',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2020, 4, 23)
+    },
+    {
+        id: 'undeath-lesions-of-a-different-kind-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Undeath',
+        imgs: [
+            'undeath_lesions-of-a-different-kind-longsleeve_front', 
+            'undeath_lesions-of-a-different-kind-longsleeve_back'
+        ],
+        desc: 'Lesions of a Different Kind',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2020, 4, 23)
+    },
+    {
+        id: 'undeath-blacksmith-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Undeath',
+        imgs: [
+            'undeath_blacksmith-longsleeve_front', 
+            'undeath_blacksmith-longsleeve_back'
+        ],
+        desc: 'Blacksmith',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2020, 4, 23)
+    },
+    {
+        id: 'undeath-its-time-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Undeath',
+        imgs: [
+            'undeath_its-time-longsleeve_front', 
+            'undeath_its-time-longsleeve_back'
+        ],
+        desc: 'It\'s Time',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2022, 9, 23)
+    },
+    {
+        id: 'undeath-uk-tour-2023-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Undeath',
+        imgs: [
+            'undeath_uk-tour-2023-longsleeve_front', 
+            'undeath_uk-tour-2023-longsleeve_back'
+        ],
+        desc: 'UK Tour 2023',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2023, 4, 23)
+    },
+    {
+        id: 'undeath-sentient-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Undeath',
+        imgs: [
+            'undeath_sentient-longsleeve_front', 
+            'undeath_sentient-longsleeve_back'
+        ],
+        desc: 'Sentient',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2019, 6, 30)
+    },
+    {
+        id: 'undeath-head-splattered-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Undeath',
+        imgs: [
+            'undeath_head-splattered-hoodie_front', 
+            'undeath_head-splattered-hoodie_back'
+        ],
+        desc: 'Head Splattered',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2022, 9, 1)
+    },
+    {
+        id: 'undeath-head-splattered-grey-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Undeath',
+        imgs: [
+            'undeath_head-splattered-grey-hoodie_front', 
+            'undeath_head-splattered-grey-hoodie_back'
+        ],
+        desc: 'Head Splattered - Grey',
+        color: 'Grey',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2022, 9, 1)
+    },
+    {
+        id: 'undeath-purple-logo-hoodie',
+        category: 'apparel',
+        featured: false,
+        productType: 'Hoodie',
+        band: 'Undeath',
+        imgs: ['undeath_purple-logo-hoodie'],
+        desc: 'Purple Logo',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '50% Cotton / 50% Polyester',
+        price: 39.99,
+        dateAdded: new Date(2022, 9, 1)
+    },
+    {
+        id: 'primitive-man-stoned-death-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_stoned-death-t-shirt_front',
+            'primitive-man_stoned-death-t-shirt_back'
+        ],
+        desc: 'Stoned Death',
+        color: 'Natural',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2020, 7, 14)
+    },
+    {
+        id: 'primitive-man-stoner-witch-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_stoner-witch-t-shirt_front',
+            'primitive-man_stoner-witch-t-shirt_back'
+        ],
+        desc: 'Stoner Witch',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 3, 10)
+    },
+    {
+        id: 'primitive-man-bag-lady-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_bag-lady-t-shirt_front',
+            'primitive-man_bag-lady-t-shirt_back'
+        ],
+        desc: 'Bag Lady',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2018, 9, 1)
+    },
+    {
+        id: 'primitive-man-pitiful-and-loathsome-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_pitiful-and-loathsome-t-shirt_front',
+            'primitive-man_pitiful-and-loathsome-t-shirt_back'
+        ],
+        desc: 'Pitiful & Loathsome',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 1, 22)
+    },
+    {
+        id: 'primitive-man-hell-split-t-shirt',
+        category: 'apparel',
+        featured: false,
+        productType: 'T-Shirt',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_hell-split-t-shirt_front',
+            'primitive-man_hell-split-t-shirt_back'
+        ],
+        desc: 'Hell Split',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 24.99,
+        dateAdded: new Date(2022, 1, 22)
+    },
+    {
+        id: 'primitive-man-reaper-snake-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_reaper-snake-longsleeve_front',
+            'primitive-man_reaper-snake-longsleeve_back'
+        ],
+        desc: 'Reaper Snake',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2020, 7, 14)
+    },
+    {
+        id: 'primitive-man-entity-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_entity-longsleeve_front',
+            'primitive-man_entity-longsleeve_back'
+        ],
+        desc: 'Entity',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2020, 7, 14)
+    },
+    {
+        id: 'primitive-man-you-are-in-hell-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_you-are-in-hell-longsleeve_front',
+            'primitive-man_you-are-in-hell-longsleeve_back'
+        ],
+        desc: 'You Are in Hell',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2017, 9, 18)
+    },
+    {
+        id: 'primitive-man-enemies-of-art-longsleeve',
+        category: 'apparel',
+        featured: false,
+        productType: 'Longsleeve',
+        band: 'Primitive Man',
+        imgs: [
+            'primitive-man_enemies-of-art-longsleeve_front',
+            'primitive-man_enemies-of-art-longsleeve_back'
+        ],
+        desc: 'Enemies of Art',
+        color: 'Black',
+        manufacturer: 'Gildan',
+        material: '100% Cotton',
+        price: 34.99,
+        dateAdded: new Date(2022, 4, 13)
     },
 ];
 

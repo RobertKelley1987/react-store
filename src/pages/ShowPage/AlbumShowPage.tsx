@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { albums } from '../../data/albums'; 
-import { MusicCartAction, Album } from '../../types';
+import { CartAction, Album } from '../../types';
 import ShowPage from './ShowPage';
 
 type AlbumShowPageProps = {
-    dispatch: React.Dispatch<MusicCartAction>
+    dispatch: React.Dispatch<CartAction>
 }
 
 const AlbumShowPage = ({ dispatch }: AlbumShowPageProps) => {
@@ -23,10 +23,19 @@ const AlbumShowPage = ({ dispatch }: AlbumShowPageProps) => {
 
     const handleClick = () => {
         const newItem = { product, qty }
-        dispatch({ type: 'ADD_ALBUM', payload: newItem });
+        dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 
-    return <ShowPage handleClick={handleClick} product={product} qty={qty} setQty={setQty} desc={product.albumDesc}/>
+    return (
+        <ShowPage 
+            handleClick={handleClick} 
+            product={product} 
+            qty={qty} 
+            setQty={setQty} 
+            desc={product.albumDesc}
+            tracklist={product.tracklist}
+        />
+    )
 }
 
 export default AlbumShowPage;

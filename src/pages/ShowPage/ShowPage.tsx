@@ -8,11 +8,28 @@ type ShowPageProps = {
     product: Album | Apparel,
     qty: number,
     setQty: React.Dispatch<React.SetStateAction<number>>,
-    desc?: string,
+    desc?: string[],
+    tracklist?: string[]
     children?: React.ReactNode
 }
 
-const ShowPage = ({ product, qty, setQty, handleClick, desc, children }: ShowPageProps) => {
+const formatTrackNum = (trackNum: number) => trackNum < 10 ? `0${trackNum}` : trackNum;
+
+const ShowPage = ({ product, qty, setQty, handleClick, desc, tracklist, children }: ShowPageProps) => {
+
+    const renderDescription = () => desc && <article>{desc.map(paragraph => <p>{paragraph}</p>)}</article>;
+
+    const renderTrackList = () => {
+        if(tracklist) {
+            return (
+                <div>
+                    <h3>Tracklist</h3>
+                    <ul>{tracklist.map((track, index) => <li>{`${formatTrackNum(index + 1)}. ${track}`}</li>)}</ul>
+                </div>
+            );
+        }
+    }
+
     return (
         <div className="show-page-product-grid container">
             <ImgCarousel product={product} />
@@ -22,7 +39,10 @@ const ShowPage = ({ product, qty, setQty, handleClick, desc, children }: ShowPag
                 <Qty qty={qty} setQty={setQty} />
                 {children}
                 <button onClick={handleClick} className="button button-black">ADD TO CART</button>
-                {desc && <p>{desc}</p>}
+                <div>
+                    {renderDescription()}
+                    {renderTrackList()}
+                </div>
             </div>
         </div>
     )

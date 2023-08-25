@@ -1,7 +1,6 @@
 import { useState, useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import albumReducer from './state/albumReducer';
-import apparelReducer from './state/apparelReducer';
+import cartReducer from './state/cartReducer';
 import SiteHeader from './components/SiteHeader';
 import HomePage from './pages/HomePage';
 import CartPage from './pages/CartPage';
@@ -17,11 +16,10 @@ import { newAlbumPages } from './data/albums';
 import './App.css';
 
 const App = () => {
-  const [albumState, albumDispatch] = useReducer(albumReducer, []);
-  const [apparelState, apparelDispatch] = useReducer(apparelReducer, []);
+  const [state, dispatch] = useReducer(cartReducer, []);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const cart = [...albumState, ...apparelState];
+  const cart = [...state];
   console.log(cart);
 
   return (
@@ -33,15 +31,15 @@ const App = () => {
         <ErrorMessage errorMessage={errorMessage} setErrorMessage={setErrorMessage} />
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/cart' element={<CartPage />} />
+          <Route path='/cart' element={<CartPage cart={state} dispatch={dispatch} />} />
           <Route path='/music' element={<ListPage pages={newAlbumPages} pageName='All Music' />} />
           <Route path='/music/new' element={<ListPage pages={newAlbumPages} pageName='New Music' />} />
-          <Route path='/music/:albumId' element={<AlbumShowPage dispatch={albumDispatch}/>} />
+          <Route path='/music/:albumId' element={<AlbumShowPage dispatch={dispatch}/>} />
           <Route path='/apparel/new' element={<ListPage pages={newApparelPages} pageName='New Apparel' />} />
           <Route path='/apparel/t-shirts' element={<ListPage pages={tShirtPages} pageName='T-Shirts' />} />
           <Route path='/apparel/longsleeves' element={<ListPage pages={longsleevePages} pageName='Longsleeves' />} />
           <Route path='/apparel/hoodies' element={<ListPage pages={hoodiePages} pageName='Hoodies' />} />
-          <Route path='/apparel/:apparelId' element={<ApparelShowPage dispatch={apparelDispatch}/>} />
+          <Route path='/apparel/:apparelId' element={<ApparelShowPage dispatch={dispatch}/>} />
           <Route path='/artists/:name' element={<ArtistPage />} />
         </Routes>
       </ErrorMessageContext.Provider>

@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { albums } from '../data/albums';
 import { apparel } from '../data/apparel';
@@ -5,6 +6,7 @@ import { accessories } from '../data/accessories';
 import { paginate, httpFormat } from '../utils';
 import ListPage from "./ListPage";
 import { ALL_BANDS } from '../constants';
+import './ArtistPage.css';
 
 // Convert all band names to http format
 const allBands = ALL_BANDS.map(band => httpFormat(band));
@@ -23,7 +25,18 @@ const ArtistPage = () => {
     const capitalizedName = ALL_BANDS[bandIndex];
 
     if(name && allBands.includes(name.toLowerCase())) {
-        return <ListPage pages={bandPages} pageName={capitalizedName}/>
+        return (
+            (
+                <Fragment>
+                    <img 
+                        className="artist-page-banner-img" 
+                        src={`/imgs/banners/${httpFormat(name)}-banner.png`} 
+                        alt={`Page banner with ${name} logo`}
+                    />
+                    <ListPage pages={bandPages} pageName={capitalizedName} />
+                </Fragment>
+            )
+        )
     } else {
         return <p>Error: Artist store not found</p>
     } 
