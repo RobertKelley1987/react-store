@@ -14,17 +14,17 @@ const MUSIC_PAGES = ['New', 'Vinyl'];
 export const CATEGORIES = [{ name: 'Apparel', pages: APPAREL_PAGES}, { name: 'Music', pages: MUSIC_PAGES }];
 
 // BAND NAMES GROUPED WITH IDS TO USE AS KEYS
-export const ALL_BANDS = [
+export const ALL_ARTISTS = [
     'Agriculture', 'Bell Witch', 'Blood Incantation', 'The Body', 'Chat Pile', 'Cloud Rat', 
     'Deafheaven', 'Devil Master', 'Divide and Dissolve', 'Emma Ruth Rundle', 'Full of Hell', 
     'Knoll', 'Nails', 'Oathbreaker', 'Portrayal of Guilt', 'Primitive Man', 'Ragana', 'Soft Kill', 
     'Spectral Wound', 'Touché Amoré', 'Undeath'
 ]
 
-const A_TO_C = ALL_BANDS.filter(name => nameIsBetween(name, 'a', 'c'));
-const D_TO_H = ALL_BANDS.filter(name => nameIsBetween(name, 'd', 'h'));
-const I_TO_P = ALL_BANDS.filter(name => nameIsBetween(name, 'i', 'p'));;
-const Q_TO_Z = ALL_BANDS.filter(name => nameIsBetween(name, 'q', 'z'));;
+const A_TO_C = ALL_ARTISTS.filter(name => nameIsBetween(name, 'a', 'c'));
+const D_TO_H = ALL_ARTISTS.filter(name => nameIsBetween(name, 'd', 'h'));
+const I_TO_P = ALL_ARTISTS.filter(name => nameIsBetween(name, 'i', 'p'));;
+const Q_TO_Z = ALL_ARTISTS.filter(name => nameIsBetween(name, 'q', 'z'));;
 
 export const BANDS = [
     { name: 'A to C', pages: A_TO_C }, 
@@ -34,4 +34,4 @@ export const BANDS = [
 ];
 
 // ITEMS PER PAGE
-export const ITEMS_PER_PAGE = 16;
+export const ITEMS_PER_PAGE = 24;

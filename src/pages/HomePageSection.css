@@ -1,7 +1,13 @@
+.home-page-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .home-page-section-heading {
     font-family: var(--sans-serif);
     font-size: var(--huge-font);
-    margin: 0 0 2rem 0;
     text-align: center;
     text-transform: uppercase;
 }

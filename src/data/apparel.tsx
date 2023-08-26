@@ -1,13 +1,13 @@
 import { Apparel } from '../types';
-import { paginate, sortByBandName, sortByDateAdded } from '../utils';
+import { paginate, sortByArtistName, sortByDateAdded } from '../utils';
 
 export const apparel: Apparel[] = [
     {
-        id: 'agriculture_logo-t-shirt',
+        id: 'agriculture-logo-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Agriculture',
+        artist: 'Agriculture',
         imgs: ['agriculture_logo-t-shirt'],
         desc: 'Logo',
         color: 'Black',
@@ -17,11 +17,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 5, 10)
     },
     {
-        id: 'agriculture_ecstatic-longsleeve',
+        id: 'agriculture-ecstatic-longsleeve',
         category: 'apparel',
         featured: true,
         productType: 'Longsleeve',
-        band: 'Agriculture',
+        artist: 'Agriculture',
         imgs: ['agriculture_ecstatic-longsleeve'],
         desc: 'Ecstatic',
         color: 'Black',
@@ -35,7 +35,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: ['blood-incantation_logo-tour-2022-t-shirt_front', 'blood-incantation_logo-tour-2022-t-shirt_back'],
         desc: 'Logo - Tour 2022',
         color: 'Black',
@@ -47,9 +47,9 @@ export const apparel: Apparel[] = [
     {        
         id: 'blood-incantation-orbital-remains-tour-2022-t-shirt',
         category: 'apparel',
-        featured: true,
+        featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_orbital-remains-tour-2022-t-shirt_front', 
             'blood-incantation_orbital-remains-tour-2022-t-shirt_back'
@@ -66,7 +66,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: ['blood-incantation_split-t-shirt'],
         desc: 'Split',
         color: 'White',
@@ -80,7 +80,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_timewave-zero-t-shirt_front', 
             'blood-incantation_timewave-zero-t-shirt_back'
@@ -97,7 +97,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_timewave-zero-tour-2022-t-shirt_front', 
             'blood-incantation_timewave-zero-tour-2022-t-shirt_back'
@@ -114,21 +114,21 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: ['blood-incantation_live-vitrification-t-shirt'],
         desc: 'Live Vitrification',
         color: 'White',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2018, 10, 18)
+        dateAdded: new Date(2023, 8, 30)
     },
     {        
-        id: 'blood-incantation_hidden-history-t-shirt',
+        id: 'blood-incantation-hidden-history-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_hidden-history-t-shirt_front', 
             'blood-incantation_hidden-history-t-shirt_back'
@@ -145,7 +145,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_starspawn-t-shirt_front', 
             'blood-incantation_starspawn-t-shirt_back'
@@ -158,11 +158,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2016, 7, 13)
     },
     {        
-        id: 'blood-incantation_hidden-species-t-shirt',
+        id: 'blood-incantation-hidden-species-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_hidden-species-t-shirt_front', 
             'blood-incantation_hidden-species-t-shirt_back'
@@ -172,14 +172,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2023, 3, 7)
+        dateAdded: new Date(2021, 5, 12)
     },
     {        
         id: 'blood-incantation-timewave-zero-pocket-grey-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_timewave-zero-pocket-grey-t-shirt_front', 
             'blood-incantation_timewave-zero-pocket-grey-t-shirt_back'
@@ -189,14 +189,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2023, 4, 30)
+        dateAdded: new Date(2022, 1, 25)
     },
     {        
         id: 'blood-incantation-red-logo-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_red-logo-t-shirt_front', 
             'blood-incantation_red-logo-t-shirt_back'
@@ -213,7 +213,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_interdimensional-extinction-longsleeve_front', 
             'blood-incantation_interdimensional-extinction-longsleeve_back'
@@ -230,7 +230,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_interdimensional-extinction-logo-longsleeve_front', 
             'blood-incantation_interdimensional-extinction-logo-longsleeve_back'
@@ -247,7 +247,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_interdimensional-pocket-tour-2022-longsleeve_front', 
             'blood-incantation_interdimensional-pocket-tour-2022-longsleeve_back'
@@ -264,7 +264,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_bacteria-longsleeve_front', 
             'blood-incantation_bacteria-longsleeve_back'
@@ -281,7 +281,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_logo-grey-longsleeve_front', 
             'blood-incantation_logo-grey-longsleeve_back'
@@ -298,7 +298,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_timewave-zero-longsleeve_front', 
             'blood-incantation_timewave-zero-longsleeve_back'
@@ -315,7 +315,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_timewave-zero-pocket-longsleeve_front', 
             'blood-incantation_timewave-zero-pocket-longsleeve_back'
@@ -332,7 +332,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_starspawn-pocket-longsleeve_front', 
             'blood-incantation_starspawn-pocket-longsleeve_back'
@@ -349,7 +349,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_hidden-history-longsleeve_front', 
             'blood-incantation_hidden-history-longsleeve_back'
@@ -366,7 +366,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_hidden-history-tour-longsleeve_front', 
             'blood-incantation_hidden-history-tour-longsleeve_back'
@@ -379,11 +379,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 10, 22)
     },
     {
-        id: 'IqZbSP',
+        id: 'blood-incantation-hidden-species-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_hidden-species-longsleeve_front', 
             'blood-incantation_hidden-species-longsleeve_back'
@@ -393,14 +393,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2023, 3, 7)
+        dateAdded: new Date(2021, 5, 12)
     },
     {
-        id: '3btUFL',
+        id: 'blood-incantation-hidden-history-hoodie',
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Blood Incantation',
+        artist: 'Blood Incantation',
         imgs: [
             'blood-incantation_hidden-history-hoodie_front', 
             'blood-incantation_hidden-history-hoodie_back'
@@ -413,25 +413,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 10, 22)
     },
     {        
-        id: 'chat-pile_on-deadly-ground-t-shirt',
+        id: 'chat-pile-on-deadly-ground-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_on-deadly-ground-t-shirt_front', 'chat-pile_on-deadly-ground-t-shirt_back'],
         desc: 'On Deadly Ground',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2023, 2, 1),
+        dateAdded: new Date(2023, 0, 15),
     },
     {        
-        id: '7v81xM',
+        id: 'chat-pile-logo-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_logo-t-shirt'],
         desc: 'Logo',
         color: 'Natural',
@@ -441,11 +441,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 2, 3),
     },
     {        
-        id: 'chat-pile_grim-guy-smoking-weed-t-shirt',
+        id: 'chat-pile-grim-guy-smoking-weed-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_grim-guy-smoking-weed-t-shirt'],
         desc: 'Grim Guy Smoking Weed',
         color: 'Black',
@@ -455,25 +455,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 2),
     },
     {        
-        id: 'chat-pile_pamela-t-shirt',
+        id: 'chat-pile-pamela-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_pamela-t-shirt'],
         desc: 'Pamela',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2021, 7, 15),
+        dateAdded: new Date(2021, 2, 3),
     },
     {        
-        id: 'zrj2MJ',
+        id: 'chat-pile-staircase-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_staircase-t-shirt'],
         desc: 'Staircase',
         color: 'Sand Dune',
@@ -483,11 +483,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 1, 10),
     },
     {        
-        id: 'WIxfW7',
+        id: 'chat-pile-samantha-wendel-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_samantha-wendel-longsleeve'],
         desc: 'Samantha Wendel',
         color: 'White',
@@ -497,11 +497,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 0, 15),
     },
     {        
-        id: '0YGiGt',
+        id: 'chat-pile-mute-neighbor-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_mute-neighbor-longsleeve'],
         desc: 'Mute Neighbor',
         color: 'Black',
@@ -511,25 +511,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 1, 3),
     },
     {        
-        id: 'lXfmFS',
+        id: 'chat-pile-alex-eckman-longsleeve',
         category: 'apparel',
         featured: true,
         productType: 'Longsleeve',
-        band: 'Chat Pile',
+        artist: 'Chat Pile',
         imgs: ['chat-pile_alex-eckman-longsleeve'],
         desc: 'Alex Eckman',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2022, 4, 15),
+        dateAdded: new Date(2022, 5, 2),
     },
     {
-        id: 'V7SZ54',
+        id: 'deafheaven-sunbather-t-shirt',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_sunbather-t-shirt_front', 'deafheaven_sunbather-t-shirt_back'],
         desc: 'Sunbather',
         color: 'Black',
@@ -539,11 +539,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2013, 5, 13)
     },
     {
-        id: 'deafheaven_sunbather-pink-t-shirt',
+        id: 'deafheaven-sunbather-pink-t-shirt',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_sunbather-pink-t-shirt_front', 'deafheaven_sunbather-pink-t-shirt_back'],
         desc: 'Sunbather Pink',
         color: 'Pink',
@@ -553,11 +553,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 8, 13)
     },
     {
-        id: 'V7SZ5o',
+        id: 'deafheaven-shellstar-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_shellstar-t-shirt'],
         desc: 'Shellstar',
         color: 'Black',
@@ -567,11 +567,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 7, 20)
     },
     {
-        id: 'deafheaven_grid-tri-blend-t-shirt',
+        id: 'deafheaven-grid-tri-blend-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_grid-tri-blend-t-shirt'],
         desc: 'Grid - Tri-Blend',
         color: 'Blue Tri-Blend',
@@ -581,11 +581,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 7, 20)
     },
     {
-        id: 'deafheaven_infinite-granite-t-shirt',
+        id: 'deafheaven-infinite-granite-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_infinite-granite-t-shirt_front', 'deafheaven_infinite-granite-t-shirt_back'],
         desc: 'Infinite Granite',
         color: 'Black',
@@ -595,11 +595,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 7, 20)
     },
     {
-        id: 'deafheaven_styleguide-t-shirt',
+        id: 'deafheaven-styleguide-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_styleguide-t-shirt_front', 'deafheaven_styleguide-t-shirt_back'],
         desc: 'Styleguide',
         color: 'Black',
@@ -609,39 +609,39 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 7, 20)
     },
     {
-        id: 'deafheaven_ochl-t-shirt',
+        id: 'deafheaven-ochl-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_ochl-t-shirt'],
         desc: 'OCHL',
         color: 'Military Green',
         manufacturer: 'Gildan',
         material: '100%',
         price: 24.99,
-        dateAdded: new Date(2018, 6, 15)
+        dateAdded: new Date(2018, 7, 23)
     },
     {
-        id: 'YRmZq2',
+        id: 'deafheaven-sleeper-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_sleeper-t-shirt'],
         desc: 'Sleeper',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2015, 9, 3),
+        dateAdded: new Date(2013, 5, 13),
     },
     {
-        id: 'pBjMac',
+        id: 'deafheaven-sunflower-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Deafheaven',
+        artist: 'Deafheaven',
         imgs: ['deafheaven_sunflower-t-shirt_front', 'deafheaven_sunflower-t-shirt_back'],
         desc: 'Sunflower',
         color: 'Black',
@@ -655,7 +655,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: ['nails_unsilent-death-t-shirt'],
         desc: 'Unsilent Death',
         color: 'Black',
@@ -669,7 +669,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: ['nails_destroy-all-who-oppose-t-shirt'],
         desc: 'Destroy All Who Oppose',
         color: 'Black',
@@ -679,40 +679,40 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2012, 4, 20)
     },
     {
-        id: 'izaYdb',
+        id: 'nails-scapegoat-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: ['nails_scapegoat-t-shirt'],
         desc: 'Scapegoat',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2013, 4, 20)
+        dateAdded: new Date(2012, 4, 20)
 
     },
     {
-        id: '6wekQY',
+        id: 'nails-hatred-ad-infinitum-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: ['nails_hatred-ad-infinitum-t-shirt'],
         desc: 'Hatred Ad Infinitum',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2013, 7, 30)
+        dateAdded: new Date(2012, 4, 20)
     },
     {
         id: 'nails-you-will-never-be-one-of-us-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: [
             'nails_you-will-never-be-one-of-us-t-shirt_front', 
             'nails_you-will-never-be-one-of-us-t-shirt_back'
@@ -725,11 +725,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2016, 0, 13)
     },
     {
-        id: 'gdXf2X',
+        id: 'nails-unsilent-death-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: ['nails_unsilent-death-longsleeve_front', 'nails_unsilent-death-longsleeve_back'],
         desc: 'Unsilent Death',
         color: 'Black',
@@ -743,7 +743,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: [
             'nails_born-to-follow-longsleeve_front', 
             'nails_born-to-follow-longsleeve_back'
@@ -760,7 +760,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: [
             'nails_you-will-never-be-one-of-us-longsleeve_front', 
             'nails_you-will-never-be-one-of-us-longsleeve_back'
@@ -777,7 +777,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: [
             'nails_you-will-never-be-one-of-us-hoodie_front', 
             'nails_you-will-never-be-one-of-us-hoodie_back'
@@ -794,7 +794,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Nails',
+        artist: 'Nails',
         imgs: ['nails_unsilent-death-hoodie_front', 'nails_unsilent-death-hoodie_back'],
         desc: 'Unsilent Death',
         color: 'Black',
@@ -808,7 +808,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: ['bell-witch_impious-t-shirt'],
         desc: 'Impious',
         color: 'Black',
@@ -822,7 +822,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: ['bell-witch_hollow-specter-t-shirt'],
         desc: 'Hollow Specter',
         color: 'Black',
@@ -832,25 +832,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 2, 15)
     },
     {
-        id: 'HUr2a3',
+        id: 'bell-witch-phantom-forest-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: ['bell-witch_phantom-forest-t-shirt'],
         desc: 'Phantom Forest',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2020, 10, 4)
+        dateAdded: new Date(2017, 10, 30)
     },
     {
-        id: '1HbKq5',
+        id: 'bell-witch-clandestine-gate-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: ['bell-witch_clandestine-gate-t-shirt'],
         desc: 'Clandestine Gate',
         color: 'Black',
@@ -864,7 +864,7 @@ export const apparel: Apparel[] = [
      
      category: 'apparel',   featured: false,
         productType: 'T-Shirt',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: [
             'bell-witch_mirror-reaper-t-shirt_front',
             'bell-witch_mirror-reaper-t-shirt_back'
@@ -881,7 +881,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: [
             'bell-witch_mirror-reaper-longsleeve_front',
             'bell-witch_mirror-reaper-longsleeve_back'
@@ -898,7 +898,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: [
             'bell-witch_spire-of-skeletons-longsleeve_front',
             'bell-witch_spire-of-skeletons-longsleeve_back'
@@ -908,14 +908,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2017, 1, 13)
+        dateAdded: new Date(2017, 10, 30)
     },
     {
         id: 'bell-witch_mirror-reaper-anniversary-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Bell Witch',
+        artist: 'Bell Witch',
         imgs: [
             'bell-witch_mirror-reaper-anniversary-longsleeve_front',
             'bell-witch_mirror-reaper-anniversary-longsleeve_front'
@@ -932,7 +932,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'The Body',
+        artist: 'The Body',
         imgs: [
             'the-body_enemy-t-shirt_front',
             'the-body_enemy-t-shirt_back'
@@ -949,7 +949,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'The Body',
+        artist: 'The Body',
         imgs: ['the-body_the-hour-of-loneliness-t-shirt'],
         desc: 'Hour Of Loneliness',
         color: 'White',
@@ -963,21 +963,21 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'The Body',
+        artist: 'The Body',
         imgs: ['the-body_new-heaven-t-shirt'],
         desc: 'New Heaven',
         color: 'White',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2022, 4, 30)
+        dateAdded: new Date(2020, 10, 30)
     },
     {
-        id: 'the-body_cloth-cross-t-shirt',
+        id: 'the-body-cloth-cross-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'The Body',
+        artist: 'The Body',
         imgs: ['the-body_cloth-cross-t-shirt'],
         desc: 'Cloth Cross',
         color: 'White',
@@ -991,7 +991,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'The Body',
+        artist: 'The Body',
         imgs: ['the-body_demon-t-shirt'],
         desc: 'Demon',
         color: 'Black',
@@ -1001,25 +1001,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 9, 30)
     },
     {
-        id: '5Ll43Z',
+        id: 'the-body-enough-labor-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'The Body',
+        artist: 'The Body',
         imgs: ['the-body_enough-labor-longsleeve'],
         desc: 'Enough Labor',
         color: 'White',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2018, 6, 25)
+        dateAdded: new Date(2019, 9, 30)
     },
     {
-        id: 'lsMpx1',
+        id: 'ragana-logo-t-shirt',
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'Ragana',
+        artist: 'Ragana',
         imgs: ['ragana_logo-t-shirt'],
         desc: 'Logo',
         color: 'Black',
@@ -1033,7 +1033,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Knoll',
+        artist: 'Knoll',
         imgs: ['knoll_marred-longsleeve'],
         desc: 'Marred',
         color: 'Black',
@@ -1047,7 +1047,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: true,
         productType: 'T-Shirt',
-        band: 'Knoll',
+        artist: 'Knoll',
         imgs: ['knoll_dolly-t-shirt'],
         desc: 'Dolly',
         color: 'Natural',
@@ -1061,7 +1061,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Knoll',
+        artist: 'Knoll',
         imgs: ['knoll_ligature-t-shirt_front', 'knoll_ligature-t-shirt_back'],
         desc: 'Ligature',
         color: 'Black',
@@ -1075,7 +1075,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Cloud Rat',
+        artist: 'Cloud Rat',
         imgs: ['cloud-rat_harpy-hoodie_front', 'cloud-rat_harpy-hoodie_back'],
         desc: 'Harpy',
         color: 'Black',
@@ -1089,7 +1089,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Cloud Rat',
+        artist: 'Cloud Rat',
         imgs: ['cloud-rat_biome-longsleeve_front', 'cloud-rat_biome-longsleeve_back'],
         desc: 'Biome',
         color: 'Red',
@@ -1103,7 +1103,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Cloud Rat',
+        artist: 'Cloud Rat',
         imgs: ['cloud-rat_heartbreak-t-shirt_front', 'cloud-rat_heartbreak-t-shirt_back'],
         desc: 'Heartbreak',
         color: 'White',
@@ -1117,7 +1117,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Cloud Rat',
+        artist: 'Cloud Rat',
         imgs: ['cloud-rat_youre-safe-now-t-shirt_front', 'cloud-rat_youre-safe-now-t-shirt_back'],
         desc: 'You\'re Safe Now',
         color: 'Black',
@@ -1131,7 +1131,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Cloud Rat',
+        artist: 'Cloud Rat',
         imgs: ['cloud-rat_deer-splatter-t-shirt'],
         desc: 'Deer Splatter',
         color: 'White',
@@ -1141,39 +1141,39 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: 'full-of-hell_free-will-t-shirt',
+        id: 'full-of-hell-free-will-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_free-will-t-shirt'],
         desc: 'Free Will',
         color: 'White',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 19.99,
-        dateAdded: new Date(2018, 6, 7)
+        dateAdded: new Date(2018, 3, 1)
     },
     {
-        id: 'full-of-hell_torture-t-shirt',
+        id: 'full-of-hell-torture-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_torture-t-shirt'],
         desc: 'Torture',
         color: 'Light Pink',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 19.99,
-        dateAdded: new Date(2023, 7, 22)
+        dateAdded: new Date(2023, 8, 22)
     },
     {
-        id: 'full-of-hell_goat-church-t-shirt',
+        id: 'full-of-hell-goat-church-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_goat-church-t-shirt'],
         desc: 'Goat Church',
         color: 'Sand',
@@ -1183,11 +1183,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 2, 21)
     },
     {
-        id: 'full-of-hell_merzrip-black-t-shirt',
+        id: 'full-of-hell-merzrip-black-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_merzrip-black-t-shirt'],
         desc: 'Merzrip - Black',
         color: 'Black',
@@ -1197,11 +1197,11 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2018, 3, 1)
     },
     {
-        id: 'full-of-hell_merzrip-white-t-shirt',
+        id: 'full-of-hell-merzrip-white-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_merzrip-white-t-shirt'],
         desc: 'Merzrip - White',
         color: 'Black',
@@ -1211,25 +1211,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2018, 3, 1)
     },
     {
-        id: 'full-of-hell_cherub-t-shirt',
+        id: 'full-of-hell-cherub-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_cherub-t-shirt'],
         desc: 'Cherub',
         color: 'Light Blue',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 19.99,
-        dateAdded: new Date(2022, 11, 5)
+        dateAdded: new Date(2023, 8, 22)
     },
     {
-        id: 'full-of-hell_cursed-guardian-t-shirt',
+        id: 'full-of-hell-cursed-guardian-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_cursed-guardian-t-shirt'],
         desc: 'Cursed Guardian',
         color: 'Black',
@@ -1239,39 +1239,39 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 8, 22)
     },
     {
-        id: 'full-of-hell_demon-t-shirt',
+        id: 'full-of-hell-demon-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_demon-t-shirt'],
         desc: 'Demon',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 19.99,
-        dateAdded: new Date(2021, 4, 14)
+        dateAdded: new Date(2020, 2, 21)
     },
     {
-        id: 'full-of-hell_trumpeting-ecstasy-t-shirt',
+        id: 'full-of-hell-trumpeting-ecstasy-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_trumpeting-ecstasy-t-shirt'],
         desc: 'Trumpeting Ecstasy',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 19.99,
-        dateAdded: new Date(2019, 1, 30)
+        dateAdded: new Date(2017, 4, 5)
     },    
     {
-        id: 'full-of-hell_garden-of-burning-apparitions-t-shirt',
+        id: 'full-of-hell-garden-of-burning-apparitions-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: [
             'full-of-hell_garden-of-burning-apparitions-t-shirt_front', 
             'full-of-hell_garden-of-burning-apparitions-t-shirt_back'
@@ -1284,25 +1284,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 10, 21)
     },
     {
-        id: 'full-of-hell_radiant-longsleeve',
+        id: 'full-of-hell-radiant-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_radiant-longsleeve'],
         desc: 'Radiant',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2020, 9, 30)
+        dateAdded: new Date(2020, 2, 21)
     },
     {
-        id: 'full-of-hell_crawling-back-longsleeve',
+        id: 'full-of-hell-crawling-back-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_crawling-back-longsleeve'],
         desc: 'Crawling Back',
         color: 'Black',
@@ -1312,25 +1312,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 12, 30)
     },
     {
-        id: 'full-of-hell_trumpeting-ecstasy-longsleeve',
+        id: 'full-of-hell-trumpeting-ecstasy-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_trumpeting-ecstasy-longsleeve'],
         desc: 'Trumpeting Ecstasy',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2017, 5, 30)
+        dateAdded: new Date(2017, 4, 5)
     },
     {
-        id: 'full-of-hell_garden-of-burning-apparitions-longsleeve',
+        id: 'full-of-hell-garden-of-burning-apparitions-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: [
             'full-of-hell_garden-of-burning-apparitions-longsleeve_front', 
             'full-of-hell_garden-of-burning-apparitions-longsleeve_back'
@@ -1343,25 +1343,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 10, 21)
     },
     {
-        id: 'full-of-hell_insect-logo-hoodie',
+        id: 'full-of-hell-insect-logo-hoodie',
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Full of Hell',
+        artist: 'Full of Hell',
         imgs: ['full-of-hell_insect-logo-hoodie'],
         desc: 'Insect Logo',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '50% Cotton / 50% Polyester',
         price: 39.99,
-        dateAdded: new Date(2015, 2, 10)
+        dateAdded: new Date(2017, 4, 5)
     },
     {
-        id: 'portrayal-of-guilt_devil-music-t-shirt',
+        id: 'portrayal-of-guilt-devil-music-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Portrayal of Guilt',
+        artist: 'Portrayal of Guilt',
         imgs: ['portrayal-of-guilt_devil-music-t-shirt'],
         desc: 'Devil Music',
         color: 'White',
@@ -1371,25 +1371,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 3, 1)
     },
     {
-        id: 'portrayal-of-guilt_bad-museums-t-shirt',
+        id: 'portrayal-of-guilt-bad-museums-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Portrayal of Guilt',
+        artist: 'Portrayal of Guilt',
         imgs: ['portrayal-of-guilt_bad-museums-t-shirt'],
         desc: 'Bad Museums',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2022, 8, 10)
+        dateAdded: new Date(2023, 3, 1)
     },
     {
-        id: 'portrayal-of-guilt_devil-music-longsleeve',
+        id: 'portrayal-of-guilt-devil-music-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Portrayal of Guilt',
+        artist: 'Portrayal of Guilt',
         imgs: [
             'portrayal-of-guilt_devil-music-longsleeve_front',
             'portrayal-of-guilt_devil-music-longsleeve_back'
@@ -1402,25 +1402,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 3, 1)
     },
     {
-        id: 'soft-kill_pretty-face-t-shirt',
+        id: 'soft-kill-pretty-face-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Soft Kill',
+        artist: 'Soft Kill',
         imgs: ['soft-kill_pretty-face-t-shirt'],
         desc: 'Pretty Face',
         color: 'White',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2020, 10, 15)
+        dateAdded: new Date(2021, 7, 15)
     },
     {
-        id: 'soft-kill_halloween-t-shirt',
+        id: 'soft-kill-halloween-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Soft Kill',
+        artist: 'Soft Kill',
         imgs: [
             'soft-kill_halloween-t-shirt_front',
             'soft-kill_halloween-t-shirt_back'
@@ -1433,39 +1433,39 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2021, 7, 15)
     },
     {
-        id: 'soft-kill_dancing-with-glass-t-shirt',
+        id: 'soft-kill-dancing-with-glass-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Soft Kill',
+        artist: 'Soft Kill',
         imgs: ['soft-kill_dancing-with-glass-t-shirt'],
         desc: 'Dancing With Glass',
         color: 'Pepper Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2023, 1, 15)
+        dateAdded: new Date(2021, 7, 15)
     },
     {
-        id: 'touche-amore_sirens-t-shirt',
+        id: 'touche-amore-sirens-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touché Amoré',
+        artist: 'Touché Amoré',
         imgs: ['touche-amore_sirens-t-shirt'],
         desc: 'Sirens',
         color: 'Sand',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 22.99,
-        dateAdded: new Date(2023, 1, 15)
+        dateAdded: new Date(2016, 8, 30)
     },
     {
-        id: 'touche-amore_city-t-shirt',
+        id: 'touche-amore-city-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touché Amoré',
+        artist: 'Touché Amoré',
         imgs: ['touche-amore_city-t-shirt_front', 'touche-amore_city-t-shirt_back'],
         desc: 'City',
         color: 'Black',
@@ -1475,25 +1475,25 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 4, 15)
     },
     {
-        id: 'touche-amore_honest-sleep-t-shirt',
+        id: 'touche-amore-honest-sleep-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touché Amoré',
+        artist: 'Touché Amoré',
         imgs: ['touche-amore_honest-sleep-t-shirt_front', 'touche-amore_honest-sleep-t-shirt_back'],
         desc: 'Honest Sleep',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 22.99,
-        dateAdded: new Date(2010, 2, 3)
+        dateAdded: new Date(2016, 8, 30)
     },
     {
-        id: 'touche-amore_stage-four-rose-t-shirt',
+        id: 'touche-amore-stage-four-rose-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Touché Amoré',
+        artist: 'Touché Amoré',
         imgs: [
             'touche-amore_stage-four-rose-t-shirt_front', 
             'touche-amore_stage-four-rose-t-shirt_back'
@@ -1510,7 +1510,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_live-at-roadburn-t-shirt_front', 
             'emma-ruth-rundle_live-at-roadburn-t-shirt_back'
@@ -1527,7 +1527,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_afterlife-t-shirt'],
         desc: 'Afterlife',
         color: 'Black',
@@ -1541,7 +1541,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_mfd-t-shirt'],
         desc: 'MFD',
         color: 'Black',
@@ -1555,7 +1555,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_marked-for-death-album-cover-t-shirt'],
         desc: 'MFD',
         color: 'Black',
@@ -1569,7 +1569,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_dowsing-voice-t-shirt'],
         desc: 'Dowsing Voice',
         color: 'Black',
@@ -1583,7 +1583,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_some-heavy-ocean-t-shirt'],
         desc: 'Some Heavy Ocean',
         color: 'Black',
@@ -1597,7 +1597,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_moon-lady-t-shirt'],
         desc: 'Moon Lady',
         color: 'Black',
@@ -1611,7 +1611,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_album-cover-t-shirt'],
         desc: 'Album Cover',
         color: 'White',
@@ -1625,7 +1625,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_skull-t-shirt'],
         desc: 'Skull',
         color: 'Black',
@@ -1639,21 +1639,21 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_jas-helena-t-shirt'],
         desc: 'Jas Helena',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100%',
         price: 24.99,
-        dateAdded: new Date(2020, 8, 21)
+        dateAdded: new Date(2018, 8, 14)
     },
     {
         id: 'emma-ruth-rundle-return-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_return-t-shirt'],
         desc: 'Return',
         color: 'Black',
@@ -1667,7 +1667,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_engine-of-hell-black-t-shirt_front', 
             'emma-ruth-rundle_engine-of-hell-black-t-shirt_back'
@@ -1684,7 +1684,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_skull-longsleeve_front',
             'emma-ruth-rundle_skull-longsleeve_back'
@@ -1701,7 +1701,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_dark-horse-longsleeve_front',
             'emma-ruth-rundle_dark-horse-longsleeve_back'
@@ -1718,7 +1718,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_engine-of-hell-white-longsleeve_front', 
             'emma-ruth-rundle_engine-of-hell-white-longsleeve_back'
@@ -1735,7 +1735,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_engine-of-hell-lyrics-longsleeve_front', 
             'emma-ruth-rundle_engine-of-hell-lyrics-longsleeve_back'
@@ -1752,7 +1752,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_citadel-longsleeve'],
         desc: 'Citadel',
         color: 'Black',
@@ -1766,7 +1766,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Emma Ruth Rundle',
+        artist: 'Emma Ruth Rundle',
         imgs: [
             'emma-ruth-rundle_afterlife-hoodie_front', 
             'emma-ruth-rundle_afterlife-hoodie_back'
@@ -1783,7 +1783,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Spectral Wound',
+        artist: 'Spectral Wound',
         imgs: [
             'spectral-wound_infernal-decadence-t-shirt_front', 
             'spectral-wound_infernal-decadence-t-shirt_back'
@@ -1800,7 +1800,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Spectral Wound',
+        artist: 'Spectral Wound',
         imgs: [
             'spectral-wound_a-diabolic-thirst-t-shirt_front', 
             'spectral-wound_a-diabolic-thirst-t-shirt_back'
@@ -1817,7 +1817,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Spectral Wound',
+        artist: 'Spectral Wound',
         imgs: [
             'spectral-wound_skull-t-shirt_front', 
             'spectral-wound_skull-t-shirt_back'
@@ -1834,7 +1834,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Spectral Wound',
+        artist: 'Spectral Wound',
         imgs: [
             'spectral-wound_infernal-decadence-longsleeve_front', 
             'spectral-wound_infernal-decadence-longsleeve_back'
@@ -1851,7 +1851,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Spectral Wound',
+        artist: 'Spectral Wound',
         imgs: [
             'spectral-wound_a-diabolic-thirst-longsleeve_front', 
             'spectral-wound_a-diabolic-thirst-longsleeve_back'
@@ -1868,7 +1868,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Spectral Wound',
+        artist: 'Spectral Wound',
         imgs: [
             'spectral-wound_infernal-decadence-hoodie_front', 
             'spectral-wound_infernal-decadence-hoodie_back'
@@ -1885,7 +1885,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Devil Master',
+        artist: 'Devil Master',
         imgs: ['devil-master_devil-head-t-shirt'],
         desc: 'Devil Head',
         color: 'Black',
@@ -1899,7 +1899,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Devil Master',
+        artist: 'Devil Master',
         imgs: ['devil-master_devil-head-longsleeve'],
         desc: 'Devil Head',
         color: 'Black',
@@ -1913,7 +1913,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Divide and Dissolve',
+        artist: 'Divide and Dissolve',
         imgs: [
             'divide-and-dissolve_destroy-white-supremacy-t-shirt_front', 
             'divide-and-dissolve_destroy-white-supremacy-t-shirt_back'
@@ -1930,7 +1930,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Divide and Dissolve',
+        artist: 'Divide and Dissolve',
         imgs: [
             'divide-and-dissolve_no-prisons-t-shirt_front', 
             'divide-and-dissolve_no-prisons-t-shirt_back'
@@ -1947,7 +1947,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Divide and Dissolve',
+        artist: 'Divide and Dissolve',
         imgs: [
             'divide-and-dissolve_dismantle-t-shirt_front', 
             'divide-and-dissolve_dismantle-t-shirt_back'
@@ -1964,7 +1964,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Oathbreaker',
+        artist: 'Oathbreaker',
         imgs: [
             'oathbreaker_hands-hoodie_front', 
             'oathbreaker_hands-hoodie_back'
@@ -1981,7 +1981,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Oathbreaker',
+        artist: 'Oathbreaker',
         imgs: ['oathbreaker_face-t-shirt'],
         desc: 'Face',
         color: 'Black',
@@ -1995,7 +1995,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Oathbreaker',
+        artist: 'Oathbreaker',
         imgs: [
             'oathbreaker_bird-t-shirt_front',
             'oathbreaker_bird-t-shirt_back'
@@ -2012,7 +2012,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: ['undeath_death-obscene-t-shirt'],
         desc: 'Death Obscene',
         color: 'Black',
@@ -2026,7 +2026,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_its-time-t-shirt_front', 
             'undeath_its-time-t-shirt_back'
@@ -2043,7 +2043,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: ['undeath_its-time-t-shirt_front'],
         desc: 'It\'s Time (No Back)',
         color: 'Black',
@@ -2057,21 +2057,21 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: ['undeath_red-on-black-t-shirt'],
         desc: 'Red On Black',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2020, 11, 3)
+        dateAdded: new Date(2019, 6, 30)
     },
     {
         id: 'undeath-rotting-in-rochester-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: ['undeath_rotting-in-rochester-t-shirt'],
         desc: 'Rotting in Rochester',
         color: 'Black',
@@ -2085,21 +2085,21 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: ['undeath_jumped-t-shirt'],
         desc: 'Jumped',
         color: 'Black',
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2019, 10, 30)
+        dateAdded: new Date(2020, 4, 23)
     },
     {
         id: 'undeath-european-exhumation-2023-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_european-exhumation-2023-t-shirt_front',
             'undeath_european-exhumation-2023-t-shirt_back'
@@ -2109,14 +2109,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2023, 11, 2)
+        dateAdded: new Date(2023, 7, 1)
     },
     {
         id: 'undeath-skull-crushing-death-metal-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_skull-crushing-death-metal-t-shirt_front', 
             'undeath_skull-crushing-death-metal-t-shirt_back'
@@ -2133,7 +2133,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_lesions-of-a-different-kind-t-shirt_front', 
             'undeath_lesions-of-a-different-kind-t-shirt_back'
@@ -2150,7 +2150,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_lesions-of-a-different-kind-longsleeve_front', 
             'undeath_lesions-of-a-different-kind-longsleeve_back'
@@ -2167,7 +2167,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_blacksmith-longsleeve_front', 
             'undeath_blacksmith-longsleeve_back'
@@ -2184,7 +2184,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_its-time-longsleeve_front', 
             'undeath_its-time-longsleeve_back'
@@ -2201,7 +2201,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_uk-tour-2023-longsleeve_front', 
             'undeath_uk-tour-2023-longsleeve_back'
@@ -2211,14 +2211,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2023, 4, 23)
+        dateAdded: new Date(2023, 7, 1)
     },
     {
         id: 'undeath-sentient-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_sentient-longsleeve_front', 
             'undeath_sentient-longsleeve_back'
@@ -2235,7 +2235,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_head-splattered-hoodie_front', 
             'undeath_head-splattered-hoodie_back'
@@ -2252,7 +2252,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: [
             'undeath_head-splattered-grey-hoodie_front', 
             'undeath_head-splattered-grey-hoodie_back'
@@ -2269,7 +2269,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Hoodie',
-        band: 'Undeath',
+        artist: 'Undeath',
         imgs: ['undeath_purple-logo-hoodie'],
         desc: 'Purple Logo',
         color: 'Black',
@@ -2283,7 +2283,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_stoned-death-t-shirt_front',
             'primitive-man_stoned-death-t-shirt_back'
@@ -2300,7 +2300,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_stoner-witch-t-shirt_front',
             'primitive-man_stoner-witch-t-shirt_back'
@@ -2317,7 +2317,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_bag-lady-t-shirt_front',
             'primitive-man_bag-lady-t-shirt_back'
@@ -2327,14 +2327,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2018, 9, 1)
+        dateAdded: new Date(2020, 7, 14)
     },
     {
         id: 'primitive-man-pitiful-and-loathsome-t-shirt',
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_pitiful-and-loathsome-t-shirt_front',
             'primitive-man_pitiful-and-loathsome-t-shirt_back'
@@ -2351,7 +2351,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'T-Shirt',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_hell-split-t-shirt_front',
             'primitive-man_hell-split-t-shirt_back'
@@ -2361,14 +2361,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 24.99,
-        dateAdded: new Date(2022, 1, 22)
+        dateAdded: new Date(2018, 3, 10)
     },
     {
         id: 'primitive-man-reaper-snake-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_reaper-snake-longsleeve_front',
             'primitive-man_reaper-snake-longsleeve_back'
@@ -2385,7 +2385,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_entity-longsleeve_front',
             'primitive-man_entity-longsleeve_back'
@@ -2402,7 +2402,7 @@ export const apparel: Apparel[] = [
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_you-are-in-hell-longsleeve_front',
             'primitive-man_you-are-in-hell-longsleeve_back'
@@ -2412,14 +2412,14 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2017, 9, 18)
+        dateAdded: new Date(2018, 3, 10)
     },
     {
         id: 'primitive-man-enemies-of-art-longsleeve',
         category: 'apparel',
         featured: false,
         productType: 'Longsleeve',
-        band: 'Primitive Man',
+        artist: 'Primitive Man',
         imgs: [
             'primitive-man_enemies-of-art-longsleeve_front',
             'primitive-man_enemies-of-art-longsleeve_back'
@@ -2429,21 +2429,16 @@ export const apparel: Apparel[] = [
         manufacturer: 'Gildan',
         material: '100% Cotton',
         price: 34.99,
-        dateAdded: new Date(2022, 4, 13)
+        dateAdded: new Date(2022, 1, 22)
     },
 ];
 
-// All apparel sorted new to old
-const newApparel = apparel.sort(sortByDateAdded);
-export const newApparelPages = paginate(newApparel);
-
-// All t-shirts sorted by band name
-const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(sortByBandName);
-export const tShirtPages = paginate(tShirts);
-// All longsleeves sorted by band name
-export const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(sortByBandName);
-export const longsleevePages = paginate(longsleeves);
-// All hoodies sorted by band name
-export const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(sortByBandName);
-export const hoodiePages = paginate(hoodies);
+// All apparel sorted by date
+export const newApparel = apparel.sort(sortByDateAdded);
+// All t-shirts sorted by artist name
+export const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(sortByArtistName);
+// All longsleeves sorted by artist name
+export const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(sortByArtistName);
+// All hoodies sorted by artist name
+export const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(sortByArtistName);
 

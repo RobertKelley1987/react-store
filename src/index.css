@@ -19,6 +19,7 @@
 /* GLOBAL */
 body {
   color: var(--black);
+  font-weight: 300;
   margin: 0;
 }
 
@@ -42,22 +43,29 @@ ul {
 
 /* UTILITY CLASSES */
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .button {
+  align-items: center;
   background: none;
   border: 1px solid white;
   color: white;
+  display: inline-flex;
   font-family: var(--sans-serif);
   font-size: var(--medium-font);
-  font-weight: 400;
+  font-weight: 600;
+  gap: .2rem;
+  letter-spacing: .05rem;
   padding: .5rem;
+  text-transform: uppercase;
   white-space: nowrap;
+  width: fit-content;
 }
 
 .button:hover {
-  background-color: red;
+  background-color: white;
+  color: var(--black);
   cursor: pointer;
 }
 
@@ -70,6 +78,13 @@ ul {
 .button-black-selected {
   background: var(--black);
   color: white;
+}
+
+.button-arrow {
+  align-items: center;
+  display: flex;
+  height: 1rem;
+  width: 1.25rem;
 }
 
 .heading-small {

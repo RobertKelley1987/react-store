@@ -1,2 +1,4 @@
 - MenuList and Menu use similar click outside element function. Try to refactor into a custom hook.
 - Band names should be sorted from data, not hardcoded in Artists element used in Menu
+- Error message when you don't seelct a size sucks. Does not go away when you leave page.
+Should I just use default size small like Evil Greed?

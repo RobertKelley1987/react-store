@@ -34,7 +34,7 @@ const ShowPage = ({ product, qty, setQty, handleClick, desc, tracklist, children
         <div className="show-page-product-grid container">
             <ImgCarousel product={product} />
             <div className="show-page-text-wrapper">
-                <h2 className="show-page-heading">{`${product.band} "${product.desc}" ${product.productType}`}</h2>
+                <h2 className="show-page-heading">{`${product.artist} "${product.desc}" ${product.productType}`}</h2>
                 <span className="show-page-price">${product.price}</span>
                 <Qty qty={qty} setQty={setQty} />
                 {children}

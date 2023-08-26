@@ -1,38 +1,24 @@
-import { Link, useLocation } from 'react-router-dom';
-import useQuery from '../hooks/useQuery';
 import Grid from '../components/Grid';
 import ItemList from '../components/ItemList';
+import PageNumbers from './PageNumbers';
 import { ProductList } from '../types';
+import './ListPage.css';
 
 type ListPageProps = {
     pages: ProductList[],
-    pageName: string
+    pageNum: number,
+    currentPath: string
 }
 
-function ListPage({ pages, pageName }: ListPageProps) {
-    const query = useQuery();
-    const location = useLocation();
-    const pageNumQuery = query.get('page') || '1';
-    const pageNum = parseInt(pageNumQuery);
-
+function ListPage({ pages, pageNum, currentPath }: ListPageProps) {
     return (
-        <main className="container">
-            <div className="list-page">
-                <Link to='/'>Home</Link> /
-                <Link to={`${location.pathname}`}>{` ${pageName}`}</Link> /
-                {` Page ${pageNum} of ${pages.length}`}
-            </div>
-
+        <div className="list-page">
             <Grid>
                 <ItemList items={pages[pageNum - 1]} />
             </Grid>
 
-            {/* SHOW PAGE SELECTOR IF THERE IS MORE THAN 1 PAGE OF DATA */}
-            {pages.length > 1 && pages.map((page, index) => {
-                const pageNum = index + 1;
-                return <Link key={pageNum} to={`${location.pathname}?page=${pageNum}`}>{pageNum}</Link>
-            })}
-        </main>
+            <PageNumbers pages={pages} currentPage={pageNum} currentPath={currentPath}/>            
+        </div>
     );
 }
 

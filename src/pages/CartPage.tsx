@@ -10,7 +10,7 @@ const CartPage = ({ cart, dispatch }: CartProps) => {
     return (
         <div className="cart-page">
             {cart.map(item => {
-                return <div className="cart-item">{`${item.product.band} ${item.product.productType}`}</div>
+                return <div className="cart-item">{`${item.product.artist} ${item.product.productType}`}</div>
             })}
         </div>
     );

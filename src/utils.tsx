@@ -7,10 +7,10 @@ export const sortByDateAdded = (item: Product, nextItem: Product) => {
 }
 
 // Sort by band name
-export const sortByBandName = (item: Product, nextItem: Product) => {
-    if(item.band < nextItem.band) {
+export const sortByArtistName = (item: Product, nextItem: Product) => {
+    if(item.artist < nextItem.artist) {
         return 1;
-    } else if(item.band > nextItem.band) {
+    } else if(item.artist > nextItem.artist) {
         return -1
     } else {
         return 0;

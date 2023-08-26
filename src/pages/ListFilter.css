@@ -1,0 +1,39 @@
+.list-filter {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif);
+    gap: 1rem;
+}
+
+.list-filter-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: white;
+    border: .15em solid currentColor;
+    color: currentColor;
+    display: grid;
+    font: inherit;
+    height: 1.15em;
+    margin: 0;
+    place-content: center;
+    width: 1.15em;
+}
+
+.list-filter-checkbox::before {
+    box-shadow: inset 1em 1em red;
+    content:'';
+    height: 0.65em;
+    transform: scale(0);
+    width: 0.65em;
+}
+
+.list-filter-checkbox:checked::before {
+    transform: scale(1);
+}
+
+.list-filter-checkbox-label {
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 1em auto;
+    line-height: 1.1;
+}

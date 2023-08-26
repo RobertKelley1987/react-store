@@ -1,20 +1,28 @@
-import { ProductList } from "../types";
-import Grid from "../components/Grid";
+import { Link } from 'react-router-dom'; 
+import Grid from '../components/Grid';
 import ItemList from '../components/ItemList';
+import { ProductList } from '../types';
 import './HomePageSection.css';
 
 type HomePageProps = {
     heading: string,
-    items: ProductList
+    items: ProductList,
+    path: string
 }
 
-const HomePageSection = ({ heading, items }: HomePageProps) => {
+const HomePageSection = ({ heading, items, path }: HomePageProps) => {
     return (
         <section className="home-page-section">
-            <h2 className="home-page-section-heading">{heading}</h2>
+            <Link to={path}>
+                <h2 className="home-page-section-heading">{heading}</h2>
+            </Link>
             <Grid>
                 <ItemList items={items} />
             </Grid>
+            <Link to={path} className="button button-black">
+                View All
+                <span className="material-symbols-outlined button-arrow">arrow_forward</span>
+            </Link>
         </section>
     )
 }

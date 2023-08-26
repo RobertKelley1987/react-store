@@ -10,8 +10,8 @@ const Item = ({ item }: ItemProps) => {
     return (
         <article className="item">
             <Link to={`/${item.category}/${item.id}`}>
-                <img className="item-img" src={`/imgs/${item.imgs[0]}.jpg`} alt={`${item.band} ${item.productType}`} />
-                <h2 className="item-name">{`${item.band} "${item.desc}" ${item.productType}`}</h2>
+                <img className="item-img" src={`/imgs/${item.imgs[0]}.jpg`} alt={`${item.artist} ${item.productType}`} />
+                <h2 className="item-name">{`${item.artist} "${item.desc}" ${item.productType}`}</h2>
                 <span className="item-price">{`$${item.price}`}</span>
             </Link>
         </article>
