@@ -2435,10 +2435,14 @@ export const apparel: Apparel[] = [
 
 // All apparel sorted by date
 export const newApparel = apparel.sort(sortByDateAdded);
-// All t-shirts sorted by artist name
-export const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(sortByArtistName);
-// All longsleeves sorted by artist name
-export const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(sortByArtistName);
-// All hoodies sorted by artist name
-export const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(sortByArtistName);
+// All apparel segmented by category and accessible by matching http slug
+const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(sortByArtistName);
+const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(sortByArtistName);
+const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(sortByArtistName);
+
+export const apparelCategories = {
+    tShirts: tShirts,
+    longsleeves: longsleeves,
+    hoodies: hoodies
+}
 

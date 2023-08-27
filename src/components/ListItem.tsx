@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Product } from "../types";
+import { Item } from "../types";
 import './Item.css';
 
-type ItemProps = {
-    item: Product
+type ItemProps<T> = {
+    item: T
 }
 
-const Item = ({ item }: ItemProps) => {
+function ListItem<T extends Item<K>, K extends string>({ item }: ItemProps<T>) {
     return (
         <article className="item">
-            <Link to={`/${item.category}/${item.id}`}>
+            <Link to={`/${item.category}/products/${item.id}`}>
                 <img className="item-img" src={`/imgs/${item.imgs[0]}.jpg`} alt={`${item.artist} ${item.productType}`} />
                 <h2 className="item-name">{`${item.artist} "${item.desc}" ${item.productType}`}</h2>
                 <span className="item-price">{`$${item.price}`}</span>
@@ -18,4 +18,4 @@ const Item = ({ item }: ItemProps) => {
     );
 }
 
-export default Item;
+export default ListItem;

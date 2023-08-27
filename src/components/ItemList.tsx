@@ -1,13 +1,13 @@
 import { Fragment } from "react";
-import Item from './Item';
-import { ProductList } from "../types";
+import ListItem from './ListItem';
+import { Item } from "../types";
 
-type ItemListProps = {
-    items: ProductList
+type ItemListProps<T> = {
+    items: T[]
 }
 
-const ItemList = ({ items }: ItemListProps) => {
-    return <Fragment>{items.map(item => <Item key={item.id} item={item} />)}</Fragment>
+function ItemList<T extends Item<K>, K extends string>({ items }: ItemListProps<T>) {
+    return <Fragment>{items.map(item => <ListItem<T, K> key={item.id} item={item} />)}</Fragment>
 }
 
 export default ItemList;

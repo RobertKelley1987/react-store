@@ -1,20 +1,17 @@
 import { Link } from 'react-router-dom';
-import { ApparelProduct } from '../types';
+import { ApparelProduct, MusicProduct } from '../types';
 import './StorePath.css';
 
-type StorePathProps<T> = {
+type StorePathProps = {
     currentStorePath: string,
     currentStoreName: string,
-    currentPageNum: number,
-    pageNumTotal: number,
-    setProductTypes?: React.Dispatch<React.SetStateAction<T[]>>
+    tail: React.ReactNode
 }
 
-const StorePath = ({ currentStorePath, currentStoreName, currentPageNum, pageNumTotal, setProductTypes }: StorePathProps<ApparelProduct>) => {
+const StorePath = ({ currentStorePath, currentStoreName, tail }: StorePathProps) => {
     return (
         <div className="store-path">
             <Link className="store-path-item" to='/' 
-            // onClick={() => setProductTypes([])}
             >
                 Home
             </Link>
@@ -22,12 +19,11 @@ const StorePath = ({ currentStorePath, currentStoreName, currentPageNum, pageNum
             <Link 
                 className="store-path-item" 
                 to={`${currentStorePath}`}
-                // onClick={() => setProductTypes([])}
             >
                 {`${currentStoreName}`}
             </Link>
             <span> / </span>
-            <span className="store-path-item">{`Page ${currentPageNum} of ${pageNumTotal}`}</span>
+            {tail}
         </div>
     )
 }

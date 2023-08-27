@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import { ProductList } from '../types';
+import { Item } from '../types';
 import './PageNumbers.css';
 
-type PageNumbersProps = {
-    pages: ProductList[],
+type PageNumbersProps<T> = {
+    pages: T[][],
     currentPage: number,
     currentPath: string
 }
 
-const PageNumbers = ({ pages, currentPage, currentPath }: PageNumbersProps) => {
+function PageNumbers<T extends Item<K>, K extends string>({ pages, currentPage, currentPath }: PageNumbersProps<T>) {
     const handleClick = () => {
         window.scrollTo({ top: 0 });
     }

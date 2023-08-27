@@ -7,8 +7,10 @@ type Artist = 'Agriculture' | 'Bell Witch' | 'Blood Incantation' | 'The Body' | 
 'Full of Hell' | 'Knoll' | 'Nails' |  'Oathbreaker' | 'Portrayal of Guilt' | 'Primitive Man' | 
 'Ragana' | 'Soft Kill' | 'Spectral Wound' | 'Touché Amoré' | 'Undeath'
 
-type Item = {
+export type Item<T> = {
     id: string,
+    category: 'apparel' | 'music' | 'accessory',
+    productType: T,
     featured: boolean,
     artist: Artist,
     imgs: string[],
@@ -17,24 +19,18 @@ type Item = {
     dateAdded: Date
 }
 
-export type Apparel = Item & { 
-    category: 'apparel',
-    productType: ApparelProduct, 
+export type Apparel = Item<ApparelProduct> & { 
     color: string, 
     manufacturer: string, 
     material: string 
 }
 
-export type Album = Item & { 
-    category: 'music',
-    productType: MusicProduct, 
+export type Album = Item<MusicProduct> & { 
     albumDesc: string[], 
     tracklist?: string[] 
 }
 
-export type Accessory = Item & { 
-    category: 'accessory',
-    productType: AccessoryProduct, 
+export type Accessory = Item<AccessoryProduct> & { 
     color?: string, 
     manufacturer?: string, 
     material?: string, 

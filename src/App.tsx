@@ -6,22 +6,25 @@ import HomePage from './pages/HomePage';
 import CartPage from './pages/CartPage';
 import AlbumShowPage from './pages/ShowPage/AlbumShowPage';
 import ApparelShowPage from './pages/ShowPage/ApparelShowPage';
-import ListPage from './pages/ListPage';
 import ArtistPage from './pages/ArtistPage';
 import ErrorMessage from './components/ErrorMessage';
 import { ErrorMessageContext } from './context/ErrorMessageContext';
 import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
-import { newApparel, tShirts, longsleeves, hoodies } from './data/apparel';
-import { newAlbumPages } from './data/albums';
-import ApparelPage from './pages/ApparelPage';
+import { newApparel, apparelCategories } from './data/apparel';
+import { newAlbums } from './data/albums';
+import CategoryPage from './pages/CategoryPage';
 import ProductTypePage from './pages/ProductTypePage';
-import { ApparelProduct, MusicProduct, AccessoryProduct } from './types';
+import { Apparel, ApparelProduct, Album, MusicProduct, Accessory, AccessoryProduct } from './types';
 import './App.css';
+
+const MUSIC_TYPES: MusicProduct[] = ['LP', '2XLP', '12"', 'CD', '2XCD', 'Tape'];
+const APPAREL_TYPES: ApparelProduct[] = ['T-Shirt', 'Longsleeve', 'Hoodie'];
 
 const App = () => {
   const [state, dispatch] = useReducer(cartReducer, []);
   const [errorMessage, setErrorMessage] = useState('');
   const [apparelTypes, setApparelTypes] = useState<ApparelProduct[] | []>([]);
+  const [musicTypes, setMusicTypes] = useState<MusicProduct[] | []>(['LP']);
 
   const cart = [...state];
   console.log(cart);
@@ -36,21 +39,36 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage setApparelTypes={setApparelTypes} />} />
           <Route path='/cart' element={<CartPage cart={state} dispatch={dispatch} />} />
-          {/* <Route path='/music' element={<ListPage pages={newAlbumPages} />} />
-          <Route path='/music/new' element={<ListPage pages={newAlbumPages} />} /> */}
-          <Route path='/music/:albumId' element={<AlbumShowPage dispatch={dispatch}/>} />
-          <Route path='/apparel/new' element={
-            <ApparelPage 
-              items={newApparel} 
-              pageName="New Merch" 
-              apparelTypes={apparelTypes} 
-              setApparelTypes={setApparelTypes}
+          <Route path='/music' element={
+            <CategoryPage 
+              items={newAlbums}
+              allTypes={MUSIC_TYPES}
+              pageName="New Music"
+              selectedTypes={musicTypes}
+              setSelectedTypes={setMusicTypes}
             />
           } />
-          <Route path='/apparel/t-shirts' element={<ProductTypePage items={tShirts} pageName="T-Shirts" />} />
-          <Route path='/apparel/longsleeves' element={<ProductTypePage items={longsleeves} pageName="Longsleeves" />} />
-          <Route path='/apparel/hoodies' element={<ProductTypePage items={hoodies} pageName="Hoodies" />} />
-          <Route path='/apparel/:apparelId' element={<ApparelShowPage dispatch={dispatch}/>} />
+          <Route path='/music/new' element={
+            <CategoryPage 
+              items={newAlbums}
+              allTypes={MUSIC_TYPES}
+              pageName="New Music"
+              selectedTypes={musicTypes}
+              setSelectedTypes={setMusicTypes}
+            />
+          } />
+          <Route path='/music/products/:albumId' element={<AlbumShowPage dispatch={dispatch}/>} />
+          <Route path='/apparel/new' element={
+            <CategoryPage<Apparel, ApparelProduct> 
+              items={newApparel} 
+              allTypes={APPAREL_TYPES}
+              pageName="New Merch" 
+              selectedTypes={apparelTypes} 
+              setSelectedTypes={setApparelTypes}
+            />
+          } />
+          <Route path='/apparel/:productType' element={<ProductTypePage items={apparelCategories} pageName="T-Shirts" />} />
+          <Route path='/apparel/products/:apparelId' element={<ApparelShowPage dispatch={dispatch}/>} />
           <Route path='/artists/:name' element={<ArtistPage />} />
         </Routes>
       </ErrorMessageContext.Provider>

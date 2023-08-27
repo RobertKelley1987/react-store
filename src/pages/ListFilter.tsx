@@ -1,18 +1,18 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { ApparelProduct } from "../types"
+import { ApparelProduct, MusicProduct } from "../types"
 import './ListFilter.css';
 
 type ListFilterProps<T> = {
     selections: T[],
     productTypes: T[]
-    setProductTypes: (value: React.SetStateAction<T[]>) => void
+    setProductTypes: React.Dispatch<React.SetStateAction<T[]>> 
 }
 
-const ListFilter = ({ selections, productTypes, setProductTypes }: ListFilterProps<ApparelProduct>) => {
+function ListFilter<T extends string> ({ selections, productTypes, setProductTypes }: ListFilterProps<T>) {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleClick = (clickedType: ApparelProduct) => {
+    const handleClick = (clickedType: T) => {
         if(productTypes.includes(clickedType)) {
             setProductTypes(prevTypes => prevTypes.filter(prevType => prevType !== clickedType));
         } else {

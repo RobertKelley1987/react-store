@@ -3418,5 +3418,4 @@ export const albums: Album[] = [
     },
 ]
 
-const sortedAlbums = albums.sort(sortByDateAdded);
-export const newAlbumPages = paginate(sortedAlbums);
+export const newAlbums = albums.sort(sortByDateAdded);
