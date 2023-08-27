@@ -45,7 +45,7 @@ const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
                 <ul className="menu-nav">
                     <DropdownList 
                         thisIsOpen={categoriesOpen} 
-                        pathSlug=''
+                        pathSlug='collections'
                         pageLists={CATEGORIES}
                         heading="Categories"
                         setOtherListsOpen={setArtistsOpen} 

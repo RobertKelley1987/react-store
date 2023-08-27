@@ -9,8 +9,8 @@ const nameIsBetween = (name: string, min: string, max: string) => {
 }
 
 // CATEGORY PAGES GROUPED WITH IDS TO USE AS MAP KEYS
-const APPAREL_PAGES = ['New', 'T-Shirts', 'Longsleeves', 'Hoodies'];
-const MUSIC_PAGES = ['New', 'Vinyl'];
+const APPAREL_PAGES = ['New Apparel', 'T-Shirts', 'Longsleeves', 'Hoodies'];
+const MUSIC_PAGES = ['New Music', 'Vinyl'];
 export const CATEGORIES = [{ name: 'Apparel', pages: APPAREL_PAGES}, { name: 'Music', pages: MUSIC_PAGES }];
 
 // BAND NAMES GROUPED WITH IDS TO USE AS KEYS

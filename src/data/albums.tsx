@@ -1,10 +1,10 @@
 import { Album } from '../types';
-import { paginate, sortByDateAdded } from '../utils';
+import { newToOld } from '../utils/sorting';
 
 export const albums: Album[] = [
     {
         id: 'agriculture-agriculture-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Agriculture',
@@ -55,7 +55,7 @@ export const albums: Album[] = [
     },
     {
         id: 'agriculture-agriculture-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Agriculture',
@@ -106,7 +106,7 @@ export const albums: Album[] = [
     },
     {
         id: 'agriculture-agriculture-tape',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'Tape',
         artist: 'Agriculture',
@@ -157,7 +157,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-interdimensional-extinction-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Blood Incantation',
@@ -179,7 +179,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-interdimensional-extinction-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Blood Incantation',
@@ -197,7 +197,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-starspawn-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Blood Incantation',
@@ -232,7 +232,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-starspawn-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Blood Incantation',
@@ -267,7 +267,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-hidden-history-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Blood Incantation',
@@ -300,7 +300,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-hidden-history-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Blood Incantation',
@@ -326,7 +326,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-timewave-zero-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Blood Incantation',
@@ -356,7 +356,7 @@ export const albums: Album[] = [
     },
     {
         id: 'blood-incantation-timewave-zero-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Blood Incantation',
@@ -386,7 +386,7 @@ export const albums: Album[] = [
     },
     {
         id: 'chat-pile-this-dungeon-earth-remove-your-skin-please-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Chat Pile',
@@ -417,7 +417,7 @@ export const albums: Album[] = [
     },
     {
         id: 'chat-pile-gods-country-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Chat Pile',
@@ -473,7 +473,7 @@ export const albums: Album[] = [
     },
     {
         id: 'chat-pile-gods-country-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Chat Pile',
@@ -529,7 +529,7 @@ export const albums: Album[] = [
     },
     {
         id: 'chat-pile-gods-country-tape',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'Tape',
         artist: 'Chat Pile',
@@ -585,7 +585,7 @@ export const albums: Album[] = [
     },
     {
         id: 'chat-pile-tenkiller-soundtrack-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Chat Pile',
@@ -636,7 +636,7 @@ export const albums: Album[] = [
     },
     {
         id: 'chat-pile-tenkiller-soundtrack-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Chat Pile',
@@ -687,7 +687,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-roads-to-judah-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Deafheaven',
@@ -699,7 +699,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-sunbather-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: '2XLP',
         artist: 'Deafheaven',
@@ -741,7 +741,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-sunbather-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Deafheaven',
@@ -778,7 +778,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-new-bermuda-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Deafheaven',
@@ -795,7 +795,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-new-bermuda-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Deafheaven',
@@ -807,7 +807,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-ordinary-corrupt-human-love-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Deafheaven',
@@ -835,7 +835,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-ordinary-corrupt-human-love-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Deafheaven',
@@ -856,7 +856,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-infinite-granite-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Deafheaven',
@@ -901,7 +901,7 @@ export const albums: Album[] = [
     },
     {
         id: 'deafheaven-infinite-granite-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Deafheaven',
@@ -946,7 +946,7 @@ export const albums: Album[] = [
     },
     {
         id: 'nails-unsilent-death-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Nails',
@@ -980,7 +980,7 @@ export const albums: Album[] = [
     },
     {
         id: 'nails-unsilent-death-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Nails',
@@ -1011,7 +1011,7 @@ export const albums: Album[] = [
     },
     {
         id: 'nails-abandon-all-life-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Nails',
@@ -1045,7 +1045,7 @@ export const albums: Album[] = [
     },
     {
         id: 'nails-abandon-all-life-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Nails',
@@ -1079,7 +1079,7 @@ export const albums: Album[] = [
     },
     {
         id: 'nails-you-will-never-be-one-of-us-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Nails',
@@ -1105,7 +1105,7 @@ export const albums: Album[] = [
     },
     {
         id: 'bell-witch-four-phantoms-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Bell Witch',
@@ -1126,7 +1126,7 @@ export const albums: Album[] = [
     },
     {
         id: 'bell-witch-mirror-reaper-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: '2XLP',
         artist: 'Bell Witch',
@@ -1160,7 +1160,7 @@ export const albums: Album[] = [
     },
     {
         id: 'bell-witch-futures-shadow-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Bell Witch',
@@ -1185,7 +1185,7 @@ export const albums: Album[] = [
     },
     {
         id: 'bell-witch-futures-shadow-2xCD',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XCD',
         artist: 'Bell Witch',
@@ -1207,7 +1207,7 @@ export const albums: Album[] = [
     },
     {
         id: 'the-body-christs-redeemers-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'The Body',
@@ -1266,7 +1266,7 @@ export const albums: Album[] = [
     },
     {
         id: 'the-body-i-shall-die-here-earth-triumphant-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'The Body',
@@ -1333,7 +1333,7 @@ export const albums: Album[] = [
     },
     {
         id: 'the-body-no-one-deserves-happiness-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: '2XLP',
         artist: 'The Body',
@@ -1368,7 +1368,7 @@ export const albums: Album[] = [
     },
     {
         id: 'the-body-i-have-fought-against-it-but-i-cant-any-longer-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'The Body',
@@ -1408,7 +1408,7 @@ export const albums: Album[] = [
     },
     {
         id: 'the-body-remixed-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'The Body',
@@ -1447,7 +1447,7 @@ export const albums: Album[] = [
     },
     {
         id: 'the-body-ive-seen-all-i-need-to-see-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'The Body',
@@ -1508,7 +1508,7 @@ export const albums: Album[] = [
     },
     {
         id: 'ragana-desolations-flower-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Ragana',
@@ -1579,7 +1579,7 @@ export const albums: Album[] = [
     },
     {
         id: 'ragana-desolations-flower-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Ragana',
@@ -1650,7 +1650,7 @@ export const albums: Album[] = [
     },
     {
         id: 'ragana-desolations-flower-tape',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'Tape',
         artist: 'Ragana',
@@ -1721,7 +1721,7 @@ export const albums: Album[] = [
     },
     {
         id: 'ragana-you-take-nothing-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Ragana',
@@ -1744,7 +1744,7 @@ export const albums: Album[] = [
     },
     {
         id: 'ragana-wash-away-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Ragana',
@@ -1768,7 +1768,7 @@ export const albums: Album[] = [
     },
     {
         id: 'knoll-metempiric-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Knoll',
@@ -1798,7 +1798,7 @@ export const albums: Album[] = [
     },
     {
         id: 'cloud-rat-cloud-rat-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Cloud Rat',
@@ -1828,7 +1828,7 @@ export const albums: Album[] = [
     },
     {
         id: 'cloud-rat-do-not-let-me-off-the-cliff-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Cloud Rat',
@@ -1854,7 +1854,7 @@ export const albums: Album[] = [
     },
     {
         id: 'cloud-rat-threshold-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Cloud Rat',
@@ -1889,7 +1889,7 @@ export const albums: Album[] = [
     },
     {
         id: 'full-of-hell-garden-of-burning-apparitions-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Full of Hell',
@@ -1946,7 +1946,7 @@ export const albums: Album[] = [
     },
     {
         id: 'full-of-hell-garden-of-burning-apparitions-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Full of Hell',
@@ -2002,7 +2002,7 @@ export const albums: Album[] = [
     },
     {
         id: 'full-of-hell-trumpeting-ecstasy-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Full of Hell',
@@ -2073,7 +2073,7 @@ export const albums: Album[] = [
     },
     {
         id: 'full-of-hell-weeping-choir-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Full of Hell',
@@ -2120,7 +2120,7 @@ export const albums: Album[] = [
     },
     {
         id: 'full-of-hell-weeping-choir-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Full of Hell',
@@ -2160,7 +2160,7 @@ export const albums: Album[] = [
     },
     {
         id: 'portrayal-of-guilt-devil-music-12in',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: '12"',
         artist: 'Portrayal of Guilt',
@@ -2218,7 +2218,7 @@ export const albums: Album[] = [
     },
     {
         id: 'portrayal-of-guilt-we-are-always-alone-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Portrayal of Guilt',
@@ -2271,7 +2271,7 @@ export const albums: Album[] = [
     },
     {
         id: 'soft-kill-savior-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Soft Kill',
@@ -2295,7 +2295,7 @@ export const albums: Album[] = [
     },
     {
         id: 'soft-kill-canary-yellow-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Soft Kill',
@@ -2322,7 +2322,7 @@ export const albums: Album[] = [
     },
     {
         id: 'soft-kill-canary-yellow-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Soft Kill',
@@ -2346,7 +2346,7 @@ export const albums: Album[] = [
     },
     {
         id: 'soft-kill-premium-drifter-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Soft Kill',
@@ -2379,7 +2379,7 @@ export const albums: Album[] = [
     },
     {
         id: 'soft-kill-metta-world-peace-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Soft Kill',
@@ -2419,7 +2419,7 @@ export const albums: Album[] = [
     },
     {
         id: 'touche-amore-parting-the-sea-between-brightness-and-me-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Touché Amoré',
@@ -2446,7 +2446,7 @@ export const albums: Album[] = [
     },
     {
         id: 'touche-amore-is-survived-by-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Touché Amoré',
@@ -2472,7 +2472,7 @@ export const albums: Album[] = [
     },
     {
         id: 'touche-amore-is-survived-by-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Touché Amoré',
@@ -2498,7 +2498,7 @@ export const albums: Album[] = [
     },
     {
         id: 'touche-amore-to-the-beat-of-a-dead-horse-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Touché Amoré',
@@ -2533,7 +2533,7 @@ export const albums: Album[] = [
     },
     {
         id: 'touche-amore-stage-four-cd',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'CD',
         artist: 'Touché Amoré',
@@ -2584,7 +2584,7 @@ export const albums: Album[] = [
     },
     {
         id: 'touche-amore-lament-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Touché Amoré',
@@ -2634,7 +2634,7 @@ export const albums: Album[] = [
     },
     {
         id: 'primitive-man-insurmountable-12in',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: '12"',
         artist: 'Primitive Man',
@@ -2679,7 +2679,7 @@ export const albums: Album[] = [
     },
     {
         id: 'primitive-man-immersion-lp',
-        category: 'music',
+        category: 'Music',
         featured: true,
         productType: 'LP',
         artist: 'Primitive Man',
@@ -2725,7 +2725,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle-live-at-roadburn-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Emma Ruth Rundle',
@@ -2755,7 +2755,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle-marked-for-death-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Emma Ruth Rundle',
@@ -2780,7 +2780,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle_on-dark-horses-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Emma Ruth Rundle',
@@ -2807,7 +2807,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle_on-dark-horses-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Emma Ruth Rundle',
@@ -2829,7 +2829,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle_engine-of-hell-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Emma Ruth Rundle',
@@ -2884,7 +2884,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle_engine-of-hell-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Emma Ruth Rundle',
@@ -2936,7 +2936,7 @@ export const albums: Album[] = [
     },
     {
         id: 'emma-ruth-rundle-eg-2-dowsing-voice-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Emma Ruth Rundle',
@@ -2984,7 +2984,7 @@ export const albums: Album[] = [
     },
     {
         id: 'spectral-wound-infernal-decadence-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Spectral Wound',
@@ -3012,7 +3012,7 @@ export const albums: Album[] = [
     },
     {
         id: 'spectral-wound-a-diabolic-thirst-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Spectral Wound',
@@ -3032,7 +3032,7 @@ export const albums: Album[] = [
     },
     {
         id: 'devil-master-satan-spits-on-children-of-light-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Devil Master',
@@ -3069,7 +3069,7 @@ export const albums: Album[] = [
     },
     {
         id: 'devil-master-ecstasies-of-never-ending-night-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Devil Master',
@@ -3123,7 +3123,7 @@ export const albums: Album[] = [
     },
     {
         id: 'divide-and-dissolve-systemic-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Divide and Dissolve',
@@ -3163,7 +3163,7 @@ export const albums: Album[] = [
     },
     {
         id: 'oathbreaker-maelstrom-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Oathbreaker',
@@ -3192,7 +3192,7 @@ export const albums: Album[] = [
     },
     {
         id: 'oathbreaker-eros-anteros-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Oathbreaker',
@@ -3241,7 +3241,7 @@ export const albums: Album[] = [
     },
     {
         id: 'oathbreaker-rheia-2xlp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: '2XLP',
         artist: 'Oathbreaker',
@@ -3296,7 +3296,7 @@ export const albums: Album[] = [
     },
     {
         id: 'undeath-lesions-of-a-different-kind-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Undeath',
@@ -3331,7 +3331,7 @@ export const albums: Album[] = [
     },
     {
         id: 'undeath-its-time-to-rise-from-the-grave-lp',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'LP',
         artist: 'Undeath',
@@ -3376,7 +3376,7 @@ export const albums: Album[] = [
     },
     {
         id: 'undeath-its-time-to-rise-from-the-grave-cd',
-        category: 'music',
+        category: 'Music',
         featured: false,
         productType: 'CD',
         artist: 'Undeath',
@@ -3418,4 +3418,4 @@ export const albums: Album[] = [
     },
 ]
 
-export const newAlbums = albums.sort(sortByDateAdded);
+export const newAlbums = albums.sort(newToOld);

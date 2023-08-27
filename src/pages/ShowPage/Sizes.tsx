@@ -3,7 +3,7 @@ import './Sizes.css';
 
 export type SizesProps = {
     selectedSize: Size | '',
-    setSelectedSize: React.Dispatch<React.SetStateAction<'' | Size>>
+    setSelectedSize: React.Dispatch<React.SetStateAction<Size>>
 }
 
 const ALL_SIZES: Size[] = ['Small', 'Medium', 'Large', 'Extra Large', 'Extra Extra Large'];

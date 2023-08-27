@@ -10,7 +10,7 @@ const cartReducer = (state: CartItem[], action: CartAction) => {
     switch(type) {
         case 'ADD_ITEM':
             // Do not add clothing items with no size provided
-            if(payload.product.category === 'apparel' && !payload.size) return state;
+            if(payload.product.category === 'Apparel' && !payload.size) return state;
 
             // If items are found in cart, increment by qty provided, otherwise add new item to cart.
             const foundItemIndex = state.findIndex(item => itemsAreEqual(item, payload));

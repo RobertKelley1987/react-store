@@ -1,21 +1,4 @@
-import { Product } from './types';
-import { ITEMS_PER_PAGE } from './constants';
-
-// Sort from newest to oldest items
-export const sortByDateAdded = (item: Product, nextItem: Product) => {
-    return nextItem.dateAdded.getTime() - item.dateAdded.getTime();
-}
-
-// Sort by band name
-export const sortByArtistName = (item: Product, nextItem: Product) => {
-    if(item.artist > nextItem.artist) {
-        return 1;
-    } else if(item.artist < nextItem.artist) {
-        return -1
-    } else {
-        return 0;
-    }
-}
+import { ITEMS_PER_PAGE } from '../constants';
 
 // Assertion to test if element clicked is a React node (stolen from stack overflow link below)
 // https://stackoverflow.com/questions/71193818/react-onclick-argument-of-type-eventtarget-is-not-assignable-to-parameter-of-t
@@ -55,3 +38,16 @@ export function paginate<T>(items: T[]): T[][] {
 
 // Function to convert a string into an http-friendly format for string comparisons
 export const httpFormat = (text: string) => text.replaceAll(' ', '-').toLowerCase();
+
+export const decodeHttpSlug = (slug?: string) => {
+    if(!slug) return 
+
+    let result = '';
+    if(slug === 't-shirts') {
+        result ='T-Shirts';
+    } else {
+        result = slug.split('-').map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
+    }
+
+    return  result;
+}

@@ -1,11 +1,5 @@
 .artist-page-banner-img {
     filter: invert(1);
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     width: 100%;
-}
-
-.filtered-list {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: auto auto;
 }

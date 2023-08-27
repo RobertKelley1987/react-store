@@ -14,8 +14,6 @@ const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
     const [sectionOpen, setSectionOpen] = useState(false);
     const screenIsBigContext = useContext(ScreenIsBigContext)
 
-    const categorySlug = pathSlug || category.toLowerCase().replaceAll(' ', '-');
-
     const renderList = () => {
         return (screenIsBigContext?.screenIsBig || sectionOpen) && (
             <ul className="menu-list">
@@ -24,7 +22,7 @@ const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
                     
                     return (
                         <li key={page} className="menu-list-item">
-                            <Link onClick={closeMenu} to={`/${categorySlug}/${pageSlug}`}>{page}</Link>
+                            <Link onClick={closeMenu} to={`/${pathSlug}/${pageSlug}`}>{page}</Link>
                         </li>
                     )
                 })}

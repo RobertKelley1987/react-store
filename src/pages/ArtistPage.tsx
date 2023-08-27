@@ -1,47 +1,69 @@
-import { Fragment } from 'react';
-import { useParams, useLocation } from 'react-router-dom'; 
-import useQuery from '../hooks/useQuery';
-import { paginate, httpFormat } from '../utils';
-import { albums } from '../data/albums';
-import { apparel } from '../data/apparel';
-import { accessories } from '../data/accessories';
-import ListPage from "./ListPage";
+import { useParams } from 'react-router-dom'; 
+import usePageNum from '../hooks/usePageNum';
+import { data } from '../data';
 import { ALL_ARTISTS } from '../constants';
+import { paginate, httpFormat } from '../utils';
+import ListPage from "./ListPage";
+import ListFilter from './ListFilter';
+import StorePath from '../components/StorePath';
+import { Category } from '../types';
 import './ArtistPage.css';
+
+const ALL_CATEGORIES: Category[] = ['Apparel', 'Music', 'Accessories'];
+
+type ArtistPageProps = {
+    selectedTypes: Category[],
+    setSelectedTypes: React.Dispatch<React.SetStateAction<Category[]>>
+}
 
 // Convert all band names to http format
 const allArtists = ALL_ARTISTS.map(artist => httpFormat(artist));
 
-const ArtistPage = () => {
-    const { name } = useParams();
-    const location = useLocation();
+function ArtistPage({ selectedTypes, setSelectedTypes }: ArtistPageProps) {
+    const { collectionName = '' } = useParams();
+    const { pageNum } = usePageNum();
 
     // Filter all store data by band name from name in request parameter
-    const artistAlbums = albums.filter(album => httpFormat(album.artist) === name?.toLowerCase());
-    const artistApparel = apparel.filter(item => httpFormat(item.artist) === name?.toLowerCase());
-    const artistAccessories = accessories.filter(item => httpFormat(item.artist) === name?.toLowerCase());
-    const artistPages = paginate([...artistAlbums, ...artistApparel, ...artistAccessories]);
+    const artistItems = data.filter(item => httpFormat(item.artist) === collectionName?.toLowerCase());
 
-    // Find artist name in original format to print on page
-    const artistIndex = allArtists.findIndex(artist => artist === name?.toLowerCase());
-    const capitalizedName = ALL_ARTISTS[artistIndex];
+    // Apply category filters from props / sidebar options
+    const filteredItems = () => {
+        let items = artistItems;
+        if(selectedTypes.length) {
+            items = artistItems.filter(item => selectedTypes.includes(item.category));
+        } 
+        return items;
+    }
 
-    // Get page number 
-    const query = useQuery();
-    const pageNumQuery = query.get('page') || '1';
-    const pageNum = parseInt(pageNumQuery);
+    // Paginate filtered data
+    const artistPages = paginate(filteredItems());
 
-    if(name && allArtists.includes(name.toLowerCase())) {
+    // Filter options should only include categories present in the item list.
+    // Ex: Do not allow user to filter by 'Accessories' if artist has zero accessories
+    const filterOptions = ALL_CATEGORIES.filter(category => artistItems.find(item => item.category === category))
+
+    if(allArtists.includes(collectionName?.toLowerCase())) {
         return (
             (
-                <Fragment>
+                <div className="container">
                     <img 
                         className="artist-page-banner-img" 
-                        src={`/imgs/banners/${httpFormat(name)}-banner.png`} 
-                        alt={`Page banner with ${name} logo`}
+                        src={`/imgs/banners/${httpFormat(collectionName)}-banner.png`} 
+                        alt={`Page banner with ${collectionName} logo`}
                     />
-                    <ListPage pages={artistPages} pageNum={pageNum} currentPath={location.pathname}/>
-                </Fragment>
+                    <StorePath
+                        setSelectedTypes={setSelectedTypes}
+                        tail={<span className="store-path-item">{`Page ${pageNum} of ${artistPages.length}`}</span>}
+                    />
+                    <div className="filtered-list">
+                        <ListFilter<Category> 
+                            selections={filterOptions} 
+                            productTypes={selectedTypes}
+                            setProductTypes={setSelectedTypes}
+                        />
+                        <ListPage pages={artistPages} pageNum={pageNum} />
+                    </div>
+                </div>
             )
         )
     } else {

@@ -37,3 +37,12 @@
     grid-template-columns: 1em auto;
     line-height: 1.1;
 }
+
+.list-filter-checkbox-label:hover,
+.list-filter-checkbox:hover {
+    cursor: pointer;
+}
+
+.list-filter-heading {
+    text-transform: uppercase;
+}

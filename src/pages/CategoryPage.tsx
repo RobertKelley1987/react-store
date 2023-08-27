@@ -1,44 +1,50 @@
-import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import usePageNum from '../hooks/usePageNum';
 import { paginate } from '../utils';
-import { Item } from '../types';
+import { configSortFn } from '../utils/sorting';
 import ListPage from './ListPage';
-import StorePath from './StorePath';
+import StorePath from '../components/StorePath';
 import ListFilter from './ListFilter';
-
-const PGS_WITH_FILTERS = ["New Merch", "New Music"];
+import SortSelector from './SortSelector';
+import { Item, SortOption, Product } from '../types';
 
 type CategoryPageProps<T, K> = {
     items: T[],
     allTypes: K[],
-    pageName: string,
     selectedTypes: K[],
     setSelectedTypes: React.Dispatch<React.SetStateAction<K[]>>
+    defaultValue?: K
+    collection: string
 }
 
-function CategoryPage<T extends Item<K>, K extends string> ({ items, allTypes, pageName, selectedTypes, setSelectedTypes }: CategoryPageProps<T, K>) {
-    const location = useLocation();
+function CategoryPage<T extends Item<K>, K extends string> (props: CategoryPageProps<T, K>) {
+    const { items, allTypes, selectedTypes, setSelectedTypes, defaultValue, collection } = props;
     const { pageNum } = usePageNum();
+    const [sortOption, setSortOption] = useState<SortOption>('Date - New to Old');
 
     // Get pages of filtered data
     const filteredItems = () => items.filter(item => selectedTypes.includes(item.productType));
-    const currentItems = selectedTypes.length ? filteredItems() : items;
+    let currentItems = selectedTypes.length ? filteredItems() : items;
+
+    // Sort by selected sort option
+    const sortFn = configSortFn(sortOption);
+    currentItems = currentItems.sort(sortFn<T, K>);
+
+    // Paginate results
     const filteredPages = paginate(currentItems);
 
-    const renderListFilter = () => {
-        return <ListFilter<K> selections={allTypes} productTypes={selectedTypes} setProductTypes={setSelectedTypes}/>;
-    }
-
     return (
-        <div className="container apparel-page">
-            <StorePath 
-                currentStorePath={location.pathname}
-                currentStoreName={pageName}
+        <div className="container category-page">
+            <StorePath<K> 
+                collection={collection}
+                setSelectedTypes={setSelectedTypes}
+                defaultValue={defaultValue}
                 tail={<span className="store-path-item">{`Page ${pageNum} of ${filteredPages.length}`}</span>}
             />
+            <SortSelector sortOption={sortOption} setSortOption={setSortOption} />
             <div className="filtered-list">
-                {PGS_WITH_FILTERS.includes(pageName) && renderListFilter()}
-                <ListPage pages={filteredPages} pageNum={pageNum} currentPath={location.pathname}/>
+                <ListFilter<K> selections={allTypes} productTypes={selectedTypes} setProductTypes={setSelectedTypes} />
+                <ListPage pages={filteredPages} pageNum={pageNum} />
             </div>
         </div>
     );

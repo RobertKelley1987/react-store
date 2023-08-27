@@ -4,7 +4,7 @@ export const accessories: Accessory[] = [
     {
         id: 'chat-pile_logo-cap',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Cap',
         artist: 'Chat Pile',
         imgs: ['chat-pile_logo-cap_1', 'chat-pile_logo-cap_2'],
@@ -18,7 +18,7 @@ export const accessories: Accessory[] = [
     {
         id: 'nails_logo-cap',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Cap',
         artist: 'Nails',
         imgs: ['nails_logo-cap_1', 'nails_logo-cap_2'],
@@ -32,7 +32,7 @@ export const accessories: Accessory[] = [
     {
         id: 'nails_logo-beanie',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Beanie',
         artist: 'Nails',
         imgs: ['nails_logo-beanie'],
@@ -46,7 +46,7 @@ export const accessories: Accessory[] = [
     {
         id: 'nails_unsilent-death-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Nails',
         imgs: ['nails_unsilent-death-patch'],
@@ -58,7 +58,7 @@ export const accessories: Accessory[] = [
     {
         id: 'full-of-hell_logo-patch-cap',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Cap',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_logo-patch-cap_1', 'full-of-hell_logo-patch-cap_2'],
@@ -72,7 +72,7 @@ export const accessories: Accessory[] = [
     {
         id: 'full-of-hell_logo-beanie',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Beanie',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_logo-beanie'],
@@ -86,7 +86,7 @@ export const accessories: Accessory[] = [
     {
         id: 'full-of-hell_insect-logo-enamel-pin',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Enamel Pin',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_insect-logo-enamel-pin'],
@@ -98,7 +98,7 @@ export const accessories: Accessory[] = [
     {
         id: 'full-of-hell_insect-logo-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_insect-logo-patch'],
@@ -110,7 +110,7 @@ export const accessories: Accessory[] = [
     {
         id: 'portrayal-of-guilt_devil-music-tote-bag',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Tote Bag',
         artist: 'Portrayal of Guilt',
         imgs: ['portrayal-of-guilt_devil-music-tote-bag'],
@@ -122,7 +122,7 @@ export const accessories: Accessory[] = [
     {
         id: 'emma-ruth-rundle-err-enamel-pin',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Enamel Pin',
         artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_err-enamel-pin'],
@@ -134,7 +134,7 @@ export const accessories: Accessory[] = [
     {
         id: 'emma-ruth-rundle-err-white-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_err-white-patch'],
@@ -146,7 +146,7 @@ export const accessories: Accessory[] = [
     {
         id: 'emma-ruth-rundle-err-black-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_err-black-patch'],
@@ -158,7 +158,7 @@ export const accessories: Accessory[] = [
     {
         id: 'emma-ruth-rundle-emma-ruth-rundle-cap',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Cap',
         artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_emma-ruth-rundle-cap_1', 'emma-ruth-rundle_emma-ruth-rundle-cap_2'],
@@ -172,7 +172,7 @@ export const accessories: Accessory[] = [
     {
         id: 'blood-incantation-hidden-history-of-the-human-race-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_hidden-history-of-the-human-race-patch'],
@@ -184,7 +184,7 @@ export const accessories: Accessory[] = [
     {
         id: 'blood-incantation-logo-white-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_logo-white-patch'],
@@ -196,7 +196,7 @@ export const accessories: Accessory[] = [
     {
         id: 'blood-incantation-logo-green-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_logo-green-patch'],
@@ -208,7 +208,7 @@ export const accessories: Accessory[] = [
     {
         id: 'spectral-wound-new-logo-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Spectral Wound',
         imgs: ['spectral-wound_new-logo-patch'],
@@ -220,7 +220,7 @@ export const accessories: Accessory[] = [
     {
         id: 'spectral-wound-logo-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Spectral Wound',
         imgs: ['spectral-wound_logo-patch'],
@@ -232,7 +232,7 @@ export const accessories: Accessory[] = [
     {
         id: 'spectral-wound-new-logo-enamel-pin',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Enamel Pin',
         artist: 'Spectral Wound',
         imgs: ['spectral-wound_new-logo-enamel-pin'],
@@ -244,7 +244,7 @@ export const accessories: Accessory[] = [
     {
         id: 'oathbreaker-hands-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Oathbreaker',
         imgs: ['oathbreaker_hands-patch'],
@@ -256,7 +256,7 @@ export const accessories: Accessory[] = [
     {
         id: 'oathbreaker-logo-patch',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Patch',
         artist: 'Oathbreaker',
         imgs: ['oathbreaker_logo-patch'],
@@ -268,7 +268,7 @@ export const accessories: Accessory[] = [
     {
         id: 'undeath_logo-cap',
         featured: false,
-        category: 'accessory',
+        category: 'Accessories',
         productType: 'Cap',
         artist: 'Undeath',
         imgs: ['undeath_logo-cap_1', 'undeath_logo-cap_2'],

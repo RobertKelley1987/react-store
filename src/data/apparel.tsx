@@ -1,10 +1,11 @@
 import { Apparel } from '../types';
-import { paginate, sortByArtistName, sortByDateAdded } from '../utils';
+import { aToZ, newToOld } from '../utils/sorting';
+import { paginate } from '../utils';
 
 export const apparel: Apparel[] = [
     {
         id: 'agriculture-logo-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Agriculture',
@@ -18,7 +19,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'agriculture-ecstatic-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'Longsleeve',
         artist: 'Agriculture',
@@ -32,7 +33,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-logo-tour-2022-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -46,7 +47,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-orbital-remains-tour-2022-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -63,7 +64,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-split-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -77,7 +78,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-timewave-zero-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -94,7 +95,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-timewave-zero-tour-2022-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -111,7 +112,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-live-vitrification-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -125,7 +126,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-hidden-history-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -142,7 +143,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-starspawn-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -159,7 +160,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-hidden-species-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -176,7 +177,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-timewave-zero-pocket-grey-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -193,7 +194,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'blood-incantation-red-logo-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Blood Incantation',
@@ -210,7 +211,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-interdimensional-extinction-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -227,7 +228,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-interdimensional-extinction-logo-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -244,7 +245,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-interdimensional-pocket-tour-2022-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -261,7 +262,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-bacteria-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -278,7 +279,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-logo-grey-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -295,7 +296,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-timewave-zero-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -312,7 +313,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-timewave-zero-pocket-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -329,7 +330,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-starspawn-pocket-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -346,7 +347,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-hidden-history-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -363,7 +364,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-hidden-history-tour-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -380,7 +381,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-hidden-species-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
@@ -397,7 +398,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blood-incantation-hidden-history-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Blood Incantation',
@@ -414,7 +415,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-on-deadly-ground-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Chat Pile',
@@ -428,7 +429,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-logo-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Chat Pile',
@@ -442,7 +443,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-grim-guy-smoking-weed-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Chat Pile',
@@ -456,7 +457,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-pamela-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Chat Pile',
@@ -470,7 +471,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-staircase-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Chat Pile',
@@ -484,7 +485,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-samantha-wendel-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Chat Pile',
@@ -498,7 +499,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-mute-neighbor-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Chat Pile',
@@ -512,7 +513,7 @@ export const apparel: Apparel[] = [
     },
     {        
         id: 'chat-pile-alex-eckman-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'Longsleeve',
         artist: 'Chat Pile',
@@ -526,7 +527,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-sunbather-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -540,7 +541,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-sunbather-pink-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -554,7 +555,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-shellstar-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -568,7 +569,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-grid-tri-blend-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -582,7 +583,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-infinite-granite-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -596,7 +597,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-styleguide-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -610,7 +611,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-ochl-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -624,7 +625,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-sleeper-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -638,7 +639,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'deafheaven-sunflower-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
@@ -652,7 +653,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'ZlOcH8',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Nails',
@@ -666,7 +667,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'AKFLVT',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Nails',
@@ -680,7 +681,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-scapegoat-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Nails',
@@ -695,7 +696,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-hatred-ad-infinitum-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Nails',
@@ -709,7 +710,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-you-will-never-be-one-of-us-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Nails',
@@ -726,7 +727,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-unsilent-death-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Nails',
@@ -740,7 +741,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-born-to-follow-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Nails',
@@ -757,7 +758,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-you-will-never-be-one-of-us-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Nails',
@@ -774,7 +775,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-you-will-never-be-one-of-us-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Nails',
@@ -791,7 +792,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nails-unsilent-death-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Nails',
@@ -805,7 +806,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'bell-witch-impious-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Bell Witch',
@@ -819,7 +820,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'abnMGh',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'Bell Witch',
@@ -833,7 +834,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'bell-witch-phantom-forest-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Bell Witch',
@@ -847,7 +848,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'bell-witch-clandestine-gate-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Bell Witch',
@@ -862,7 +863,7 @@ export const apparel: Apparel[] = [
     {
         id: '',
      
-     category: 'apparel',   featured: false,
+     category: 'Apparel',   featured: false,
         productType: 'T-Shirt',
         artist: 'Bell Witch',
         imgs: [
@@ -878,7 +879,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'nYMwxu',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Bell Witch',
@@ -895,7 +896,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'bell-witch_spire-of-skeletons-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Bell Witch',
@@ -912,7 +913,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'bell-witch_mirror-reaper-anniversary-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Bell Witch',
@@ -929,7 +930,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'rmHwNn',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'The Body',
@@ -946,7 +947,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'the-body_the-hour-of-loneliness-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'The Body',
@@ -960,7 +961,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'the-body_new-heaven-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'The Body',
@@ -974,7 +975,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'the-body-cloth-cross-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'The Body',
@@ -988,7 +989,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'blacVK',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'The Body',
@@ -1002,7 +1003,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'the-body-enough-labor-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'The Body',
@@ -1016,7 +1017,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'ragana-logo-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'Ragana',
@@ -1030,7 +1031,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'knoll_marred-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Knoll',
@@ -1044,7 +1045,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'knoll_dolly-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
         artist: 'Knoll',
@@ -1058,7 +1059,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'knoll_ligature-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Knoll',
@@ -1072,7 +1073,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'cloud-rat_harpy-hoodie_front',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Cloud Rat',
@@ -1086,7 +1087,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'cloud-rat_biome-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Cloud Rat',
@@ -1100,7 +1101,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'cloud-rat_heartbreak-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Cloud Rat',
@@ -1114,7 +1115,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'ujsTdl',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Cloud Rat',
@@ -1128,7 +1129,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'pFESkH',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Cloud Rat',
@@ -1142,7 +1143,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-free-will-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1156,7 +1157,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-torture-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1170,7 +1171,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-goat-church-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1184,7 +1185,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-merzrip-black-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1198,7 +1199,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-merzrip-white-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1212,7 +1213,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-cherub-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1226,7 +1227,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-cursed-guardian-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1240,7 +1241,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-demon-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1254,7 +1255,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-trumpeting-ecstasy-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1268,7 +1269,7 @@ export const apparel: Apparel[] = [
     },    
     {
         id: 'full-of-hell-garden-of-burning-apparitions-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
@@ -1285,7 +1286,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-radiant-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Full of Hell',
@@ -1299,7 +1300,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-crawling-back-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Full of Hell',
@@ -1313,7 +1314,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-trumpeting-ecstasy-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Full of Hell',
@@ -1327,7 +1328,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-garden-of-burning-apparitions-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Full of Hell',
@@ -1344,7 +1345,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'full-of-hell-insect-logo-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Full of Hell',
@@ -1358,7 +1359,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'portrayal-of-guilt-devil-music-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Portrayal of Guilt',
@@ -1372,7 +1373,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'portrayal-of-guilt-bad-museums-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Portrayal of Guilt',
@@ -1386,7 +1387,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'portrayal-of-guilt-devil-music-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Portrayal of Guilt',
@@ -1403,7 +1404,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'soft-kill-pretty-face-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Soft Kill',
@@ -1417,7 +1418,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'soft-kill-halloween-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Soft Kill',
@@ -1434,7 +1435,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'soft-kill-dancing-with-glass-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Soft Kill',
@@ -1448,7 +1449,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'touche-amore-sirens-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Touché Amoré',
@@ -1462,7 +1463,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'touche-amore-city-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Touché Amoré',
@@ -1476,7 +1477,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'touche-amore-honest-sleep-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Touché Amoré',
@@ -1490,7 +1491,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'touche-amore-stage-four-rose-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Touché Amoré',
@@ -1507,7 +1508,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-live-at-roadburn-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1524,7 +1525,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-afterlife-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1538,7 +1539,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-mfd-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1552,7 +1553,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-marked-for-death-album-cover-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1566,7 +1567,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-dowsing-voice-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1580,7 +1581,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-some-heavy-ocean-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1594,7 +1595,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-moon-lady-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1608,7 +1609,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-album-cover-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1622,7 +1623,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-skull-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1636,7 +1637,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-jas-helena-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1650,7 +1651,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-return-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1664,7 +1665,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-engine-of-hell-black-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
@@ -1681,7 +1682,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-skull-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Emma Ruth Rundle',
@@ -1698,7 +1699,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-dark-horse-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Emma Ruth Rundle',
@@ -1715,7 +1716,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-engine-of-hell-white-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Emma Ruth Rundle',
@@ -1732,7 +1733,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-engine-of-hell-lyrics-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Emma Ruth Rundle',
@@ -1749,7 +1750,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-citadel-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Emma Ruth Rundle',
@@ -1763,7 +1764,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'emma-ruth-rundle-afterlife-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Emma Ruth Rundle',
@@ -1780,7 +1781,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'spectral-wound-infernal-decadence-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Spectral Wound',
@@ -1797,7 +1798,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'spectral-wound-a-diabolic-thirst-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Spectral Wound',
@@ -1814,7 +1815,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'spectral-wound-skull-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Spectral Wound',
@@ -1831,7 +1832,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'spectral-wound-infernal-decadence-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Spectral Wound',
@@ -1848,7 +1849,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'spectral-wound-a-diabolic-thirst-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Spectral Wound',
@@ -1865,7 +1866,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'spectral-wound-infernal-decadence-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Spectral Wound',
@@ -1882,7 +1883,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'devil-master-devil-head-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Devil Master',
@@ -1896,7 +1897,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'devil-master-devil-head-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Devil Master',
@@ -1910,7 +1911,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'divide-and-dissolve-destroy-white-supremacy-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Divide and Dissolve',
@@ -1927,7 +1928,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'divide-and-dissolve-no-prisons-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Divide and Dissolve',
@@ -1944,7 +1945,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'divide-and-dissolve-dismantle-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Divide and Dissolve',
@@ -1961,7 +1962,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'oathbreaker-hands-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Oathbreaker',
@@ -1978,7 +1979,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'oathbreaker-face-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Oathbreaker',
@@ -1992,7 +1993,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'oathbreaker-bird-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Oathbreaker',
@@ -2009,7 +2010,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-death-obscene-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2023,7 +2024,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-its-time-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2040,7 +2041,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-its-time-no-back-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2054,7 +2055,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-red-on-black-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2068,7 +2069,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-rotting-in-rochester-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2082,7 +2083,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-jumped-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2096,7 +2097,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-european-exhumation-2023-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2113,7 +2114,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-skull-crushing-death-metal-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2130,7 +2131,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-lesions-of-a-different-kind-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Undeath',
@@ -2147,7 +2148,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-lesions-of-a-different-kind-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Undeath',
@@ -2164,7 +2165,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-blacksmith-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Undeath',
@@ -2181,7 +2182,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-its-time-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Undeath',
@@ -2198,7 +2199,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-uk-tour-2023-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Undeath',
@@ -2215,7 +2216,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-sentient-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Undeath',
@@ -2232,7 +2233,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-head-splattered-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Undeath',
@@ -2249,7 +2250,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-head-splattered-grey-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Undeath',
@@ -2266,7 +2267,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'undeath-purple-logo-hoodie',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
         artist: 'Undeath',
@@ -2280,7 +2281,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-stoned-death-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Primitive Man',
@@ -2297,7 +2298,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-stoner-witch-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Primitive Man',
@@ -2314,7 +2315,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-bag-lady-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Primitive Man',
@@ -2331,7 +2332,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-pitiful-and-loathsome-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Primitive Man',
@@ -2348,7 +2349,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-hell-split-t-shirt',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
         artist: 'Primitive Man',
@@ -2365,7 +2366,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-reaper-snake-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Primitive Man',
@@ -2382,7 +2383,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-entity-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Primitive Man',
@@ -2399,7 +2400,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-you-are-in-hell-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Primitive Man',
@@ -2416,7 +2417,7 @@ export const apparel: Apparel[] = [
     },
     {
         id: 'primitive-man-enemies-of-art-longsleeve',
-        category: 'apparel',
+        category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
         artist: 'Primitive Man',
@@ -2434,11 +2435,11 @@ export const apparel: Apparel[] = [
 ];
 
 // All apparel sorted by date
-export const newApparel = apparel.sort(sortByDateAdded);
+export const newApparel = apparel.sort(newToOld);
 // All apparel segmented by category and accessible by matching http slug
-const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(sortByArtistName);
-const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(sortByArtistName);
-const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(sortByArtistName);
+const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(aToZ);
+const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(aToZ);
+const hoodies = apparel.filter(item => item.productType === 'Hoodie').sort(aToZ);
 
 export const apparelCategories = {
     tShirts: tShirts,
