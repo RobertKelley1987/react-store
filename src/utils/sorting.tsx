@@ -10,25 +10,39 @@ export function oldToNew<T extends Item<K>, K extends string>(item: T, nextItem:
     return item.dateAdded.getTime() - nextItem.dateAdded.getTime();
 }
 
-// Sort by band name - a to z
+// Sort alphabetically - a to z
 export function aToZ<T extends Item<K>, K extends string>(item: T, nextItem: T) {
-    let result = 0
-    if(item.artist > nextItem.artist) {
+    let result = 0;
+
+    // Compare strings that will appear as product names: "band name 'product desc' product type",
+    // Ex: Aerosmith "Armageddon" T-Shirt
+    const itemOneStr = `${item.artist} ${item.desc} ${item.productType}`;
+    const itemTwoStr = `${nextItem.artist} ${nextItem.desc} ${nextItem.productType}`;
+
+    if(itemOneStr > itemTwoStr) {
         result = 1;
-    } else if(item.artist < nextItem.artist) {
+    } else if(itemOneStr < itemTwoStr) {
         result = -1
     } 
+
     return result;
 }
 
-// Sort by band name - z to a
+// Sort alphabetically - z to a
 export function zToA<T extends Item<K>, K extends string>(item: T, nextItem: T) {
-    let result = 0
-    if(item.artist < nextItem.artist) {
+    let result = 0;
+
+    // Compare strings that will appear as product names - "band name 'product desc' product type",
+    // Ex: Aerosmith "Armageddon" T-Shirt
+    const itemOneStr = `${item.artist} ${item.desc} ${item.productType}`;
+    const itemTwoStr = `${nextItem.artist} ${nextItem.desc} ${nextItem.productType}`;
+
+    if(itemOneStr < itemTwoStr) {
         result = 1;
-    } else if(item.artist > nextItem.artist) {
+    } else if(itemOneStr > itemTwoStr) {
         result = -1
     } 
+    
     return result;
 }
 
@@ -42,6 +56,7 @@ export function lowToHigh<T extends Item<K>, K extends string>(item: T, nextItem
     return item.price - nextItem.price;
 }
 
+// Reurns matching sorting function based on sort requested as arg
 export const configSortFn = (sortOption: SortOption) => {
     let sortFn = null;
 
@@ -52,10 +67,10 @@ export const configSortFn = (sortOption: SortOption) => {
         case 'Date - New to Old':
             sortFn = newToOld;
             break;
-        case 'Artist Name - A to Z':
+        case 'Alphabetically - A to Z':
             sortFn = aToZ;
             break;
-        case 'Artist Name - Z to A':
+        case 'Alphabetically - Z to A':
             sortFn = zToA;
             break;
         case 'Price - High to Low':

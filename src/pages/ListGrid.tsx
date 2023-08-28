@@ -4,14 +4,15 @@ import Grid from '../components/Grid';
 import ItemList from '../components/ItemList';
 import PageNumbers from './PageNumbers';
 import { Item } from '../types';
-import './ListPage.css';
+import './ListGrid.css';
 
-type ListPageProps<T> = {
+type ListGridProps<T> = {
     pages: T[][],
-    pageNum: number
+    pageNum: number,
+    srcPg?: string
 }
 
-function ListPage<T extends Item<K>, K extends string>({ pages, pageNum }: ListPageProps<T>) {
+function ListGrid<T extends Item<K>, K extends string>({ pages, pageNum, srcPg }: ListGridProps<T>) {
     const location = useLocation();
 
     useEffect(() => {
@@ -21,11 +22,11 @@ function ListPage<T extends Item<K>, K extends string>({ pages, pageNum }: ListP
     return (
         <div className="list-page">
             <Grid>
-                <ItemList<T, K> items={pages[pageNum - 1]} />
+                <ItemList<T, K> items={pages[pageNum - 1]} srcPg={srcPg} />
             </Grid>
             <PageNumbers pages={pages} currentPage={pageNum} currentPath={location.pathname}/>            
         </div>
     );
 }
 
-export default ListPage;
+export default ListGrid;

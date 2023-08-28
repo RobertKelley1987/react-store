@@ -8,9 +8,10 @@ import './Menu.css';
 type MenuProps = {
     menuOpen: boolean,
     setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+    clearFilter: () => void
 }
 
-const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
+const Menu = ({ menuOpen, setMenuOpen, clearFilter }: MenuProps) => {
     const [categoriesOpen, setCategoriesOpen] = useState(false);
     const [artistsOpen, setArtistsOpen] = useState(false);
     const screenIsBigContext = useContext(ScreenIsBigContext);
@@ -45,12 +46,12 @@ const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
                 <ul className="menu-nav">
                     <DropdownList 
                         thisIsOpen={categoriesOpen} 
-                        pathSlug='collections'
                         pageLists={CATEGORIES}
                         heading="Categories"
                         setOtherListsOpen={setArtistsOpen} 
                         setThisListOpen={setCategoriesOpen}
                         setMenuOpen={setMenuOpen}
+                        clearFilter={clearFilter}
                     />
                     <DropdownList 
                         thisIsOpen={artistsOpen} 
@@ -60,6 +61,7 @@ const Menu = ({ menuOpen, setMenuOpen }: MenuProps) => {
                         setOtherListsOpen={setCategoriesOpen} 
                         setThisListOpen={setArtistsOpen}
                         setMenuOpen={setMenuOpen}
+                        clearFilter={clearFilter}
                     />
                 </ul>    
             </nav>

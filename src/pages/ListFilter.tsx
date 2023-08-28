@@ -19,17 +19,13 @@ function ListFilter<T extends string> ({ selections, productTypes, setProductTyp
         }
         navigate(`${location.pathname}?page=1`);
     }
-    
+
     return (
         <div className="list-filter">
             <h2 className="list-filter-heading">Product Type</h2>
             {selections.map(selection => {
                 return (
-                    <label
-                        key={selection} 
-                        className="list-filter-checkbox-label" 
-                        htmlFor={selection}
-                    >
+                    <label key={selection} className="list-filter-checkbox-label" htmlFor={selection}>
                         <input 
                             className="list-filter-checkbox"  
                             id={selection} 
@@ -42,7 +38,7 @@ function ListFilter<T extends string> ({ selections, productTypes, setProductTyp
                 )
             })}
         </div>
-    )
+    );
 }
 
 export default ListFilter;

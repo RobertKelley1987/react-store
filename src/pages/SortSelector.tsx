@@ -1,4 +1,5 @@
 import { SortOption } from "../types";
+import './SortSelector.css';
 
 type SortSelectorProps = {
     sortOption: SortOption,
@@ -8,8 +9,8 @@ type SortSelectorProps = {
 const SORT_OPTIONS: SortOption[] = [
     'Date - Old to New', 
     'Date - New to Old', 
-    'Artist Name - A to Z', 
-    'Artist Name - Z to A', 
+    'Alphabetically - A to Z', 
+    'Alphabetically - Z to A', 
     'Price - High to Low', 
     'Price - Low to High'
 ];
@@ -34,8 +35,9 @@ const SortSelector = ({ sortOption, setSortOption }: SortSelectorProps) => {
     }
 
     return (
-        <div className="sort-wrapper">
-            <select onChange={handleChange} >
+        <div className="sort-selector-wrapper">
+            <span className="material-symbols-outlined sort-selector-arrow">expand_more</span>
+            <select value={sortOption} onChange={handleChange} className="sort-selector">
                 {SORT_OPTIONS.map(option => <option key={option} value={option}>{option}</option>)}
             </select>
         </div>

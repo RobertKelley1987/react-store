@@ -15,11 +15,21 @@ type DropdownListProps = {
     heading: string,
     setOtherListsOpen: React.Dispatch<React.SetStateAction<boolean>>,
     setThisListOpen: React.Dispatch<React.SetStateAction<boolean>>,
-    setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+    setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>,
+    clearFilter: () => void
 }
 
 const DropdownList = (props: DropdownListProps) => {
-    const { thisIsOpen, pathSlug, pageLists, heading, setOtherListsOpen, setThisListOpen, setMenuOpen } = props;
+    const { 
+        thisIsOpen, 
+        pathSlug, 
+        pageLists, 
+        heading, 
+        setOtherListsOpen, 
+        setThisListOpen, 
+        setMenuOpen,
+        clearFilter 
+    } = props;
 
     const handleClick = () => { 
         const mediaQuery = window.matchMedia('(min-width: 700px)');
@@ -49,6 +59,7 @@ const DropdownList = (props: DropdownListProps) => {
                             pathSlug={pathSlug} 
                             pages={pageList.pages} 
                             closeMenu={closeAllMenus} 
+                            clearFilter={clearFilter}
                         />
                     );
                 })}

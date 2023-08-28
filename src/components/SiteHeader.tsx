@@ -5,7 +5,11 @@ import ShoppingBag from './SVGs/ShoppingBag';
 import Menu from './Menu';
 import './SiteHeader.css';
 
-const SiteHeader = () => {
+type SiteHeaderProps = {
+    clearFilter: () => void
+}
+
+const SiteHeader = ({ clearFilter }: SiteHeaderProps) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -13,7 +17,7 @@ const SiteHeader = () => {
             <div className="site-header-main">
                 <MenuButton menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
                 <Link to="/" className="site-header-logo">Infinite Bliss</Link>
-                <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+                <Menu setMenuOpen={setMenuOpen} menuOpen={menuOpen} clearFilter={clearFilter} />
                 <Link to="/cart">
                     <ShoppingBag className="site-header-svg" />
                 </Link>

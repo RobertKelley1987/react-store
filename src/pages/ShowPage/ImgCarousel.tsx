@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Product } from '../../types';
+import { Item } from '../../types';
 import './ImgCarousel.css';
 
-type ImgCarouselProps = {
-    product: Product
+type ImgCarouselProps<T> = {
+    product: T
 }
 
-const ImgCarousel = ({ product }: ImgCarouselProps) => {
+function ImgCarousel<T extends Item<K>, K extends string>({ product }: ImgCarouselProps<T>) {
     const { imgs, productType } = product;
     const [selectedImg, setSelectedImg] = useState('');
 

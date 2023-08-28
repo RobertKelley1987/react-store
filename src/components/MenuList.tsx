@@ -8,11 +8,19 @@ type MenuListProps = {
     pathSlug?: string,
     pages: string[],
     closeMenu: () => void,
+    clearFilter: () => void
 }
 
-const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
+const MenuList = ({ category, pathSlug, pages, closeMenu, clearFilter }: MenuListProps) => {
     const [sectionOpen, setSectionOpen] = useState(false);
     const screenIsBigContext = useContext(ScreenIsBigContext)
+
+    pathSlug = pathSlug || category.toLowerCase();
+
+    const handleClick = () => {
+        closeMenu();
+        clearFilter();
+    }
 
     const renderList = () => {
         return (screenIsBigContext?.screenIsBig || sectionOpen) && (
@@ -22,7 +30,7 @@ const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
                     
                     return (
                         <li key={page} className="menu-list-item">
-                            <Link onClick={closeMenu} to={`/${pathSlug}/${pageSlug}`}>{page}</Link>
+                            <Link onClick={handleClick} to={`/${pathSlug}/${pageSlug}`}>{page}</Link>
                         </li>
                     )
                 })}

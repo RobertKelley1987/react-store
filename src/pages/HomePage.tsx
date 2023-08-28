@@ -1,10 +1,8 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { albums } from '../data/albums';
 import { apparel } from '../data/apparel';
 import { newToOld } from '../utils/sorting';
 import HomePageSection from './HomePageSection';
-import { ApparelProduct } from '../types';
 import './HomePage.css';
 
 const MAX_LIST_SIZE = 8;
@@ -16,16 +14,7 @@ const featuredMusic = albums.filter(item => item.featured);
 const newestMusic = [...albums].sort(newToOld);
 const newestApparel = [...apparel].sort(newToOld);
 
-type HomePageProps = {
-    setApparelTypes: React.Dispatch<React.SetStateAction<ApparelProduct[]>>
-}
-
-const HomePage = ({ setApparelTypes }: HomePageProps) => {
-
-    useEffect(() => {
-        setApparelTypes([]);
-    }, []);
-
+const HomePage = () => {
     return (
         <div className="home-page">
             <div className="home-page-banner" style={{ backgroundImage: "url('imgs/chat-pile_live.jpg')" }}>
@@ -46,22 +35,22 @@ const HomePage = ({ setApparelTypes }: HomePageProps) => {
                 <HomePageSection 
                     heading="Featured Apparel" 
                     items={featuredApparel.slice(0, MAX_LIST_SIZE)}
-                    path='/apparel/featured' 
+                    path='/apparel/featured-apparel'
                 />
                 <HomePageSection 
                     heading="New Apparel" 
                     items={newestApparel.slice(0, MAX_LIST_SIZE)}
-                    path='/collections/new-apparel'
+                    path='/apparel/new-apparel'
                 />
                 <HomePageSection 
                     heading="Featured Music" 
                     items={featuredMusic.slice(0, MAX_LIST_SIZE)}
-                    path='/music/featured'
+                    path='/music/featured-music'
                 />
                 <HomePageSection 
                     heading="New Music" 
                     items={newestMusic.slice(0, MAX_LIST_SIZE)}
-                    path='/collections/new-music' 
+                    path='/music/new-music'
                 />
             </main>
         </div>

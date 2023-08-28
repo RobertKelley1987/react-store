@@ -1,6 +1,5 @@
 import { Apparel } from '../types';
-import { aToZ, newToOld } from '../utils/sorting';
-import { paginate } from '../utils';
+import { aToZ } from '../utils/sorting';
 
 export const apparel: Apparel[] = [
     {
@@ -1452,7 +1451,7 @@ export const apparel: Apparel[] = [
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_sirens-t-shirt'],
         desc: 'Sirens',
         color: 'Sand',
@@ -1466,7 +1465,7 @@ export const apparel: Apparel[] = [
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_city-t-shirt_front', 'touche-amore_city-t-shirt_back'],
         desc: 'City',
         color: 'Black',
@@ -1480,7 +1479,7 @@ export const apparel: Apparel[] = [
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_honest-sleep-t-shirt_front', 'touche-amore_honest-sleep-t-shirt_back'],
         desc: 'Honest Sleep',
         color: 'Black',
@@ -1494,7 +1493,7 @@ export const apparel: Apparel[] = [
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: [
             'touche-amore_stage-four-rose-t-shirt_front', 
             'touche-amore_stage-four-rose-t-shirt_back'
@@ -2434,8 +2433,6 @@ export const apparel: Apparel[] = [
     },
 ];
 
-// All apparel sorted by date
-export const newApparel = apparel.sort(newToOld);
 // All apparel segmented by category and accessible by matching http slug
 const tShirts = apparel.filter(item => item.productType === 'T-Shirt').sort(aToZ);
 const longsleeves = apparel.filter(item => item.productType === 'Longsleeve').sort(aToZ);

@@ -17,7 +17,7 @@ const HomePageSection = ({ heading, items, path }: HomePageProps) => {
                 <h2 className="home-page-section-heading">{heading}</h2>
             </Link>
             <Grid>
-                <ItemList items={items} />
+                <ItemList items={items} srcPg={heading}/>
             </Grid>
             <Link to={path} className="button button-black">
                 View All

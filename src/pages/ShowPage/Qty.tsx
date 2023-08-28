@@ -11,11 +11,15 @@ const Qty = ({ qty, setQty }: QtyProps) => {
 
     return (
         <div className="qty-wrapper">
-            <h3 className="heading-small">Quantity</h3>
+            <h3 className="qty-heading">Quantity</h3>
             <div className="qty-buttons">
-                <button className="button button-black qty-button" onClick={decrement}>-</button>
+                <button className="qty-button" onClick={decrement}>
+                    <span className="material-symbols-outlined qty-icon">remove</span>
+                </button>
                 <span className="qty-text">{qty}</span>
-                <button className="button button-black qty-button" onClick={increment}>+</button>
+                <button className="qty-button" onClick={increment}>
+                    <span className="material-symbols-outlined qty-icon">add</span>
+                </button>
             </div>
         </div>
     )

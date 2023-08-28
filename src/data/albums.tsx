@@ -1,5 +1,4 @@
 import { Album } from '../types';
-import { newToOld } from '../utils/sorting';
 
 export const albums: Album[] = [
     {
@@ -479,7 +478,7 @@ export const albums: Album[] = [
         artist: 'Chat Pile',
         imgs: ['chat-pile_gods-country-cover'],
         desc: 'God\'s Country',
-        price: 21.99,
+        price: 15.99,
         dateAdded: new Date(2022, 6, 20),
         tracklist: [
             'Slaughterhouse',
@@ -645,7 +644,7 @@ export const albums: Album[] = [
             'chat-pile_tenkiller-soundtrack-cd_1'
         ],
         desc: 'Tenkiller: Motion Picture Soundtrack',
-        price: 26.99,
+        price: 13.99,
         dateAdded: new Date(2023, 4, 12),
         tracklist: [
             'TAH',
@@ -723,7 +722,7 @@ export const albums: Album[] = [
         ],
         albumDesc: [
             'Recorded and engineered by Jack Shirley (Funeral Diner, Comadre) and designed by Nick Steinhardt' +
-            ' (Touché Amoré) "Sunbather" deals with the profound sadness found in the quest for one\'s personal perfection.' + 
+            ' (Touche Amore) "Sunbather" deals with the profound sadness found in the quest for one\'s personal perfection.' + 
             ' Serving as an artistic lucid dream of warmth despite the stinging pain of life\'s cruel idealism.',
 
             'With opener "Dream House" George Clarke\'s tortured vocals familiarly intertwine with Kerry McCoy\'s hypnotic' + 
@@ -760,7 +759,7 @@ export const albums: Album[] = [
         ],
         albumDesc: [
             'Recorded and engineered by Jack Shirley (Funeral Diner, Comadre) and designed by Nick Steinhardt' +
-            ' (Touché Amoré) "Sunbather" deals with the profound sadness found in the quest for one\'s personal perfection.' + 
+            ' (Touche Amore) "Sunbather" deals with the profound sadness found in the quest for one\'s personal perfection.' + 
             ' Serving as an artistic lucid dream of warmth despite the stinging pain of life\'s cruel idealism.',
 
             'With opener "Dream House" George Clarke\'s tortured vocals familiarly intertwine with Kerry McCoy\'s hypnotic' + 
@@ -1051,7 +1050,7 @@ export const albums: Album[] = [
         artist: 'Nails',
         imgs: ['nails_abandon-all-life-cover'],
         desc: 'Abandon All Life',
-        price: 21.99,
+        price: 13.99,
         dateAdded: new Date(2013, 2, 1),
         tracklist: [
             'In Exodus',
@@ -2422,7 +2421,7 @@ export const albums: Album[] = [
         category: 'Music',
         featured: true,
         productType: 'LP',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_parting-the-sea-between-brightness-and-me-cover'],        
         desc: 'Parting The Sea Between The Brightness And Me',
         price: 28.99,
@@ -2449,7 +2448,7 @@ export const albums: Album[] = [
         category: 'Music',
         featured: true,
         productType: 'LP',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_is-survived-by-cover'],        
         desc: 'Is Survived By',
         price: 28.99,
@@ -2475,7 +2474,7 @@ export const albums: Album[] = [
         category: 'Music',
         featured: true,
         productType: 'CD',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_is-survived-by-cover'],        
         desc: 'Is Survived By',
         price: 15.99,
@@ -2501,7 +2500,7 @@ export const albums: Album[] = [
         category: 'Music',
         featured: true,
         productType: 'LP',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_to-the-beat-of-a-dead-horse-cover'],        
         desc: 'To The Beat of a Dead Horse...',
         price: 34.99,
@@ -2520,9 +2519,9 @@ export const albums: Album[] = [
             'Adieux'
         ],
         albumDesc: [
-            'Hailing from Los Angeles, CA, Touché Amoré set themselves' + 
+            'Hailing from Los Angeles, CA, Touche Amore set themselves' + 
             ' against the glamor and greed of their hometown culture with "...To The' + 
-            ' Beat Of A Dead Horse," the passionate debut LP and CD. Where Touché Amoré\'s' + 
+            ' Beat Of A Dead Horse," the passionate debut LP and CD. Where Touche Amore\'s' + 
             ' demo 7" (No Sleep Records) was full of promise, "...To The Beat Of A Dead' + 
             ' Horse" feels fully realized: the guitars bend and weave but always maintain' + 
             ' their drive, the rhythms are frequently off kilter but never off-time and the' + 
@@ -2536,7 +2535,7 @@ export const albums: Album[] = [
         category: 'Music',
         featured: true,
         productType: 'CD',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_stage-four-cover'],        
         desc: 'Stage Four',
         price: 13.99,
@@ -2555,7 +2554,7 @@ export const albums: Album[] = [
             'Skyscraper'
         ],
         albumDesc: [
-            'Los Angeles artful indie post hardcore band Touché Amoré have announced' + 
+            'Los Angeles artful indie post hardcore band Touche Amore have announced' + 
             'a new album, Stage Four, to be released September 16 on Epitaph.',
 
             'Formed in Burbank, California, across 2007 and 2008, the band\'s urgent sound, with' + 
@@ -2567,7 +2566,7 @@ export const albums: Album[] = [
             ' album to date, they are cementing their status as one of rock music\'s most talented,' + 
             ' relatable, and visceral acts. Over the years the band rose to prominence with 2009\'s' + 
             ' To the Beat of a Dead Horse and 2011\'s Parting the Sea Between Brightness and Me.' + 
-            ' Touché Amoré crossed into new territory with the 2013 art-punk masterpiece Is Survived' + 
+            ' Touche Amore crossed into new territory with the 2013 art-punk masterpiece Is Survived' + 
             ' By. Having earned early cred, critical favor, and legions of fans by playing lengthy' + 
             ' tours of all shapes and sizes, in every basement, youth center, and house show, the' + 
             ' band enjoyed a bigger following which only grew along with their talents.',
@@ -2578,7 +2577,7 @@ export const albums: Album[] = [
             ' question that it would be about passing of Bolm\'s mother in late 2014. Stage Four was recorded' + 
             ' in early 2016 in Studio City, CA with producer Brad Wood. Cathartic in delivery, highly' + 
             ' sentimental, and sonically triumphant, Stage Four is an emblem of a band both living its dream' + 
-            ' and marred by loss. And with Stage Four, Touché Amoré has unmistakably made the biggest, boldest,' + 
+            ' and marred by loss. And with Stage Four, Touche Amore has unmistakably made the biggest, boldest,' + 
             ' and most artistic statement of their career.'
         ]
     },
@@ -2587,7 +2586,7 @@ export const albums: Album[] = [
         category: 'Music',
         featured: true,
         productType: 'LP',
-        artist: 'Touché Amoré',
+        artist: 'Touche Amore',
         imgs: ['touche-amore_lament-cover'],        
         desc: 'Lament',
         price: 23.99,
@@ -2610,9 +2609,9 @@ export const albums: Album[] = [
             ' cancer, and heartbreak throughout four adored studio albums. After over' + 
             ' a decade of working through darkness, the band\'s gorgeously gruff fifth' + 
             ' album, Lament, finds the light at the end of the tunnel. Through 11 songs,' + 
-            ' Touché Amoré looks back at its past and uses hard-won optimism to point its' + 
+            ' Touche Amore looks back at its past and uses hard-won optimism to point its' + 
             ' fans toward light, and love. For the follow up to the their critically' + 
-            ' acclaimed 2016 release, Stage Four, Touché Amoré have opted to get out' + 
+            ' acclaimed 2016 release, Stage Four, Touche Amore have opted to get out' + 
             ' of their comfort zone and work with a new producer, the famously demanding' + 
             ' Ross Robinson (Slipknot, Korn, At the Drive-In). Both Robinson and Touché' + 
             ' Amoré are known for their trademark intensity. "I believe there was an' + 
@@ -3416,6 +3415,4 @@ export const albums: Album[] = [
             ' death is only the beginning.'
         ]
     },
-]
-
-export const newAlbums = albums.sort(newToOld);
+];

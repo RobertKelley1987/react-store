@@ -1,14 +1,16 @@
+import './Tracklist.css';
+
 const formatTrackNum = (trackNum: number) => trackNum < 10 ? `0${trackNum}` : trackNum;
 
 type TracklistProps = {
-    tracklist: string[] | undefined
+    tracklist?: string[]
 }
 
 const Tracklist = ({ tracklist }: TracklistProps) => {
     if(tracklist) {
         return (
-            <div>
-                <h3>Tracklist</h3>
+            <div className="tracklist">
+                <h3 className="tracklist-heading">Tracklist</h3>
                 <ul>{tracklist.map((track, index) => <li>{`${formatTrackNum(index + 1)}. ${track}`}</li>)}</ul>
             </div>
         );

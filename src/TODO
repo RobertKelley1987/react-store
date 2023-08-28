@@ -1,8 +1,7 @@
-- MenuList and Menu use similar click outside element function. Try to refactor into a custom hook.
-- Band names should be sorted from data, not hardcoded in Artists element used in Menu
-- Error message when you don't seelct a size sucks. Does not go away when you leave page.
+- Error message when you don't select a size sucks. Does not go away when you leave page.
 Should I just use default size small like Evil Greed?
 - Review for use of main tags
-- Add sort feature to other elements
 - style sort feature
-- work on featured items section on home and make featured pages
+- work on featured items data
+- when I click middle section of store path, I need the filters to reset... how do I do that in
+a way that isn't sloppy?

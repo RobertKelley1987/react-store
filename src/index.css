@@ -5,6 +5,7 @@
 :root {
   /* COLORS */
   --black: rgb(40, 40, 40);
+  --accent: rgb(233, 115, 139);
 
   /* FONTS */
   --display-font: 'EB Garamond', serif; 
@@ -55,10 +56,10 @@ ul {
   display: inline-flex;
   font-family: var(--sans-serif);
   font-size: var(--medium-font);
-  font-weight: 600;
+  font-weight: 500;
   gap: .2rem;
   letter-spacing: .05rem;
-  padding: .5rem;
+  padding: .75rem;
   text-transform: uppercase;
   white-space: nowrap;
   width: fit-content;
@@ -98,6 +99,7 @@ ul {
   transform: rotate(180deg) translateX(-8px);
 }
 
+/* google icons*/
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
