@@ -5,7 +5,7 @@
 :root {
   /* COLORS */
   --black: rgb(40, 40, 40);
-  --accent: rgb(233, 115, 139);
+  --accent: rgb(85, 102, 255);
 
   /* FONTS */
   --display-font: 'EB Garamond', serif; 
@@ -82,6 +82,18 @@ ul {
   color: white;
 }
 
+.button-color {
+  background: var(--accent);
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.button-color:hover {
+  background-color: var(--black);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
 .button-arrow {
   align-items: center;
   display: flex;
@@ -92,7 +104,8 @@ ul {
 .heading-small {
   font-family:var(--sans-serif);
   font-size: var(--medium-font);
-  font-weight: bold;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .flipped {

@@ -20,7 +20,7 @@ function ListGrid<T extends Item<K>, K extends string>({ pages, pageNum, srcPg }
     }, [])
 
     return (
-        <div className="list-page">
+        <div className="list-grid">
             <Grid>
                 <ItemList<T, K> items={pages[pageNum - 1]} srcPg={srcPg} />
             </Grid>

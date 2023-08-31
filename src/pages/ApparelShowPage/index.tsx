@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { apparel } from '../../data/apparel';
-import ShowPage from ".";
+import ShowPage from "../ShowPage";
 import Sizes from './Sizes';
 import { CartAction, Size, Apparel, ApparelProduct } from '../../types';
 

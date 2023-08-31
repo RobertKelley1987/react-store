@@ -330,7 +330,7 @@ export const apparel: Apparel[] = [
     {
         id: 'blood-incantation-starspawn-pocket-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Blood Incantation',
         imgs: [
@@ -429,7 +429,7 @@ export const apparel: Apparel[] = [
     {        
         id: 'chat-pile-logo-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Chat Pile',
         imgs: ['chat-pile_logo-t-shirt'],
@@ -541,7 +541,7 @@ export const apparel: Apparel[] = [
     {
         id: 'deafheaven-sunbather-pink-t-shirt',
         category: 'Apparel',
-        featured: true,
+        featured: false,
         productType: 'T-Shirt',
         artist: 'Deafheaven',
         imgs: ['deafheaven_sunbather-pink-t-shirt_front', 'deafheaven_sunbather-pink-t-shirt_back'],
@@ -651,7 +651,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2018, 7, 23)
     },
     {
-        id: 'ZlOcH8',
+        id: 'nails-unsilent-death-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -665,7 +665,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2010, 2, 1)
     },
     {
-        id: 'AKFLVT',
+        id: 'nails-destroy-all-who-oppose-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -696,7 +696,7 @@ export const apparel: Apparel[] = [
     {
         id: 'nails-hatred-ad-infinitum-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Nails',
         imgs: ['nails_hatred-ad-infinitum-t-shirt'],
@@ -727,7 +727,7 @@ export const apparel: Apparel[] = [
     {
         id: 'nails-unsilent-death-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Nails',
         imgs: ['nails_unsilent-death-longsleeve_front', 'nails_unsilent-death-longsleeve_back'],
@@ -818,7 +818,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2017, 10, 30)
     },
     {
-        id: 'abnMGh',
+        id: 'bell-witch-hollow-specter-t-shirt',
         category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
@@ -860,9 +860,8 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 2, 15)
     },
     {
-        id: '',
-     
-     category: 'Apparel',   featured: false,
+        id: 'bell-witch_mirror-reaper-t-shirt',
+        category: 'Apparel',   featured: false,
         productType: 'T-Shirt',
         artist: 'Bell Witch',
         imgs: [
@@ -877,7 +876,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2017, 11, 30)
     },
     {
-        id: 'nYMwxu',
+        id: 'bell-witch-mirror-reaper-longsleeve',
         category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -894,7 +893,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2017, 11, 30)
     },
     {
-        id: 'bell-witch_spire-of-skeletons-longsleeve',
+        id: 'bell-witch-spire-of-skeletons-longsleeve',
         category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -913,12 +912,12 @@ export const apparel: Apparel[] = [
     {
         id: 'bell-witch_mirror-reaper-anniversary-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Bell Witch',
         imgs: [
             'bell-witch_mirror-reaper-anniversary-longsleeve_front',
-            'bell-witch_mirror-reaper-anniversary-longsleeve_front'
+            'bell-witch_mirror-reaper-anniversary-longsleeve_back'
         ],
         desc: 'Mirror Reaper - Fifth Anniversary',
         color: 'Black',
@@ -928,7 +927,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 2, 15)
     },
     {
-        id: 'rmHwNn',
+        id: 'the-body-enemy-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -945,7 +944,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 10, 30)
     },
     {
-        id: 'the-body_the-hour-of-loneliness-t-shirt',
+        id: 'the-body-the-hour-of-loneliness-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -959,7 +958,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 3, 30)
     },
     {
-        id: 'the-body_new-heaven-t-shirt',
+        id: 'the-body-new-heaven-t-shirt',
         category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
@@ -987,7 +986,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2019, 9, 30)
     },
     {
-        id: 'blacVK',
+        id: 'the-body-demon-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -1003,7 +1002,7 @@ export const apparel: Apparel[] = [
     {
         id: 'the-body-enough-labor-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'The Body',
         imgs: ['the-body_enough-labor-longsleeve'],
@@ -1029,7 +1028,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2023, 5, 30)
     },
     {
-        id: 'knoll_marred-longsleeve',
+        id: 'knoll-marred-longsleeve',
         category: 'Apparel',
         featured: false,
         productType: 'Longsleeve',
@@ -1043,7 +1042,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 30)
     },
     {
-        id: 'knoll_dolly-t-shirt',
+        id: 'knoll-dolly-t-shirt',
         category: 'Apparel',
         featured: true,
         productType: 'T-Shirt',
@@ -1057,7 +1056,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 30)
     },
     {
-        id: 'knoll_ligature-t-shirt',
+        id: 'knoll-ligature-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -1071,7 +1070,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2022, 5, 30)
     },
     {
-        id: 'cloud-rat_harpy-hoodie_front',
+        id: 'cloud-rat-harpy-hoodie_front',
         category: 'Apparel',
         featured: false,
         productType: 'Hoodie',
@@ -1085,9 +1084,9 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: 'cloud-rat_biome-longsleeve',
+        id: 'cloud-rat-biome-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Cloud Rat',
         imgs: ['cloud-rat_biome-longsleeve_front', 'cloud-rat_biome-longsleeve_back'],
@@ -1099,7 +1098,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: 'cloud-rat_heartbreak-t-shirt',
+        id: 'cloud-rat-heartbreak-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -1113,9 +1112,9 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: 'ujsTdl',
+        id: 'cloud-rat-youre-safe-now-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Cloud Rat',
         imgs: ['cloud-rat_youre-safe-now-t-shirt_front', 'cloud-rat_youre-safe-now-t-shirt_back'],
@@ -1127,7 +1126,7 @@ export const apparel: Apparel[] = [
         dateAdded: new Date(2020, 9, 30)
     },
     {
-        id: 'pFESkH',
+        id: 'cloud-rat-deer-splatter-t-shirt',
         category: 'Apparel',
         featured: false,
         productType: 'T-Shirt',
@@ -1143,7 +1142,7 @@ export const apparel: Apparel[] = [
     {
         id: 'full-of-hell-free-will-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_free-will-t-shirt'],
@@ -1314,7 +1313,7 @@ export const apparel: Apparel[] = [
     {
         id: 'full-of-hell-trumpeting-ecstasy-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_trumpeting-ecstasy-longsleeve'],
@@ -1345,7 +1344,7 @@ export const apparel: Apparel[] = [
     {
         id: 'full-of-hell-insect-logo-hoodie',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Hoodie',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_insect-logo-hoodie'],
@@ -1359,7 +1358,7 @@ export const apparel: Apparel[] = [
     {
         id: 'portrayal-of-guilt-devil-music-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Portrayal of Guilt',
         imgs: ['portrayal-of-guilt_devil-music-t-shirt'],
@@ -1387,7 +1386,7 @@ export const apparel: Apparel[] = [
     {
         id: 'portrayal-of-guilt-devil-music-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Portrayal of Guilt',
         imgs: [
@@ -1665,7 +1664,7 @@ export const apparel: Apparel[] = [
     {
         id: 'emma-ruth-rundle-engine-of-hell-black-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Emma Ruth Rundle',
         imgs: [
@@ -1733,7 +1732,7 @@ export const apparel: Apparel[] = [
     {
         id: 'emma-ruth-rundle-engine-of-hell-lyrics-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Emma Ruth Rundle',
         imgs: [
@@ -1781,7 +1780,7 @@ export const apparel: Apparel[] = [
     {
         id: 'spectral-wound-infernal-decadence-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Spectral Wound',
         imgs: [
@@ -1832,7 +1831,7 @@ export const apparel: Apparel[] = [
     {
         id: 'spectral-wound-infernal-decadence-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Spectral Wound',
         imgs: [
@@ -1962,7 +1961,7 @@ export const apparel: Apparel[] = [
     {
         id: 'oathbreaker-hands-hoodie',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Hoodie',
         artist: 'Oathbreaker',
         imgs: [
@@ -2114,7 +2113,7 @@ export const apparel: Apparel[] = [
     {
         id: 'undeath-skull-crushing-death-metal-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Undeath',
         imgs: [
@@ -2216,7 +2215,7 @@ export const apparel: Apparel[] = [
     {
         id: 'undeath-sentient-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Undeath',
         imgs: [
@@ -2233,7 +2232,7 @@ export const apparel: Apparel[] = [
     {
         id: 'undeath-head-splattered-hoodie',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Hoodie',
         artist: 'Undeath',
         imgs: [
@@ -2349,7 +2348,7 @@ export const apparel: Apparel[] = [
     {
         id: 'primitive-man-hell-split-t-shirt',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'T-Shirt',
         artist: 'Primitive Man',
         imgs: [
@@ -2400,7 +2399,7 @@ export const apparel: Apparel[] = [
     {
         id: 'primitive-man-you-are-in-hell-longsleeve',
         category: 'Apparel',
-        featured: false,
+        featured: true,
         productType: 'Longsleeve',
         artist: 'Primitive Man',
         imgs: [

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { albums } from '../../data/albums';
-import ShowPage from '.';
+import ShowPage from '../ShowPage';
 import AlbumText from './AlbumText';
 import { Album, CartAction, MusicProduct } from '../../types';
 

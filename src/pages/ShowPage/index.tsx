@@ -37,7 +37,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
                     <span className="show-page-price">${product.price}</span>
                     <Qty qty={qty} setQty={setQty} />
                     {sizes}
-                    <button onClick={() => handleClick(product, qty)} className="button button-black show-page-button">
+                    <button onClick={() => handleClick(product, qty)} className="button button-color  ">
                         ADD TO CART
                     </button>
                     {descText}

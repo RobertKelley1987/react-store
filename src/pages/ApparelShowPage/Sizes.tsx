@@ -11,7 +11,7 @@ const ALL_SIZES: Size[] = ['Small', 'Medium', 'Large', 'Extra Large', 'Extra Ext
 const Sizes = ({ selectedSize, setSelectedSize }: SizesProps) => {
 
     const renderClassNames = (size: Size) => {
-        return size === selectedSize ? "button button-black button-black-selected" : "button button-black";
+        return size === selectedSize ? "sizes-button sizes-button-selected" : "sizes-button";
     } 
 
     return (

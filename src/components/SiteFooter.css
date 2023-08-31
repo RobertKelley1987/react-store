@@ -1,0 +1,11 @@
+.site-footer {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.site-footer-logo {
+    color: var(--black);
+    font-size: 4rem;
+    font-style: italic;
+}

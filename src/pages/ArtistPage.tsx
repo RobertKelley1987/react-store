@@ -24,7 +24,7 @@ function ArtistPage({ selectedCategories, setSelectedCategories }: ArtistPagePro
 
     // Filter options should only include categories present in the item list.
     // Ex: Do not allow user to filter by 'Accessories' if artist has zero accessories
-    const filterOptions = ALL_CATEGORIES.filter(category => artistItems.find(item => item.category === category))
+    const filterOptions = ALL_CATEGORIES.filter(category => artistItems.find(item => item.category === category));
 
     if(allArtists.includes(artistName)) {
         return <CategoryFilterPage

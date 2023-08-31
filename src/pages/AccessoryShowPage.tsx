@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { accessories } from '../../data/accessories';
-import ShowPage from '.';
-import { Accessory, CartAction, AccessoryProduct } from '../../types';
+import { accessories } from '../data/accessories';
+import ShowPage from './ShowPage';
+import { Accessory, CartAction, AccessoryProduct } from '../types';
 
 type AccessoryShowPageProps = {
     dispatch: React.Dispatch<CartAction>

@@ -1,22 +1,22 @@
 import { useState, useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import cartReducer from './state/cartReducer';
-import SiteHeader from './components/SiteHeader';
-import HomePage from './pages/HomePage';
-import CartPage from './pages/CartPage';
-import ShowPage from './pages/ShowPage';
-import ApparelShowPage from './pages/ShowPage/ApparelShowPage';
-import MusicShowPage from './pages/ShowPage/MusicShowPage';
-import AccessoryShowPage from './pages/ShowPage/AccessoryShowPage';
-import ArtistPage from './pages/ArtistPage';
-import ErrorMessage from './components/ErrorMessage';
-import { ErrorMessageContext } from './context/ErrorMessageContext';
-import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
 import { apparel } from './data/apparel';
 import { albums } from './data/albums';
 import { accessories } from './data/accessories';
+import { ErrorMessageContext } from './context/ErrorMessageContext';
+import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
+import SiteHeader from './components/SiteHeader';
+import HomePage from './pages/HomePage/index';
+import CartPage from './pages/CartPage';
+import ApparelShowPage from './pages/ApparelShowPage';
+import MusicShowPage from './pages/MusicShowPage';
+import AccessoryShowPage from './pages/AccessoryShowPage';
+import ArtistPage from './pages/ArtistPage';
+import ErrorMessage from './components/ErrorMessage';
 import ProductFilterPage from './pages/ProductFilterPage';
 import CollectionPage from './pages/CollectionPage';
+import SiteFooter from './components/SiteFooter';
 import { Apparel, ApparelProduct, Album, MusicProduct, Accessory, AccessoryProduct, Category } from './types';
 import './App.css';
 
@@ -35,7 +35,6 @@ const App = () => {
   const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
 
   const cart = [...state];
-  console.log(cart);
 
   const clearFilter = () => {
     setSelectedAccessoryTypes([]);
@@ -43,6 +42,11 @@ const App = () => {
     setSelectedMusicTypes([]);
     setSelectedCategories([]);
   }
+
+  const featuredApparel = apparel.filter(item => item.featured);
+  const apparelFilter = APPAREL_TYPES.filter(productType => featuredApparel.find(item => item.productType === productType));
+  const featuredMusic = albums.filter(item => item.featured);
+  const musicFilter = MUSIC_TYPES.filter(productType => featuredMusic.find(item => item.productType === productType));
 
   return (
     <div className="app">
@@ -67,10 +71,11 @@ const App = () => {
           <Route path='/music/featured-music' element={
             <ProductFilterPage<Album, MusicProduct> 
               items={albums.filter(item => item.featured)} 
-              allTypes={MUSIC_TYPES}
+              allTypes={musicFilter}
               selectedTypes={selectedMusicTypes}
               setSelectedTypes={setSelectedMusicTypes}
               collection="Featured Music"
+              defaultValue='LP'
             />
           } />
           <Route path='/music/vinyl' element={
@@ -109,8 +114,8 @@ const App = () => {
           } />
           <Route path='/apparel/featured-apparel' element={
             <ProductFilterPage<Apparel, ApparelProduct> 
-              items={apparel.filter(item => item.featured)} 
-              allTypes={APPAREL_TYPES}
+              items={featuredApparel} 
+              allTypes={apparelFilter}
               selectedTypes={selectedApparelTypes}
               setSelectedTypes={setSelectedApparelTypes}
               collection="Featured Apparel"
@@ -178,6 +183,7 @@ const App = () => {
           <Route path='/artists/:collectionName/music/:itemId' element={<MusicShowPage dispatch={dispatch}/>} />
           <Route path='/artists/:collectionName/accessories/:itemId' element={<AccessoryShowPage dispatch={dispatch}/>} />
         </Routes>
+        <SiteFooter />
       </ErrorMessageContext.Provider>
     </div>
   );

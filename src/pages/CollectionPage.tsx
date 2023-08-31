@@ -10,7 +10,7 @@ import { Item, SortOption } from "../types";
 type CollectionPageProps<T, K> = {
     items: T[],
     collection: string,
-    filter?: React.ReactNode, // Filter sidebar
+    filter?: React.ReactNode, // Sidebar filter
     banner?: React.ReactNode, // Artist banner
 }
 

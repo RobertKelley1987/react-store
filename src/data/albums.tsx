@@ -4,7 +4,7 @@ export const albums: Album[] = [
     {
         id: 'agriculture-agriculture-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Agriculture',
         imgs: ['agriculture_agriculture-lp_1', 'agriculture_agriculture-lp_2'],
@@ -55,7 +55,7 @@ export const albums: Album[] = [
     {
         id: 'agriculture-agriculture-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Agriculture',
         imgs: ['agriculture_agriculture-lp_1'],
@@ -106,7 +106,7 @@ export const albums: Album[] = [
     {
         id: 'agriculture-agriculture-tape',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'Tape',
         artist: 'Agriculture',
         imgs: ['agriculture_agriculture-lp_1'],
@@ -197,7 +197,7 @@ export const albums: Album[] = [
     {
         id: 'blood-incantation-starspawn-lp',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'LP',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_starspawn-lp'],
@@ -232,7 +232,7 @@ export const albums: Album[] = [
     {
         id: 'blood-incantation-starspawn-cd',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'CD',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_starspawn-lp'],
@@ -326,7 +326,7 @@ export const albums: Album[] = [
     {
         id: 'blood-incantation-timewave-zero-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_timewave-zero-lp'],
@@ -356,7 +356,7 @@ export const albums: Album[] = [
     {
         id: 'blood-incantation-timewave-zero-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Blood Incantation',
         imgs: ['blood-incantation_timewave-zero-lp'],
@@ -529,7 +529,7 @@ export const albums: Album[] = [
     {
         id: 'chat-pile-gods-country-tape',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'Tape',
         artist: 'Chat Pile',
         imgs: ['chat-pile_gods-country-cover'],
@@ -1011,7 +1011,7 @@ export const albums: Album[] = [
     {
         id: 'nails-abandon-all-life-lp',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'LP',
         artist: 'Nails',
         imgs: ['nails_abandon-all-life-cover'],
@@ -1045,7 +1045,7 @@ export const albums: Album[] = [
     {
         id: 'nails-abandon-all-life-cd',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'CD',
         artist: 'Nails',
         imgs: ['nails_abandon-all-life-cover'],
@@ -1508,7 +1508,7 @@ export const albums: Album[] = [
     {
         id: 'ragana-desolations-flower-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Ragana',
         imgs: [
@@ -1579,7 +1579,7 @@ export const albums: Album[] = [
     {
         id: 'ragana-desolations-flower-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Ragana',
         imgs: [
@@ -1650,7 +1650,7 @@ export const albums: Album[] = [
     {
         id: 'ragana-desolations-flower-tape',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'Tape',
         artist: 'Ragana',
         imgs: [
@@ -1889,7 +1889,7 @@ export const albums: Album[] = [
     {
         id: 'full-of-hell-garden-of-burning-apparitions-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Full of Hell',
         imgs: [
@@ -1946,7 +1946,7 @@ export const albums: Album[] = [
     {
         id: 'full-of-hell-garden-of-burning-apparitions-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Full of Hell',
         imgs: [
@@ -2073,7 +2073,7 @@ export const albums: Album[] = [
     {
         id: 'full-of-hell-weeping-choir-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Full of Hell',
         imgs: [
@@ -2120,7 +2120,7 @@ export const albums: Album[] = [
     {
         id: 'full-of-hell-weeping-choir-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Full of Hell',
         imgs: ['full-of-hell_weeping-choir-cover'],        
@@ -2218,7 +2218,7 @@ export const albums: Album[] = [
     {
         id: 'portrayal-of-guilt-we-are-always-alone-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Portrayal of Guilt',
         imgs: ['portrayal-of-guilt_we-are-always-alone-cover'],        
@@ -2271,7 +2271,7 @@ export const albums: Album[] = [
     {
         id: 'soft-kill-savior-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Soft Kill',
         imgs: ['soft-kill_savior-cover'],        
@@ -2295,7 +2295,7 @@ export const albums: Album[] = [
     {
         id: 'soft-kill-canary-yellow-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Soft Kill',
         imgs: [
@@ -2322,7 +2322,7 @@ export const albums: Album[] = [
     {
         id: 'soft-kill-canary-yellow-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Soft Kill',
         imgs: ['soft-kill_canary-yellow-cover'],        
@@ -2379,7 +2379,7 @@ export const albums: Album[] = [
     {
         id: 'soft-kill-metta-world-peace-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Soft Kill',
         imgs: [
@@ -2419,7 +2419,7 @@ export const albums: Album[] = [
     {
         id: 'touche-amore-parting-the-sea-between-brightness-and-me-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Touche Amore',
         imgs: ['touche-amore_parting-the-sea-between-brightness-and-me-cover'],        
@@ -2446,7 +2446,7 @@ export const albums: Album[] = [
     {
         id: 'touche-amore-is-survived-by-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Touche Amore',
         imgs: ['touche-amore_is-survived-by-cover'],        
@@ -2472,7 +2472,7 @@ export const albums: Album[] = [
     {
         id: 'touche-amore-is-survived-by-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Touche Amore',
         imgs: ['touche-amore_is-survived-by-cover'],        
@@ -2498,7 +2498,7 @@ export const albums: Album[] = [
     {
         id: 'touche-amore-to-the-beat-of-a-dead-horse-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Touche Amore',
         imgs: ['touche-amore_to-the-beat-of-a-dead-horse-cover'],        
@@ -2533,7 +2533,7 @@ export const albums: Album[] = [
     {
         id: 'touche-amore-stage-four-cd',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'CD',
         artist: 'Touche Amore',
         imgs: ['touche-amore_stage-four-cover'],        
@@ -2584,7 +2584,7 @@ export const albums: Album[] = [
     {
         id: 'touche-amore-lament-lp',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: 'LP',
         artist: 'Touche Amore',
         imgs: ['touche-amore_lament-cover'],        
@@ -2634,7 +2634,7 @@ export const albums: Album[] = [
     {
         id: 'primitive-man-insurmountable-12in',
         category: 'Music',
-        featured: true,
+        featured: false,
         productType: '12"',
         artist: 'Primitive Man',
         imgs: [
@@ -2780,7 +2780,7 @@ export const albums: Album[] = [
     {
         id: 'emma-ruth-rundle_on-dark-horses-lp',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'LP',
         artist: 'Emma Ruth Rundle',
         imgs: [
@@ -2807,7 +2807,7 @@ export const albums: Album[] = [
     {
         id: 'emma-ruth-rundle_on-dark-horses-cd',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'CD',
         artist: 'Emma Ruth Rundle',
         imgs: ['emma-ruth-rundle_on-dark-horses-cover'],
@@ -3296,7 +3296,7 @@ export const albums: Album[] = [
     {
         id: 'undeath-lesions-of-a-different-kind-lp',
         category: 'Music',
-        featured: false,
+        featured: true,
         productType: 'LP',
         artist: 'Undeath',
         imgs: [

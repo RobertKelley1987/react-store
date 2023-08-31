@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { albums } from '../data/albums';
-import { apparel } from '../data/apparel';
-import { newToOld } from '../utils/sorting';
+import { albums } from '../../data/albums';
+import { apparel } from '../../data/apparel';
+import { newToOld } from '../../utils/sorting';
 import HomePageSection from './HomePageSection';
 import './HomePage.css';
 
@@ -9,9 +9,10 @@ const MAX_LIST_SIZE = 8;
 
 // Get featured apparel and music
 const featuredApparel = apparel.filter(item => item.featured);
-const featuredMusic = albums.filter(item => item.featured);
+const featuredMusic = albums.filter(item => item.featured && item.productType === 'LP');
+
 // Get most recently apparel and music
-const newestMusic = [...albums].sort(newToOld);
+const newestMusic = albums.filter(album => album.productType === 'LP').sort(newToOld);
 const newestApparel = [...apparel].sort(newToOld);
 
 const HomePage = () => {
@@ -25,8 +26,8 @@ const HomePage = () => {
                         className="home-page-banner-img"
                     />
                     <div className="home-page-banner-links">
-                        <Link className="button" to="/artists/chat-pile">Official Store</Link>
-                        <Link className="button" to="/artists/chat-pile/products/chat-pile-gods-country-lp">New Record</Link>
+                        <Link className="button button-color" to="/artists/chat-pile">Official Store</Link>
+                        <Link className="button button-color" to="/artists/chat-pile/music/chat-pile-gods-country-lp">New Record</Link>
                     </div>
                 </div>
             </div>
