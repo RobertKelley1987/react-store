@@ -1,4 +1,5 @@
 .site-header {
+    border-bottom: 1px solid var(--black);
     position: relative;
     width: 100%;
     z-index: 1;
@@ -26,5 +27,29 @@
     display: flex;
     height: 55px;
     justify-content: space-between;
-    padding: 0 1rem;
+}
+
+.site-header-bag {
+    font-size: 2.25rem;
+}
+
+.site-header-cart-link {    
+    align-items: center;
+    border-left: 1px solid var(--black);
+    display: flex;
+    font-family: var(--sans-serif);
+    font-size: var(--medium-font);
+    height: 100%;
+    padding: 0 1rem 0 .5rem;
+}
+
+.site-header-cart-link:hover {
+    background-color: var(--black);
+    color: white;
+}
+
+@media(min-width: 700px) {
+    .site-header-logo {
+        padding: 0 0 0 1rem;
+    }
 }

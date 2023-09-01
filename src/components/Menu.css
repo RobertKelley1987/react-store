@@ -75,6 +75,7 @@
 
     .menu-dropdown {
         background-color: white;
+        border-bottom: 1px solid var(--black);
         left: 0;
         position: absolute;
         top: 55px;

@@ -11,7 +11,7 @@ type MusicShowPageProps = {
 const MusicShowPage = ({ dispatch }: MusicShowPageProps) => {
     const [product, setProduct] = useState<Album | null>(null);
 
-    const handleClick = (product: Album, qty: number) => {
+    const addToCart = (product: Album, qty: number) => {
         const newItem = { product, qty }
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
@@ -21,7 +21,7 @@ const MusicShowPage = ({ dispatch }: MusicShowPageProps) => {
                 descText={<AlbumText album={product}/>}
                 product={product}
                 setProduct={setProduct}
-                handleClick={handleClick}
+                addToCart={addToCart}
             />
 }
 

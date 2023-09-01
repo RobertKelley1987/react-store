@@ -3,22 +3,30 @@
     border-bottom: 1px solid var(--black);
     border-top: 1px solid var(--black);
     display: flex;
+    flex-basis: calc(100% - 100px);
+    flex-shrink: 0;
     font-family: var(--sans-serif);
     font-size: var(--medium-font);
-    height: calc(100% - 2px);
+    height: 46px; /* Match height of +/- buttons then adj for top and bottom 1px borders */
     justify-content: center;
     text-align: center;
-    width: 60px;
+}
+
+.qty-text-small {
+    height: 28px;
 }
 
 .qty-button {
+    align-items: center;
     background: none;
     border: 1px solid var(--black);
     color: var(--black);
-    height: 50px;
-    width: 50px;
+    display: flex;
+    flex-shrink: 1;
+    height: 48px;
     justify-content: center;
-    min-width: 45px;
+    padding: 0;
+    width: 100%;
 }
 
 .qty-button:hover {
@@ -27,13 +35,23 @@
     cursor: pointer;
 }
 
+.qty-button-small {
+    height: 30px;
+}
+
 .qty-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .qty-buttons {
     align-items: center;
     display: flex;
+    flex: 1 0 50%;
+    width: 50%;
+}
+
+.qty-buttons-small {
+    width: 150px;
 }
 
 .qty-wrapper {

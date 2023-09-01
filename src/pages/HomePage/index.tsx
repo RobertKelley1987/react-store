@@ -26,13 +26,13 @@ const HomePage = () => {
                         className="home-page-banner-img"
                     />
                     <div className="home-page-banner-links">
-                        <Link className="button button-color" to="/artists/chat-pile">Official Store</Link>
-                        <Link className="button button-color" to="/artists/chat-pile/music/chat-pile-gods-country-lp">New Record</Link>
+                        <Link className="button" to="/artists/chat-pile">Official Store</Link>
+                        <Link className="button" to="/artists/chat-pile/music/chat-pile-gods-country-lp">New Record</Link>
                     </div>
                 </div>
             </div>
 
-            <main className="home-page-grid container">
+            <main className="home-page-grid">
                 <HomePageSection 
                     heading="Featured Apparel" 
                     items={featuredApparel.slice(0, MAX_LIST_SIZE)}

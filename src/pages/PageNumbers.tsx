@@ -13,6 +13,8 @@ function PageNumbers<T extends Item<K>, K extends string>({ pages, currentPage, 
         window.scrollTo({ top: 0 });
     }
 
+    const pageNums = pages.map((page, index) => index + 1);
+
     const renderPageLink = (pageNum: number) => {
         return (
             <Link 
@@ -26,7 +28,17 @@ function PageNumbers<T extends Item<K>, K extends string>({ pages, currentPage, 
         )
     }
 
-    const pageNums = pages.map((page, index) => index + 1);
+    const renderTextLink = (text: string, pageNum: number) => {
+        return (
+            <Link 
+                to={`${currentPath}?page=${pageNum}`} 
+                onClick={handleClick} 
+                className="page-numbers-text"
+            >
+                {text}
+            </Link> 
+        );
+    }
 
     const renderPrevLinks = () => {
         let prevPages;
@@ -47,12 +59,6 @@ function PageNumbers<T extends Item<K>, K extends string>({ pages, currentPage, 
             nextPages = pageNums.slice(currentPage, pageNums.length);
         }
         return nextPages.map(pageNum => renderPageLink(pageNum));
-    }
-
-    const renderTextLink = (text: string, pageNum: number) => {
-        return (
-            <Link to={`${currentPath}?page=${pageNum}`} className="page-numbers-text">{text}</Link> 
-        );
     }
 
     const renderPageNumbers = () => {

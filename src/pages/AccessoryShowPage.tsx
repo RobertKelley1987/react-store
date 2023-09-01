@@ -10,7 +10,7 @@ type AccessoryShowPageProps = {
 const AccessoryShowPage = ({ dispatch }: AccessoryShowPageProps) => {
     const [product, setProduct] = useState<Accessory | null>(null);
 
-    const handleClick = (product: Accessory, qty: number) => {
+    const addToCart = (product: Accessory, qty: number) => {
         const newItem = { product, qty }
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
@@ -20,7 +20,7 @@ const AccessoryShowPage = ({ dispatch }: AccessoryShowPageProps) => {
                 descText={<p>{product?.accessoryDesc}</p>}
                 product={product}
                 setProduct={setProduct}
-                handleClick={handleClick}
+                addToCart={addToCart}
             />
 }
 

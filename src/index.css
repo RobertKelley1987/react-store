@@ -45,7 +45,7 @@ ul {
 /* UTILITY CLASSES */
 .container {
   margin: 0 2rem;
-  max-width: 1100px;
+  max-width: 1000px;
 }
 
 .button {
@@ -62,7 +62,6 @@ ul {
   padding: .75rem;
   text-transform: uppercase;
   white-space: nowrap;
-  width: fit-content;
 }
 
 .button:hover {
@@ -80,18 +79,6 @@ ul {
 .button-black-selected {
   background: var(--black);
   color: white;
-}
-
-.button-color {
-  background: var(--accent);
-  border: 1px solid var(--black);
-  color: var(--black);
-}
-
-.button-color:hover {
-  background-color: var(--black);
-  border: 1px solid var(--accent);
-  color: var(--accent);
 }
 
 .button-arrow {
@@ -115,15 +102,8 @@ ul {
 /* google icons*/
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 200,
-  'GRAD' 0,
-  'opsz' 48
-}
-
-/* This smells dude */
-.filtered-list {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: auto auto;
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 48
 }

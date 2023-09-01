@@ -34,5 +34,6 @@
     grid-gap: 4rem;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     margin: 4rem auto;
+    max-width: 1000px;
     padding: 0 2rem;
   }

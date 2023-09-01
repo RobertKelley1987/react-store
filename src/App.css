@@ -1,5 +1,14 @@
 .app {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-content {
     align-items: center;
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: center;
+    width: 100%;
 }

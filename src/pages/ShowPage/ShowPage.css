@@ -1,7 +1,11 @@
+.show-page {
+    max-width: 1000px;
+    margin: 0 2rem 4rem 2rem;
+}
+
 .show-page-product-grid {
     display: flex;
     grid-gap: 3rem;
-    margin: 2rem;
 }
 
 .show-page-heading,
@@ -33,4 +37,9 @@
     font-family: var(--sans-serif);
     gap: 2rem;
     width: 40%;
+}
+
+.show-page-cart-button {
+    justify-content: center;
+    width: 50%;
 }

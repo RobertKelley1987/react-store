@@ -12,13 +12,13 @@ const ApparelShowPage = ({ dispatch }: ApparelShowPageProps) => {
     const [product, setProduct] = useState<Apparel | null>(null);
     const [selectedSize, setSelectedSize] = useState<Size>('Small');
 
-    const handleClick = (product: Apparel, qty: number) => {
+    const addToCart = (product: Apparel, qty: number) => {
         const newItem = { product, qty, size: selectedSize }
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 
     return <ShowPage<Apparel, ApparelProduct> 
-                handleClick={handleClick}
+                addToCart={addToCart}
                 sizes={<Sizes selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>}
                 data={apparel}
                 product={product}

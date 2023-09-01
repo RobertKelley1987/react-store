@@ -1,0 +1,10 @@
+.collection-page {
+    margin: 0 2rem 4rem 2rem;
+    max-width: 1000px;
+}
+
+.collection-page-list {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: auto auto;
+}
