@@ -4,7 +4,6 @@ import cartReducer from './state/cartReducer';
 import { apparel } from './data/apparel';
 import { albums } from './data/albums';
 import { accessories } from './data/accessories';
-import { ErrorMessageContext } from './context/ErrorMessageContext';
 import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
 import SiteHeader from './components/SiteHeader';
 import HomePage from './pages/HomePage/index';
@@ -31,6 +30,8 @@ const App = () => {
   const [selectedMusicTypes, setSelectedMusicTypes] = useState<MusicProduct[]>([]);
   const [selectedAccessoryTypes, setSelectedAccessoryTypes] = useState<AccessoryProduct[]>([]);
   const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
+  const [viewingCartPage, setViewingCartPage] = useState(false);
+  const [cartIsVisible, setCartIsVisible] = useState(false);
 
   const clearFilter = () => {
     setSelectedAccessoryTypes([]);
@@ -47,12 +48,19 @@ const App = () => {
   return (
     <div className="app">
         <ScreenIsBigContextProvider>
-          <SiteHeader clearFilter={clearFilter} cart={state} />
+          <SiteHeader 
+            clearFilter={clearFilter} 
+            cart={state} 
+            dispatch={dispatch} 
+            viewingCartPage={viewingCartPage}
+            cartIsVisible={cartIsVisible}
+            setCartIsVisible={setCartIsVisible}
+          />
         </ScreenIsBigContextProvider> 
         <div className="app-content">       
           <Routes>
             <Route path='/' element={<HomePage />} />
-            <Route path='/cart' element={<CartPage cart={state} dispatch={dispatch} />} />
+            <Route path='/cart' element={<CartPage cart={state} dispatch={dispatch} setViewingCartPage={setViewingCartPage}/>} />
             <Route path='/music/new-music' element={
               <ProductFilterPage<Album, MusicProduct> 
                 items={albums}
@@ -134,7 +142,9 @@ const App = () => {
                 collection="Hoodies"
               />
             } />
-            <Route path='/apparel/:collectionName/products/:itemId' element={<ApparelShowPage dispatch={dispatch}/>} />
+            <Route path='/apparel/:collectionName/products/:itemId' element={
+              <ApparelShowPage dispatch={dispatch} setCartIsVisible={setCartIsVisible} />
+            } />
             <Route path='/accessories/new-accessories' element={
               <ProductFilterPage<Accessory, AccessoryProduct> 
                 items={accessories} 

@@ -30,12 +30,11 @@
 }
 
 .site-header-bag {
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 .site-header-cart-link {    
     align-items: center;
-    border-left: 1px solid var(--black);
     display: flex;
     font-family: var(--sans-serif);
     font-size: var(--medium-font);
@@ -46,6 +45,26 @@
 .site-header-cart-link:hover {
     background-color: var(--black);
     color: white;
+}
+
+.site-header-cart-wrapper {
+    border-left: 1px solid var(--black);
+    height: 100%;
+    position: relative;
+}
+
+.site-header-cart {
+    align-items: center;
+    background-color: white;
+    border: 1px solid var(--black);
+    display: flex;
+    font-family: var(--sans-serif);
+    justify-content: center;
+    overflow-y: auto;
+    position: absolute;
+    right: -1px;
+    top: 100%;
+    width: 450px;
 }
 
 @media(min-width: 700px) {

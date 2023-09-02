@@ -38,5 +38,6 @@ export const BANDS = [
     { name: 'Q to Z', pages: Q_TO_Z }
 ];
 
-// ITEMS PER PAGE
 export const ITEMS_PER_PAGE = 24;
+
+export const MAX_ORDER_QTY = 10;

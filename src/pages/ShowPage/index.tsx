@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ImgCarousel from './ImgCarousel';
 import Qty from '../../components/Qty';
 import StorePath from '../../components/StorePath';
+import { MAX_ORDER_QTY } from '../../constants';
 import { Item } from '../../types';
 import './ShowPage.css';
 
@@ -42,7 +43,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
         setConfirmItemAdded(true);
     }
 
-    const increment = () => setQty(prev => ++prev);
+    const increment = () => qty < MAX_ORDER_QTY && setQty(prev => ++prev);
     const decrement = () => qty > 1 && setQty(prev => --prev); // Do nothing if qty is 1 
 
     return (

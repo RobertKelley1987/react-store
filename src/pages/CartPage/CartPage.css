@@ -5,38 +5,9 @@
     max-width: 1000px;
 }
 
-.cart-page-grid {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 3fr 1fr;
-}
-
-.cart-page-summary {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
 .cart-page-heading {
     font-size: var(--huge-font);
     font-weight: 500;
     margin: 0 0 2rem 0;
     text-transform: uppercase;
-}
-
-.cart-page-items {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.cart-page-subtotal-wrapper {
-    display: flex;
-    font-size: 1.25rem;
-    font-weight: 500;
-    justify-content: space-between;
-}
-
-.cart-page-button {
-    justify-content: center;
 }
