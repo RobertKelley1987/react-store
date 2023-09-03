@@ -14,10 +14,11 @@ type ShowPageProps<T> = {
     setProduct: React.Dispatch<React.SetStateAction<T | null>>
     sizes?: React.ReactNode,
     descText?: React.ReactNode,
+    setCartIsVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) {
-    const { addToCart, sizes, data, descText, product, setProduct } = props
+    const { addToCart, sizes, data, descText, product, setProduct, setCartIsVisible } = props
     const [qty, setQty] = useState(1);
     const [confirmItemAdded, setConfirmItemAdded] = useState(false);
     const { itemId } = useParams();
@@ -30,7 +31,10 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
 
     useEffect(() => {
         if(confirmItemAdded) {
-            timeoutId = setTimeout(() => setConfirmItemAdded(false), 2000);
+            timeoutId = setTimeout(() => {
+                setConfirmItemAdded(false);
+                setCartIsVisible(false);
+            }, 2000);
         }
 
         return () => clearTimeout(timeoutId);
@@ -41,6 +45,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
     const handleClick = () => {
         addToCart(product, qty);
         setConfirmItemAdded(true);
+        setCartIsVisible(true);
     }
 
     const increment = () => qty < MAX_ORDER_QTY && setQty(prev => ++prev);
@@ -59,6 +64,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
                     <button 
                         onClick={() => handleClick()} 
                         className="button button-black show-page-cart-button"
+                        disabled={confirmItemAdded}
                     >
                         {confirmItemAdded ? "ITEM ADDED!" : "ADD TO CART"}
                     </button>

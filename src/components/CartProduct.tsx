@@ -6,7 +6,7 @@ import './CartProduct.css';
 type CartProductProps = {
     item: CartItem,
     dispatch: React.Dispatch<CartAction>,
-    cartStyle: 'small' | 'medium' | 'large'
+    cartStyle: 'small' | 'large'
 }
 
 const STYLES = {
@@ -16,13 +16,6 @@ const STYLES = {
         price: 'cart-product-price-small',
         total: 'cart-product-total-small',
         textWrapper: 'cart-product-text cart-product-text-small'
-    },
-    'medium': {
-        name: 'cart-product-name',
-        closeButton: 'cart-product-close-button',
-        price: 'cart-product-price',
-        total: 'cart-product-total',
-        textWrapper: 'cart-product-text'
     },
     'large': {
         name: 'cart-product-name',

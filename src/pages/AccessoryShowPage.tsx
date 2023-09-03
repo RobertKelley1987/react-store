@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { accessories } from '../data/accessories';
 import ShowPage from './ShowPage';
+import ClothingData from '../components/ClothingData';
 import { Accessory, CartAction, AccessoryProduct } from '../types';
 
 type AccessoryShowPageProps = {
-    dispatch: React.Dispatch<CartAction>
+    dispatch: React.Dispatch<CartAction>,
+    setCartIsVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const AccessoryShowPage = ({ dispatch }: AccessoryShowPageProps) => {
+const AccessoryShowPage = ({ dispatch, setCartIsVisible }: AccessoryShowPageProps) => {
     const [product, setProduct] = useState<Accessory | null>(null);
 
     const addToCart = (product: Accessory, qty: number) => {
@@ -15,12 +17,17 @@ const AccessoryShowPage = ({ dispatch }: AccessoryShowPageProps) => {
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 
+    const isHat = (item: Accessory | null) => item?.productType === 'Cap' || item?.productType === 'Beanie';
+
+    const descText = isHat(product) ? <ClothingData item={product} /> : <p>{product?.accessoryDesc}</p>; 
+
     return <ShowPage<Accessory, AccessoryProduct> 
                 data={accessories} 
-                descText={<p>{product?.accessoryDesc}</p>}
                 product={product}
                 setProduct={setProduct}
                 addToCart={addToCart}
+                setCartIsVisible={setCartIsVisible}
+                descText={descText}
             />
 }
 

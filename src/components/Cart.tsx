@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CartProduct from './CartProduct';
 import { CartItem, CartAction } from '../types';
 import './Cart.css';
@@ -5,17 +6,13 @@ import './Cart.css';
 type CartProps = {
     cart: CartItem[],
     dispatch: React.Dispatch<CartAction>,
-    cartStyle: 'large' | 'medium' | 'small'
+    cartStyle: 'small' | 'large'
 }
 
 const STYLES = {
     'small': {
         grid: 'cart-grid cart-grid-small',
         subtotal: 'cart-subtotal-wrapper cart-subtotal-wrapper-small'
-    },
-    'medium': {
-        grid: 'cart-grid',
-        subtotal: 'cart-subtotal-wrapper'
     },
     'large': {
         grid: 'cart-grid',
@@ -41,7 +38,7 @@ const Cart = ({ cart, dispatch, cartStyle }: CartProps) => {
                         <span>Subtotal</span>
                         <span>${cartTotal(cart)}</span>
                     </div>
-                    <button className="button button-black cart-button">Checkout</button>
+                    <Link to='/checkout' className="button button-black cart-button">Checkout</Link>
                 </div>
             </div>
         )

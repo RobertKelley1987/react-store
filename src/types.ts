@@ -62,3 +62,19 @@ export type CartAction = {
 
 export type SortOption = 'Date - Old to New' | 'Date - New to Old' | 'Alphabetically - A to Z' | 'Alphabetically - Z to A'
 | 'Price - High to Low' | 'Price - Low to High';
+
+type State = 'AL' | 'AK' | 'AZ' | 'AR' | 'CA' | 'CO' | 'CT' | 'DE' | 'FL' | 'GA' | 
+'HI' | 'ID' | 'IL' | 'IN' | 'IA' | 'KS' | 'KY' | 'LA' | 'ME' | 'MD' | 'MA' | 'MI' | 
+'MN' | 'MS' | 'MO' | 'MT' | 'NE' | 'NV' | 'NH' | 'NJ' | 'NM' | 'NY' | 'NC' | 'ND' | 
+'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VT' | 'VA' | 
+'WA' | 'WV' | 'WI' | 'WY' | '';
+
+export type MailingAddress = {
+    firstName: string,
+    lastName: string,
+    streetLine1: string,
+    streetLine2?: string,
+    city: string,
+    state: State
+}
+

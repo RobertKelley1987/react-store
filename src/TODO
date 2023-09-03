@@ -1,7 +1,4 @@
-- Error message when you don't select a size sucks. Does not go away when you leave page.
-Should I just use default size small like Evil Greed?
 - Review for use of main tags
-- style sort feature
-- work on featured items data
-- when I click middle section of store path, I need the filters to reset... how do I do that in
-a way that isn't sloppy?
+- Review for contexts I made but am not using, mainly ErrorMessage
+- When I click the middle part of the nav slug thing it should clear any applied filters
+- mobile css

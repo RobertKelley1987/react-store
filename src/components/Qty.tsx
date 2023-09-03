@@ -1,7 +1,7 @@
 import './Qty.css';
 
 type QtyProps = {
-    size: 'small' | 'medium' | 'large',
+    size: 'small' | 'large',
     qty: number,
     inc: () => void,
     dec: () => void,
@@ -10,14 +10,9 @@ type QtyProps = {
 
 const STYLES = {
     'small': {
-        button: 'qty-button qty-button-medium',
-        text: 'qty-text qty-text-medium',
-        wrapper: 'qty-buttons qty-buttons-medium'
-    },
-    'medium': {
-        button: 'qty-button qty-button-medium',
-        text: 'qty-text qty-text-medium',
-        wrapper: 'qty-buttons qty-buttons-medium'
+        button: 'qty-button qty-button-small',
+        text: 'qty-text qty-text-small',
+        wrapper: 'qty-buttons qty-buttons-small'
     },
     'large': {
         button: 'qty-button',

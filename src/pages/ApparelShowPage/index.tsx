@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { apparel } from '../../data/apparel';
 import ShowPage from "../ShowPage";
 import Sizes from './Sizes';
+import ClothingData from '../../components/ClothingData';
 import { CartAction, Size, Apparel, ApparelProduct } from '../../types';
 
 type ApparelShowPageProps = {
-    dispatch: React.Dispatch<CartAction>
+    dispatch: React.Dispatch<CartAction>,
+    setCartIsVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const ApparelShowPage = ({ dispatch }: ApparelShowPageProps) => {
+const ApparelShowPage = ({ dispatch, setCartIsVisible }: ApparelShowPageProps) => {
     const [product, setProduct] = useState<Apparel | null>(null);
     const [selectedSize, setSelectedSize] = useState<Size>('Small');
 
@@ -23,6 +25,8 @@ const ApparelShowPage = ({ dispatch }: ApparelShowPageProps) => {
                 data={apparel}
                 product={product}
                 setProduct={setProduct}
+                setCartIsVisible={setCartIsVisible}
+                descText={<ClothingData item={product} />}
             />
 }
 

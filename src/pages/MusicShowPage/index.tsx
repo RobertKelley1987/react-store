@@ -5,10 +5,11 @@ import AlbumText from './AlbumText';
 import { Album, CartAction, MusicProduct } from '../../types';
 
 type MusicShowPageProps = {
-    dispatch: React.Dispatch<CartAction>
+    dispatch: React.Dispatch<CartAction>,
+    setCartIsVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const MusicShowPage = ({ dispatch }: MusicShowPageProps) => {
+const MusicShowPage = ({ dispatch, setCartIsVisible }: MusicShowPageProps) => {
     const [product, setProduct] = useState<Album | null>(null);
 
     const addToCart = (product: Album, qty: number) => {
@@ -22,6 +23,7 @@ const MusicShowPage = ({ dispatch }: MusicShowPageProps) => {
                 product={product}
                 setProduct={setProduct}
                 addToCart={addToCart}
+                setCartIsVisible={setCartIsVisible}
             />
 }
 

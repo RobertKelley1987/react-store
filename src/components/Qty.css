@@ -12,7 +12,7 @@
     text-align: center;
 }
 
-.qty-text-medium {
+.qty-text-small {
     height: 28px;
 }
 
@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 
-.qty-button-medium {
+.qty-button-small {
     height: 30px;
 }
 
@@ -50,7 +50,7 @@
     width: 50%;
 }
 
-.qty-buttons-medium {
+.qty-buttons-small {
     width: 150px;
 }
 
