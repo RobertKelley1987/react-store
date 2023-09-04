@@ -1,11 +1,16 @@
 /* IMPORT "EB GARAMOND", "KANIT" AND "OPEN SANS" FROM GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 /* VARIABLES */
 :root {
   /* COLORS */
   --black: rgb(40, 40, 40);
   --accent: rgb(85, 102, 255);
+  --placeholder-color: gray;
 
   /* FONTS */
   --display-font: 'EB Garamond', serif; 
@@ -42,6 +47,20 @@ ul {
   padding: 0;
 }
 
+select {
+  background: none;
+}
+
+option {
+  color: var(--black);
+}
+
+input::placeholder,
+option:disabled {
+  color: var(--placeholder-color);
+  opacity: 1;
+}
+
 /* UTILITY CLASSES */
 .container {
   margin: 0 2rem;
@@ -58,6 +77,7 @@ ul {
   font-size: var(--medium-font);
   font-weight: 500;
   gap: .2rem;
+  justify-content: center;
   letter-spacing: .05rem;
   padding: .75rem;
   text-transform: uppercase;

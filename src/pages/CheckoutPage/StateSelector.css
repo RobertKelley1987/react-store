@@ -1,0 +1,12 @@
+.state-selector {
+    padding: .5rem;
+    width: 100%;
+}
+
+.state-selector-disabled {
+    color: var(--placeholder-color);
+}
+
+.state-selector-wrapper {
+    display: flex;
+}

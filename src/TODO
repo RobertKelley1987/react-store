@@ -2,3 +2,4 @@
 - Review for contexts I made but am not using, mainly ErrorMessage
 - When I click the middle part of the nav slug thing it should clear any applied filters
 - mobile css
+- using 1.25rem throughout for prices and headings. Try to change over to a css variable

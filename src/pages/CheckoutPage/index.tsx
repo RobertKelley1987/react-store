@@ -10,13 +10,7 @@ type CheckoutPageProps = {
 }
 
 const CheckoutPage = ({ cart, setCheckingOut }: CheckoutPageProps) => {
-    const [email, setEmail] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [streetLine1, setStreetLine1] = useState('');
-    const [streetLine2, setStreetLine2] = useState('');
-    const [city, setCity] = useState('');
-    const [state, setState] = useState('');
+    const [currentSection, setCurrentSection] = useState('');
 
     useEffect(() => {
         setCheckingOut(true);
@@ -25,21 +19,29 @@ const CheckoutPage = ({ cart, setCheckingOut }: CheckoutPageProps) => {
     }, []);
 
     return (
-        <div className="checkout-page">
-            <header>
-                <h1 className="checkout-page-logo">Infinite Bliss</h1>
-                <nav className="checkout-page-nav">
-                    <Link to='/cart'>Cart</Link>
-                    <span className="material-symbols-outlined">chevron_right</span>
-                    <button>Info</button>
-                    <span className="material-symbols-outlined">chevron_right</span>
-                    <button>Shipping</button>
-                    <span className="material-symbols-outlined">chevron_right</span>
-                </nav>
-            </header>
+        <main className="checkout-page">
+            <section className="checkout-page-form-section">
+                <header>
+                    <h1 className="checkout-page-logo">Infinite Bliss</h1>
+                    <nav className="checkout-page-nav">
+                        <Link className="checkout-page-link" to='/cart'>Cart</Link>
+                        <span className="material-symbols-outlined">chevron_right</span>
+                        <button className="checkout-page-link">Info</button>
+                        <span className="material-symbols-outlined">chevron_right</span>
+                        <button className="checkout-page-link">Shipping</button>
+                        <span className="material-symbols-outlined">chevron_right</span>
+                        <button className="checkout-page-link">Payment</button>
+                        <span className="material-symbols-outlined">chevron_right</span>
+                        <button className="checkout-page-link">Review</button>
+                    </nav>
+                </header>
 
-            <CheckoutForm />
-        </div>
+                <CheckoutForm />
+            </section>
+            <section className="checkout-page-cart-section">
+
+            </section>
+        </main>
     )
 }
 

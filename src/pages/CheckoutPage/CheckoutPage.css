@@ -1,14 +1,42 @@
 .checkout-page {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.checkout-page-form-section {
+    border-right: 1px solid var(--black);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    max-width: 1000px;
-    width: 100%;
+    gap: 2rem;
+    padding: 4rem;
 }
 
 .checkout-page-logo {
     font-family: var(--display-font);
+    font-size: var(--huge-font);
     font-style: italic;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+.checkout-page-nav {
+    align-items: center;
+    display: flex;
+    gap: .25rem;
+}
+
+.checkout-page-link {
+    background: none;
+    border: none;
+    color: var(--black);
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 0;
+}
+
+.checkout-page-link:hover {
+    cursor: pointer;
 }

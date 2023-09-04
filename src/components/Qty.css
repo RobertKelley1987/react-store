@@ -7,7 +7,7 @@
     flex-shrink: 0;
     font-family: var(--sans-serif);
     font-size: var(--medium-font);
-    height: 46px; /* Match height of +/- buttons then adj for top and bottom 1px borders */
+    height: 48px;
     justify-content: center;
     text-align: center;
 }
