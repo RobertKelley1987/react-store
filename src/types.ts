@@ -75,6 +75,7 @@ export type MailingAddress = {
     streetLine1: string,
     streetLine2?: string,
     city: string,
-    state: State
+    state: State,
+    zip: string
 }
 
