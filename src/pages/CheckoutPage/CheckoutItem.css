@@ -1,0 +1,14 @@
+.checkout-item {
+    align-items: center;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 7fr 1fr;
+}
+
+.checkout-item-img {
+    width: 100%;
+}
+
+.checkout-item-text > * {
+    display: block;
+}

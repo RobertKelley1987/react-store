@@ -59,3 +59,6 @@ export const decodeHttpSlug = (slug?: string) => {
 
 // RegEx for digits
 export const isANumber = new RegExp(/[0-9]/);
+
+// Format a number to two decimal places for display
+export const formatMoney = (num: number) => (Math.round(num * 100) / 100).toFixed(2);

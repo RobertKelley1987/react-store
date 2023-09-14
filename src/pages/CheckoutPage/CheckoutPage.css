@@ -1,8 +1,14 @@
 .checkout-page {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 55% 45%;
+    max-width: 1200px;
     min-height: 100vh;
     width: 100%;
+}
+
+.checkout-page-header {
+    display: grid;
+    grid-gap: 1rem;
 }
 
 .checkout-page-form-section {
@@ -18,6 +24,7 @@
     font-size: var(--huge-font);
     font-style: italic;
     font-weight: 300;
+    line-height: 1;
     text-transform: uppercase;
 }
 
@@ -39,4 +46,8 @@
 
 .checkout-page-link:hover {
     cursor: pointer;
+}
+
+.checkout-page-cart-section {
+    padding: 4rem;
 }

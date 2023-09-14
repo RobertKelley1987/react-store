@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import CartProduct from './CartProduct';
+import { cartTotal } from '../utils/cart';
 import { CartItem, CartAction } from '../types';
 import './Cart.css';
 
@@ -18,11 +19,6 @@ const STYLES = {
         grid: 'cart-grid',
         subtotal: 'cart-subtotal-wrapper'
     }
-}
-
-const cartTotal = (cart: CartItem[]) => {
-    const total = cart.reduce((prevVal, currVal) => (currVal.product.price * currVal.qty) + prevVal, 0);
-    return (Math.round(total * 100) / 100).toFixed(2);
 }
 
 const Cart = ({ cart, dispatch, cartStyle }: CartProps) => {
