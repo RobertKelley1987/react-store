@@ -85,3 +85,8 @@ export type MailingAddress = {
 }
 
 export type CheckoutFormSection = 'shipping-address' | 'shipping-options' | '';
+
+export type QAndA = {
+    question: string,
+    answer: string
+}

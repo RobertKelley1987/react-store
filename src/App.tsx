@@ -14,10 +14,12 @@ import AccessoryShowPage from './pages/AccessoryShowPage';
 import ArtistPage from './pages/ArtistPage';
 import ProductFilterPage from './pages/ProductFilterPage';
 import CollectionPage from './pages/CollectionPage';
+import CheckoutPage from './pages/CheckoutPage';
+import FAQPage from './pages/FAQPage';
 import SiteFooter from './components/SiteFooter';
 import { Apparel, ApparelProduct, Album, MusicProduct, Accessory, AccessoryProduct, Category } from './types';
 import './App.css';
-import CheckoutPage from './pages/CheckoutPage';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 const VINYL_TYPES: MusicProduct[] = ['LP', '2XLP', '12"'];
 const CD_TYPES: MusicProduct[] = ['CD', '2XCD'];
@@ -203,6 +205,8 @@ const App = () => {
           <Route path='/artists/:collectionName/accessories/:itemId' element={
             <AccessoryShowPage dispatch={dispatch} setCartIsVisible={setCartIsVisible} />
           } />
+          <Route path='/faqs' element={<FAQPage />} />
+          <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
         </Routes>
       </div>
       {!checkingOut && <SiteFooter />}

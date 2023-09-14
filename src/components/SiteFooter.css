@@ -51,5 +51,6 @@
 }
 
 .site-footer-heading {
+    font-size: var(--medium-font);
     font-weight: 500;
 }
