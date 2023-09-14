@@ -10,8 +10,6 @@ type CheckoutPageProps = {
 }
 
 const CheckoutPage = ({ cart, setCheckingOut }: CheckoutPageProps) => {
-    const [currentSection, setCurrentSection] = useState('');
-
     useEffect(() => {
         setCheckingOut(true);
 

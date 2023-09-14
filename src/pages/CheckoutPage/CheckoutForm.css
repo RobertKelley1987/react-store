@@ -42,6 +42,23 @@
     font-size: 1rem;
 }
 
-.checkout-form-button {
+.checkout-form-input {
+    border: 1px solid var(--black);
+    padding: .75rem;
+    width: 100%;
+}
 
+.checkout-form-input-error {
+    border: 1px solid red;
+}
+
+.checkout-form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif);
+    width: 100%;
+}
+
+.checkout-form-error {
+    color: red;
 }

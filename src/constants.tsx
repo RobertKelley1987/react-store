@@ -1,12 +1,4 @@
-// Returns true if first letter in band name is between min and max letters provided.
-// Example: isBetween('Aerosmith', 'a', 'f') returns true.
-export const nameIsBetween = (name: string, min: string, max: string) => {
-    // If band name starts with 'The', ex: 'The Body', use first letter of next word 
-    // for comparison
-    const indexOfFirstLetter = name.indexOf('The') === 0 ? 4 : 0;
-    const firstLetter = name[indexOfFirstLetter].toLowerCase();
-    return firstLetter >= min.toLowerCase() && firstLetter <= max.toLowerCase();
-}
+import { MailingAddress, MailingAddressInput, State } from "./types";
 
 // CATEGORY PAGES GROUPED WITH IDS TO USE AS MAP KEYS
 export const APPAREL_PAGES = ['New Apparel', 'T-Shirts', 'Longsleeves', 'Hoodies'];
@@ -24,7 +16,17 @@ export const ALL_ARTISTS = [
     'Deafheaven', 'Devil Master', 'Divide and Dissolve', 'Emma Ruth Rundle', 'Full of Hell', 
     'Knoll', 'Nails', 'Oathbreaker', 'Portrayal of Guilt', 'Primitive Man', 'Ragana', 'Soft Kill', 
     'Spectral Wound', 'Touche Amore', 'Undeath'
-]
+];
+
+// Returns true if first letter in band name is between min and max letters provided.
+// Example: isBetween('Aerosmith', 'a', 'f') returns true.
+const nameIsBetween = (name: string, min: string, max: string) => {
+    // If band name starts with 'The', ex: 'The Body', use first letter of next word 
+    // for comparison
+    const indexOfFirstLetter = name.indexOf('The') === 0 ? 4 : 0;
+    const firstLetter = name[indexOfFirstLetter].toLowerCase();
+    return firstLetter >= min.toLowerCase() && firstLetter <= max.toLowerCase();
+}
 
 const A_TO_C = ALL_ARTISTS.filter(name => nameIsBetween(name, 'a', 'c'));
 const D_TO_H = ALL_ARTISTS.filter(name => nameIsBetween(name, 'd', 'h'));
@@ -93,7 +95,8 @@ export const US_STATES = [
     'West Virginia',
     'Wisconsin',
     'Wyoming'
-]
+];
+
 export const US_STATE_ABBREVS = [
     'AL',
     'AK',
@@ -146,3 +149,36 @@ export const US_STATE_ABBREVS = [
     'WI',
     'WY'
 ];
+
+export const VOWELS = 'AEIOUaeiou';
+
+export const EMPTY_TEXT_INPUT: MailingAddressInput<string> = {
+    value: '',
+    error: ''
+}
+
+export const EMPTY_STATE_SELECTOR: MailingAddressInput<State> = {
+    value: '',
+    error: ''
+}
+
+export const DEFAULT_MAILING_ADDRESS: MailingAddress = {
+    firstName: EMPTY_TEXT_INPUT,
+    lastName: EMPTY_TEXT_INPUT,
+    streetLine1: EMPTY_TEXT_INPUT,
+    streetLine2: EMPTY_TEXT_INPUT,
+    city: EMPTY_TEXT_INPUT,
+    state: EMPTY_STATE_SELECTOR,
+    zip: EMPTY_TEXT_INPUT
+}
+
+export const ADDRESS_STR_LIB = {
+    firstName: 'first name',
+    lastName: 'last name',
+    streetLine1: 'street address',
+    streetLine2: 'unit, apt, suite etc...',
+    city: 'city',
+    state: 'state',
+    zip: 'zip code'
+}
+

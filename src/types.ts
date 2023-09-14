@@ -63,19 +63,25 @@ export type CartAction = {
 export type SortOption = 'Date - Old to New' | 'Date - New to Old' | 'Alphabetically - A to Z' | 'Alphabetically - Z to A'
 | 'Price - High to Low' | 'Price - Low to High';
 
-type State = 'AL' | 'AK' | 'AZ' | 'AR' | 'CA' | 'CO' | 'CT' | 'DE' | 'FL' | 'GA' | 
+export type State = 'AL' | 'AK' | 'AZ' | 'AR' | 'CA' | 'CO' | 'CT' | 'DE' | 'FL' | 'GA' | 
 'HI' | 'ID' | 'IL' | 'IN' | 'IA' | 'KS' | 'KY' | 'LA' | 'ME' | 'MD' | 'MA' | 'MI' | 
 'MN' | 'MS' | 'MO' | 'MT' | 'NE' | 'NV' | 'NH' | 'NJ' | 'NM' | 'NY' | 'NC' | 'ND' | 
 'OH' | 'OK' | 'OR' | 'PA' | 'RI' | 'SC' | 'SD' | 'TN' | 'TX' | 'UT' | 'VT' | 'VA' | 
 'WA' | 'WV' | 'WI' | 'WY' | '';
 
-export type MailingAddress = {
-    firstName: string,
-    lastName: string,
-    streetLine1: string,
-    streetLine2?: string,
-    city: string,
-    state: State,
-    zip: string
+export type MailingAddressInput<T> = {
+    value: T,
+    error: string
 }
 
+export type MailingAddress = {
+    firstName: MailingAddressInput<string>,
+    lastName: MailingAddressInput<string>,
+    streetLine1: MailingAddressInput<string>,
+    streetLine2: MailingAddressInput<string>,
+    city: MailingAddressInput<string>,
+    state: MailingAddressInput<State>,
+    zip: MailingAddressInput<string>
+}
+
+export type CheckoutFormSection = 'shipping-address' | 'shipping-options' | '';

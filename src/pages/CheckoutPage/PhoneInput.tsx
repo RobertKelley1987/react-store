@@ -1,58 +1,29 @@
+import { isANumber } from '../../utils';
+import { formatPhoneNum } from '../../utils/phoneNumbers';
+import { MailingAddressInput } from '../../types';
 import './PhoneInput.css';
 
 type PhoneInputProps = {
     placeholder: string,
-    value: string,
-    setValue: React.Dispatch<React.SetStateAction<string>>,
-    error?: string 
+    phone: MailingAddressInput<string>,
+    setPhone: React.Dispatch<React.SetStateAction<MailingAddressInput<string>>>,
 }
 
-const isANumber = new RegExp(/[0-9]/);
-
-const splitPhoneNum = (number: string) => {
-    const phoneNumArr = number.split('').filter(char => isANumber.test(char));
-    let areaCode = '', prefix = '', lineNumber = '';
-
-    for(let i = 0; i < phoneNumArr.length; i++) {
-        if(i < 3 && phoneNumArr[i]) 
-            areaCode += phoneNumArr[i];
-        else if(i < 6 && phoneNumArr[i])
-            prefix += phoneNumArr[i];
-        else if(phoneNumArr[i])    
-            lineNumber += phoneNumArr[i];
+const PhoneInput = ({ placeholder, phone, setPhone }: PhoneInputProps) => {
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const formattedPhoneNumber = formatPhoneNum(e.target.value, phone.value);
+        setPhone({ value: formattedPhoneNumber, error: '' });
     }
 
-    return { areaCode, prefix, lineNumber }
-}
-
-const PhoneInput = ({ placeholder, value, setValue, error }: PhoneInputProps) => {
-    const formattedNumber = (number: string) => {
-        // Split string into area code, prefix and line number
-        const { areaCode, prefix, lineNumber } = splitPhoneNum(number);
-
-        // Format parts based on current number length
-        const enteredThirdNum = number.length > value.length && areaCode.length === 3;
-        if(lineNumber.length) {
-            return `(${areaCode}) ${prefix}-${lineNumber}`;
-        } else if(enteredThirdNum || prefix.length) {
-            return `(${areaCode}) ${prefix}`;
-        } else {
-            return areaCode;
-        }
-    }
-
-    return (
-        <div className="phone-input-wrapper">
-            <input 
-                className="phone-input" 
-                value={value} 
-                onChange={e => setValue(formattedNumber(e.target.value))} 
+    return <input 
+                className={phone.error ? "phone-input phone-input-error" : "phone-input"} 
+                value={phone.value} 
+                onChange={handlePhoneChange} 
                 placeholder={placeholder} 
                 type="tel"
                 maxLength={14}
-            />
-        </div>
-    );
+                onKeyDown={e => !isANumber.test(e.key) && e.preventDefault()}
+            />;
 }
 
 export default PhoneInput;

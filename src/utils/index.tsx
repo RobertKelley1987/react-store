@@ -56,3 +56,6 @@ export const decodeHttpSlug = (slug?: string) => {
 
     return  result;
 }
+
+// RegEx for digits
+export const isANumber = new RegExp(/[0-9]/);
