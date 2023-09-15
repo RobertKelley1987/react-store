@@ -90,3 +90,8 @@ export type QAndA = {
     question: string,
     answer: string
 }
+
+export type ShippingMethod = {
+    name: string,
+    cost: number
+}

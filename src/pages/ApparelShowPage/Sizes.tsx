@@ -16,7 +16,7 @@ const Sizes = ({ selectedSize, setSelectedSize }: SizesProps) => {
 
     return (
         <div className="sizes-wrapper">
-            <h3 className="heading-small">Size</h3>
+            <h3 className="sizes-heading">Size</h3>
             <ul className="sizes">
                 {ALL_SIZES.map(size => {
                     return (

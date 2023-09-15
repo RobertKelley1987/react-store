@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import ShippingAddressForm from './ShippingAddressForm';
+import ShippingOptionsForm from './ShippingOptionsForm';
 import { EMPTY_TEXT_INPUT, DEFAULT_MAILING_ADDRESS } from '../../constants';
-import { MailingAddress, MailingAddressInput, CheckoutFormSection } from '../../types';
+import { MailingAddress, MailingAddressInput, CheckoutFormSection, ShippingMethod } from '../../types';
 import './CheckoutForm.css';
 
-const CheckoutForm = () => {
+type CheckoutFormProps = {
+    setShippingMethod: React.Dispatch<React.SetStateAction<ShippingMethod>>
+}
+
+const CheckoutForm = ({ setShippingMethod }: CheckoutFormProps) => {
     const [currentSection, setCurrentSection] = useState<CheckoutFormSection>('shipping-address');
     const [email, setEmail] = useState<MailingAddressInput<string>>(EMPTY_TEXT_INPUT);
     const [phone, setPhone] = useState<MailingAddressInput<string>>(EMPTY_TEXT_INPUT);
@@ -21,6 +26,8 @@ const CheckoutForm = () => {
                         setMailingAddress={setMailingAddress}
                         setCurrentSection={setCurrentSection}
                    />
+        } else if(currentSection === 'shipping-options') {
+            return <ShippingOptionsForm setShippingMethod={setShippingMethod}/>;
         } else {
             return null;
         }

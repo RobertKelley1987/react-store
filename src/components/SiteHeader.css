@@ -64,10 +64,9 @@
     position: absolute;
     right: -1px;
     top: 100%;
-    width: 450px;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     .site-header-logo {
         padding: 0 0 0 1rem;
     }

@@ -9,6 +9,7 @@
     font-size: var(--medium-font);
     height: 48px;
     justify-content: center;
+    min-width: 50px;
     text-align: center;
 }
 
@@ -47,7 +48,7 @@
     align-items: center;
     display: flex;
     flex: 1 0 50%;
-    width: 50%;
+    width: 100%;
 }
 
 .qty-buttons-small {
@@ -65,4 +66,10 @@
     font-size: var(--medium-font);
     font-weight: 500;
     text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+    .qty-buttons {
+        width: 50%;
+    }
 }

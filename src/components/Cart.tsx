@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import CartProduct from './CartProduct';
+import { formatMoney } from '../utils';
 import { cartTotal } from '../utils/cart';
 import { CartItem, CartAction } from '../types';
 import './Cart.css';
@@ -13,15 +14,19 @@ type CartProps = {
 const STYLES = {
     'small': {
         grid: 'cart-grid cart-grid-small',
-        subtotal: 'cart-subtotal-wrapper cart-subtotal-wrapper-small'
+        subtotal: 'cart-subtotal-wrapper cart-subtotal-wrapper-small',
+        emptyMessage: 'cart-empty-message cart-empty-message-small'
     },
     'large': {
         grid: 'cart-grid',
-        subtotal: 'cart-subtotal-wrapper'
+        subtotal: 'cart-subtotal-wrapper',
+        emptyMessage: 'cart-empty-message'
     }
 }
 
 const Cart = ({ cart, dispatch, cartStyle }: CartProps) => {
+    const cartValue = cartTotal(cart);
+
     const renderCart = () => {
         return (
             <div className={STYLES[cartStyle].grid}>
@@ -32,7 +37,7 @@ const Cart = ({ cart, dispatch, cartStyle }: CartProps) => {
                 <div className="cart-summary">
                     <div className={STYLES[cartStyle].subtotal}>
                         <span>Subtotal</span>
-                        <span>${cartTotal(cart)}</span>
+                        <span>${formatMoney(cartValue)}</span>
                     </div>
                     <Link to='/checkout' className="button button-black cart-button">Checkout</Link>
                 </div>
@@ -40,7 +45,7 @@ const Cart = ({ cart, dispatch, cartStyle }: CartProps) => {
         )
     }
 
-    const emptyCartMessage = <p className="cart-empty-message">There are no items in your cart.</p>;
+    const emptyCartMessage = <p className="cart-empty-message cart-empty-message-small">There are no items in your cart.</p>;
 
     return (!cart.length && cartStyle === 'small') ? emptyCartMessage : renderCart();
 }

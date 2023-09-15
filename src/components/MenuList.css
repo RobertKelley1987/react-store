@@ -19,7 +19,7 @@
     padding: .5rem 0;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     .menu-list {
         padding: 0;
     }

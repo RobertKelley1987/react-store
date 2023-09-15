@@ -1,4 +1,4 @@
-import { MailingAddress, MailingAddressInput, State } from "./types";
+import { MailingAddress, MailingAddressInput, State, ShippingMethod } from "./types";
 
 // CATEGORY PAGES GROUPED WITH IDS TO USE AS MAP KEYS
 export const APPAREL_PAGES = ['New Apparel', 'T-Shirts', 'Longsleeves', 'Hoodies'];
@@ -181,4 +181,9 @@ export const ADDRESS_STR_LIB = {
     state: 'state',
     zip: 'zip code'
 }
+
+export const SHIPPING_METHODS: ShippingMethod[] = [
+    { name: 'Standard', cost: 9.99 },
+    { name: 'Express', cost: 19.99 }
+]
 

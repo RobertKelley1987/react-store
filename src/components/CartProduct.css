@@ -4,6 +4,7 @@
     font-family: var(--sans-serif);
     grid-gap: 2rem;
     grid-template-columns: 1fr 3fr;
+    min-width: 400px;
 }
 
 .cart-product-img {

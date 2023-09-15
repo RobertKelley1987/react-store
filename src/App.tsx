@@ -1,10 +1,10 @@
 import { useState, useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import cartReducer from './state/cartReducer';
 import { apparel } from './data/apparel';
 import { albums } from './data/albums';
 import { accessories } from './data/accessories';
 import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
+import cartReducer from './state/cartReducer';
 import SiteHeader from './components/SiteHeader';
 import HomePage from './pages/HomePage/index';
 import CartPage from './pages/CartPage';
@@ -16,10 +16,13 @@ import ProductFilterPage from './pages/ProductFilterPage';
 import CollectionPage from './pages/CollectionPage';
 import CheckoutPage from './pages/CheckoutPage';
 import FAQPage from './pages/FAQPage';
+import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import PaymentPage from './pages/PaymentPage';
+import ContactPage from './pages/ContactPage';
 import SiteFooter from './components/SiteFooter';
 import { Apparel, ApparelProduct, Album, MusicProduct, Accessory, AccessoryProduct, Category } from './types';
 import './App.css';
-import TermsAndConditions from './pages/TermsAndConditions';
 
 const VINYL_TYPES: MusicProduct[] = ['LP', '2XLP', '12"'];
 const CD_TYPES: MusicProduct[] = ['CD', '2XCD'];
@@ -206,10 +209,15 @@ const App = () => {
             <AccessoryShowPage dispatch={dispatch} setCartIsVisible={setCartIsVisible} />
           } />
           <Route path='/faqs' element={<FAQPage />} />
-          <Route path='/terms-and-conditions' element={<TermsAndConditions />} />
+          <Route path='/terms-and-conditions' element={<TermsAndConditionsPage />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
+          <Route path='/payment' element={<PaymentPage />} />
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </div>
-      {!checkingOut && <SiteFooter />}
+      <ScreenIsBigContextProvider>
+        {!checkingOut && <SiteFooter />}
+      </ScreenIsBigContextProvider>
     </div>
   );
 }

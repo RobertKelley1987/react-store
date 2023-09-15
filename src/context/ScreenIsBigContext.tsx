@@ -16,7 +16,7 @@ export const ScreenIsBigContextProvider = ({ children }: ScreenIsBigContextProvi
 
     useEffect(() => {
         const openSection = (e: MediaQueryListEvent ) => setScreenIsBig(e.matches);
-        const mediaQuery = window.matchMedia('(min-width: 700px)');
+        const mediaQuery = window.matchMedia('(min-width: 800px)');
         mediaQuery.addEventListener('change', openSection);
     
         return () => mediaQuery.removeEventListener('change', openSection);

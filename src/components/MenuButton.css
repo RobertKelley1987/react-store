@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     .menu-button {
         display: none
     }

@@ -41,3 +41,8 @@
 .cart-button {
     justify-content: center;
 }
+
+.cart-empty-message-small {
+    margin: 1rem;
+    white-space: nowrap;
+}

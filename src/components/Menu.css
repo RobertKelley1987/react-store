@@ -39,7 +39,7 @@
     padding: 1rem;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 800px) {
     .menu {
         position: static;
         width: auto;

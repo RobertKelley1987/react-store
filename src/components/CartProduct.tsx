@@ -1,5 +1,6 @@
 import Qty from './Qty';
 import { MAX_ORDER_QTY } from '../constants';
+import { formatMoney } from '../utils';
 import { CartItem, CartAction } from '../types';
 import './CartProduct.css';
 
@@ -27,6 +28,8 @@ const STYLES = {
 }
 
 const CartProduct = ({ item, dispatch, cartStyle }: CartProductProps) => {
+    const subTotal = item.product.price * item.qty
+
     const increment = () => {
         item.qty < MAX_ORDER_QTY && ++item.qty;
         dispatch({ type: 'UPDATE_QTY', payload: item })
@@ -39,11 +42,6 @@ const CartProduct = ({ item, dispatch, cartStyle }: CartProductProps) => {
             --item.qty;
             dispatch({ type: 'UPDATE_QTY', payload: item })
         }
-    }
-
-    const calcSubtotal = () => {
-        const subTotal = item.product.price * item.qty
-        return (Math.round(100 * subTotal) / 100).toFixed(2);
     }
 
     // If this is the small dropdown cart, append clothing size to product desc
@@ -66,7 +64,7 @@ const CartProduct = ({ item, dispatch, cartStyle }: CartProductProps) => {
             return (
                 <span className={STYLES[cartStyle].total}>
                     <span className="cart-product-total-label">Total: </span>
-                    ${calcSubtotal()}
+                    ${formatMoney(subTotal)}
                 </span>
             )                     
         }

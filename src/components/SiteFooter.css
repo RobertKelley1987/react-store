@@ -6,14 +6,16 @@
     width: 100%;
 }
 
-.site-footer p {
-    margin: 0;
-}
-
 .site-footer-wrapper {
-    align-items: flex-start;
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "text"
+    "socials";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     padding: 2rem;
+    row-gap: 1rem;
     width: 1000px;
 }
 
@@ -22,21 +24,22 @@
     font-family: var(--display-font);
     font-size: 6rem;
     font-style: italic;
+    grid-area: logo;
     line-height: .9;
-}
-
-.site-footer-logo-wrapper {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-rows: auto auto;
-    margin: 0 3rem 0 0;
 }
 
 .site-footer-socials {
     align-items: center;
     display: grid;
-    grid-gap: .5rem;
+    grid-area: socials;
+    grid-gap: 1rem;
     grid-template-columns: auto auto auto auto;
+    width: min-content;
+}
+
+.site-footer-logo,
+.site-footer-socials {
+    justify-self: center;
 }
 
 .site-footer-social-link {
@@ -45,12 +48,71 @@
 
 .site-footer-sections {
     display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 60%;
+    grid-area: text;
+    row-gap: 1rem;
 }
 
 .site-footer-heading {
     font-size: var(--medium-font);
     font-weight: 500;
+    text-transform: uppercase;
+}
+
+.site-footer-heading-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-footer-heading-wrapper:hover {
+    cursor: pointer;
+}
+
+.site-footer-info-links,
+.site-footer-shipping,
+.site-footer-contact {
+    margin: .5rem;
+}
+
+.site-footer-info-links {
+    display: grid;
+    row-gap: .5rem;
+}
+
+@media (min-width: 800px) {
+    .site-footer-wrapper {
+        align-items: start;
+        column-gap: 2rem;
+        grid-template-areas: 
+        "logo text text text text"
+        "socials text text text text";
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        row-gap: .5rem;
+    }
+
+    .site-footer-sections {
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 75%;
+    }
+
+    .site-footer-logo,
+    .site-footer-socials {
+        justify-self: start;
+    }
+
+    .site-footer-heading-wrapper:hover {
+        cursor: unset;
+    }
+
+    .site-footer-contact,
+    .site-footer-shipping,
+    .site-footer-info-links {
+        margin: 0;
+    }
+
+    .site-footer-info-links {
+        row-gap: 0;
+    }
 }

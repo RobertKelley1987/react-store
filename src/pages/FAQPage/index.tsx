@@ -10,7 +10,7 @@ const FAQPage = () => {
 
     return (
         <main className="faq-page">
-            <h1 className="faq-page-heading">FAQs</h1>
+            <h1 className="heading-1">FAQs</h1>
             <div className="faq-page-faqs">
                 {faqs.map(faq => <FAQ faq={faq} />)}
             </div>
