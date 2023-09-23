@@ -28,7 +28,7 @@ const SiteHeader = ({ clearFilter, cart, dispatch, viewingCartPage, cartIsVisibl
                 onMouseEnter={() => setMouseIsOverCart(true)}
                 onMouseLeave={() => setMouseIsOverCart(false)}
             >
-                <Cart cart={cart} dispatch={dispatch} cartStyle='small' />
+                <Cart cart={cart} dispatch={dispatch} cartStyle='small' buttonOption='cart' />
             </div>
         )
     }

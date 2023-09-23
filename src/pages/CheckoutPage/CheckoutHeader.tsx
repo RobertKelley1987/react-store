@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 const CheckoutHeader = () => {
     return (
         <header className="checkout-page-header">
-            <Link to="/">
-                <h1 className="checkout-page-logo">Infinite Bliss</h1>
-            </Link>
+            <Link to="/" className="checkout-page-logo">Infinite Bliss</Link>
             <nav className="checkout-page-nav">
                 <Link className="checkout-page-link" to='/cart'>Cart</Link>
                 <span className="material-symbols-outlined">chevron_right</span>

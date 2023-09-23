@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+import useScreenIsBig from '../hooks/useScreenIsBig';
 
 type ScreenIsBigContextType = {
     screenIsBig: boolean,
@@ -12,15 +13,7 @@ type ScreenIsBigContextProviderProps = {
 }
 
 export const ScreenIsBigContextProvider = ({ children }: ScreenIsBigContextProviderProps ) => {
-    const [screenIsBig, setScreenIsBig] = useState(true);
-
-    useEffect(() => {
-        const openSection = (e: MediaQueryListEvent ) => setScreenIsBig(e.matches);
-        const mediaQuery = window.matchMedia('(min-width: 800px)');
-        mediaQuery.addEventListener('change', openSection);
-    
-        return () => mediaQuery.removeEventListener('change', openSection);
-      }, []);
+    const { screenIsBig, setScreenIsBig } = useScreenIsBig(800);
 
     return (
         <ScreenIsBigContext.Provider value={{ screenIsBig, setScreenIsBig }}>

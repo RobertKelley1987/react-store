@@ -22,15 +22,17 @@ const STYLES = {
 }
 
 const Qty = ({ size, qty, inc, dec, displayHeading }: QtyProps) => {
+    const { button, text, wrapper } = STYLES[size];
+
     return (
         <div className="qty-wrapper">
             {displayHeading && <h3 className="qty-heading">Quantity</h3>}
-            <div className={STYLES[size].wrapper}>
-                <button className={STYLES[size].button} onClick={dec}>
+            <div className={wrapper}>
+                <button className={button} onClick={dec}>
                     <span className="material-symbols-outlined qty-icon">remove</span>
                 </button>
-                <span className={STYLES[size].text}>{qty}</span>
-                <button className={STYLES[size].button} onClick={inc}>
+                <span className={text}>{qty}</span>
+                <button className={button} onClick={inc}>
                     <span className="material-symbols-outlined qty-icon">add</span>
                 </button>
             </div>

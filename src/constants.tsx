@@ -183,7 +183,7 @@ export const ADDRESS_STR_LIB = {
 }
 
 export const SHIPPING_METHODS: ShippingMethod[] = [
-    { name: 'Standard', cost: 9.99 },
-    { name: 'Express', cost: 19.99 }
+    { name: 'Standard', days: '5 - 7', cost: 9.99 },
+    { name: 'Express', days: '1 - 2' ,cost: 19.99 }
 ]
 

@@ -64,9 +64,9 @@ option:disabled {
 /* UTILITY CLASSES */
 .button {
   align-items: center;
-  background: none;
-  border: 1px solid white;
-  color: white;
+  background: white;
+  border: 1px solid var(--black);
+  color: var(--black);
   display: inline-flex;
   font-family: var(--sans-serif);
   font-size: var(--medium-font);
@@ -80,12 +80,12 @@ option:disabled {
 }
 
 .button:hover {
-  background-color: white;
-  color: var(--black);
+  background-color: var(--black);
+  color: white;
   cursor: pointer;
 }
 
-.button-black {
+/* .button-black {
   border: 1px solid var(--black);
   color: var(--black);
 }
@@ -94,7 +94,7 @@ option:disabled {
 .button-black-selected {
   background: var(--black);
   color: white;
-}
+} */
 
 .button-arrow {
   align-items: center;
@@ -138,6 +138,14 @@ option:disabled {
 
 .list-with-discs > li {
   list-style-type: disc;
+}
+
+.hidden {
+  height: 0px;
+  left: 10_000px;
+  position: fixed;
+  visibility: hidden;
+  width: 0px;
 }
 
 /* GOOGLE ICONS */

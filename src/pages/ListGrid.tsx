@@ -17,7 +17,7 @@ function ListGrid<T extends Item<K>, K extends string>({ pages, pageNum, srcPg }
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
-    }, [])
+    }, []);
 
     return (
         <div className="list-grid">

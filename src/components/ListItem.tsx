@@ -19,6 +19,8 @@ function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProp
         const artist = httpFormat(item.artist);
         let path = '';
 
+        console.log("SRC: " + srcPg);
+
         if(srcPg) {
             if(allApparelPgs.includes(srcPg)) {
                 path = `/apparel/${httpFormat(srcPg)}/products/${item.id}`;
@@ -30,6 +32,8 @@ function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProp
                 path = `/artists/${artist}/${category}/${item.id}`;
             }
         }
+
+        console.log(path);
 
         return path;
     }

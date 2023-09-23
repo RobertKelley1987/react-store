@@ -22,7 +22,7 @@ const CartPage = ({ cart, dispatch, setViewingCartPage }: CartPageProps) => {
         return (
             <main className="cart-page">
                 <h1 className="cart-page-heading">Shopping Cart</h1>
-                <Cart cart={cart} dispatch={dispatch} cartStyle='large'/>
+                <Cart cart={cart} dispatch={dispatch} cartStyle='large' buttonOption='checkout' />
             </main>
         )
     }

@@ -93,5 +93,6 @@ export type QAndA = {
 
 export type ShippingMethod = {
     name: string,
+    days: string,
     cost: number
 }

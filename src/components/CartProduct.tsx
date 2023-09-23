@@ -28,7 +28,8 @@ const STYLES = {
 }
 
 const CartProduct = ({ item, dispatch, cartStyle }: CartProductProps) => {
-    const subTotal = item.product.price * item.qty
+    const subTotal = item.product.price * item.qty;
+    let productDesc = `${item.product.artist} "${item.product.desc}" ${item.product.productType}`;
 
     const increment = () => {
         item.qty < MAX_ORDER_QTY && ++item.qty;
@@ -46,7 +47,6 @@ const CartProduct = ({ item, dispatch, cartStyle }: CartProductProps) => {
 
     // If this is the small dropdown cart, append clothing size to product desc
     const renderProductDesc = () => {
-        let productDesc = `${item.product.artist} "${item.product.desc}" ${item.product.productType}`;
         if(cartStyle === 'small' && item.size) {
             productDesc += `  - ${item.size}`;
         }
@@ -72,7 +72,11 @@ const CartProduct = ({ item, dispatch, cartStyle }: CartProductProps) => {
 
     return (
         <div className="cart-product">
-            <img className="cart-product-img" src={`/imgs/${item.product.imgs[0]}.jpg`} />
+            <img 
+                className="cart-product-img" 
+                src={`/imgs/${item.product.imgs[0]}.jpg`}
+                alt={productDesc}
+            />
                 <div className={STYLES[cartStyle].textWrapper}>
                     <div className="cart-product-name-wrapper">
                         <h2 className={STYLES[cartStyle].name}>{renderProductDesc()}</h2>

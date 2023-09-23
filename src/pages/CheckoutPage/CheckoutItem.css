@@ -1,8 +1,8 @@
 .checkout-item {
     align-items: center;
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 2fr 7fr 1fr;
+    grid-gap: 2rem;
+    grid-template-columns: 2fr 7fr auto;
 }
 
 .checkout-item-img {
@@ -11,4 +11,14 @@
 
 .checkout-item-text > * {
     display: block;
+}
+
+.checkout-item-price {
+    width: min-content;
+}
+
+@media (min-width: 1000px) {
+    .checkout-item {
+        grid-gap: 1rem;
+    }
 }

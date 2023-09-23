@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import PhoneInput from './PhoneInput';
 import StateSelector from './StateSelector';
 import ZipInput from './ZipInput';
 import { VOWELS, ADDRESS_STR_LIB } from '../../constants';
-import { MailingAddress, MailingAddressInput, CheckoutFormSection } from "../../types";
+import { MailingAddress, MailingAddressInput } from "../../types";
+import './ShippingAddressForm.css';
 
 type ShippingAddressFormProps = {
     email: MailingAddressInput<string>,
@@ -10,21 +12,22 @@ type ShippingAddressFormProps = {
     phone: MailingAddressInput<string>,
     setPhone: React.Dispatch<React.SetStateAction<MailingAddressInput<string>>>,
     mailingAddress: MailingAddress,
-    setMailingAddress: React.Dispatch<React.SetStateAction<MailingAddress>>,
-    setCurrentSection: React.Dispatch<React.SetStateAction<CheckoutFormSection>>
+    setMailingAddress: React.Dispatch<React.SetStateAction<MailingAddress>>
 }
 
 const ShippingAddressForm = (props: ShippingAddressFormProps) => {
-    const { email, setEmail, phone, setPhone, mailingAddress, setMailingAddress, setCurrentSection} = props;
+    const { email, setEmail, phone, setPhone, mailingAddress, setMailingAddress } = props;
+    const navigate = useNavigate();
 
     // Util to add 'a' or 'an' before required field
     const generateErrorMessage = (str: string) => {
         return VOWELS.includes(str[0]) ? `Enter an ${str}` : `Enter a ${str}` 
     }
+
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if(!validateForm()) return;
-        setCurrentSection('shipping-options');
+        navigate('/checkout/shipping');
     }
 
     const validateForm = () => {
@@ -33,14 +36,14 @@ const ShippingAddressForm = (props: ShippingAddressFormProps) => {
         // Validate contact info
         if(!email.value) {
             setEmail(prev => {
-                return {...prev, error: 'Enter an email address'}
+                return {...prev, error: 'Enter an valid email address'}
             });
             readyToSubmit = false;
         }
 
-        if(!phone.value) {
+        if(!phone.value || phone.value.length < 14) {
             setPhone(prev => {
-                return {...prev, error: 'Enter a phone number'}
+                return {...prev, error: 'Enter a valid phone number'}
             });
             readyToSubmit = false;
         }
@@ -75,100 +78,98 @@ const ShippingAddressForm = (props: ShippingAddressFormProps) => {
     }
 
     return (
-        <form className="checkout-form" onSubmit={handleSubmit}>
-            <div className="checkout-form-section">
-                <h2 className="checkout-form-heading">Contact</h2>
+        <form className="shipping-address-form" onSubmit={handleSubmit}>
+            <div className="shipping-address-form-section">
+                <h2 className="shipping-address-form-heading">Contact</h2>
 
-                <div className="checkout-form-input-wrapper">
+                <div className="shipping-address-form-input-wrapper">
                     <input 
                         placeholder="Email" 
                         name="email"
                         value={email.value} 
                         onChange={e => setEmail({ value: e.target.value, error: '' })}
                         type="text"
-                        className={email.error ? "checkout-form-input checkout-form-input-error" : "checkout-form-input"}
+                        className={email.error ? "shipping-address-form-input shipping-address-form-input-error" : "shipping-address-form-input"}
                     />
-                    {email.error && <span className="checkout-form-error">{email.error}</span>}
+                    {email.error && <span className="shipping-address-form-error">{email.error}</span>}
                 </div>
 
-                <div className="checkout-form-input-wrapper">
+                <div className="shipping-address-form-input-wrapper">
                     <PhoneInput placeholder='Phone' phone={phone} setPhone={setPhone}/>
-                    {phone.error && <span className="checkout-form-error">{phone.error}</span>}
+                    {phone.error && <span className="shipping-address-form-error">{phone.error}</span>}
                 </div>
             </div>
 
-            <div className="checkout-form-section">
-                <h2 className="checkout-form-heading">Shipping Info</h2>
-                <div className="checkout-form-name-wrapper">
-                    <div className="checkout-form-input-wrapper">
+            <div className="shipping-address-form-section">
+                <h2 className="shipping-address-form-heading">Shipping Info</h2>
+                <div className="shipping-address-form-name-wrapper">
+                    <div className="shipping-address-form-input-wrapper">
                         <input 
                             placeholder="First Name" 
                             name="firstName" 
                             value={mailingAddress.firstName.value} 
                             onChange={setValue}
                             type="text"
-                            className={mailingAddress.firstName.error ? "checkout-form-input checkout-form-input-error" : "checkout-form-input"} 
+                            className={mailingAddress.firstName.error ? "shipping-address-form-input shipping-address-form-input-error" : "shipping-address-form-input"} 
                         />
-                        {mailingAddress.firstName.error && <span className="checkout-form-error">{mailingAddress.firstName.error}</span>} 
+                        {mailingAddress.firstName.error && <span className="shipping-address-form-error">{mailingAddress.firstName.error}</span>} 
                     </div>
 
-                    <div className="checkout-form-input-wrapper">
+                    <div className="shipping-address-form-input-wrapper">
                         <input 
                             placeholder="Last Name" 
                             name="lastName" 
                             value={mailingAddress.lastName.value} 
                             onChange={setValue}
                             type="text"
-                            className={mailingAddress.lastName.error ? "checkout-form-input checkout-form-input-error" : "checkout-form-input"}
+                            className={mailingAddress.lastName.error ? "shipping-address-form-input shipping-address-form-input-error" : "shipping-address-form-input"}
                         />
-                        {mailingAddress.lastName.error && <span className="checkout-form-error">{mailingAddress.lastName.error}</span>}
+                        {mailingAddress.lastName.error && <span className="shipping-address-form-error">{mailingAddress.lastName.error}</span>}
                     </div>
                 </div>
 
-                <div className="checkout-form-input-wrapper">
+                <div className="shipping-address-form-input-wrapper">
                     <input 
                         placeholder='Address' 
                         value={mailingAddress.streetLine1.value} 
                         name="streetLine1"
                         onChange={setValue}
                         type="text"
-                        className={mailingAddress.streetLine1.error ? "checkout-form-input checkout-form-input-error" : "checkout-form-input"}
+                        className={mailingAddress.streetLine1.error ? "shipping-address-form-input shipping-address-form-input-error" : "shipping-address-form-input"}
                     />
-                    {mailingAddress.streetLine1.error && <span className="checkout-form-error">{mailingAddress.streetLine1.error}</span>}
+                    {mailingAddress.streetLine1.error && <span className="shipping-address-form-error">{mailingAddress.streetLine1.error}</span>}
                 </div>
 
-                <div className="checkout-form-input-wrapper">
-                    <input 
-                        placeholder='Apt, suite etc. (optional)'
-                        name="streetLine2" 
-                        value={mailingAddress.streetLine2.value} 
-                        onChange={setValue}
-                        type="text"
-                        className="checkout-form-input"
-                    />                    
-                </div>
+                <input 
+                    placeholder='Apt, suite etc. (optional)'
+                    name="streetLine2" 
+                    value={mailingAddress.streetLine2.value} 
+                    onChange={setValue}
+                    type="text"
+                    className="shipping-address-form-input"
+                />                    
 
-                <div className="checkout-form-location-wrapper">
-                    <div className="checkout-form-input-wrapper">
+                <div className="shipping-address-form-location-wrapper">
+                    <div className="shipping-address-form-input-wrapper">
                         <input 
                             placeholder="City" 
                             name="city"
                             value={mailingAddress.city.value} 
                             onChange={setValue}
                             type="text"
-                            className={mailingAddress.city.error ? "checkout-form-input checkout-form-input-error" : "checkout-form-input"}
+                            className={mailingAddress.city.error ? "shipping-address-form-input shipping-address-form-input-error" : "shipping-address-form-input"}
                         />
-                        {mailingAddress.city.error && <span className="checkout-form-error">{mailingAddress.city.error}</span>}
+                        {mailingAddress.city.error && <span className="shipping-address-form-error">{mailingAddress.city.error}</span>}
                     </div>
 
-                    <div className="checkout-form-input-wrapper">
+                    <div className="shipping-address-form-input-wrapper">
                         <StateSelector state={mailingAddress.state} setValue={setValue} />
-                        {mailingAddress.state.error && <span className="checkout-form-error">{mailingAddress.state.error}</span>}
+                        {mailingAddress.state.error && <span className="shipping-address-form-error">{mailingAddress.state.error}</span>}
                     </div>
 
-                    <div className="checkout-form-input-wrapper">
+                    <div className="shipping-address-form-input-wrapper">
                         <ZipInput zip={mailingAddress.zip} setValue={setValue} />
-                        {mailingAddress.zip.error && <span className="checkout-form-error">{mailingAddress.zip.error}</span>}
+                        {mailingAddress.zip.error && <span className="shipping-address-form-error">{mailingAddress.zip.error}</span>}
                     </div>
                 </div>
             </div>

@@ -22,14 +22,15 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
     const [qty, setQty] = useState(1);
     const [confirmItemAdded, setConfirmItemAdded] = useState(false);
     const { itemId } = useParams();
-    let timeoutId: NodeJS.Timeout;
     
     useEffect(() => {
         const foundItem = data.find(item => item.id === itemId);
         if(foundItem) setProduct(foundItem);
-    }, [itemId]);
+    }, [itemId, data, setProduct]);
 
     useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+
         if(confirmItemAdded) {
             timeoutId = setTimeout(() => {
                 setConfirmItemAdded(false);
@@ -38,7 +39,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
         }
 
         return () => clearTimeout(timeoutId);
-    }, [confirmItemAdded])
+    }, [confirmItemAdded, setCartIsVisible])
 
     if(!product) return <p>Error - Product Not Found.</p>;
 
@@ -63,7 +64,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
                     <Qty size="large" qty={qty} inc={increment} dec={decrement} displayHeading={true} />
                     <button 
                         onClick={() => handleClick()} 
-                        className="button button-black show-page-cart-button"
+                        className="button show-page-cart-button"
                         disabled={confirmItemAdded}
                     >
                         {confirmItemAdded ? "ITEM ADDED!" : "ADD TO CART"}

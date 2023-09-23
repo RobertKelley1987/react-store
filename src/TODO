@@ -3,3 +3,5 @@
 - When I click the middle part of the nav slug thing it should clear any applied filters
 - mobile css
 - using 1.25rem throughout for prices and headings. Try to change over to a css variable
+- Why is all shipping data lifted to App state? Should I change that back?
+- mobile css for cart page

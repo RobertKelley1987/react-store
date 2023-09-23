@@ -70,6 +70,7 @@
 
 @media (min-width: 800px) {
     .qty-buttons {
+        max-width: 160px;
         width: 50%;
     }
 }

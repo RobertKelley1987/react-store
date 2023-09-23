@@ -7,6 +7,25 @@
 .order-summary-heading {
     font-size: 1.25rem;
     font-weight: 500;
+    line-height: .9;
+}
+
+.order-summary-heading-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.order-summary-heading-wrapper .menu-chevron {
+    transform: translateY(1.5px);
+}
+
+.order-summary-dropdown-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summary-dropdown-heading:hover {
+    cursor: pointer;
 }
 
 .order-summary-items {

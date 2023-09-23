@@ -19,7 +19,7 @@ const HomePageSection = ({ heading, items, path }: HomePageProps) => {
             <Grid>
                 <ItemList items={items} srcPg={heading}/>
             </Grid>
-            <Link to={path} className="button button-black">
+            <Link to={path} className="button">
                 View All
                 <span className="material-symbols-outlined button-arrow">arrow_forward</span>
             </Link>
