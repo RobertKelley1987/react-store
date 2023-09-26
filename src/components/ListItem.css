@@ -5,7 +5,7 @@
 .list-item-name,
 .list-item-price {
     font-family: var(--sans-serif);
-    font-size: var(--medium-font);
+    font-size: var(--small-font);
 }
 
 .list-item-name {
@@ -15,4 +15,9 @@
 
 .list-item-price {
     font-weight: 300;
+}
+
+.list-item:hover .list-item-name,
+.list-item:hover .list-item-price {
+    color: var(--accent);
 }

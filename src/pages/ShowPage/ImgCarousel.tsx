@@ -26,7 +26,7 @@ function ImgCarousel<T extends Item<K>, K extends string>({ product }: ImgCarous
             <div className="img-carousel-imgs-wrapper">
                 {imgs.map(image => {
                     return (
-                        <div className="img-carousel-img-wrapper" onClick={() => setSelectedImg(image)}>
+                        <div key={image} className="img-carousel-img-wrapper" onClick={() => setSelectedImg(image)}>
                             <img alt={productType} src={`/imgs/${image}.jpg`} className={renderClassNames(image)}/>
                         </div>
                     );

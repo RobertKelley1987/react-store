@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import CollectionPage from './CollectionPage';
-import ListFilter from './ListFilter';
+import ListFilter from '../components/ListFilter';
 import { Item } from '../types';
 
 type ProductFilterPageProps<T, K> = {

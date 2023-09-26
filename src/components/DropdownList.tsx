@@ -32,13 +32,10 @@ const DropdownList = (props: DropdownListProps) => {
     } = props;
 
     const handleClick = () => { 
-        const mediaQuery = window.matchMedia('(min-width: 700px)');
-
+        setThisListOpen(prev => !prev);
+        const mediaQuery = window.matchMedia('(min-width: 800px)');
         if(mediaQuery.matches) {
             setOtherListsOpen(false);
-            setThisListOpen(true);
-        } else {
-            setThisListOpen(prev => !prev);
         }
     }
 
@@ -72,6 +69,8 @@ const DropdownList = (props: DropdownListProps) => {
             <li 
                 className={classNames(thisIsOpen, 'menu-heading-wrapper', 'menu-heading-wrapper-selected')} 
                 onClick={handleClick}
+                onKeyDown={e => e.key === 'Enter' && handleClick()}
+                tabIndex={0}
             >
                 <h1 className="menu-heading">{heading}</h1>
                 <MenuChevron flipped={thisIsOpen}/>

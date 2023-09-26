@@ -12,3 +12,7 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+.home-page-section-heading-link:hover {
+    color: var(--accent);
+}

@@ -9,7 +9,7 @@
 :root {
   /* COLORS */
   --black: rgb(40, 40, 40);
-  --accent: rgb(85, 102, 255);
+  --accent: rgb(117, 86, 255);
   --placeholder-color: gray;
 
   /* FONTS */
@@ -17,9 +17,18 @@
   --sans-serif: 'Kanit', sans-serif;
 
   /* FONT SIZES*/
-  --huge-font: 2.5rem;
-  --big-font: 1.5rem;
+  --huge-font: 1.25rem;
+  --big-font: 1.25rem;
   --medium-font: 1rem;
+  --small-font: 1rem;
+}
+
+@media (min-width: 550px) {
+  :root {
+    --huge-font: 2.5rem;
+    --big-font: 1.5rem;
+    --medium-font: 1.25rem;
+  }
 }
 
 /* GLOBAL */
@@ -36,6 +45,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: var(--black);
   text-decoration: none;
+}
+
+a:focus-visible {
+  color: var(--accent);
+  outline: none;
 }
 
 li {
@@ -69,7 +83,7 @@ option:disabled {
   color: var(--black);
   display: inline-flex;
   font-family: var(--sans-serif);
-  font-size: var(--medium-font);
+  font-size: var(--small-font);
   font-weight: 500;
   gap: .2rem;
   justify-content: center;
@@ -79,22 +93,23 @@ option:disabled {
   white-space: nowrap;
 }
 
-.button:hover {
-  background-color: var(--black);
-  color: white;
-  cursor: pointer;
-}
-
-/* .button-black {
-  border: 1px solid var(--black);
+.button:hover,
+.button:focus-visible {
+  background-color: var(--accent);
   color: var(--black);
+  cursor: pointer;
+  outline: none;
 }
 
-.button-black:hover,
-.button-black-selected {
-  background: var(--black);
-  color: white;
-} */
+.button:disabled {
+  opacity: 70%;
+}
+
+.button:hover:disabled {
+  background-color: white;
+  color: var(--black);
+  cursor: default;
+}
 
 .button-arrow {
   align-items: center;
@@ -114,7 +129,7 @@ option:disabled {
 .page-container {
   font-family: var(--sans-serif);
   font-size: 1rem;
-  margin: 2rem 2rem 4rem 2rem;
+  padding: 2rem 2rem 4rem 2rem;
   max-width: 1000px;
   width: 100%;
 }
@@ -146,6 +161,59 @@ option:disabled {
   position: fixed;
   visibility: hidden;
   width: 0px;
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: .1px solid currentColor;
+  color: var(--black);
+  display: grid;
+  font: inherit;
+  height: 1rem;
+  margin: 0;
+  place-content: center;
+  width: 1rem;
+}
+
+.checkbox::before {
+  box-shadow: inset 1em 1em var(--accent);
+  content:'';
+  height: 0.5rem;
+  transform: scale(0);
+  width: 0.5rem;
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+.checkbox:focus-visible {
+  border: 1px solid var(--accent);
+  outline: none;
+}
+
+.checkbox-label {
+  display: grid;
+  font: 300 1rem var(--sans-serif);
+  gap: .5em;
+  grid-template-columns: 1em auto;
+  line-height: 1.1;
+}
+
+.checkbox:focus-visible + span,
+.checkbox-label:hover {
+  color: var(--accent);
+}
+
+.checkbox-label:hover .checkbox {
+  border: 1px solid var(--accent);
+}
+
+.checkbox-label:hover,
+.checkbox:hover {
+  cursor: pointer;
 }
 
 /* GOOGLE ICONS */

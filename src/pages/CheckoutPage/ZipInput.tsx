@@ -1,6 +1,5 @@
 import { isANumber } from '../../utils';
 import { MailingAddressInput } from '../../types';
-import './ZipInput.css';
 
 type ZipInputProps = {
     zip: MailingAddressInput<string>,
@@ -21,11 +20,12 @@ const ZipInput = ({ zip, setValue }: ZipInputProps) => {
 
     return (
         <input 
-            className={zip.error ? "zip-input zip-input-error" : "zip-input"}
+            className={zip.error ? "form-input form-input-error" : "form-input"}
+            id="zip"
             name="zip" 
             value={zip.value} 
             onChange={handleChange}
-            placeholder="Zip Code" 
+            placeholder="12345" 
             type="text"
             maxLength={5}
         />

@@ -1,5 +1,14 @@
 .artist-page-banner {
     filter: invert(1);
-    margin: 2rem 0 0 0;
     width: 100%;
+}
+
+.artist-page-banner-wrapper {
+    border-bottom: 1px solid var(--black);
+    display: flex;
+}
+
+.artist-page-error-message {
+    font-family: var(--sans-serif);
+    font-size: var(--small-font);
 }

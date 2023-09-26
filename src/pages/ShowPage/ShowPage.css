@@ -22,7 +22,7 @@
 }
 
 .show-page-heading-small {
-    font-size: var(--medium-font);
+    font-size: var(--small-font);
     font-weight: 500;
     text-transform: uppercase;
 }

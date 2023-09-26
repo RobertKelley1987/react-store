@@ -13,7 +13,7 @@ type HomePageProps = {
 const HomePageSection = ({ heading, items, path }: HomePageProps) => {
     return (
         <section className="home-page-section">
-            <Link to={path}>
+            <Link to={path} className="home-page-section-heading-link">
                 <h2 className="home-page-section-heading">{heading}</h2>
             </Link>
             <Grid>

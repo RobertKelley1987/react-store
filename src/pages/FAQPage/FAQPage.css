@@ -2,7 +2,7 @@
     display: grid;
     font-family: var(--sans-serif);
     grid-gap: 1rem;
-    margin: 2rem 2rem 4rem 2rem;
+    padding: 2rem 2rem 4rem 2rem;
     max-width: 1000px;
     width: 100%;
 }

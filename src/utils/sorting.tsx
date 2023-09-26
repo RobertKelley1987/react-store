@@ -14,7 +14,7 @@ export function oldToNew<T extends Item<K>, K extends string>(item: T, nextItem:
 export function aToZ<T extends Item<K>, K extends string>(item: T, nextItem: T) {
     let result = 0;
 
-    // Compare strings that will appear as product names: "band name 'product desc' product type",
+    // Compare items using this string format: "<band name> '<product desc>' <product type>",
     // Ex: Aerosmith "Armageddon" T-Shirt
     const itemOneStr = `${item.artist} ${item.desc} ${item.productType}`;
     const itemTwoStr = `${nextItem.artist} ${nextItem.desc} ${nextItem.productType}`;
@@ -32,7 +32,7 @@ export function aToZ<T extends Item<K>, K extends string>(item: T, nextItem: T) 
 export function zToA<T extends Item<K>, K extends string>(item: T, nextItem: T) {
     let result = 0;
 
-    // Compare strings that will appear as product names - "band name 'product desc' product type",
+    // Compare items using this string format: "<band name> '<product desc>' <product type>",
     // Ex: Aerosmith "Armageddon" T-Shirt
     const itemOneStr = `${item.artist} ${item.desc} ${item.productType}`;
     const itemTwoStr = `${nextItem.artist} ${nextItem.desc} ${nextItem.productType}`;

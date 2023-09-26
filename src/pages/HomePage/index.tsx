@@ -27,7 +27,12 @@ const HomePage = () => {
                     />
                     <div className="home-page-banner-links">
                         <Link className="button" to="/artists/chat-pile">Official Store</Link>
-                        <Link className="button" to="/artists/chat-pile/music/chat-pile-gods-country-lp">New Record</Link>
+                        <Link 
+                            className="button new-record-button" 
+                            to="/artists/chat-pile/music/chat-pile-gods-country-lp"
+                        >
+                            New Record
+                        </Link>
                     </div>
                 </div>
             </div>

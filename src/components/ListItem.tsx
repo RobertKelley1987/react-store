@@ -9,9 +9,11 @@ type ItemProps<T> = {
     srcPg?: string
 }
 
+// Page constants are also used for header menu, and intentionally do not include 'Featured' links
 const allMusicPgs = [...MUSIC_PAGES, 'Featured Music']
 const allApparelPgs = [...APPAREL_PAGES, 'Featured Apparel'];
 const allAccessoryPgs = [...ACCESSORY_PAGES, 'Featured Accessories'];
+const nonArtistPgs = [...allMusicPgs, ...allApparelPgs, ...allAccessoryPgs]
 
 function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProps<T>) {
     const configItemPath = () => {
@@ -19,21 +21,13 @@ function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProp
         const artist = httpFormat(item.artist);
         let path = '';
 
-        console.log("SRC: " + srcPg);
-
         if(srcPg) {
-            if(allApparelPgs.includes(srcPg)) {
-                path = `/apparel/${httpFormat(srcPg)}/products/${item.id}`;
-            } else if(allMusicPgs.includes(srcPg)) {
-                path = `/music/${httpFormat(srcPg)}/products/${item.id}`;
-            } else if(allAccessoryPgs.includes(srcPg)) {
-                path = `/accessories/${httpFormat(srcPg)}/products/${item.id}`;
+            if(nonArtistPgs.includes(srcPg)) {
+                path = `/${category}/${httpFormat(srcPg)}/products/${item.id}`;
             } else if(ALL_ARTISTS.includes(srcPg)) {
                 path = `/artists/${artist}/${category}/${item.id}`;
             }
         }
-
-        console.log(path);
 
         return path;
     }
@@ -41,7 +35,12 @@ function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProp
     return (
         <article className="list-item">
             <Link to={configItemPath()}>
-                <img className="list-item-img" src={`/imgs/${item.imgs[0]}.jpg`} alt={`${item.artist} ${item.productType}`} />
+                <img 
+                    className="list-item-img" 
+                    src={`/imgs/${item.imgs[0]}.jpg`} 
+                    alt={`${item.artist} 
+                    ${item.productType}`} 
+                />
                 <h2 className="list-item-name">{`${item.artist} "${item.desc}" ${item.productType}`}</h2>
                 <span className="list-item-price">{`$${item.price}`}</span>
             </Link>

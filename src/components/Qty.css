@@ -6,7 +6,7 @@
     flex-basis: calc(100% - 100px);
     flex-shrink: 0;
     font-family: var(--sans-serif);
-    font-size: var(--medium-font);
+    font-size: var(--small-font);
     height: 48px;
     justify-content: center;
     min-width: 50px;
@@ -30,10 +30,12 @@
     width: 100%;
 }
 
-.qty-button:hover {
-    background: var(--black);
-    color: white;
+.qty-button:hover,
+.qty-button:focus-visible {
+    background: var(--accent);
+    color: var(--black);
     cursor: pointer;
+    outline: none;
 }
 
 .qty-button-small {
@@ -63,7 +65,7 @@
 }
 
 .qty-heading {
-    font-size: var(--medium-font);
+    font-size: var(--small-font);
     font-weight: 500;
     text-transform: uppercase;
 }

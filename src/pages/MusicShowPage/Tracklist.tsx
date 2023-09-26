@@ -11,7 +11,12 @@ const Tracklist = ({ tracklist }: TracklistProps) => {
         return (
             <div className="tracklist">
                 <h3 className="tracklist-heading">Tracklist</h3>
-                <ul>{tracklist.map((track, index) => <li>{`${formatTrackNum(index + 1)}. ${track}`}</li>)}</ul>
+                <ul>
+                    {tracklist.map((track, index) => {
+                        const trackNum = formatTrackNum(index + 1);
+                        return <li key={trackNum}>{`${trackNum}. ${track}`}</li>
+                    })}
+                </ul>
             </div>
         );
     } else {

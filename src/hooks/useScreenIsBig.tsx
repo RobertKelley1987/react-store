@@ -9,14 +9,19 @@ const useScreenIsBig = (size: number) => {
     const [screenIsBig, setScreenIsBig] = useState(true);
 
     useEffect(() => {
-        const updateState = (e: MediaQueryListEvent ) => setScreenIsBig(e.matches);
-        const mediaQuery = window.matchMedia(`(min-width: ${size}px)`);
-        mediaQuery.addEventListener('change', updateState);
-    
-        return () => mediaQuery.removeEventListener('change', updateState);
-      }, []);
+      const mediaQuery = window.matchMedia(`(min-width: ${size}px)`);
+      const updateState = () => setScreenIsBig(mediaQuery.matches);
 
-      return { screenIsBig, setScreenIsBig }
+      // Set initial state
+      setScreenIsBig(mediaQuery.matches);
+
+      // Update state when query status changes
+      mediaQuery.addEventListener('change', updateState);
+  
+      return () => mediaQuery.removeEventListener('change', updateState);
+    }, []);
+
+      return { screenIsBig, setScreenIsBig };
 }
 
 export default useScreenIsBig;

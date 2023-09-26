@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { accessories } from '../data/accessories';
 import ShowPage from './ShowPage';
 import ClothingData from '../components/ClothingData';
@@ -11,9 +12,10 @@ type AccessoryShowPageProps = {
 
 const AccessoryShowPage = ({ dispatch, setCartIsVisible }: AccessoryShowPageProps) => {
     const [product, setProduct] = useState<Accessory | null>(null);
+    const location = useLocation();
 
     const addToCart = (product: Accessory, qty: number) => {
-        const newItem = { product, qty }
+        const newItem = { product, qty, link: location.pathname }
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 

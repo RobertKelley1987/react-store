@@ -1,5 +1,6 @@
 import { US_STATES } from "../../constants";
 import { MailingAddressInput, State } from "../../types";
+import './Form.css';
 import './StateSelector.css';
 
 type StateSelectorProps = {
@@ -23,15 +24,19 @@ const StateSelector = ({ state, setValue }: StateSelectorProps) => {
     }
 
     return (
-        <select 
-            className={classNames()}
-            name="state"
-            value={state.value} 
-            onChange={setValue}
-        >
-            <option className="select-placeholder" value='' disabled selected hidden>Select State</option>
-            {US_STATES.map(state => <option value={state}>{state}</option>)}
-        </select>
+        <div className="state-selector-wrapper">
+            <span className="material-symbols-outlined state-selector-arrow">expand_more</span>
+            <select 
+                id="state"
+                className={classNames()}
+                name="state"
+                value={state.value} 
+                onChange={setValue}
+            >
+                <option className="select-placeholder" value='' disabled hidden>Select State</option>
+                {US_STATES.map(state => <option key={state} className="form-option" value={state}>{state}</option>)}
+            </select>
+        </div>
     )
 }
 

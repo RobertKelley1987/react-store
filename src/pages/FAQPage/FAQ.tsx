@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { QAndA } from '../../types';
+import { QAndA } from './FAQPage.types';
 import './FAQ.css';
 
 type FAQProps = {

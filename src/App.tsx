@@ -4,8 +4,8 @@ import { apparel } from './data/apparel';
 import { albums } from './data/albums';
 import { accessories } from './data/accessories';
 import { ScreenIsBigContextProvider } from './context/ScreenIsBigContext';
-import { cartTotal } from './utils/cart';
 import cartReducer from './state/cartReducer';
+import { getAddressValues } from './utils/addresses';
 import SiteHeader from './components/SiteHeader';
 import HomePage from './pages/HomePage/index';
 import CartPage from './pages/CartPage';
@@ -21,11 +21,12 @@ import TermsAndConditionsPage from './pages/TermsAndConditionsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import PaymentPage from './pages/PaymentPage';
 import ContactPage from './pages/ContactPage';
-import ShippingAddressForm from './pages/CheckoutPage/ShippingAddressForm';
-import ShippingMethodForm from './pages/CheckoutPage/ShippingMethodForm';
+import BillingAddressForm from './pages/CheckoutPage/BillingAddressForm';
+import ShippingForm from './pages/CheckoutPage/ShippingForm';
+import OrderConfirmationPage from './pages/OrderConfirmationPage';
 import PaymentFormWrapper from './pages/CheckoutPage/PaymentFormWrapper';
 import SiteFooter from './components/SiteFooter';
-import { SHIPPING_METHODS, DEFAULT_MAILING_ADDRESS, EMPTY_TEXT_INPUT } from './constants';
+import { SHIPPING_METHODS, DEFAULT_ADDRESS_FORM, EMPTY_TEXT_INPUT } from './constants';
 import { 
   Apparel, 
   ApparelProduct, 
@@ -35,8 +36,11 @@ import {
   AccessoryProduct, 
   Category,
   ShippingMethod,
-  MailingAddress,
-  MailingAddressInput
+  MailingAddressForm,
+  MailingAddressInput,
+  CheckoutPhase,
+  Order,
+  PendingOrder
 } from './types';
 import './App.css';
 
@@ -58,7 +62,21 @@ const App = () => {
   const [shippingMethod, setShippingMethod] = useState<ShippingMethod>(SHIPPING_METHODS[0]);
   const [email, setEmail] = useState<MailingAddressInput<string>>(EMPTY_TEXT_INPUT);
   const [phone, setPhone] = useState<MailingAddressInput<string>>(EMPTY_TEXT_INPUT);
-  const [mailingAddress, setMailingAddress] = useState<MailingAddress>(DEFAULT_MAILING_ADDRESS);
+  const [billingAddress, setBillingAddress] = useState<MailingAddressForm>(DEFAULT_ADDRESS_FORM);
+  const [shippingAddress, setShippingAddress] = useState<MailingAddressForm>(DEFAULT_ADDRESS_FORM);
+  const [checkoutPhase, setCheckoutPhase] = useState<CheckoutPhase>('info');
+  const [confirmedOrder, setConfirmedOrder] = useState<Order | null>(null);
+
+  const order: PendingOrder = {
+    contact: {
+      email: email.value,
+      phone: phone.value
+    },
+    billingAddress: getAddressValues(billingAddress),
+    shippingAddress: getAddressValues(shippingAddress),
+    shippingMethod: shippingMethod,
+    cart: state
+  }
 
   const clearFilter = () => {
     setSelectedAccessoryTypes([]);
@@ -67,13 +85,19 @@ const App = () => {
     setSelectedCategories([]);
   }
 
+  const resetCustomerData = () => {
+    setEmail(EMPTY_TEXT_INPUT);
+    setPhone(EMPTY_TEXT_INPUT);
+    setBillingAddress(DEFAULT_ADDRESS_FORM);
+    setShippingAddress(DEFAULT_ADDRESS_FORM);
+    setShippingMethod(SHIPPING_METHODS[0]);
+    dispatch({ type: 'EMPTY_CART' });
+  }
+
   const featuredApparel = apparel.filter(item => item.featured);
   const apparelFilter = APPAREL_TYPES.filter(productType => featuredApparel.find(item => item.productType === productType));
   const featuredMusic = albums.filter(item => item.featured);
   const musicFilter = MUSIC_TYPES.filter(productType => featuredMusic.find(item => item.productType === productType));
-
-  const cartValue = cartTotal(state);
-  const orderTotal = cartValue + shippingMethod.cost;
 
   return (
     <ScreenIsBigContextProvider>
@@ -90,26 +114,48 @@ const App = () => {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/checkout' element={
-              <CheckoutPage cart={state} setCheckingOut={setCheckingOut} shippingCost={shippingMethod.cost}/>}
-            >
+              <CheckoutPage 
+                cart={state} 
+                setCheckingOut={setCheckingOut} 
+                shippingCost={shippingMethod.cost}
+                checkoutPhase={checkoutPhase}
+              />
+            }>
               <Route path='info' element={
-                <ShippingAddressForm 
+                <BillingAddressForm 
                   email={email}
                   setEmail={setEmail}
                   phone={phone}
                   setPhone={setPhone}
-                  mailingAddress={mailingAddress}
-                  setMailingAddress={setMailingAddress}
+                  billingAddress={billingAddress}
+                  setBillingAddress={setBillingAddress}
+                  setCheckoutPhase={setCheckoutPhase}
                 />
               } />
               <Route path='shipping' element={
-                <ShippingMethodForm shippingMethod={shippingMethod} setShippingMethod={setShippingMethod} />
+                <ShippingForm 
+                  shippingMethod={shippingMethod} 
+                  setShippingMethod={setShippingMethod} 
+                  shippingAddress={shippingAddress}
+                  setShippingAddress={setShippingAddress}
+                  billingAddress={billingAddress}
+                  setCheckoutPhase={setCheckoutPhase}
+                />
               } />
               <Route path='payment' element={
-                <PaymentFormWrapper cart={state}/>
+                <PaymentFormWrapper 
+                  setCheckoutPhase={setCheckoutPhase} 
+                  setConfirmedOrder={setConfirmedOrder}
+                  order={order}
+                  resetCustomerData={resetCustomerData}
+                />
               } />
             </Route>
-            <Route path='/order-success' element={<div>ORDER COMPLETE!</div>} />
+            <Route 
+              path='/order-success' 
+              element={
+                <OrderConfirmationPage order={confirmedOrder} setConfirmedOrder={setConfirmedOrder} />} 
+            />
             <Route path='/cart' element={
               <CartPage cart={state} dispatch={dispatch} setViewingCartPage={setViewingCartPage}/>
             } />

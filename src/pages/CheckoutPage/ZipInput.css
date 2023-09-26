@@ -1,9 +1,0 @@
-.zip-input {
-    border: 1px solid var(--black);
-    padding: .75rem;
-    width: 100%;
-}
-
-.zip-input-error {
-    border: 1px solid red;
-}

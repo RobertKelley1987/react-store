@@ -57,28 +57,28 @@ const SiteFooter = () => {
     return (
         <footer className="site-footer">
             <div className="site-footer-wrapper">
-                <div className="site-footer-logo">IB</div>
+                <Link to="/" className="site-footer-logo">IB</Link>
 
                 <ul className="site-footer-socials">
                     <li>
-                        <Link to="https://www.facebook.com" className="site-footer-social-link">
+                        <a href="https://www.facebook.com" target="_blank" rel="noreferrer noopener" className="site-footer-social-link">
                             <Facebook className="site-footer-svg" />
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link to="https://www.instagram.com" className="site-footer-social-link">
+                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener" className="site-footer-social-link">
                             <Instagram className="site-footer-svg" />
-                        </Link>   
+                        </a>   
                     </li>
                     <li>
-                        <Link to="https://www.twitter.com" className="site-footer-social-link">
+                        <a href="https://www.twitter.com" target="_blank" rel="noreferrer noopener" className="site-footer-social-link">
                             <Twitter className="site-footer-svg" />
-                        </Link>   
+                        </a>   
                     </li>
                     <li>
-                        <Link to="https://www.youtube.com" className="site-footer-social-link">
+                        <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener" className="site-footer-social-link">
                             <Youtube className="site-footer-svg" />
-                        </Link>   
+                        </a>   
                     </li>
                 </ul>
 
@@ -87,6 +87,7 @@ const SiteFooter = () => {
                         <div 
                             onClick={() => setInfoVisible(prev => !prev)} 
                             className="site-footer-heading-wrapper"
+                            tabIndex={screenIsBig ? undefined : 0}
                         >
                             <h3 className="site-footer-heading">Information</h3>
                             {!screenIsBig && <MenuChevron flipped={infoVisible}/>}
@@ -98,6 +99,7 @@ const SiteFooter = () => {
                         <div 
                             onClick={() => setShippingVisible(prev => !prev)} 
                             className="site-footer-heading-wrapper"
+                            tabIndex={screenIsBig ? undefined : 0}
                         >
                             <h3 className="site-footer-heading">Free Shipping</h3>
                             {!screenIsBig && <MenuChevron flipped={shippingVisible}/>}
@@ -107,8 +109,9 @@ const SiteFooter = () => {
 
                     <div>
                         <div 
-                            className="site-footer-heading-wrapper"
                             onClick={() => setContactVisible(prev => !prev)}
+                            className="site-footer-heading-wrapper"
+                            tabIndex={screenIsBig ? undefined : 0}
                         >
                             <h3 className="site-footer-heading">Customer Support</h3>
                             {!screenIsBig && <MenuChevron flipped={contactVisible}/>}

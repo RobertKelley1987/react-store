@@ -62,3 +62,13 @@ export const isANumber = new RegExp(/[0-9]/);
 
 // Format a number to two decimal places for display
 export const formatMoney = (num: number) => (Math.round(num * 100) / 100).toFixed(2);
+
+// Returns true if first letter in band name is between min and max letters provided.
+// Example: isBetween('Aerosmith', 'a', 'f') returns true.
+export const nameIsBetween = (name: string, min: string, max: string) => {
+    // If band name starts with 'The', ex: 'The Body', use first letter of next word 
+    // for comparison
+    const indexOfFirstLetter = name.indexOf('The') === 0 ? 4 : 0;
+    const firstLetter = name[indexOfFirstLetter].toLowerCase();
+    return firstLetter >= min.toLowerCase() && firstLetter <= max.toLowerCase();
+}

@@ -15,7 +15,7 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
     padding: 2rem;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
     width: 1000px;
 }
 
@@ -25,7 +25,7 @@
     font-size: 6rem;
     font-style: italic;
     grid-area: logo;
-    line-height: .9;
+    line-height: .8;
 }
 
 .site-footer-socials {
@@ -53,7 +53,7 @@
 }
 
 .site-footer-heading {
-    font-size: var(--medium-font);
+    font-size: var(--small-font);
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -64,8 +64,17 @@
     justify-content: space-between;
 }
 
-.site-footer-heading-wrapper:hover {
+.site-footer-heading-wrapper:hover,
+.site-footer-heading-wrapper:focus-visible {
+    color: var(--accent);
+}
+
+.site-footer-heading-wrapper:hover{
     cursor: pointer;
+}
+
+.site-footer-heading-wrapper:focus-visible {
+    outline: none;
 }
 
 .site-footer-info-links,
@@ -77,6 +86,17 @@
 .site-footer-info-links {
     display: grid;
     row-gap: .5rem;
+}
+
+.site-footer-info-links a:hover,
+.site-footer-contact a:hover,
+.site-footer-social-link:hover,
+.site-footer-logo:hover {
+    color: var(--accent);
+}
+
+.site-footer-contact a {
+    text-decoration: underline;
 }
 
 @media (min-width: 800px) {
@@ -103,6 +123,7 @@
     }
 
     .site-footer-heading-wrapper:hover {
+        color: var(--black);
         cursor: unset;
     }
 

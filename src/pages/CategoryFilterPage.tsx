@@ -1,5 +1,5 @@
 import CollectionPage from './CollectionPage';
-import ListFilter from './ListFilter';
+import ListFilter from '../components/ListFilter';
 import { Product, Category } from '../types';
 
 type CategoryFilterPageProps<T> = {

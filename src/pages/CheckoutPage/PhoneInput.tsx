@@ -1,15 +1,15 @@
 import { isANumber } from '../../utils';
 import { formatPhoneNum } from '../../utils/phoneNumbers';
 import { MailingAddressInput } from '../../types';
+import './Form.css';
 import './PhoneInput.css';
 
 type PhoneInputProps = {
-    placeholder: string,
     phone: MailingAddressInput<string>,
     setPhone: React.Dispatch<React.SetStateAction<MailingAddressInput<string>>>,
 }
 
-const PhoneInput = ({ placeholder, phone, setPhone }: PhoneInputProps) => {
+const PhoneInput = ({ phone, setPhone }: PhoneInputProps) => {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const formattedPhoneNumber = formatPhoneNum(e.target.value, phone.value);
         setPhone({ value: formattedPhoneNumber, error: '' });
@@ -26,10 +26,11 @@ const PhoneInput = ({ placeholder, phone, setPhone }: PhoneInputProps) => {
     }
 
     return <input 
-                className={phone.error ? "phone-input phone-input-error" : "phone-input"} 
+                id="phone"
+                className={phone.error ? "form-input form-input-error" : "form-input"} 
                 value={phone.value} 
                 onChange={handleChange} 
-                placeholder={placeholder} 
+                placeholder="(555) 555-5555" 
                 type="tel"
                 maxLength={14}
                 onKeyDown={handleKeyDown}

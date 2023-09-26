@@ -1,7 +1,7 @@
 .cart-grid {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .cart-grid-small {
@@ -18,7 +18,7 @@
     font-family: var(--sans-serif);
     font-weight: 500;
     gap: 1rem;
-    padding: 0 0 1rem 0;
+    padding: 0;
 }
 
 .cart-items {
@@ -45,4 +45,18 @@
 .cart-empty-message-small {
     margin: 1rem;
     white-space: nowrap;
+}
+
+@media (min-width: 800px) {
+    .cart-grid {
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .cart-grid-small {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        padding: 0 0 1rem 0;
+    }
 }

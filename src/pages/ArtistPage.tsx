@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { data } from '../data';
 import { ALL_ARTISTS } from '../constants';
@@ -17,6 +18,7 @@ type ArtistPageProps = {
 }
 
 function ArtistPage({ selectedCategories, setSelectedCategories }: ArtistPageProps) {
+    const img = useRef<HTMLImageElement>(null);
     const { artistName = '' } = useParams();
 
     // Filter all store data by band name from name in request parameter
@@ -34,15 +36,18 @@ function ArtistPage({ selectedCategories, setSelectedCategories }: ArtistPagePro
                     selectedCategories={selectedCategories}
                     setSelectedCategories={setSelectedCategories}
                     banner={
-                        <img 
-                            className="artist-page-banner" 
-                            src={`/imgs/banners/${httpFormat(artistName)}.png`} 
-                            alt={`${artistName} logo`}
-                        />
+                        <div className="artist-page-banner-wrapper">
+                            <img 
+                                ref={img}
+                                className={"artist-page-banner"} 
+                                src={`/imgs/banners/${httpFormat(artistName)}.png`} 
+                                alt={`${artistName} logo`}
+                            />
+                        </div>
                     }
                 />
     } else {
-        return <p>Error: Artist store not found</p>
+        return <p className="artist-page-error-message">Error: Artist store not found</p>
     } 
 }
 

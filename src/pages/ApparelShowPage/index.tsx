@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { apparel } from '../../data/apparel';
 import ShowPage from "../ShowPage";
 import Sizes from './Sizes';
@@ -13,9 +14,10 @@ type ApparelShowPageProps = {
 const ApparelShowPage = ({ dispatch, setCartIsVisible }: ApparelShowPageProps) => {
     const [product, setProduct] = useState<Apparel | null>(null);
     const [selectedSize, setSelectedSize] = useState<Size>('Small');
+    const location = useLocation();
 
     const addToCart = (product: Apparel, qty: number) => {
-        const newItem = { product, qty, size: selectedSize }
+        const newItem = { product, qty, size: selectedSize, link: location.pathname }
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 

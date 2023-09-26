@@ -1,19 +1,18 @@
-import Hamburger from './SVGs/Hamburger';
-import X from './SVGs/X';
 import './MenuButton.css'
 
 type MenuSVGProps = {
+    menuButton: React.RefObject<HTMLButtonElement>
     menuOpen: boolean,
     setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const MenuButton = ({ menuOpen, setMenuOpen }: MenuSVGProps) => {
+const MenuButton = ({ menuButton, menuOpen, setMenuOpen }: MenuSVGProps) => {
+    const closeIcon = <span className="material-symbols-outlined menu-button-icon">close</span>;
+    const menuIcon = <span className="material-symbols-outlined menu-button-icon">menu</span>;
+
     return (
-        <button onClick={() => {
-            console.log('click: ' + menuOpen)
-            setMenuOpen(true)
-        }} className="menu-button">
-            {menuOpen ? <X className="site-header-svg"/> : <Hamburger className="site-header-svg"/>}
+        <button ref={menuButton} onClick={() => setMenuOpen(prev => !prev)} className="menu-button">
+            {menuOpen ? closeIcon : menuIcon}
         </button>
     );
 }

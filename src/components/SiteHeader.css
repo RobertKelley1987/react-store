@@ -16,10 +16,9 @@
     text-transform: uppercase;
 }
 
-.site-header-svg {
-    color: var(--black);
-    height: 30px;
-    width: 30px;
+.site-header-logo:hover,
+.site-header-logo:focus-visible {
+    color: var(--accent);
 }
 
 .site-header-main {
@@ -42,9 +41,14 @@
     padding: 0 1rem 0 .5rem;
 }
 
-.site-header-cart-link:hover {
-    background-color: var(--black);
-    color: white;
+.site-header-cart-link:hover,
+.site-header-cart-link:focus-visible {
+    background-color: var(--accent);
+    color: var(--black);
+}
+
+.site-header-cart-qty {
+    font-size: var(--small-font);
 }
 
 .site-header-cart-wrapper {
