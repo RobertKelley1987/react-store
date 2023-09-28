@@ -44,51 +44,55 @@ const HomePage = () => {
     const newestMusic = music.filter(album => album.productType === 'LP').sort(newToOld);
     const newestApparel = [...apparel].sort(newToOld);
 
-    return (
-        <div className="home-page">
-            <div className="home-page-banner" style={{ backgroundImage: "url('imgs/chat-pile_live.jpg')" }}>
-                <div className="home-page-banner-grid">
-                    <img 
-                        alt="Chat Pile logo" 
-                        src='/imgs/chat-pile-logo.webp' 
-                        className="home-page-banner-img"
-                    />
-                    <div className="home-page-banner-links">
-                        <Link className="button" to="/artists/chat-pile">Official Store</Link>
-                        <Link 
-                            className="button new-record-button" 
-                            to="/artists/chat-pile/music/chat-pile-gods-country-lp"
-                        >
-                            New Record
-                        </Link>
+    const renderHomePage = () => {
+        return (
+            <div className="home-page">
+                <div className="home-page-banner" style={{ backgroundImage: "url('imgs/chat-pile_live.jpg')" }}>
+                    <div className="home-page-banner-grid">
+                        <img 
+                            alt="Chat Pile logo" 
+                            src='/imgs/chat-pile-logo.webp' 
+                            className="home-page-banner-img"
+                        />
+                        <div className="home-page-banner-links">
+                            <Link className="button" to="/artists/chat-pile">Official Store</Link>
+                            <Link 
+                                className="button new-record-button" 
+                                to="/artists/chat-pile/music/chat-pile-gods-country-lp"
+                            >
+                                New Record
+                            </Link>
+                        </div>
                     </div>
                 </div>
+    
+                <main className="home-page-grid">
+                    <HomePageSection 
+                        heading="Featured Apparel" 
+                        items={featuredApparel.slice(0, MAX_LIST_SIZE)}
+                        path='/apparel/featured'
+                    />
+                    <HomePageSection 
+                        heading="New Apparel" 
+                        items={newestApparel.slice(0, MAX_LIST_SIZE)}
+                        path='/apparel/new'
+                    />
+                    <HomePageSection 
+                        heading="Featured Music" 
+                        items={featuredMusic.slice(0, MAX_LIST_SIZE)}
+                        path='/music/featured'
+                    />
+                    <HomePageSection 
+                        heading="New Music" 
+                        items={newestMusic.slice(0, MAX_LIST_SIZE)}
+                        path='/music/new'
+                    />
+                </main>
             </div>
+        );
+    }
 
-            <main className="home-page-grid">
-                <HomePageSection 
-                    heading="Featured Apparel" 
-                    items={featuredApparel.slice(0, MAX_LIST_SIZE)}
-                    path='/apparel/featured'
-                />
-                <HomePageSection 
-                    heading="New Apparel" 
-                    items={newestApparel.slice(0, MAX_LIST_SIZE)}
-                    path='/apparel/new'
-                />
-                <HomePageSection 
-                    heading="Featured Music" 
-                    items={featuredMusic.slice(0, MAX_LIST_SIZE)}
-                    path='/music/featured'
-                />
-                <HomePageSection 
-                    heading="New Music" 
-                    items={newestMusic.slice(0, MAX_LIST_SIZE)}
-                    path='/music/new'
-                />
-            </main>
-        </div>
-    );
+    return errorMessage ? <p className="plain-text">{errorMessage}</p> : renderHomePage();
 }
 
 export default HomePage;
