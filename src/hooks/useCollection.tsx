@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import { Category, Item, ProductFilterOption } from '../types';
+import products from '../services/products';
 import { convertToFilterOptions } from '../utils';
+import { Category, Item, ProductFilterOption } from '../types';
 
 function useCollection<T extends Item<K>, K>(collections: string[], category: Category) {
     const { collectionName = '' } = useParams();
@@ -27,7 +27,7 @@ function useCollection<T extends Item<K>, K>(collections: string[], category: Ca
         }
 
         const getItems = async () => {
-            const { data: { collection, collectionTypes, error } } = await axios.get(`/${category}/${collectionName}`);
+            const { data: { collection, collectionTypes, error } } = await products.findCollection(category, collectionName);
             if(error) {
                 setErrorMessage(error);
             } else {

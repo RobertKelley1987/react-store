@@ -25,7 +25,7 @@ const PaymentFormWrapper = (props: PaymentFormWrapperProps) => {
         setCheckoutPhase('payment');
 
         return () => setCheckoutPhase('none');
-    }, []);
+    }, [setCheckoutPhase]);
 
     const options = { clientSecret: clientSecret, appearance: stripeStyles, fonts: stripeFonts }
 

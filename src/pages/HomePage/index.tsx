@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import products from '../../services/products';
 import { newToOld } from '../../utils/sorting';
 import HomePageSection from './HomePageSection';
 import { Apparel, Album } from '../../types';
@@ -14,26 +14,19 @@ const HomePage = () => {
     const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
-        const getMusic = async () => {
-            const { data: { collection, error } } = await axios.get('/music');
-            if(error) {
-                setErrorMessage('Server error: Please try again later.')
-            } else {
-                setMusic(collection);
-            }
+        const getAllMusic = async () => {
+            const { data: { collection, error } } = await products.findByCategory('Music');
+            error ? setErrorMessage('Server error: Please try again later.') : setMusic(collection);
         }
 
-        const getApparel = async () => {
-            const { data: { collection, error } } = await axios.get('/apparel');
-            if(error) {
-                setErrorMessage('Server error: Please try again later.')
-            } else {
-                setApparel(collection);
-            }
+        const getAllApparel = async () => {
+            const { data: { collection, error } } = await products.findByCategory('Apparel');
+            error ? setErrorMessage('Server error: Please try again later.') : setApparel(collection);
         }
 
-        getMusic();
-        getApparel();;
+        setErrorMessage('');
+        getAllMusic();
+        getAllApparel();;
     }, []);
 
     // Get featured apparel and music
