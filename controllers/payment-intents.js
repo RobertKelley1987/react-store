@@ -6,8 +6,9 @@ const cartValInCents = cart => {
     return Math.round(total * 100);
 }
 
+// Create a payment intent with stripe api.
+// Returns client secret string for confirmation on client.
 module.exports.create = async (req, res) => {
-    console.log('intent');
     const { cart } = req.body;
 
     const intent = await stripe.paymentIntents.create({

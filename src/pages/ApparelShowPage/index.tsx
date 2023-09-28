@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import useItem from '../../hooks/useItem';
+import { configBackLinkText } from '../../utils';
 import ShowPage from '../ShowPage';
 import Sizes from './Sizes';
 import ClothingData from '../../components/ClothingData';
@@ -14,6 +15,7 @@ type ApparelShowPageProps = {
 const ApparelShowPage = ({ dispatch, setCartIsVisible }: ApparelShowPageProps) => {
     const { item, errorMessage, isLoading } = useItem<Apparel>('Apparel');
     const [selectedSize, setSelectedSize] = useState<Size>('Small');
+    const { collectionName } = useParams();
     const location = useLocation();
 
     const addToCart = (product: Apparel, qty: number) => {
@@ -31,6 +33,7 @@ const ApparelShowPage = ({ dispatch, setCartIsVisible }: ApparelShowPageProps) =
                 addToCart={addToCart}
                 sizes={<Sizes selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>}
                 product={item}
+                backLinkText={configBackLinkText('Apparel', collectionName)}
                 setCartIsVisible={setCartIsVisible}
                 descText={<ClothingData item={item} />}
             />

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'; 
 import { MAX_ORDER_QTY } from '../constants';
-import { formatMoney } from '../utils';
+import { formatMoney } from '../utils/formatting';
 import Qty from './Qty';
 import { CartItem, CartAction } from '../types';
 import './CartProduct.css';

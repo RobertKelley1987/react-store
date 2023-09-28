@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import CartProduct from './CartProduct';
-import { formatMoney } from '../utils';
+import { formatMoney } from '../utils/formatting';
 import { cartTotal } from '../utils/cart';
 import { CartItem, CartAction } from '../types';
 import './Cart.css';

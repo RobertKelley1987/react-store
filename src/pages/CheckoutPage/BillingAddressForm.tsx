@@ -4,7 +4,6 @@ import PhoneInput from './PhoneInput';
 import AddressForm from './AddressForm';
 import { validateAddress } from '../../utils/addresses';
 import { CheckoutPhase, MailingAddressForm, MailingAddressInput } from "../../types"; 
-import './Form.css';
 
 type BillingAddressFormProps = {
     email: MailingAddressInput<string>,

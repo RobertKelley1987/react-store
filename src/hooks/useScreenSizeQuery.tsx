@@ -5,23 +5,23 @@ import { useState, useEffect } from 'react';
 // method to update state.
  
 // Paramater "size" is the screen size in px that the window will listen for.
-const useScreenIsBig = (size: number) => {
-    const [screenIsBig, setScreenIsBig] = useState(true);
+const useScreenSizeQuery = (size: number) => {
+    const [screenIsBig, setScreenSizeQuery] = useState(true);
 
     useEffect(() => {
       const mediaQuery = window.matchMedia(`(min-width: ${size}px)`);
-      const updateState = () => setScreenIsBig(mediaQuery.matches);
+      const updateState = () => setScreenSizeQuery(mediaQuery.matches);
 
       // Set initial state
-      setScreenIsBig(mediaQuery.matches);
+      setScreenSizeQuery(mediaQuery.matches);
 
       // Update state when query status changes
       mediaQuery.addEventListener('change', updateState);
   
       return () => mediaQuery.removeEventListener('change', updateState);
-    }, []);
+    }, [size]);
 
-      return { screenIsBig, setScreenIsBig };
+      return { screenIsBig, setScreenSizeQuery };
 }
 
-export default useScreenIsBig;
+export default useScreenSizeQuery;

@@ -1,6 +1,6 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
-import useScreenIsBig from '../hooks/useScreenIsBig';
+import useScreenSizeQuery from '../hooks/useScreenSizeQuery';
 import MenuChevron from '../components/MenuChevron';
 import { ProductFilterOption } from '../types';
 import './ListFilter.css';
@@ -14,14 +14,10 @@ function ListFilter<T extends string> ({ productTypes, setProductTypes }: ListFi
     const [isOpen, setIsOpen] = useState(true);
     const location = useLocation();
     const navigate = useNavigate();
-    const { screenIsBig } = useScreenIsBig(800);
+    const { screenIsBig } = useScreenSizeQuery(800);
 
     useEffect(() => {
-        if(screenIsBig) {
-            setIsOpen(true);
-        } else {
-            setIsOpen(false);
-        }
+        setIsOpen(screenIsBig);
     }, [screenIsBig])
 
     const handleChange = (clickedType: T) => {

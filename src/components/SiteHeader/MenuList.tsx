@@ -1,7 +1,7 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useScreenSizeQuery from '../../hooks/useScreenSizeQuery';
 import './MenuList.css';
-import useScreenIsBig from '../hooks/useScreenIsBig';
 
 type MenuListProps = {
     category: string,
@@ -12,7 +12,7 @@ type MenuListProps = {
 
 const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
     const [sectionOpen, setSectionOpen] = useState(false);
-    const { screenIsBig } = useScreenIsBig(800);
+    const { screenIsBig } = useScreenSizeQuery(800);
     pathSlug = pathSlug || category.toLowerCase();
 
     const renderList = () => {

@@ -9,40 +9,7 @@ export type Artist = 'Agriculture' | 'Bell Witch' | 'Blood Incantation' | 'The B
 'Full of Hell' | 'Knoll' | 'Nails' |  'Oathbreaker' | 'Portrayal of Guilt' | 'Primitive Man' | 
 'Ragana' | 'Soft Kill' | 'Spectral Wound' | 'Touche Amore' | 'Undeath'
 
-export type ArtistSlug = 'agriculture' | 'bell-witch' | 'blood-incantation' | 'the-body' | 'chat-pile' | 
-'cloud-rat' | 'deafheaven' | 'devil-master' | 'divide-and-dissolve' | 'emma-ruth-rundle' | 
-'full-of-hell' | 'knoll' | 'nails' |  'oathbreaker' | 'portrayal-of-guilt' | 'primitive-man' | 
-'ragana' | 'soft-kill' | 'spectral-wound' | 'touche-amore' | 'undeath'
-
-export type ArtistNameLib = {
-    'agriculture': Artist, 
-    'bell-witch': Artist, 
-    'blood-incantation': Artist, 
-    'the-body': Artist, 
-    'chat-pile': Artist, 
-    'cloud-rat': Artist, 
-    'deafheaven': Artist, 
-    'devil-master': Artist,  
-    'divide-and-dissolve': Artist, 
-    'emma-ruth-rundle': Artist, 
-    'full-of-hell': Artist, 
-    'knoll': Artist, 
-    'nails': Artist, 
-    'oathbreaker': Artist, 
-    'portrayal-of-guilt': Artist, 
-    'primitive-man': Artist, 
-    'ragana': Artist, 
-    'soft-kill': Artist, 
-    'spectral-wound': Artist, 
-    'touche-amore': Artist, 
-    'undeath': Artist, 
-}
-
-export type ArtistName = keyof ArtistNameLib;
-
 export type Category = 'Apparel' | 'Music' | 'Accessories';
-
-export type Collection = Category | Artist;
 
 export type Item<T> = {
     id: string,
@@ -92,8 +59,8 @@ export type CartAction = {
     payload?: CartItem
 }
 
-export type SortOption = 'Date - Old to New' | 'Date - New to Old' | 'Alphabetically - A to Z' | 'Alphabetically - Z to A'
-| 'Price - High to Low' | 'Price - Low to High';
+export type SortOption = 'Date - Old to New' | 'Date - New to Old' | 'Alphabetically - A to Z' | 
+'Alphabetically - Z to A' | 'Price - High to Low' | 'Price - Low to High';
 
 export type State = '' |
 'Alabama' | 'Alaska' | 'Arizona' |
@@ -166,4 +133,9 @@ export type PendingOrder = Omit<Order, 'id'>;
 export type ProductFilterOption<T> = {
     name: T,
     selected: boolean
+}
+
+export type Collection<T> = {
+    name: string,
+    items: T[]
 }

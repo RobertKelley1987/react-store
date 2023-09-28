@@ -1,13 +1,13 @@
 const fs = require('fs').promises;
 
-const ARTISTS = [
+const ALL_ARTISTS = [
     'agriculture', 'bell-witch', 'blood-incantation', 'the-body', 'chat-pile', 'cloud-rat', 
     'deafheaven', 'devil-master', 'divide-and-dissolve', 'emma-ruth-rundle', 'full-of-hell', 
     'knoll', 'nails', 'oathbreaker', 'portrayal-of-guilt', 'primitive-man', 'ragana', 'soft-kill', 
     'spectral-wound', 'touche-amore', 'undeath'
 ];
 
-const ARTIST_NAME_LIB = {
+const ARTIST_LOOKUP = {
     'agriculture': 'Agriculture',
     'bell-witch': 'Bell Witch',
     'blood-incantation': 'Blood Incantation',
@@ -31,14 +31,17 @@ const ARTIST_NAME_LIB = {
     'undeath': 'Undeath'
 }
 
+// Find all products with a specified artist's name.
+// Returns the collection and unique categories needed for filtering.
+// Ex: If artist sells apparel and music, user can filter by either.
 module.exports.findByName = async (req, res) => {
     const { name } = req.params;
 
-    if(ARTISTS.includes(name)) {
+    if(ALL_ARTISTS.includes(name)) {
         // Filter by artist name
         const productsJson = await fs.readFile('./data/products.json');
         const products = JSON.parse(productsJson);
-        const artist = ARTIST_NAME_LIB[name];
+        const artist = ARTIST_LOOKUP[name];
         const artistProducts = products.filter(product => product.artist === artist);
 
         // Get unique types in list

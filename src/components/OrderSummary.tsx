@@ -1,5 +1,5 @@
 import CheckoutItem from './CheckoutItem';
-import { formatMoney } from '../utils';
+import { formatMoney } from '../utils/formatting';
 import { cartTotal } from '../utils/cart';
 import { CartItem } from '../types';
 import './OrderSummary.css';

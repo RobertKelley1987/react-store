@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 const { v4: uuid } = require('uuid');
 
+// Create a new order and save to db for future processing and shipping
 module.exports.create = async (req, res) => {
     try {
         // Create new order

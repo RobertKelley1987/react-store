@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import StateSelector from './StateSelector';
 import ZipInput from './ZipInput';
 import { MailingAddressForm } from '../../types';
-import './Form.css';
 import './AddressForm.css';
 
 type AddressFormProps = {

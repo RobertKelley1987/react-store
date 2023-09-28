@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useScreenIsBig from '../hooks/useScreenIsBig';
+import useScreenSizeQuery from '../hooks/useScreenSizeQuery';
 import MenuChevron from './MenuChevron';
 import Facebook from '../components/SVGs/Facebook';
 import Instagram from '../components/SVGs/Instagram';
@@ -12,7 +12,7 @@ const SiteFooter = () => {
     const [infoVisible, setInfoVisible] = useState(false);
     const [shippingVisible, setShippingVisible] = useState(false);
     const [contactVisible, setContactVisible] = useState(false);
-    const { screenIsBig } = useScreenIsBig(800);
+    const { screenIsBig } = useScreenSizeQuery(800);
 
     useEffect(() => {
         if(screenIsBig) {

@@ -1,6 +1,5 @@
 import { US_STATES } from "../../constants";
 import { MailingAddressInput, State } from "../../types";
-import './Form.css';
 import './StateSelector.css';
 
 type StateSelectorProps = {

@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import useScreenIsBig from '../hooks/useScreenIsBig';
-import { assertIsNode } from '../utils';
-import Cart from './Cart';
+import useScreenIsBig from '../../hooks/useScreenSizeQuery';
+import { assertIsNode } from '../../utils/assertions';
+import Cart from '../Cart';
 import MenuButton from './MenuButton';
 import Menu from './Menu';
-import { CartItem, CartAction } from '../types';
+import { CartItem, CartAction } from '../../types';
 import './SiteHeader.css';
 
 type SiteHeaderProps = {

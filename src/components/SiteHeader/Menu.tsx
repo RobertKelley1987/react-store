@@ -1,9 +1,9 @@
-import { useEffect, useContext } from 'react';
-import { classNames, nameIsBetween } from '../utils';
-import { ALL_ARTISTS, APPAREL_PAGES, MUSIC_PAGES, ACCESSORY_PAGES } from '../constants';
+import { useEffect } from 'react';
+import useScreenSizeQuery from '../../hooks/useScreenSizeQuery';
+import { classNames, nameIsBetween } from '../../utils';
+import { ALL_ARTISTS, APPAREL_PAGES, MUSIC_PAGES, ACCESSORY_PAGES } from '../../constants';
 import DropdownList from './DropdownList';
 import './Menu.css';
-import useScreenIsBig from '../hooks/useScreenIsBig';
 
 const A_TO_C = ALL_ARTISTS.filter(name => nameIsBetween(name, 'a', 'c'));
 const D_TO_H = ALL_ARTISTS.filter(name => nameIsBetween(name, 'd', 'h'));
@@ -18,8 +18,8 @@ const ARTISTS = [
 ];
 
 const CATEGORIES = [
-    { name: 'Apparel', pages: APPAREL_PAGES}, 
-    { name: 'Music', pages: MUSIC_PAGES },
+    { name: 'Apparel', pages: APPAREL_PAGES.filter(page => page !== 'Featured')}, 
+    { name: 'Music', pages: MUSIC_PAGES.filter(page => page !== 'Featured') },
     { name: 'Accessories', pages: ACCESSORY_PAGES}
 ];
 
@@ -43,7 +43,7 @@ const Menu = (props: MenuProps) => {
         artistsOpen,
         setArtistsOpen 
     } = props;
-    const { screenIsBig } = useScreenIsBig(800);
+    const { screenIsBig } = useScreenSizeQuery(800);
  
     useEffect(() => {
         setMenuOpen(false);

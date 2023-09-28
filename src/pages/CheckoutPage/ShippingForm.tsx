@@ -5,7 +5,6 @@ import ShippingMethodForm from './ShippingMethodForm';
 import { validateAddress } from '../../utils/addresses';
 import { DEFAULT_ADDRESS_FORM } from '../../constants';
 import { ShippingMethod, MailingAddressForm, CheckoutPhase } from '../../types';
-import './Form.css';
 
 type ShippingFormProps = {
     shippingMethod: ShippingMethod,

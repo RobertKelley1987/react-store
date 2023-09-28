@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Grid from '../../components/Grid';
-import ItemList from '../../components/ItemList';
+import Grid from '../Grid';
+import ItemList from '../ItemList';
 import PageNumbers from './PageNumbers';
 import { Item } from '../../types';
 

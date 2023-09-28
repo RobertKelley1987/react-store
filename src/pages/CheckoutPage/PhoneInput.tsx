@@ -1,7 +1,6 @@
 import { isANumber } from '../../utils';
 import { formatPhoneNum } from '../../utils/phoneNumbers';
 import { MailingAddressInput } from '../../types';
-import './Form.css';
 import './PhoneInput.css';
 
 type PhoneInputProps = {

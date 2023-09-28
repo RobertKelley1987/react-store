@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import useScreenIsBig from '../../hooks/useScreenIsBig';
-import { formatMoney } from '../../utils';
-import { cartTotal } from "../../utils/cart";
+import useScreenSizeQuery from '../../hooks/useScreenSizeQuery';
+import { formatMoney } from '../../utils/formatting';
+import { cartTotal } from '../../utils/cart';
 import MenuChevron from '../../components/MenuChevron';
 import OrderSummary from '../../components/OrderSummary';
-import { CartItem } from "../../types";
+import { CartItem } from '../../types';
 import './OrderSummaryDropdown.css';
 
 type OrderSummaryDropdownProps = {
@@ -14,7 +14,7 @@ type OrderSummaryDropdownProps = {
 
 const OrderSummaryDropdown = ({ cart, shippingCost }: OrderSummaryDropdownProps) => {
     const [isOpen, setIsOpen] = useState(true);
-    const { screenIsBig } = useScreenIsBig(1000);
+    const { screenIsBig } = useScreenSizeQuery(1000);
     const cartValue = cartTotal(cart);
     const orderTotal = cartValue + shippingCost;
 

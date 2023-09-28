@@ -1,4 +1,4 @@
-import { formatMoney } from '../utils';
+import { formatMoney } from '../utils/formatting';
 import { CartItem } from '../types';
 import './CheckoutItem.css';
 

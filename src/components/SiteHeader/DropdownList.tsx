@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import MenuList from './MenuList';
-import MenuChevron from './MenuChevron';
-import { classNames } from '../utils';
+import MenuChevron from '../MenuChevron';
+import { classNames } from '../../utils';
 
 export type PageList = {
     name: string,

@@ -44,6 +44,7 @@ import {
   PendingOrder
 } from './types';
 import './App.css';
+import { httpFormat } from './utils/formatting';
 
 const App = () => {
   const [state, dispatch] = useReducer(cartReducer, []);
@@ -77,6 +78,10 @@ const App = () => {
     setShippingMethod(SHIPPING_METHODS[0]);
     dispatch({ type: 'EMPTY_CART' });
   }
+
+  const musicProductPages = MUSIC_PAGES.map(page => httpFormat(page));
+  const apparelProductPages = APPAREL_PAGES.map(page => httpFormat(page));
+  const accessoryProductPages = ACCESSORY_PAGES.map(page => httpFormat(page));
 
   return (
     <div className="app">
@@ -133,14 +138,22 @@ const App = () => {
             element={
               <OrderConfirmationPage order={confirmedOrder} setConfirmedOrder={setConfirmedOrder} />} 
           />
+          <Route 
+            path='/order-error' 
+            element={
+              <p className="plain-text">
+                There was an issue with your order. Please contact info@infinitebliss.com for assistance.
+              </p>
+            } 
+          />
           <Route path='/cart' element={
             <CartPage cart={state} dispatch={dispatch} setViewingCartPage={setViewingCartPage}/>
           } />
           <Route 
             path='/music/:collectionName' 
             element={<CollectionPage<Album, MusicProduct> 
-              productType='music' 
-              collections={[...MUSIC_PAGES, 'Featured']} 
+              category='Music' 
+              collections={[...musicProductPages, 'featured']} 
             />} 
           />
           <Route path='/music/:collectionName/products/:itemId' element={
@@ -150,8 +163,8 @@ const App = () => {
             path='/apparel/:collectionName' 
             element={
               <CollectionPage<Apparel, ApparelProduct> 
-                productType='apparel' 
-                collections={[...APPAREL_PAGES, 'Featured']} 
+                category='Apparel' 
+                collections={[...apparelProductPages, 'featured']} 
               />
             } 
           />
@@ -160,8 +173,8 @@ const App = () => {
           } />
           <Route path='/accessories/:collectionName' element={
             <CollectionPage<Accessory, AccessoryProduct> 
-              productType='accessories' 
-              collections={[...ACCESSORY_PAGES, 'Featured']}
+              category='Accessories' 
+              collections={accessoryProductPages}
             />
           } />
           <Route path='/accessories/:collectionName/products/:itemId' element={
@@ -184,6 +197,12 @@ const App = () => {
           <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
           <Route path='/payment' element={<PaymentPage />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route 
+            path='*' 
+            element={
+              <p className="plain-text">404 Error: A page with this address could not be found {':('}</p>
+            } 
+          />        
         </Routes>
       </div>
       {!checkingOut && <SiteFooter />}

@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios'; 
-import { ALL_ARTISTS, ARTIST_NAME_LIB } from '../constants';
-import { httpFormat, convertToFilterOptions, assertIsArtistName } from '../utils';
-import Collection from './Collection';
+import { ALL_ARTISTS, ARTIST_PAGE_LOOKUP } from '../../constants';
+import { convertToFilterOptions } from '../../utils';
+import { httpFormat } from '../../utils/formatting';
+import { assertIsArtist } from '../../utils/assertions';
+import Collection from '../../components/Collection';
 import ArtistBanner from './ArtistBanner';
-import ListFilter from '../components/ListFilter';
-import { ArtistName, Category, Product, ProductType, ProductFilterOption } from '../types';
+import ListFilter from '../../components/ListFilter';
+import BackLink from '../../components/BackLink';
+import { Category, Product, ProductType, ProductFilterOption } from '../../types';
 import './ArtistPage.css';
 
 const artistCollections = ALL_ARTISTS.map(artist => httpFormat(artist));
@@ -61,12 +64,14 @@ function ArtistPage() {
         } else if(errorMessage || !collectionName || !collection.length) {
             element = <p className="artist-page-error-message">{errorMessage}</p>;
         } else {
-            assertIsArtistName(collectionName);
+            const artistName = ARTIST_PAGE_LOOKUP[collectionName];
+            assertIsArtist(artistName);
             element = <Collection<Product, ProductType> 
                 items={selectedNames.length > 0 ? filteredCollection : collection} 
-                collection={ARTIST_NAME_LIB[collectionName]}
+                collection={artistName}
+                backLink={<BackLink text={artistName} />}
                 filter={categories.length > 1 ? filter : undefined} 
-                banner={<ArtistBanner collectionName={collectionName} />}
+                banner={<ArtistBanner artist={artistName} />}
             />
         }
 

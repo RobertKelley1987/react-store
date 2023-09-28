@@ -1,8 +1,9 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import useItem from '../hooks/useItem';
 import ShowPage from './ShowPage';
 import ClothingData from '../components/ClothingData';
 import { Accessory, CartAction, AccessoryProduct } from '../types';
+import { configBackLinkText } from '../utils';
 
 type AccessoryShowPageProps = {
     dispatch: React.Dispatch<CartAction>,
@@ -11,6 +12,7 @@ type AccessoryShowPageProps = {
 
 const AccessoryShowPage = ({ dispatch, setCartIsVisible }: AccessoryShowPageProps) => {
     const { item, errorMessage, isLoading } = useItem<Accessory>('Accessories');
+    const { collectionName } = useParams();
     const location = useLocation();
 
     const addToCart = (product: Accessory, qty: number) => {
@@ -31,6 +33,7 @@ const AccessoryShowPage = ({ dispatch, setCartIsVisible }: AccessoryShowPageProp
             return <ShowPage<Accessory, AccessoryProduct> 
                 product={item}
                 addToCart={addToCart}
+                backLinkText={configBackLinkText('Accessories', collectionName)}
                 setCartIsVisible={setCartIsVisible}
                 descText={descText}
             />

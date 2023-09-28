@@ -1,17 +1,38 @@
-import { MailingAddressForm, MailingAddressInput, State, ShippingMethod, ArtistNameLib } from "./types";
+import { 
+    MailingAddressForm, 
+    MailingAddressInput, 
+    State, 
+    ShippingMethod,
+    Artist, 
+} from "./types";
 
-export const APPAREL_PAGES = ['New', 'T-Shirts', 'Longsleeves', 'Hoodies'];
-export const MUSIC_PAGES = ['New', 'Vinyl', 'CDs', 'Tapes'];
-export const ACCESSORY_PAGES = ['New', 'Hats', 'Patches', 'Pins', 'Bags'];
-
-export const ALL_ARTISTS = [
+export const ALL_ARTISTS: string[] = [
     'Agriculture', 'Bell Witch', 'Blood Incantation', 'The Body', 'Chat Pile', 'Cloud Rat', 
     'Deafheaven', 'Devil Master', 'Divide and Dissolve', 'Emma Ruth Rundle', 'Full of Hell', 
     'Knoll', 'Nails', 'Oathbreaker', 'Portrayal of Guilt', 'Primitive Man', 'Ragana', 'Soft Kill', 
     'Spectral Wound', 'Touche Amore', 'Undeath'
 ];
 
-export const ARTIST_NAME_LIB: ArtistNameLib = {
+export const APPAREL_PAGES = ['New', 'Featured', 'T-Shirts', 'Longsleeves', 'Hoodies'];
+export const MUSIC_PAGES = ['New', 'Featured', 'Vinyl', 'CDs', 'Tapes'];
+export const ACCESSORY_PAGES = ['New', 'Hats', 'Patches', 'Pins', 'Bags'];
+
+export const CATEGORY_PAGE_LOOKUP: { [key: string]: string } = {
+    't-shirts': 'T-Shirts',
+    'longsleeves': 'Longsleeves',
+    'hoodies': 'Hoodies',
+    'bags': 'Bags',
+    'patches': 'Patches',
+    'hats': 'Hats',
+    'pins': 'Pins',
+    'vinyl': 'Vinyl',
+    'cds': 'CDs',
+    'tapes': 'Tapes',
+    'featured': 'Featured',
+    'new': 'New'
+}
+
+export const ARTIST_PAGE_LOOKUP: { [key: string]: Artist } = {
     'agriculture': 'Agriculture',
     'bell-witch': 'Bell Witch',
     'blood-incantation': 'Blood Incantation',
@@ -116,19 +137,4 @@ export const SHIPPING_METHODS: ShippingMethod[] = [
     { name: 'Standard', days: '5 - 7', cost: 9.99 },
     { name: 'Express', days: '1 - 2' ,cost: 19.99 }
 ];
-
-export const SLUG_LIB: { [key: string]: string } = {
-    't-shirts': 'T-Shirts',
-    'longsleeves': 'Longsleeves',
-    'hoodies': 'Hoodies',
-    'bags': 'Bags',
-    'patches': 'Patches',
-    'hats': 'Hats',
-    'pins': 'Pins',
-    'vinyl': 'Vinyl',
-    'cds': 'CDs',
-    'tapes': 'Tapes',
-    'featured': 'Featured',
-    'new': 'New'
-}
 

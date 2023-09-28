@@ -1,6 +1,8 @@
 const fs = require('fs').promises;
 
+// All possible accessory product types
 const PRODUCT_TYPES = ['hats', 'bags', 'pins', 'patches'];
+// The product types contained in each collection.
 const COLLECTIONS_LIB = {
     'hats': ['Beanie', 'Cap'],
     'pins': ['Enamel Pin'],
@@ -8,6 +10,7 @@ const COLLECTIONS_LIB = {
     'patches': ['Patch']
 }
 
+// Get all accessories
 module.exports.findAll = async (req, res) => {
     const accessoriesJson = await fs.readFile('./data/accessories.json');
     const accessories = JSON.parse(accessoriesJson);
@@ -17,6 +20,9 @@ module.exports.findAll = async (req, res) => {
     res.status(200).send({ collection: accessories, collectionTypes: [...uniqueAccessoryTypes] });
 }
 
+// Find a collection of accessories by its name.
+// Returns the collection and the any types needed for filtering.
+// Ex: 'Hats' collection has beanies and caps, and user can filter by those types.
 module.exports.findCollection = async (req, res) => {
     const { collectionName } = req.params;
 
@@ -31,6 +37,7 @@ module.exports.findCollection = async (req, res) => {
     }
 }
 
+// Find one accessory by its id.
 module.exports.findById = async (req, res) => {
     const { id } = req.params;
     const accessoriesJson = await fs.readFile('./data/accessories.json');

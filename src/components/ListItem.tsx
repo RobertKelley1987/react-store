@@ -1,22 +1,19 @@
 import { Link } from 'react-router-dom'
-import { httpFormat } from '../utils';
+import { httpFormat } from '../utils/formatting';
 import { ALL_ARTISTS, APPAREL_PAGES, MUSIC_PAGES, ACCESSORY_PAGES } from '../constants';
 import { Item } from '../types';
 import './ListItem.css';
 
-type ItemProps<T> = {
+// Page constants are also used for header menu, and intentionally include 'New' but not
+// 'Feautured' where I am storing this constant
+const nonArtistPgs = [...MUSIC_PAGES, ...APPAREL_PAGES, ...ACCESSORY_PAGES];
+
+type ListItemProps<T> = {
     item: T,
     srcPg?: string
 }
 
-// Page constants are also used for header menu, and intentionally do not include 'Featured' links
-const allMusicPgs = [...MUSIC_PAGES, 'Featured']
-const allApparelPgs = [...APPAREL_PAGES, 'Featured'];
-const allAccessoryPgs = [...ACCESSORY_PAGES, 'Featured'];
-const nonArtistPgs = [...allMusicPgs, ...allApparelPgs, ...allAccessoryPgs];
-const HOME_PAGE_SECTIONS = ['Featured Music', 'Featured Apparel', 'New Music', 'New Apparel'];
-
-function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProps<T>) {
+function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ListItemProps<T>) {
     const configItemPath = () => {
         const category = item.category.toLowerCase();
         const artist = httpFormat(item.artist);

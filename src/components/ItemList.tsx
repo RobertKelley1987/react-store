@@ -8,7 +8,6 @@ type ItemListProps<T> = {
 }
 
 function ItemList<T extends Item<K>, K extends string>({ items, srcPg }: ItemListProps<T>) {
-
     return (
         <Fragment>
             {items.map(item => <ListItem<T, K> key={item.id} item={item} srcPg={srcPg}/>)}

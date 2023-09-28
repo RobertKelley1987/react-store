@@ -1,21 +1,6 @@
-import { ITEMS_PER_PAGE, ARTIST_NAME_LIB } from '../constants';
-import { ProductFilterOption, ArtistName } from '../types';
-
-// Assertion to test if element clicked is a React node (stolen from stack overflow link below)
-// https://stackoverflow.com/questions/71193818/react-onclick-argument-of-type-eventtarget-is-not-assignable-to-parameter-of-t
-// Also see typescript docs: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html
-export function assertIsNode(target: EventTarget | null): asserts target is Node {
-    if(!target || !("nodeType" in target)) {
-        throw new Error("Element clicked is not a react node");
-    }
-}
-
-// Assertion to test if a string is an artist with products on this website
-export function assertIsArtistName(name: string): asserts name is ArtistName {
-    if(!name || !(name in ARTIST_NAME_LIB)) {
-        throw new Error("Name used in ArtistPage is not an artist.");
-    }
-}
+import { ITEMS_PER_PAGE, ARTIST_PAGE_LOOKUP, CATEGORY_PAGE_LOOKUP, ALL_ARTISTS } from '../constants';
+import { httpFormat } from './formatting';
+import { ProductFilterOption } from '../types';
 
 // Add conditional utility class names to existing list, 
 // ex: add "menu-hidden" to "menu" to get "menu menu-hidden"
@@ -44,32 +29,8 @@ export function paginate<T>(items: T[]): T[][] {
     return pages;
 }
 
-// Function to convert a string into an http-friendly format for string comparisons
-export const httpFormat = (text: string) => text.replaceAll(' ', '-').toLowerCase();
-
-// De-formats http slug. Ex: 'the-band-name' should return as 'The Band Name'
-export const decodeHttpSlug = (slug?: string) => {
-    if(!slug) return 
-
-    let result = '';
-
-    // Exceptions for 'CD' and 'T-Shirt', otherwise remove hyphens and capitalize
-    if(slug === 't-shirts') {
-        result ='T-Shirts';
-    } else if(slug === 'cd') {
-        result = 'CD';
-    } else {
-        result = slug.split('-').map(word => word[0].toUpperCase() + word.substring(1)).join(' ');
-    }
-
-    return  result;
-}
-
 // RegEx for digits
 export const isANumber = new RegExp(/[0-9]/);
-
-// Format a number to two decimal places for display
-export const formatMoney = (num: number) => (Math.round(num * 100) / 100).toFixed(2);
 
 // Returns true if first letter in band name is between min and max letters provided.
 // Example: isBetween('Aerosmith', 'a', 'f') returns true.
@@ -87,4 +48,24 @@ export function convertToFilterOptions<T>(collectionTypes: T[]): ProductFilterOp
     return collectionTypes.map(collectionType => {
         return { name: collectionType, selected: false }
     });
+}
+
+// Helper to create back link text for header path links in most pages.
+// Ex: Page for new music called 'new' returns 'New Music' for back link text
+const allArtistSlugs = ALL_ARTISTS.map(artist => httpFormat(artist));
+export const configBackLinkText = (category: string, page?: string) => {
+    if(!page) return '';
+
+    // Config if artist page
+    if(allArtistSlugs.includes(page)) {
+        return ARTIST_PAGE_LOOKUP[page];
+    }
+
+    // Config if category page
+    if(page === 'new' || page === 'featured') {
+        const pageCapitalized = page[0].toUpperCase() + page.substring(1, page.length);
+        return `${pageCapitalized} ${category}`; 
+    } else {
+        return CATEGORY_PAGE_LOOKUP[page];
+    }
 }
