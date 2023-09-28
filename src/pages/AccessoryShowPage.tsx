@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { accessories } from '../data/accessories';
+import useItem from '../hooks/useItem';
 import ShowPage from './ShowPage';
 import ClothingData from '../components/ClothingData';
 import { Accessory, CartAction, AccessoryProduct } from '../types';
@@ -11,7 +10,7 @@ type AccessoryShowPageProps = {
 }
 
 const AccessoryShowPage = ({ dispatch, setCartIsVisible }: AccessoryShowPageProps) => {
-    const [product, setProduct] = useState<Accessory | null>(null);
+    const { item, errorMessage, isLoading } = useItem<Accessory>('Accessories');
     const location = useLocation();
 
     const addToCart = (product: Accessory, qty: number) => {
@@ -21,16 +20,24 @@ const AccessoryShowPage = ({ dispatch, setCartIsVisible }: AccessoryShowPageProp
 
     const isHat = (item: Accessory | null) => item?.productType === 'Cap' || item?.productType === 'Beanie';
 
-    const descText = isHat(product) ? <ClothingData item={product} /> : <p>{product?.accessoryDesc}</p>; 
-
-    return <ShowPage<Accessory, AccessoryProduct> 
-                data={accessories} 
-                product={product}
-                setProduct={setProduct}
+    const descText = isHat(item) ? <ClothingData item={item} /> : <p>{item?.accessoryDesc}</p>; 
+    
+    const renderShowPage = () => {
+        if(isLoading) {
+            return <p className="plain-text">Loading...</p>
+        } else if(errorMessage) {
+            return <p className="plain-text">{errorMessage}</p>
+        } else {
+            return <ShowPage<Accessory, AccessoryProduct> 
+                product={item}
                 addToCart={addToCart}
                 setCartIsVisible={setCartIsVisible}
                 descText={descText}
             />
+        }
+    }
+
+    return renderShowPage();
 }
 
 export default AccessoryShowPage;

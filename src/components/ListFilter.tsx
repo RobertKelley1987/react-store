@@ -1,21 +1,20 @@
 import { useState, useContext, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
-import { ScreenIsBigContext } from '../context/ScreenIsBigContext';
-import './ListFilter.css';
+import useScreenIsBig from '../hooks/useScreenIsBig';
 import MenuChevron from '../components/MenuChevron';
+import { ProductFilterOption } from '../types';
+import './ListFilter.css';
 
 type ListFilterProps<T> = {
-    selections: T[],
-    productTypes: T[]
-    setProductTypes: React.Dispatch<React.SetStateAction<T[]>> 
+    productTypes: ProductFilterOption<T>[]
+    setProductTypes: React.Dispatch<React.SetStateAction<ProductFilterOption<T>[]>> 
 }
 
-function ListFilter<T extends string> ({ selections, productTypes, setProductTypes }: ListFilterProps<T>) {
+function ListFilter<T extends string> ({ productTypes, setProductTypes }: ListFilterProps<T>) {
     const [isOpen, setIsOpen] = useState(true);
     const location = useLocation();
     const navigate = useNavigate();
-    const screenIsBigContext = useContext(ScreenIsBigContext);
-    const screenIsBig = screenIsBigContext?.screenIsBig;
+    const { screenIsBig } = useScreenIsBig(800);
 
     useEffect(() => {
         if(screenIsBig) {
@@ -26,28 +25,28 @@ function ListFilter<T extends string> ({ selections, productTypes, setProductTyp
     }, [screenIsBig])
 
     const handleChange = (clickedType: T) => {
-        if(productTypes.includes(clickedType)) {
-            setProductTypes(prevTypes => prevTypes.filter(prevType => prevType !== clickedType));
-        } else {
-            setProductTypes(prevTypes => [...prevTypes, clickedType]);
-        }
+        const typeIndex = productTypes.findIndex(productType => productType.name === clickedType);
+        productTypes[typeIndex].selected = !productTypes[typeIndex].selected;
+        setProductTypes([...productTypes]);
         navigate(`${location.pathname}?page=1`);
     }
 
     const toggleFilterIsOpen = () => !screenIsBig && setIsOpen(prev => !prev);
 
-    const renderSelections = () => selections.map(selection => {
+    const renderSelections = () => productTypes.map(productType => {
+        const { name, selected } = productType;
+
         return (
-            <label key={selection} className="checkbox-label" htmlFor={selection}>
+            <label key={name} className="checkbox-label" htmlFor={name}>
                 <input 
                     className="checkbox"  
-                    id={selection} 
+                    id={name} 
                     type="checkbox"
-                    onChange={() => handleChange(selection)}
-                    onKeyDown={e => e.key === 'Enter' && handleChange(selection)}
-                    checked={productTypes.includes(selection)} 
+                    onChange={() => handleChange(name)}
+                    onKeyDown={e => e.key === 'Enter' && handleChange(name)}
+                    checked={selected} 
                 />
-                <span>{selection}</span>
+                <span>{name}</span>
             </label>
         )
     });

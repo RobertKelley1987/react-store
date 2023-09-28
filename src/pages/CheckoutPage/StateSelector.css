@@ -18,6 +18,10 @@
     outline: none;
 }
 
+.state-selector:hover {
+    cursor: pointer;
+}
+
 .state-selector-wrapper {
     justify-content: flex-end;
     position: relative;

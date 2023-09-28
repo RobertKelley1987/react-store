@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import ImgCarousel from './ImgCarousel';
 import Qty from '../../components/Qty';
 import StorePath from '../../components/StorePath';
@@ -9,24 +8,16 @@ import './ShowPage.css';
 
 type ShowPageProps<T> = {
     addToCart: (product: T, qty: number) => void
-    data: T[],
     product: T | null,
-    setProduct: React.Dispatch<React.SetStateAction<T | null>>
     sizes?: React.ReactNode,
     descText?: React.ReactNode,
     setCartIsVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) {
-    const { addToCart, sizes, data, descText, product, setProduct, setCartIsVisible } = props
+    const { addToCart, sizes, descText, product, setCartIsVisible } = props
     const [qty, setQty] = useState(1);
     const [confirmItemAdded, setConfirmItemAdded] = useState(false);
-    const { itemId } = useParams();
-    
-    useEffect(() => {
-        const foundItem = data.find(item => item.id === itemId);
-        if(foundItem) setProduct(foundItem);
-    }, [itemId, data, setProduct]);
 
     useEffect(() => {
         let timeoutId: NodeJS.Timeout;
@@ -54,7 +45,7 @@ function ShowPage<T extends Item<K>, K extends string>(props: ShowPageProps<T>) 
 
     return (
         <div className="show-page">
-            <StorePath tail={`${product.artist} "${product.desc}" ${product.productType}`}/>
+            <StorePath tail={`${product.artist} "${product.desc}" ${product.productType}`} />
             <div className="show-page-product-grid">
                 <ImgCarousel<T, K> product={product} />
                 <div className="show-page-text-wrapper">

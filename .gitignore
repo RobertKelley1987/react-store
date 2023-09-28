@@ -12,6 +12,8 @@
 /build
 
 # misc
+/js-backup-data
+/TODO
 .DS_Store
 .env
 .env.local

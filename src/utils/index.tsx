@@ -1,4 +1,5 @@
-import { ITEMS_PER_PAGE } from '../constants';
+import { ITEMS_PER_PAGE, ARTIST_NAME_LIB } from '../constants';
+import { ProductFilterOption, ArtistName } from '../types';
 
 // Assertion to test if element clicked is a React node (stolen from stack overflow link below)
 // https://stackoverflow.com/questions/71193818/react-onclick-argument-of-type-eventtarget-is-not-assignable-to-parameter-of-t
@@ -6,6 +7,13 @@ import { ITEMS_PER_PAGE } from '../constants';
 export function assertIsNode(target: EventTarget | null): asserts target is Node {
     if(!target || !("nodeType" in target)) {
         throw new Error("Element clicked is not a react node");
+    }
+}
+
+// Assertion to test if a string is an artist with products on this website
+export function assertIsArtistName(name: string): asserts name is ArtistName {
+    if(!name || !(name in ARTIST_NAME_LIB)) {
+        throw new Error("Name used in ArtistPage is not an artist.");
     }
 }
 
@@ -71,4 +79,12 @@ export const nameIsBetween = (name: string, min: string, max: string) => {
     const indexOfFirstLetter = name.indexOf('The') === 0 ? 4 : 0;
     const firstLetter = name[indexOfFirstLetter].toLowerCase();
     return firstLetter >= min.toLowerCase() && firstLetter <= max.toLowerCase();
+}
+
+// Converts filter options from an array of strings to an array of objects with a selected state
+// attached.
+export function convertToFilterOptions<T>(collectionTypes: T[]): ProductFilterOption<T>[] {
+    return collectionTypes.map(collectionType => {
+        return { name: collectionType, selected: false }
+    });
 }

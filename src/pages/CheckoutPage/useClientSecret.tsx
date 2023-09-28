@@ -7,7 +7,7 @@ const useClientSecret = (cart: CartItem[]) => {
 
     useEffect(() => {
         const createPaymentIntent = async () => {
-            const { data } = await axios.post('/payment-intents', { cart: cart });
+            const { data } = await axios.post('/payment-intents', { cart });
             setClientSecret(data.clientSecret);
         }
 

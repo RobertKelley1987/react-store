@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import { StripeError } from '@stripe/stripe-js';
 import { useStripe, useElements, PaymentElement } from '@stripe/react-stripe-js';
-import axios from 'axios';
 import { Order, PendingOrder } from '../../types';
 import './PaymentForm.css';
 
@@ -27,6 +27,12 @@ const CARD_DECLINE_MESSAGES = {
 
 type CardDeclineMessage = keyof typeof CARD_DECLINE_MESSAGES;
 
+function assertIsCardDeclineMessage(message: string): asserts message is CardDeclineMessage {
+    if(!message || !(message in CARD_DECLINE_MESSAGES)) {
+        throw new Error('This message is not of type CardDeclineMessage');
+    }
+}
+
 const PaymentForm = (props: PaymentFormProps) => {
     const { order, setErrorMessage, setConfirmedOrder, resetCustomerData } = props
     const stripe = useStripe();
@@ -38,8 +44,14 @@ const PaymentForm = (props: PaymentFormProps) => {
     const handlePaymentError = (error: StripeError) => {
         const { code, decline_code } = error;
         const messageKey = decline_code ? decline_code : code;
-        const errorMessage = CARD_DECLINE_MESSAGES[messageKey as CardDeclineMessage]; 
-        setErrorMessage(errorMessage);
+        if(messageKey) {
+            assertIsCardDeclineMessage(messageKey);
+            const errorMessage = CARD_DECLINE_MESSAGES[messageKey]; 
+            setErrorMessage(errorMessage);
+        } else {
+            setErrorMessage('There was an error processing your payment.')
+        }
+        
     }
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

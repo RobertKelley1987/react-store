@@ -216,6 +216,12 @@ option:disabled {
   cursor: pointer;
 }
 
+.plain-text {
+  color: var(--black);
+  font-family: var(--sans-serif);
+  font-size: var(--small-font);
+}
+
 /* GOOGLE ICONS */
 .material-symbols-outlined {
   font-variation-settings:

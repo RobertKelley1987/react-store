@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { apparel } from '../../data/apparel';
-import ShowPage from "../ShowPage";
+import useItem from '../../hooks/useItem';
+import ShowPage from '../ShowPage';
 import Sizes from './Sizes';
 import ClothingData from '../../components/ClothingData';
 import { CartAction, Size, Apparel, ApparelProduct } from '../../types';
@@ -12,7 +12,7 @@ type ApparelShowPageProps = {
 }
 
 const ApparelShowPage = ({ dispatch, setCartIsVisible }: ApparelShowPageProps) => {
-    const [product, setProduct] = useState<Apparel | null>(null);
+    const { item, errorMessage, isLoading } = useItem<Apparel>('Apparel');
     const [selectedSize, setSelectedSize] = useState<Size>('Small');
     const location = useLocation();
 
@@ -21,15 +21,23 @@ const ApparelShowPage = ({ dispatch, setCartIsVisible }: ApparelShowPageProps) =
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 
-    return <ShowPage<Apparel, ApparelProduct> 
+    const renderShowPage = () => {
+        if(isLoading) {
+            return <p className="plain-text">Loading...</p>
+        } else if(errorMessage) {
+            return <p className="plain-text">{errorMessage}</p>
+        } else {
+            return <ShowPage<Apparel, ApparelProduct> 
                 addToCart={addToCart}
                 sizes={<Sizes selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>}
-                data={apparel}
-                product={product}
-                setProduct={setProduct}
+                product={item}
                 setCartIsVisible={setCartIsVisible}
-                descText={<ClothingData item={product} />}
+                descText={<ClothingData item={item} />}
             />
+        }
+    }
+
+    return renderShowPage();
 }
 
 export default ApparelShowPage;

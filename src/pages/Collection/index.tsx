@@ -6,16 +6,16 @@ import StorePath from "../../components/StorePath";
 import SortSelector from './SortSelector';
 import ListGrid from './ListGrid';
 import { Item, SortOption } from "../../types";
-import './CollectionPage.css';
+import './Collection.css';
 
-type CollectionPageProps<T> = {
+type CollectionProps<T> = {
     items: T[],
     collection: string,
     filter?: React.ReactNode, // Sidebar filter
     banner?: React.ReactNode, // Artist banner
 }
 
-function CollectionPage<T extends Item<K>, K extends string>(props: CollectionPageProps<T>) {
+function Collection<T extends Item<K>, K extends string>(props: CollectionProps<T>) {
     const { items, collection, filter, banner } = props;
     const { pageNum } = usePageNum();
     const [sortOption, setSortOption] = useState<SortOption>('Date - New to Old');
@@ -31,22 +31,26 @@ function CollectionPage<T extends Item<K>, K extends string>(props: CollectionPa
         setSortOption('Date - New to Old');
     }, []);
 
-    return (
-        <Fragment>
-            {banner}
-            <div className="collection-page">
-                <StorePath 
-                    collection={collection}
-                    tail={<span className="store-path-item">{`Page ${pageNum} of ${pages.length}`}</span>}
-                />
-                <SortSelector sortOption={sortOption} setSortOption={setSortOption} />
-                <div className="collection-page-list">
-                    {filter}
-                    <ListGrid pages={pages} pageNum={pageNum} srcPg={collection} />
+    const renderCollection = () => {
+        return (
+            <Fragment>
+                {banner}
+                <div className="collection">
+                    <StorePath 
+                        collection={collection}
+                        tail={<span className="store-path-item">{`Page ${pageNum} of ${pages.length}`}</span>}
+                    />
+                    <SortSelector sortOption={sortOption} setSortOption={setSortOption} />
+                    <div className="collection-list">
+                        {filter}
+                        <ListGrid pages={pages} pageNum={pageNum} srcPg={collection} />
+                    </div>
                 </div>
-            </div>
-        </Fragment>
-    );
+            </Fragment>
+        );
+    }
+
+    return items ? renderCollection() : null;
 }
 
-export default CollectionPage;
+export default Collection;

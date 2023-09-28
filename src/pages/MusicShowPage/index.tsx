@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { albums } from '../../data/albums';
+import useItem from '../../hooks/useItem';
 import ShowPage from '../ShowPage';
 import AlbumText from './AlbumText';
 import { Album, CartAction, MusicProduct } from '../../types';
@@ -11,7 +10,7 @@ type MusicShowPageProps = {
 }
 
 const MusicShowPage = ({ dispatch, setCartIsVisible }: MusicShowPageProps) => {
-    const [product, setProduct] = useState<Album | null>(null);
+    const { item, errorMessage, isLoading } = useItem<Album>('Music');
     const location = useLocation();
 
     const addToCart = (product: Album, qty: number) => {
@@ -19,14 +18,22 @@ const MusicShowPage = ({ dispatch, setCartIsVisible }: MusicShowPageProps) => {
         dispatch({ type: 'ADD_ITEM', payload: newItem });
     }
 
-    return <ShowPage<Album, MusicProduct> 
-                data={albums} 
-                descText={<AlbumText album={product}/>}
-                product={product}
-                setProduct={setProduct}
+    const renderShowPage = () => {
+        if(isLoading) {
+            return <p className="plain-text">Loading...</p>
+        } else if(errorMessage) {
+            return <p className="plain-text">{errorMessage}</p>
+        } else {
+            return <ShowPage<Album, MusicProduct> 
+                descText={<AlbumText album={item}/>}
+                product={item}
                 addToCart={addToCart}
                 setCartIsVisible={setCartIsVisible}
             />
+        }
+    }
+
+    return renderShowPage()
 }
 
 export default MusicShowPage;

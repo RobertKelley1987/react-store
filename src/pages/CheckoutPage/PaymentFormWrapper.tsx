@@ -46,7 +46,7 @@ const PaymentFormWrapper = (props: PaymentFormWrapperProps) => {
         )
     }
 
-    return clientSecret ? renderForm() : <span>Loading...</span>;
+    return clientSecret ? renderForm() : <span className="payment-form-wrapper-loading">Loading...</span>;
 }
 
 export default PaymentFormWrapper;

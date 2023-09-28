@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ScreenIsBigContext } from '../context/ScreenIsBigContext';
+import useScreenIsBig from '../hooks/useScreenIsBig';
 import MenuChevron from './MenuChevron';
 import Facebook from '../components/SVGs/Facebook';
 import Instagram from '../components/SVGs/Instagram';
@@ -12,8 +12,7 @@ const SiteFooter = () => {
     const [infoVisible, setInfoVisible] = useState(false);
     const [shippingVisible, setShippingVisible] = useState(false);
     const [contactVisible, setContactVisible] = useState(false);
-    const screenIsBigContext = useContext(ScreenIsBigContext);
-    const screenIsBig = screenIsBigContext?.screenIsBig;
+    const { screenIsBig } = useScreenIsBig(800);
 
     useEffect(() => {
         if(screenIsBig) {
@@ -57,7 +56,7 @@ const SiteFooter = () => {
     return (
         <footer className="site-footer">
             <div className="site-footer-wrapper">
-                <Link to="/" className="site-footer-logo">IB</Link>
+                <Link to="/" onClick={() => window.scrollTo(0 ,0)} className="site-footer-logo">IB</Link>
 
                 <ul className="site-footer-socials">
                     <li>

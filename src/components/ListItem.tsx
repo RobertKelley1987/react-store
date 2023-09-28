@@ -10,10 +10,11 @@ type ItemProps<T> = {
 }
 
 // Page constants are also used for header menu, and intentionally do not include 'Featured' links
-const allMusicPgs = [...MUSIC_PAGES, 'Featured Music']
-const allApparelPgs = [...APPAREL_PAGES, 'Featured Apparel'];
-const allAccessoryPgs = [...ACCESSORY_PAGES, 'Featured Accessories'];
-const nonArtistPgs = [...allMusicPgs, ...allApparelPgs, ...allAccessoryPgs]
+const allMusicPgs = [...MUSIC_PAGES, 'Featured']
+const allApparelPgs = [...APPAREL_PAGES, 'Featured'];
+const allAccessoryPgs = [...ACCESSORY_PAGES, 'Featured'];
+const nonArtistPgs = [...allMusicPgs, ...allApparelPgs, ...allAccessoryPgs];
+const HOME_PAGE_SECTIONS = ['Featured Music', 'Featured Apparel', 'New Music', 'New Apparel'];
 
 function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProps<T>) {
     const configItemPath = () => {
@@ -26,6 +27,10 @@ function ListItem<T extends Item<K>, K extends string>({ item, srcPg }: ItemProp
                 path = `/${category}/${httpFormat(srcPg)}/products/${item.id}`;
             } else if(ALL_ARTISTS.includes(srcPg)) {
                 path = `/artists/${artist}/${category}/${item.id}`;
+            } else if(srcPg.includes('Featured')) {
+                path = `/${category}/featured/products/${item.id}`;
+            } else if(srcPg.includes('New')) {
+                path = `/${category}/new/products/${item.id}`
             }
         }
 

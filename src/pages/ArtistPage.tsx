@@ -1,54 +1,79 @@
-import { useRef } from 'react';
-import { useParams } from 'react-router-dom'; 
-import { data } from '../data';
-import { ALL_ARTISTS } from '../constants';
-import { httpFormat } from '../utils';
-import CategoryFilterPage from './CategoryFilterPage';
-import { Category } from '../types';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios'; 
+import { ALL_ARTISTS, ARTIST_NAME_LIB } from '../constants';
+import { httpFormat, convertToFilterOptions, assertIsArtistName } from '../utils';
+import Collection from './Collection';
+import ArtistBanner from './ArtistBanner';
+import ListFilter from '../components/ListFilter';
+import { ArtistName, Category, Product, ProductType, ProductFilterOption } from '../types';
 import './ArtistPage.css';
 
-const ALL_CATEGORIES: Category[] = ['Apparel', 'Music', 'Accessories'];
+const artistCollections = ALL_ARTISTS.map(artist => httpFormat(artist));
 
-// All band names in http format
-const allArtists = ALL_ARTISTS.map(artist => httpFormat(artist));
+function ArtistPage() {
+    const { collectionName } = useParams();
+    const [collection, setCollection] = useState<Product[]>([]);
+    const [categories, setCategories] = useState<ProductFilterOption<Category>[]>([]);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        if(!collectionName) {
+            setErrorMessage('Collection not found.');
+            return;
+        }
 
-type ArtistPageProps = {
-    selectedCategories: Category[],
-    setSelectedCategories: React.Dispatch<React.SetStateAction<Category[]>>
-}
+        const getCollection = async () => {
+            const { data: { collection, categories, error } } = await axios.get(`/artists/${collectionName}`);
+            if(error) {
+                setErrorMessage(error);
+            } else {
+                setCollection(collection);
+                const filterOptions = convertToFilterOptions<Category>(categories);
+                setCategories(filterOptions);
+            }
+        }
 
-function ArtistPage({ selectedCategories, setSelectedCategories }: ArtistPageProps) {
-    const img = useRef<HTMLImageElement>(null);
-    const { artistName = '' } = useParams();
+        setLoading(true);
+        if(artistCollections.includes(collectionName)) {
+            getCollection();
+            setErrorMessage('');
+        } else {
+            setErrorMessage('Collection not found.');
+        }
+        setLoading(false);
 
-    // Filter all store data by band name from name in request parameter
-    const artistItems = data.filter(item => httpFormat(item.artist) === artistName?.toLowerCase());
+        return () => setErrorMessage('');
+    }, [collectionName]);
 
-    // Filter options should only include categories present in the item list.
-    // Ex: Do not allow user to filter by 'Accessories' if artist has zero accessories
-    const filterOptions = ALL_CATEGORIES.filter(category => artistItems.find(item => item.category === category));
+    const selectedOptions = categories.filter(category => category.selected);
+    const selectedNames = selectedOptions.map(option => option.name);
+    const filteredCollection = collection.filter(item => selectedNames.includes(item.category));
 
-    if(allArtists.includes(artistName)) {
-        return <CategoryFilterPage
-                    items={artistItems}
-                    allTypes={filterOptions}
-                    collection={ALL_ARTISTS[allArtists.indexOf(artistName)]}
-                    selectedCategories={selectedCategories}
-                    setSelectedCategories={setSelectedCategories}
-                    banner={
-                        <div className="artist-page-banner-wrapper">
-                            <img 
-                                ref={img}
-                                className={"artist-page-banner"} 
-                                src={`/imgs/banners/${httpFormat(artistName)}.png`} 
-                                alt={`${artistName} logo`}
-                            />
-                        </div>
-                    }
-                />
-    } else {
-        return <p className="artist-page-error-message">Error: Artist store not found</p>
-    } 
+    const filter = <ListFilter<Category> productTypes={categories} setProductTypes={setCategories} />
+
+    const renderCollection = () => {
+        let element;
+
+        if(loading) {
+            element = <p>Loading...</p>;
+        } else if(errorMessage || !collectionName || !collection.length) {
+            element = <p className="artist-page-error-message">{errorMessage}</p>;
+        } else {
+            assertIsArtistName(collectionName);
+            element = <Collection<Product, ProductType> 
+                items={selectedNames.length > 0 ? filteredCollection : collection} 
+                collection={ARTIST_NAME_LIB[collectionName]}
+                filter={categories.length > 1 ? filter : undefined} 
+                banner={<ArtistBanner collectionName={collectionName} />}
+            />
+        }
+
+        return element;
+    }
+
+    return renderCollection();
 }
 
 export default ArtistPage;

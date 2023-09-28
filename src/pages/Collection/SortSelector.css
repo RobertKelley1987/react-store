@@ -29,7 +29,7 @@
     color: var(--accent);
 }
 
-.sort-selector:focus {
+.sort-selector:focus-visible {
     outline: none;
 }
 

@@ -1,9 +1,9 @@
 import { useEffect, useContext } from 'react';
-import { ScreenIsBigContext } from '../context/ScreenIsBigContext';
 import { classNames, nameIsBetween } from '../utils';
 import { ALL_ARTISTS, APPAREL_PAGES, MUSIC_PAGES, ACCESSORY_PAGES } from '../constants';
 import DropdownList from './DropdownList';
 import './Menu.css';
+import useScreenIsBig from '../hooks/useScreenIsBig';
 
 const A_TO_C = ALL_ARTISTS.filter(name => nameIsBetween(name, 'a', 'c'));
 const D_TO_H = ALL_ARTISTS.filter(name => nameIsBetween(name, 'd', 'h'));
@@ -31,8 +31,6 @@ type MenuProps = {
     setArtistsOpen: React.Dispatch<React.SetStateAction<boolean>>
     menuOpen: boolean,
     setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
-    clearFilter: () => void,
-
 }
 
 const Menu = (props: MenuProps) => {
@@ -40,14 +38,12 @@ const Menu = (props: MenuProps) => {
         menu, 
         menuOpen, 
         setMenuOpen, 
-        clearFilter, 
         categoriesOpen, 
         setCategoriesOpen,
         artistsOpen,
         setArtistsOpen 
     } = props;
-    const screenIsBigContext = useContext(ScreenIsBigContext); 
-    const screenIsBig = screenIsBigContext?.screenIsBig; // True if screen size exceeds 800px
+    const { screenIsBig } = useScreenIsBig(800);
  
     useEffect(() => {
         setMenuOpen(false);
@@ -66,7 +62,6 @@ const Menu = (props: MenuProps) => {
                         setOtherListsOpen={setArtistsOpen} 
                         setThisListOpen={setCategoriesOpen}
                         setMenuOpen={setMenuOpen}
-                        clearFilter={clearFilter}
                     />
                     <DropdownList 
                         thisIsOpen={artistsOpen} 
@@ -76,7 +71,6 @@ const Menu = (props: MenuProps) => {
                         setOtherListsOpen={setCategoriesOpen} 
                         setThisListOpen={setArtistsOpen}
                         setMenuOpen={setMenuOpen}
-                        clearFilter={clearFilter}
                     />
                 </ul>    
             </nav>

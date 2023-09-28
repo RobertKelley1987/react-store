@@ -2,12 +2,16 @@ import { SortOption, Item } from '../types';
 
 // Sort from newest to oldest items
 export function newToOld<T extends Item<K>, K extends string>(item: T, nextItem: T) {
-    return nextItem.dateAdded.getTime() - item.dateAdded.getTime();
+    const itemDate = new Date(item.dateAdded);
+    const nextItemDate = new Date(nextItem.dateAdded);
+    return nextItemDate.getTime() - itemDate.getTime();
 }
 
 // Sort from oldest to newest
 export function oldToNew<T extends Item<K>, K extends string>(item: T, nextItem: T) {
-    return item.dateAdded.getTime() - nextItem.dateAdded.getTime();
+    const itemDate = new Date(item.dateAdded);
+    const nextItemDate = new Date(nextItem.dateAdded);
+    return itemDate.getTime() - nextItemDate.getTime();
 }
 
 // Sort alphabetically - a to z

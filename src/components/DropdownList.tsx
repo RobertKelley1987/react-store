@@ -16,7 +16,6 @@ type DropdownListProps = {
     setOtherListsOpen: React.Dispatch<React.SetStateAction<boolean>>,
     setThisListOpen: React.Dispatch<React.SetStateAction<boolean>>,
     setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>,
-    clearFilter: () => void
 }
 
 const DropdownList = (props: DropdownListProps) => {
@@ -28,7 +27,6 @@ const DropdownList = (props: DropdownListProps) => {
         setOtherListsOpen, 
         setThisListOpen, 
         setMenuOpen,
-        clearFilter 
     } = props;
 
     const handleClick = () => { 
@@ -56,7 +54,6 @@ const DropdownList = (props: DropdownListProps) => {
                             pathSlug={pathSlug} 
                             pages={pageList.pages} 
                             closeMenu={closeAllMenus} 
-                            clearFilter={clearFilter}
                         />
                     );
                 })}

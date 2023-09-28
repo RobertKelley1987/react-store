@@ -9,7 +9,7 @@ import { CartItem, CartAction } from '../types';
 import './SiteHeader.css';
 
 type SiteHeaderProps = {
-    clearFilter: () => void,
+    // clearFilter: () => void,
     cart: CartItem[],
     dispatch: React.Dispatch<CartAction>,
     viewingCartPage: boolean,
@@ -21,7 +21,7 @@ type SiteHeaderProps = {
 // after a user adds an item, this added state prevents the cart from vanishing if the user is mousing 
 // over it in that scenario.
 const SiteHeader = (props: SiteHeaderProps) => {
-    const { clearFilter, cart, dispatch, viewingCartPage, cartIsVisible, setCartIsVisible } = props;
+    const { cart, dispatch, viewingCartPage, cartIsVisible, setCartIsVisible } = props;
     const [menuOpen, setMenuOpen] = useState(false);
     const [categoriesOpen, setCategoriesOpen] = useState(false);
     const [artistsOpen, setArtistsOpen] = useState(false);
@@ -85,7 +85,6 @@ const SiteHeader = (props: SiteHeaderProps) => {
                     menu={menu}
                     menuOpen={menuOpen} 
                     setMenuOpen={setMenuOpen} 
-                    clearFilter={clearFilter}
                     categoriesOpen={categoriesOpen}
                     setCategoriesOpen={setCategoriesOpen}
                     artistsOpen={artistsOpen}

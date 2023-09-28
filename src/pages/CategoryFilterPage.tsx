@@ -12,31 +12,32 @@ type CategoryFilterPageProps<T> = {
 }
 
 function CategoryFilterPage<T extends Product> (props: CategoryFilterPageProps<T>) {
-    const { 
-        items, 
-        allTypes, 
-        collection, 
-        banner, 
-        selectedCategories, 
-        setSelectedCategories,
-    } = props;
+    // const { 
+    //     items, 
+    //     allTypes, 
+    //     collection, 
+    //     banner, 
+    //     selectedCategories, 
+    //     setSelectedCategories,
+    // } = props;
 
-    // Filter data based on user selected options in sidebar
-    const filterItems = () => items.filter(item => selectedCategories.includes(item.category));
-    const filteredItems = selectedCategories.length ? filterItems() : items;
+    // // Filter data based on user selected options in sidebar
+    // const filterItems = () => items.filter(item => selectedCategories.includes(item.category));
+    // const filteredItems = selectedCategories.length ? filterItems() : items;
 
-    return <CollectionPage
-                items={filteredItems}
-                collection={collection}
-                filter={
-                    <ListFilter<Category> 
-                        selections={allTypes} 
-                        productTypes={selectedCategories} 
-                        setProductTypes={setSelectedCategories} 
-                    />
-                }
-                banner={banner}
-            />
+    // return <CollectionPage
+    //             items={filteredItems}
+    //             collection={collection}
+    //             filter={
+    //                 <ListFilter<Category> 
+    //                     selections={allTypes} 
+    //                     productTypes={selectedCategories} 
+    //                     setProductTypes={setSelectedCategories} 
+    //                 />
+    //             }
+    //             banner={banner}
+    //         />
+    return null;
 }
 
 export default CategoryFilterPage;

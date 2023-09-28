@@ -1,36 +1,30 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ScreenIsBigContext } from '../context/ScreenIsBigContext';
 import './MenuList.css';
+import useScreenIsBig from '../hooks/useScreenIsBig';
 
 type MenuListProps = {
     category: string,
     pathSlug?: string,
     pages: string[],
-    closeMenu: () => void,
-    clearFilter: () => void
+    closeMenu: () => void
 }
 
-const MenuList = ({ category, pathSlug, pages, closeMenu, clearFilter }: MenuListProps) => {
+const MenuList = ({ category, pathSlug, pages, closeMenu }: MenuListProps) => {
     const [sectionOpen, setSectionOpen] = useState(false);
-    const screenIsBigContext = useContext(ScreenIsBigContext)
-
+    const { screenIsBig } = useScreenIsBig(800);
     pathSlug = pathSlug || category.toLowerCase();
 
-    const handleClick = () => {
-        closeMenu();
-        clearFilter();
-    }
-
     const renderList = () => {
-        return (screenIsBigContext?.screenIsBig || sectionOpen) && (
+        return (screenIsBig || sectionOpen) && (
             <ul className="menu-list">
                 {pages.map(page => {
                     const pageSlug = page.toLowerCase().replaceAll(' ', '-');
-                    
+                    page = page === 'New' ? `${page} ${category}` : page;
+
                     return (
                         <li key={page} className="menu-list-item">
-                            <Link onClick={handleClick} to={`/${pathSlug}/${pageSlug}`}>{page}</Link>
+                            <Link onClick={() => closeMenu()} to={`/${pathSlug}/${pageSlug}`}>{page}</Link>
                         </li>
                     )
                 })}

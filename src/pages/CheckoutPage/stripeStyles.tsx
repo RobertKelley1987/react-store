@@ -34,7 +34,7 @@ export const stripeStyles = {
             boxShadow: "0px solid red"
         },
         ".Input:focus": {
-            border: "1px solid #282828",
+            border: "1px solid #7556FF",
             boxShadow: "0px solid #282828"
         },
         ".Input--invalid:focus": {
