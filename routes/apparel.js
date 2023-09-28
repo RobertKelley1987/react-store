@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
+const catchAsync = require('../util/catch-async')
 const apparel = require('../controllers/apparel');
 
-router.get('/', apparel.findAll);
-router.get('/new', apparel.findAll);
-router.get('/featured', apparel.findFeatured);
-router.get('/products/:id', apparel.findById);
-router.get('/:collectionName', apparel.findCollection);
+router.get('/', catchAsync(apparel.findAll));
+router.get('/new', catchAsync(apparel.findAll));
+router.get('/featured', catchAsync(apparel.findFeatured));
+router.get('/products/:id', catchAsync(apparel.findById));
+router.get('/:collectionName', catchAsync(apparel.findCollection));
 
 module.exports = router;

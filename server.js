@@ -4,7 +4,6 @@ if(process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 const app = express();
-const fs = require('fs').promises;
 const apparelRoutes = require('./routes/apparel');
 const accessoryRoutes = require('./routes/accessories');
 const musicRoutes = require('./routes/music');
@@ -20,5 +19,11 @@ app.use('/music', musicRoutes);
 app.use('/artists', artistRoutes);
 app.use('/orders', orderRoutes);
 app.use('/payment-intents', paymentRoutes);
+
+// If there is an error, send message to client and log
+app.use((req, res, next, error) => {
+    console.log(error);
+    res.status(error.status).send({ errorMessage: error.message })
+});
 
 app.listen(process.env.PORT || 3001, () => 'The server listens...');

@@ -1,4 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_SK);
+const ExpressError = require('../util/express-error');
 
 // Helper fn to total cart items in cents for stripe api
 const cartValInCents = cart => {
@@ -10,6 +11,9 @@ const cartValInCents = cart => {
 // Returns client secret string for confirmation on client.
 module.exports.create = async (req, res) => {
     const { cart } = req.body;
+    if(!cart || !cart.length) {
+        throw new ExpressError(400, 'Please provide a cart to use this route.')
+    }
 
     const intent = await stripe.paymentIntents.create({
         amount: cartValInCents(cart),

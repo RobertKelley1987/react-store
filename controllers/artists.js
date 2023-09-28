@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+const ExpressError = require('../util/express-error');
 
 const ALL_ARTISTS = [
     'agriculture', 'bell-witch', 'blood-incantation', 'the-body', 'chat-pile', 'cloud-rat', 
@@ -40,6 +41,9 @@ module.exports.findByName = async (req, res) => {
     if(ALL_ARTISTS.includes(name)) {
         // Filter by artist name
         const productsJson = await fs.readFile('./data/products.json');
+        if(!productsJson) {
+            throw new ExpressError(500, 'Sever error: please try again later.')
+        }
         const products = JSON.parse(productsJson);
         const artist = ARTIST_LOOKUP[name];
         const artistProducts = products.filter(product => product.artist === artist);
