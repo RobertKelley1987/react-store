@@ -6,6 +6,7 @@ if(process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const app = express();
 const path = require('path');
+const cors = require('cors');
 const apparelRoutes = require('./routes/apparel');
 const accessoryRoutes = require('./routes/accessories');
 const musicRoutes = require('./routes/music');
@@ -16,6 +17,7 @@ const paymentRoutes = require('./routes/payment-intents');
 // General config
 app.use(express.json());
 app.use(express.static('build'));
+app.use(cors());
 
 // Routing config
 app.use('/apparel', apparelRoutes);
